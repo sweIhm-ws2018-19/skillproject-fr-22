@@ -39,12 +39,12 @@ public class TestIntentHandler implements RequestHandler {
             // Store the user's favorite color in the Session and create response.
             String sickness = sicknessSlot.getValue();
             input.getAttributesManager().setSessionAttributes(Collections.singletonMap(SICKNESS_KEY, sickness));
-//            boolean has = (Math.random() < 0.5);
-//            if(has)
-//            speechText = "Ich konnte feststellen, dass du "+sickness+ "hast";
-//            else
-//            speechText = "Ich konnte feststellen, dass du "+sickness+ " nicht hast";
-            speechText = "ich konnte feststellen, dass du " +sickness+ " hast";
+            boolean has = (Math.random() < 0.5);
+            if(has)
+            speechText = "Ich konnte feststellen, dass du "+sickness+ " hast";
+            else
+            speechText = "Ich konnte feststellen, dass du "+sickness+ " nicht hast";
+
 
 
             repromptText =

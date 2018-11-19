@@ -1,5 +1,6 @@
 package main.java.colorpicker.handlers;
 
+
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Intent;
@@ -9,12 +10,16 @@ import com.amazon.ask.model.Response;
 import com.amazon.ask.model.Slot;
 import com.amazon.ask.response.ResponseBuilder;
 import main.java.colorpicker.Lists.Strings;
+import main.java.colorpicker.Rezepte.Rezept;
+import main.java.colorpicker.Rezepte.Zutat;
+import main.java.colorpicker.Rezepte.ZutatenListe;
 
 import java.util.Collections;
 import java.util.Map;
 import java.util.Optional;
 
 import static com.amazon.ask.request.Predicates.intentName;
+import static main.java.colorpicker.handlers.LaunchRequestHandler.rezepte;
 
 public class IngredientIntentHandler implements RequestHandler {
     @Override
@@ -38,10 +43,17 @@ public class IngredientIntentHandler implements RequestHandler {
         // Check for favorite color and create output to user.
         if (ingredientSlot != null) {
             // Store the user's favorite color in the Session and create response.
-            String ingredient = ingredientSlot.getValue();
+            Zutat ingredient =  new Zutat(ingredientSlot.getValue());
             input.getAttributesManager().setSessionAttributes(Collections.singletonMap("Ingredient", ingredient));
+            Rezept bestRecipe  = rezepte.getBestFitting(ingredient);
+            if (bestRecipe != null){
+                speechText = "mit diesen Zutaten kannst du eine "+bestRecipe+ " kochen";
+            }else{
+                speechText = "Ich habe leider kein Rezept mit diesen Zutaten auf Lager. ich werde daran arbeiten!";
+            }
 
-            speechText = "Ich suche nach einem Suppenrezept mit  " +ingredient;
+
+
             repromptText = Strings.REPROMPT;
 
         } else {

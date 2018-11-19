@@ -16,11 +16,20 @@ package main.java.colorpicker;
 import com.amazon.ask.Skill;
 import com.amazon.ask.SkillStreamHandler;
 import com.amazon.ask.Skills;
+//import main.java.colorpicker.Rezepte.KartoffelcremeSuppe;
+//import main.java.colorpicker.Rezepte.Rezept;
+//import main.java.colorpicker.Rezepte.KartoffelcremeSuppe;
+//import main.java.colorpicker.Rezepte.Rezepte;
+//import main.java.colorpicker.Rezepte.Zutat;
 import main.java.colorpicker.handlers.*;
+
 
 public class ColorPickerStreamHandler extends SkillStreamHandler {
 
+
+
     private static Skill getSkill() {
+
         return Skills.standard()
                 .addRequestHandlers(
                         new WhatsMyColorIntentHandler(),
