@@ -51,6 +51,8 @@ public class IngredientIntentHandler implements RequestHandler {
                 speechText = "Ich habe leider kein Rezept mit diesen Zutaten auf Lager. ich werde daran arbeiten!";
             }
 
+            speechText = ingredient.toString();
+
 
 
             repromptText = Strings.REPROMPT;
