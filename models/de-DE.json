@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "lieblingsfarbe",
+      "invocationName": "soupit",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
@@ -44,6 +44,79 @@
         {
           "name": "AMAZON.ResumeIntent",
           "samples": []
+        },
+        {
+          "name": "AMAZON.MoreIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateSettingsIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NextIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PageUpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PageDownIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PreviousIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollRightIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollDownIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollLeftIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollUpIntent",
+          "samples": []
+        },
+        {
+          "name": "TestIntent",
+          "slots": [
+            {
+              "name": "Sickness",
+              "type": "LIST_OF_SICKNESSES"
+            }
+          ],
+          "samples": [
+            "test me on {Sickness}",
+            "do i have {Sickness} "
+          ]
+        },
+        {
+          "name": "IngredientIntent",
+          "slots": [
+            {
+              "name": "Zutat",
+              "type": "AMAZON.Food"
+            }
+          ],
+          "samples": [
+            "Ich möchte eine Suppe mit {Zutat} machen",
+            "Ich möchte eine Suppe mit {Zutat} kochen ",
+            "ich habe {Zutat}",
+            "{Zutat}",
+            "ich habe {Zutat} im kühlschrank"
+          ]
         }
       ],
       "types": [
@@ -52,7 +125,7 @@
           "values": [
             {
               "name": {
-                "value": "grün"
+                "value": "grÃ¼n"
               }
             },
             {
@@ -82,12 +155,30 @@
             },
             {
               "name": {
-                "value": "türkis"
+                "value": "tÃ¼rkis"
               }
             },
             {
               "name": {
                 "value": "gelb"
+              }
+            }
+          ]
+        },
+        {
+          "name": "LIST_OF_SICKNESSES",
+          "values": [
+            {
+              "name": {
+                "value": "cancer"
+              }
+            },
+            {
+              "name": {
+                "value": "aids",
+                "synonyms": [
+                  "hiv"
+                ]
               }
             }
           ]

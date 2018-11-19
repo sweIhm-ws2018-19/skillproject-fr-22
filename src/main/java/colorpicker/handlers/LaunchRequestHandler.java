@@ -17,6 +17,7 @@ import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.LaunchRequest;
 import com.amazon.ask.model.Response;
+import main.java.colorpicker.Lists.Strings;
 
 import java.util.Optional;
 
@@ -30,10 +31,10 @@ public class LaunchRequestHandler implements RequestHandler {
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        String speechText = "Hallo. Ich lerne Deine Lieblingsfarbe. Bitte sage mir zum Beispiel: Meine Lieblingsfarbe ist blau.";
-        String repromptText = "Bitte nenne Deine Lieblingsfarbe.";
+        String speechText = "Herelo";//Strings.WELCOME;
+        String repromptText = Strings.REPROMPT;
         return input.getResponseBuilder()
-                .withSimpleCard("ColorSession", speechText)
+                .withSimpleCard("Soup IT", speechText)
                 .withSpeech(speechText)
                 .withReprompt(repromptText)
                 .build();
