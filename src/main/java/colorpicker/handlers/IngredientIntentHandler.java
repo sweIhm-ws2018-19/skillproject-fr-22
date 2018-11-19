@@ -41,7 +41,7 @@ public class IngredientIntentHandler implements RequestHandler {
             String ingredient = ingredientSlot.getValue();
             input.getAttributesManager().setSessionAttributes(Collections.singletonMap("Ingredient", ingredient));
 
-            speechText = "Ich suche nach einem Suppenrezept mit " +ingredient;
+            speechText = "Ich suche nach einem Suppenrezept mit  " +ingredient;
             repromptText = Strings.REPROMPT;
 
         } else {
