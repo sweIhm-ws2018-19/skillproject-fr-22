@@ -31,7 +31,7 @@ public class LaunchRequestHandler implements RequestHandler {
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        String speechText = "Herelo";//Strings.WELCOME;
+        String speechText = Strings.WELCOME;
         String repromptText = Strings.REPROMPT;
         return input.getResponseBuilder()
                 .withSimpleCard("Soup IT", speechText)
