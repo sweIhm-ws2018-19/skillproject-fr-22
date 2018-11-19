@@ -106,16 +106,16 @@
           "name": "IngredientIntent",
           "slots": [
             {
-              "name": "Zutat",
+              "name": "Ingredient",
               "type": "AMAZON.Food"
             }
           ],
           "samples": [
-            "Ich möchte eine Suppe mit {Zutat} machen",
-            "Ich möchte eine Suppe mit {Zutat} kochen ",
-            "ich habe {Zutat}",
-            "{Zutat}",
-            "ich habe {Zutat} im kühlschrank"
+            "ich habe {Ingredient} {Ingredient} {Ingredient}",
+            "Ich möchte eine Suppe mit {Ingredient} machen",
+            "Ich möchte eine Suppe mit {Ingredient} kochen ",
+            "ich habe {Ingredient} ",
+            "ich habe {Ingredient} im kühlschrank"
           ]
         }
       ],

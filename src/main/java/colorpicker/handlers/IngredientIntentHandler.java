@@ -12,7 +12,6 @@ import com.amazon.ask.response.ResponseBuilder;
 import main.java.colorpicker.Lists.Strings;
 import main.java.colorpicker.Rezepte.Rezept;
 import main.java.colorpicker.Rezepte.Zutat;
-import main.java.colorpicker.Rezepte.ZutatenListe;
 
 import java.util.Collections;
 import java.util.Map;
