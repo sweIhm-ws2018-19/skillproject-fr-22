@@ -33,7 +33,7 @@ import static com.amazon.ask.request.Predicates.intentName;
 public class MyColorIsIntentHandler implements RequestHandler {
     @Override
     public boolean canHandle(HandlerInput input) {
-        return input.matches(intentName("MyColorIsIntent"));
+        return false; //input.matches(intentName("MyColorIsIntent"));
     }
 
     @Override

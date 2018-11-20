@@ -27,7 +27,7 @@ public class WhatsMyColorIntentHandler implements RequestHandler {
 
     @Override
     public boolean canHandle(HandlerInput input) {
-        return input.matches(intentName("WhatsMyColorIntent"));
+        return false;//input.matches(intentName("WhatsMyColorIntent"));
     }
 
     @Override

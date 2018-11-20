@@ -1,10 +1,12 @@
-package main.java.colorpicker.Rezepte;
+package main.java.colorpicker.HilfsKlassen;
 
 public class Zutat {
     public final String zutat;
+    final String grammatGeschlecht;
 
-   public Zutat(String zutat){
+   public Zutat(String zutat,String grammatGeschlecht){
         this.zutat = zutat;
+        this.grammatGeschlecht = grammatGeschlecht;
     }
 
     boolean equals(Zutat z){

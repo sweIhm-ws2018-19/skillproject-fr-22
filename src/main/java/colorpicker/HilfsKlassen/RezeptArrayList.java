@@ -1,10 +1,10 @@
-package main.java.colorpicker.Rezepte;
+package main.java.colorpicker.HilfsKlassen;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Rezepte extends ArrayList<Rezept> {
-    public Rezepte (Rezept...r){
+public class RezeptArrayList extends ArrayList<Rezept> {
+    public RezeptArrayList(Rezept...r){
         super.addAll(Arrays.asList(r));
     }
 

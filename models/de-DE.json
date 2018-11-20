@@ -98,8 +98,8 @@
             }
           ],
           "samples": [
-            "test me on {Sickness}",
-            "do i have {Sickness} "
+            "teste mich auf {Sickness}",
+            "habe ich {Sickness} "
           ]
         },
         {

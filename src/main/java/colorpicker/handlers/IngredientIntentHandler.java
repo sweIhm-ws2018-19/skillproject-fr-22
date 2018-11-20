@@ -9,16 +9,17 @@ import com.amazon.ask.model.Request;
 import com.amazon.ask.model.Response;
 import com.amazon.ask.model.Slot;
 import com.amazon.ask.response.ResponseBuilder;
+import main.java.colorpicker.HilfsKlassen.ZutatMengeEinheit;
 import main.java.colorpicker.Lists.Strings;
-import main.java.colorpicker.Rezepte.Rezept;
-import main.java.colorpicker.Rezepte.Zutat;
+import main.java.colorpicker.HilfsKlassen.Rezept;
+import main.java.colorpicker.HilfsKlassen.Zutat;
 
 import java.util.Collections;
 import java.util.Map;
 import java.util.Optional;
 
 import static com.amazon.ask.request.Predicates.intentName;
-import static main.java.colorpicker.handlers.LaunchRequestHandler.rezepte;
+import static main.java.colorpicker.handlers.LaunchRequestHandler.REZEPT_ARRAY_LIST;
 
 public class IngredientIntentHandler implements RequestHandler {
     @Override
@@ -45,15 +46,21 @@ public class IngredientIntentHandler implements RequestHandler {
             String[] strinGredients = ingredientSlot.getValue().split("\\s");
             Zutat[] ingredients = new Zutat[strinGredients.length];
             for(int i = 0;i<strinGredients.length; i++){
-                ingredients[i] = new Zutat(strinGredients[i]);
+                ingredients[i] = new Zutat(strinGredients[i],"f");
             }
             
             input.getAttributesManager().setSessionAttributes(Collections.singletonMap("Ingredient", ingredients));
-            Rezept bestRecipe  = rezepte.getBestFitting(ingredients);
+            Rezept bestRecipe  = REZEPT_ARRAY_LIST.getBestFitting(ingredients);
             if (bestRecipe != null){
-                speechText = "mit diesen Zutaten kannst du eine "+bestRecipe+ " kochen";
+                speechText = "mit diesen Zutaten kannst du eine "+bestRecipe+ " kochen ";
+                speechText += "dafür brauchst du ";
+                for(ZutatMengeEinheit zum:bestRecipe.zumeng){
+                    speechText += zum.mengeToString() +" ";
+                    speechText += zum.einheitToString() +" ";
+                    speechText += zum.zutatToString() +" ";
+                }
             }else{
-                speechText = "Ich habe leider kein Rezept mit diesen Zutaten auf Lager. ich werde daran arbeiten!";
+                speechText = "Ich habe leider kein Rezept mit diesen Zutaten auf Lager. ich werde daran arbeiten! ";
             }
 
 

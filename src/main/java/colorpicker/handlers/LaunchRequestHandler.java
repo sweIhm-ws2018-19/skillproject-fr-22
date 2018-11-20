@@ -17,16 +17,16 @@ import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.LaunchRequest;
 import com.amazon.ask.model.Response;
+import main.java.colorpicker.HilfsKlassen.RezeptArrayList;
 import main.java.colorpicker.Lists.Strings;
-import main.java.colorpicker.Rezepte.KartoffelcremeSuppe;
-import main.java.colorpicker.Rezepte.Rezepte;
+import main.java.colorpicker.HilfsKlassen.Rezepte.KartoffelcremeSuppe;
 
 import java.util.Optional;
 
 import static com.amazon.ask.request.Predicates.requestType;
 
 public class LaunchRequestHandler implements RequestHandler {
-    public static final Rezepte rezepte = new Rezepte(new KartoffelcremeSuppe());
+    public static final RezeptArrayList REZEPT_ARRAY_LIST = new RezeptArrayList(new KartoffelcremeSuppe());
 
 
     @Override
