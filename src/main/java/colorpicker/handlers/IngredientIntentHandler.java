@@ -42,16 +42,20 @@ public class IngredientIntentHandler implements RequestHandler {
         // Check for favorite color and create output to user.
         if (ingredientSlot != null) {
             // Store the user's favorite color in the Session and create response.
-            Zutat ingredient =  new Zutat(ingredientSlot.getValue());
-            input.getAttributesManager().setSessionAttributes(Collections.singletonMap("Ingredient", ingredient));
-            Rezept bestRecipe  = rezepte.getBestFitting(ingredient);
+            String[] strinGredients = ingredientSlot.getValue().split("\\s");
+            Zutat[] ingredients = new Zutat[strinGredients.length];
+            for(int i = 0;i<strinGredients.length; i++){
+                ingredients[i] = new Zutat(strinGredients[i]);
+            }
+
+            input.getAttributesManager().setSessionAttributes(Collections.singletonMap("Ingredient", ingredients));
+            Rezept bestRecipe  = rezepte.getBestFitting(ingredients);
             if (bestRecipe != null){
                 speechText = "mit diesen Zutaten kannst du eine "+bestRecipe+ " kochen";
             }else{
                 speechText = "Ich habe leider kein Rezept mit diesen Zutaten auf Lager. ich werde daran arbeiten!";
             }
 
-            speechText = ingredient.toString();
 
 
 

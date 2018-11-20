@@ -5,21 +5,29 @@ import main.java.colorpicker.Rezepte.Rezept;
 import main.java.colorpicker.Rezepte.Rezepte;
 import main.java.colorpicker.Rezepte.Zutat;
 
+import java.util.Collections;
+
+import static main.java.colorpicker.handlers.LaunchRequestHandler.rezepte;
 
 
 public class Test {
     public static final Rezepte rezepte = new Rezepte(new KartoffelcremeSuppe());
 
 
-    public static void main(String...args){
+    public static void main(String... args) {
         String speechText;
-        Zutat ingredient = new Zutat("kartoffel");
-        Rezept bestRecipe  = rezepte.getBestFitting(ingredient);
-        if (bestRecipe != null){
-            speechText = "mit diesen Zutaten kannst du eine "+bestRecipe+ " kochen";
-        }else{
+        String[] strinGredients = {"kartoffeln"};
+        Zutat[] ingredients = new Zutat[strinGredients.length];
+        for (int i = 0; i < strinGredients.length; i++) {
+            ingredients[i] = new Zutat(strinGredients[i]);
+        }
+
+        Rezept bestRecipe = rezepte.getBestFitting(ingredients);
+        if (bestRecipe != null) {
+            speechText = "mit diesen Zutaten kannst du eine " + bestRecipe + " kochen";
+        } else {
             speechText = "Ich habe leider kein Rezept mit diesen Zutaten auf Lager. ich werde daran arbeiten!";
         }
-        System.out.println("a".equals("a"));
+        System.out.println(speechText);
     }
 }

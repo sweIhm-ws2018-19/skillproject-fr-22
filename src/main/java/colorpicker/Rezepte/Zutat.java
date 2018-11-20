@@ -8,7 +8,7 @@ public class Zutat {
     }
 
     boolean equals(Zutat z){
-       return (z.toString().equals(zutat) || (z.toString()+"n").equals(zutat));
+       return (z.toString().equals(zutat) || (z.toString()).equals(zutat+"n"));
     }
 
     @Override

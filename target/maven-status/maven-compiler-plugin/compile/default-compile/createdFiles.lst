@@ -9,6 +9,7 @@ main\java\colorpicker\Rezepte\Rezept.class
 main\java\colorpicker\handlers\WhatsMyColorIntentHandler.class
 main\java\colorpicker\Rezepte\Zutat.class
 main\java\colorpicker\Lists\Strings.class
+main\java\colorpicker\Test.class
 main\java\colorpicker\ColorPickerStreamHandler.class
 main\java\colorpicker\Rezepte\ZutatMenge.class
 main\java\colorpicker\handlers\IngredientIntentHandler.class
