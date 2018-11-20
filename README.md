@@ -1,156 +1,21 @@
-﻿# Alexa Skills Kit SDK Sample - Color Picker - Lieblingsfarbe (deutsche Übersetzung)
-A simple [AWS Lambda](http://aws.amazon.com/lambda) function that demonstrates how to write a color picker skill for the Amazon Echo using the Alexa SDK.
+## Soup-IT
 
-## Concepts
-This sample shows how to create a Lambda function for handling Alexa Skill requests that:
+Soup-IT ist eine Anwendung, die den Nutzer bei der Zubereitung von Suppen unterstützen soll. Da das System für Amazon Alexa entwickelt wird, ist es wichtig, dass die komplette User Interaktion auf verbaler Ebene passiert. Das System sieht vor, dass der Nutzer eine Liste von Zutaten vorschlägt, welche ihm zur Verfügung stehen. Auf Basis dieser Informationen soll Alexa eine Liste mit möglichen Rezepten ausgeben, welche die größten Übereinstimmungen mit der gegebenen Zutatenliste haben.
 
-- Custom slot type: demonstrates using custom slot types to handle a finite set of known values
-- Dialog and Session state: Handles two models, both a one-shot ask and tell model, and a multi-turn dialog model.
+Werden keine Zutaten des Nutzers vorgegeben, erfolgt kein Rezeptvorschlag. Zudem soll es dem Nutzer ermöglicht werden seine Essens-Präferenzen zu spezifizieren. Dadurch schlägt Alexa ausschließlich Rezepte auf Basis dieser Präferenzen vor. Nach der Wahl eines Rezeptes und Angabe der gewünschten Portionen werden alle benötigten Zutaten mit Menge ausgegeben, sodass sich der Nutzer diese zurechtlegen kann. Sollte dem Nutzer für das gewählte Rezept eine Zutat fehlen, so soll es möglich sein, das Rezept zu wechseln oder die fehlende Zutat zur Alexa Einkaufsliste hinzuzufügen und mit dem Rezept zu einem späteren Zeitpunkt fortzufahren. Anderenfalls beginnt die Anwendung den Nutzer Schritt-für-Schritt durch den Kochprozess zu begleiten. Der Nutzer soll den Ausgabefluss der Rezeptzubereitung selbst mit „weiter“ und „zurück“ steuern können. 
+
+### Hauptziele und Zielgruppen 
+
+Unser Ziel besteht darin, das Kochen von Rezepten per Spracheingabe zu ermöglichen. Somit werden angezeigte Rezepte auf einem Display oder auf Papier nicht benötigt. Mehrmaliges Durchlesen der einzelnen Kochschritte sowie die Bedienung eines Touchscreens mit „schmutzigen Fingern“ während dem Kochen werden überflüssig. Die Anwendung soll Kochanfängern das Kochen durch speziell formulierte Anleitungen erleichtern sowie beschäftigte Berufstätige oder Studenten mit wenig Zeit zum Kochen von leckeren Suppen in der Freizeit animieren. Daher wird ein großer Wert auf möglichst einfache und schnelle Rezepte, die zugleich auch lecker und gesund sind, gelegt.
+
+### Vision
+
+Als Vision stellen wir uns die Benutzung dieser Anwendung in verschiedensten Lebenslagen bzw. Altersklassen vor. Was zunächst nur für Suppen möglich sein soll, könnte in Zukunft auch für verschiedene andere Gerichte angewandt werden. Vor allem in der heutigen Zeit, die oft recht stressig und hektisch ist, soll das Kochen von eigenen, gesunden Gerichten nicht auf der Strecke bleiben. Aber auch Hobby-Köchen mit mehr Erfahrung soll die Anwendung eine interessante Alternative für das „Kochen nach Rezept“ bieten. Denn mit einem persönlichen Kochassistenten macht das Kochen sicherlich noch mehr Spaß als alleine.
 
 ## Setup
-To run this example skill you need to do two things. The first is to deploy the example code in lambda, and the second is to configure the Alexa skill to use Lambda.
 
-### AWS Lambda Setup
-Refer to [Hosting a Custom Skill as an AWS Lambda Function](https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html) reference for a walkthrough on creating a AWS Lambda function with the correct role for your skill. When creating the function, select the “Author from scratch” option, and select the Java 8 runtime. 
+hier können wir später ergänzen ob man eventuell beim skill auf etwas achten muss.
 
-To build the sample, open a terminal and go to the directory containing pom.xml, and run 'mvn org.apache.maven.plugins:maven-assembly-plugin:2.6:assembly -DdescriptorId=jar-with-dependencies package'. This will generate a zip file named "colorpicker-1.0-jar-with-dependencies.jar" in the target directory.
+## Anwendung
 
-Once you've created your AWS Lambda function and configured “Alexa Skills Kit” as a trigger, upload the JAR file produced in the previous step and set the handler to the fully qualified class name of your handler function. Finally, copy the ARN for your AWS Lambda function because you’ll need it when configuring your skill in the Amazon Developer console.
-
-### Alexa Skill Setup
-Now that the skill code has been uploaded to AWS Lambda we're ready to configure the skill with Alexa. First, navigate to the [Alexa Skills Kit Developer Console](https://developer.amazon.com/alexa/console/ask). Click the “Create Skill” button in the upper right. Enter “ColorPicker” as your skill name. On the next page,  select “Custom” and click “Create skill”.
- 
-Now we're ready to define the interaction model for the skill. Under “Invocation” tab on the left side, define your Skill Invocation Name to be `color picker`. 
- 
-Now it’s time to add an intent to the skill. Click the “Add” button under the Intents section of the Interaction Model. Leave “Create custom intent” selected, enter “WhatsMyColorIntent” for the intent name, and create the intent. Now it’s time to add some sample utterances that will be used to invoke the intent. For this example, we’ve provided the following sample utterances, but feel free to add others. 
-
-```
-whats my color
-what is my color
-say my color
-tell me my color
-whats my favorite color
-what is my favorite color
-say my favorite color
-tell me my favorite color
-tell me what my favorite color is
-```
-Let's add a Slot Type. You can find it below Built-In Intents.Click "Add Slot Type" and under "Create custom slot type", enter the name as "LIST\_OF\_COLORS". Add below values one at a time for this slot type.
-
-```
-green
-blue
-purple
-red
-orange
-yellow
-```
-
-Let's add another intent to the skill that has slots called "MyColorIsIntent" for intent name. Skip the sample utterances part for now and create a new slot called "Color". Select Slot Type to be "LIST\_OF\_COLORS".
-Now add below sample utterances that uses this slot "Color".
-
-```
-my color is {Color}
-my favorite color is {Color}
-```
-
-Since AMAZON.CancelIntent, AMAZON.HelpIntent, and AMAZON.StopIntent are built-in Alexa intents, sample utterances do not need to be provided as they are automatically inherited.
-
-The Developer Console alternately allows you to edit the entire skill model in JSON format by selecting “JSON Editor” on the navigation bar. For this sample, the following JSON schema can be used.
-
-```
-{
-  "interactionModel": {
-    "languageModel": {
-      "invocationName": "color picker",
-      "intents": [
-        {
-          "name": "AMAZON.CancelIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.HelpIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.StopIntent",
-          "samples": []
-        },
-        {
-          "name": "MyColorIsIntent",
-          "slots": [
-            {
-              "name": "Color",
-              "type": "LIST_OF_COLORS"
-            }
-          ],
-          "samples": [
-            " my color is {Color}",
-            " my favorite color is {Color}"
-          ]
-        },
-        {
-          "name": "WhatsMyColorIntent",
-          "slots": [],
-          "samples": [
-            "whats my color",
-            "what is my color",
-            "say my color",
-            "tell me my color",
-            "whats my favorite color",
-            "what is my favorite color",
-            "say my favorite color",
-            "tell me my favorite color",
-            "tell me what my favorite color is"
-          ]
-        }
-      ],
-      "types": [
-        {
-          "name": "LIST_OF_COLORS",
-          "values": [
-            {
-              "name": {
-                "value": "green"
-              }
-            },
-            {
-              "name": {
-                "value": "blue"
-              }
-            },
-            {
-              "name": {
-                "value": "purple"
-              }
-            },
-            {
-              "name": {
-                "value": "red"
-              }
-            },
-            {
-              "name": {
-                "value": "orange"
-              }
-            },
-            {
-              "name": {
-                "value": "yellow"
-              }
-            }
-          ]
-        }
-      ]
-    }
-  }
-}
-```
-
-Once you’re done editing the interaction model don't forget to save and build the model.
- 
-Let's move on to the skill configuration section. Under “Endpoint” select “AWS Lambda ARN” and paste in the ARN of the function you created previously. The rest of the settings can be left at their default values. Click “Save Endpoints” and proceed to the next section.
- 
-Finally you're ready to test the skill! In the “Test” tab of the developer console you can simulate requests, in text and voice form, to your skill. Use the invocation name along with one of the sample utterances we just configured as a guide. You should also be able to go to the [Echo webpage](http://echo.amazon.com/#skills) and see your skill listed under “Your Skills”, where you can enable the skill on your account for testing from an Alexa enabled device.
- 
-At this point, feel free to start experimenting with your Intent Schema as well as the corresponding request handlers in your skill's implementation. Once you're finished iterating, you can optionally choose to move on to the process of getting your skill certified and published so it can be used by Alexa users worldwide.
+hier beispiele für anwendung, was man sagen soll etc.
