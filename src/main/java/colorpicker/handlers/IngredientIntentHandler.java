@@ -47,7 +47,7 @@ public class IngredientIntentHandler implements RequestHandler {
             for(int i = 0;i<strinGredients.length; i++){
                 ingredients[i] = new Zutat(strinGredients[i]);
             }
-
+            
             input.getAttributesManager().setSessionAttributes(Collections.singletonMap("Ingredient", ingredients));
             Rezept bestRecipe  = rezepte.getBestFitting(ingredients);
             if (bestRecipe != null){

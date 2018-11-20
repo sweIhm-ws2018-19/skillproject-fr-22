@@ -5,9 +5,7 @@ import main.java.colorpicker.Rezepte.Rezept;
 import main.java.colorpicker.Rezepte.Rezepte;
 import main.java.colorpicker.Rezepte.Zutat;
 
-import java.util.Collections;
 
-import static main.java.colorpicker.handlers.LaunchRequestHandler.rezepte;
 
 
 public class Test {

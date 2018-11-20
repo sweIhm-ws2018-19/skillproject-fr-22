@@ -111,7 +111,6 @@
             }
           ],
           "samples": [
-            "ich habe {Ingredient} {Ingredient} {Ingredient}",
             "Ich möchte eine Suppe mit {Ingredient} machen",
             "Ich möchte eine Suppe mit {Ingredient} kochen ",
             "ich habe {Ingredient} ",
