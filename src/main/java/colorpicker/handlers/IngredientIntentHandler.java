@@ -77,7 +77,7 @@ public class IngredientIntentHandler implements RequestHandler {
 
         ResponseBuilder responseBuilder = input.getResponseBuilder();
 
-        responseBuilder.withSimpleCard("ColorSession", speechText)
+        responseBuilder.withSimpleCard("Zutatenliste", speechText)
                 .withSpeech(speechText)
                 .withShouldEndSession(false);
 
