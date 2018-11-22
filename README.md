@@ -30,12 +30,12 @@ Auch Hobby-Köchen mit mehr Erfahrung soll die Anwendung eine interessante Alter
 
 ### Setup
 
-_hier können wir später ergänzen ob man eventuell beim skill auf etwas achten muss.
+_hier können wir später ergänzen ob man eventuell beim skill auf etwas achten muss._
 
 ### Anwendung
 
-_hier beispiele für anwendung, was man sagen soll etc.
+_hier beispiele für anwendung, was man sagen soll etc._
 
 ### Features
 
-_welche zusatzfunktionen hat der soup it skill?
+_welche zusatzfunktionen hat der soup it skill?_
