@@ -16,4 +16,4 @@ script:
 #  region: "us-east-1"
 #  role: "arn:aws:iam::003574095462:role/lambda_basic_execution"
 #  runtime: "java8"
-#  handler_name: "ColorPickerStreamHandler"
+#  handler_name: "SoupITStreamHandler"

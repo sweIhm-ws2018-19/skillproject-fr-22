@@ -24,7 +24,7 @@ import com.amazon.ask.Skills;
 import main.java.soupit.handlers.*;
 
 
-public class ColorPickerStreamHandler extends SkillStreamHandler {
+public class SoupITStreamHandler extends SkillStreamHandler {
 
 
 
@@ -46,7 +46,7 @@ public class ColorPickerStreamHandler extends SkillStreamHandler {
                 .build();
     }
 
-    public ColorPickerStreamHandler() {
+    public SoupITStreamHandler() {
         super(getSkill());
     }
 
