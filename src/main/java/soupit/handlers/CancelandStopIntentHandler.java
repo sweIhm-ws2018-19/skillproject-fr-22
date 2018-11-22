@@ -11,37 +11,27 @@
      the specific language governing permissions and limitations under the License.
 */
 
-package main.java.colorpicker.handlers;
+package main.java.soupit.handlers;
 
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
-import com.amazon.ask.model.LaunchRequest;
 import com.amazon.ask.model.Response;
-import main.java.colorpicker.HilfsKlassen.RezeptArrayList;
-import main.java.colorpicker.Lists.Strings;
-import main.java.colorpicker.HilfsKlassen.Rezepte.KartoffelcremeSuppe;
 
 import java.util.Optional;
 
-import static com.amazon.ask.request.Predicates.requestType;
+import static com.amazon.ask.request.Predicates.intentName;
 
-public class LaunchRequestHandler implements RequestHandler {
-    public static final RezeptArrayList REZEPT_ARRAY_LIST = new RezeptArrayList(new KartoffelcremeSuppe());
-
-
+public class CancelandStopIntentHandler implements RequestHandler {
     @Override
     public boolean canHandle(HandlerInput input) {
-        return input.matches(requestType(LaunchRequest.class));
+        return input.matches(intentName("AMAZON.StopIntent").or(intentName("AMAZON.CancelIntent")));
     }
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        String speechText = Strings.WELCOME;
-        String repromptText = Strings.REPROMPT;
         return input.getResponseBuilder()
-                .withSimpleCard("Soup IT", speechText)
-                .withSpeech(speechText)
-                .withReprompt(repromptText)
+                .withSpeech("Halt die fresse")
+                .withSimpleCard("ColorSession", "Halt die fresse")
                 .build();
     }
 }

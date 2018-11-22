@@ -11,17 +11,17 @@
      the specific language governing permissions and limitations under the License.
 */
 
-package main.java.colorpicker;
+package main.java.soupit;
 
 import com.amazon.ask.Skill;
 import com.amazon.ask.SkillStreamHandler;
 import com.amazon.ask.Skills;
-//import main.java.colorpicker.HilfsKlassen.RezeptArrayList.KartoffelcremeSuppe;
-//import main.java.colorpicker.HilfsKlassen.Rezept;
-//import main.java.colorpicker.HilfsKlassen.RezeptArrayList.KartoffelcremeSuppe;
-//import main.java.colorpicker.HilfsKlassen.HilfsKlassen;
-//import main.java.colorpicker.HilfsKlassen.Zutat;
-import main.java.colorpicker.handlers.*;
+//import main.java.soupit.HilfsKlassen.RezeptArrayList.KartoffelcremeSuppe;
+//import main.java.soupit.HilfsKlassen.Rezept;
+//import main.java.soupit.HilfsKlassen.RezeptArrayList.KartoffelcremeSuppe;
+//import main.java.soupit.HilfsKlassen.HilfsKlassen;
+//import main.java.soupit.HilfsKlassen.Zutat;
+import main.java.soupit.handlers.*;
 
 
 public class ColorPickerStreamHandler extends SkillStreamHandler {

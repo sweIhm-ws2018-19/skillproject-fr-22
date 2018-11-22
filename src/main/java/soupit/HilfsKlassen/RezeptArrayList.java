@@ -1,4 +1,4 @@
-package main.java.colorpicker.HilfsKlassen;
+package main.java.soupit.HilfsKlassen;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,12 +1,10 @@
-package main.java.colorpicker;
+package main.java.soupit;
 
-import main.java.colorpicker.HilfsKlassen.Rezepte.KartoffelcremeSuppe;
-import main.java.colorpicker.HilfsKlassen.Rezept;
-import main.java.colorpicker.HilfsKlassen.RezeptArrayList;
-import main.java.colorpicker.HilfsKlassen.Zutat;
-import main.java.colorpicker.HilfsKlassen.ZutatMengeEinheit;
-
-import javax.sound.midi.Soundbank;
+import main.java.soupit.HilfsKlassen.Rezepte.KartoffelcremeSuppe;
+import main.java.soupit.HilfsKlassen.Rezept;
+import main.java.soupit.HilfsKlassen.RezeptArrayList;
+import main.java.soupit.HilfsKlassen.Zutat;
+import main.java.soupit.HilfsKlassen.ZutatMengeEinheit;
 
 
 public class Test {

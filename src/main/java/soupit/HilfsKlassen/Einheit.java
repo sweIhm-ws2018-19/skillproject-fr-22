@@ -1,4 +1,4 @@
-package main.java.colorpicker.HilfsKlassen;
+package main.java.soupit.HilfsKlassen;
 
 public class Einheit {
     public final String einheit;

@@ -1,6 +1,6 @@
-package main.java.colorpicker.HilfsKlassen.Rezepte;
+package main.java.soupit.HilfsKlassen.Rezepte;
 
-import main.java.colorpicker.HilfsKlassen.*;
+import main.java.soupit.HilfsKlassen.*;
 
 public class KartoffelcremeSuppe extends Rezept {
 

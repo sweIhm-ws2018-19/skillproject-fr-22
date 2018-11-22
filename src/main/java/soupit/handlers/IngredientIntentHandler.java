@@ -1,4 +1,4 @@
-package main.java.colorpicker.handlers;
+package main.java.soupit.handlers;
 
 
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
@@ -9,17 +9,17 @@ import com.amazon.ask.model.Request;
 import com.amazon.ask.model.Response;
 import com.amazon.ask.model.Slot;
 import com.amazon.ask.response.ResponseBuilder;
-import main.java.colorpicker.HilfsKlassen.ZutatMengeEinheit;
-import main.java.colorpicker.Lists.Strings;
-import main.java.colorpicker.HilfsKlassen.Rezept;
-import main.java.colorpicker.HilfsKlassen.Zutat;
+import main.java.soupit.HilfsKlassen.ZutatMengeEinheit;
+import main.java.soupit.Lists.Strings;
+import main.java.soupit.HilfsKlassen.Rezept;
+import main.java.soupit.HilfsKlassen.Zutat;
 
 import java.util.Collections;
 import java.util.Map;
 import java.util.Optional;
 
 import static com.amazon.ask.request.Predicates.intentName;
-import static main.java.colorpicker.handlers.LaunchRequestHandler.REZEPT_ARRAY_LIST;
+import static main.java.soupit.handlers.LaunchRequestHandler.REZEPT_ARRAY_LIST;
 
 public class IngredientIntentHandler implements RequestHandler {
     @Override

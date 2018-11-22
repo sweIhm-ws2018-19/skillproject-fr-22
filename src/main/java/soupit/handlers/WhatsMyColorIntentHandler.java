@@ -11,15 +11,13 @@
      the specific language governing permissions and limitations under the License.
 */
 
-package main.java.colorpicker.handlers;
+package main.java.soupit.handlers;
 
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
 
 import java.util.Optional;
-
-import static com.amazon.ask.request.Predicates.intentName;
 
 public class WhatsMyColorIntentHandler implements RequestHandler {
     public static final String COLOR_KEY = "COLOR";

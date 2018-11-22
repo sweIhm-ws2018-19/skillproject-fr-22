@@ -11,26 +11,37 @@
      the specific language governing permissions and limitations under the License.
 */
 
-package main.java.colorpicker.handlers;
+package main.java.soupit.handlers;
 
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
+import com.amazon.ask.model.LaunchRequest;
 import com.amazon.ask.model.Response;
-import com.amazon.ask.model.SessionEndedRequest;
+import main.java.soupit.HilfsKlassen.RezeptArrayList;
+import main.java.soupit.Lists.Strings;
+import main.java.soupit.HilfsKlassen.Rezepte.KartoffelcremeSuppe;
 
 import java.util.Optional;
 
 import static com.amazon.ask.request.Predicates.requestType;
 
-public class SessionEndedRequestHandler implements RequestHandler {
+public class LaunchRequestHandler implements RequestHandler {
+    public static final RezeptArrayList REZEPT_ARRAY_LIST = new RezeptArrayList(new KartoffelcremeSuppe());
+
+
     @Override
     public boolean canHandle(HandlerInput input) {
-        return input.matches(requestType(SessionEndedRequest.class));
+        return input.matches(requestType(LaunchRequest.class));
     }
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        // any cleanup logic goes here
-        return input.getResponseBuilder().build();
+        String speechText = Strings.WELCOME;
+        String repromptText = Strings.REPROMPT;
+        return input.getResponseBuilder()
+                .withSimpleCard("Soup IT", speechText)
+                .withSpeech(speechText)
+                .withReprompt(repromptText)
+                .build();
     }
 }

@@ -1,4 +1,4 @@
-package main.java.colorpicker.Lists;
+package main.java.soupit.Lists;
 
 public class Strings {
     public static final String TEMPLATE = "";
