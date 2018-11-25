@@ -1,29 +1,35 @@
-{"rezepte": {
-  "zutaten": {
-    "kartoffel": {
-      "name": "kartoffel",
-      "geschlecht":"f"
-    },
-    "zwiebel": {
-      "name": "zwiebel",
-      "geschlecht":"f"
-    }
-  },
-  "kartoffelcremesuppe":{
-    "id":"",
-    "zutatenliste": {
-      "kartoffel":{
-        "Einheit":"",
-        "Menge":""
+{
+  "hey": "penis",
+  "zutat": [{
+    "kartoffel":"kartoffel",
+    "pizza":"pizza",
+    "spinat":"salz"
+  }],
+  "rezepte": {
+    "zutaten": {
+      "kartoffel": {
+        "name": "kartoffel",
+        "geschlecht": "f"
+      },
+      "zwiebel": {
+        "name": "zwiebel",
+        "geschlecht": "f"
       }
     },
-    "schritte": {
-      "schritt_1": "schäle ",
-      "schritt_2": "sun1"
+    "kartoffelcremesuppe": {
+      "id": "",
+      "zutatenliste": {
+        "kartoffel": {
+          "Einheit": "",
+          "Menge": ""
+        }
+      },
+      "schritte": {
+        "schritt_1": "schäle ",
+        "schritt_2": "sun1"
+      }
+    },
+    "rezept2": {
     }
-  },
-  "rezept2":{
-
   }
-
-}}
+}
