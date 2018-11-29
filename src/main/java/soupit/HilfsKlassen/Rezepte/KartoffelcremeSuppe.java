@@ -4,8 +4,6 @@ import main.java.soupit.HilfsKlassen.*;
 
 public class KartoffelcremeSuppe extends Rezept {
 
-
-
     static final ZutatMengeEinheit kartoffeln =  new ZutatMengeEinheit(ZutatenListe.KARTOFFEL.get(),125, EinheitenListe.GRAMM.get());
     static final ZutatMengeEinheit zwiebeln   =  new ZutatMengeEinheit(ZutatenListe.ZWIEBEL.get(),1/4d, EinheitenListe.NULL.get());
     static final ZutatMengeEinheit gemüseBrühe = new ZutatMengeEinheit(ZutatenListe.GEMÜSEBRÜHE.get(),110, EinheitenListe.MILLILITER.get());
@@ -17,13 +15,8 @@ public class KartoffelcremeSuppe extends Rezept {
     static final ZutatMengeEinheit muskat = new ZutatMengeEinheit(ZutatenListe.MUSKAT.get(),1/2d, EinheitenListe.PRISE.get());
     static final ZutatMengeEinheit schinkenwürfel = new ZutatMengeEinheit(ZutatenListe.SCHINKENWÜRFEL.get(),50, EinheitenListe.GRAMM.get());
 
-
-
-
     public KartoffelcremeSuppe(){
         super("KartoffelcremeSuppe", kartoffeln,zwiebeln,gemüseBrühe,öl,sahne,petersilie,salz,pfeffer,muskat);
         super.addOptions(schinkenwürfel);
     }
-
-
 }
