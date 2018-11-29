@@ -16,28 +16,6 @@
           "samples": []
         },
         {
-          "name": "MyColorIsIntent",
-          "slots": [
-            {
-              "name": "Color",
-              "type": "LIST_OF_COLORS"
-            }
-          ],
-          "samples": [
-            " Meine Lieblingsfarbe ist {Color}",
-            " Ich mag {Color}"
-          ]
-        },
-        {
-          "name": "WhatsMyColorIntent",
-          "slots": [],
-          "samples": [
-            "was ist meine Lieblingsfarbe",
-            "welche Farbe mag ich am liebsten",
-            "sag mir meine Lieblingsfarbe"
-          ]
-        },
-        {
           "name": "AMAZON.PauseIntent",
           "samples": []
         },
@@ -90,19 +68,6 @@
           "samples": []
         },
         {
-          "name": "TestIntent",
-          "slots": [
-            {
-              "name": "Sickness",
-              "type": "LIST_OF_SICKNESSES"
-            }
-          ],
-          "samples": [
-            "teste mich auf {Sickness}",
-            "habe ich {Sickness} "
-          ]
-        },
-        {
           "name": "IngredientIntent",
           "slots": [
             {
@@ -111,6 +76,7 @@
             }
           ],
           "samples": [
+            "{Ingredient}",
             "Ich möchte eine Suppe mit {Ingredient} machen",
             "Ich möchte eine Suppe mit {Ingredient} kochen ",
             "ich habe {Ingredient} ",
@@ -118,71 +84,7 @@
           ]
         }
       ],
-      "types": [
-        {
-          "name": "LIST_OF_COLORS",
-          "values": [
-            {
-              "name": {
-                "value": "grÃ¼n"
-              }
-            },
-            {
-              "name": {
-                "value": "blau"
-              }
-            },
-            {
-              "name": {
-                "value": "lila"
-              }
-            },
-            {
-              "name": {
-                "value": "rot"
-              }
-            },
-            {
-              "name": {
-                "value": "orange"
-              }
-            },
-            {
-              "name": {
-                "value": "rosa"
-              }
-            },
-            {
-              "name": {
-                "value": "tÃ¼rkis"
-              }
-            },
-            {
-              "name": {
-                "value": "gelb"
-              }
-            }
-          ]
-        },
-        {
-          "name": "LIST_OF_SICKNESSES",
-          "values": [
-            {
-              "name": {
-                "value": "cancer"
-              }
-            },
-            {
-              "name": {
-                "value": "aids",
-                "synonyms": [
-                  "hiv"
-                ]
-              }
-            }
-          ]
-        }
-      ]
+      "types": []
     }
   }
 }
