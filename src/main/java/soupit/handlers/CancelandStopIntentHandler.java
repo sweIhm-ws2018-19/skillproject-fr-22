@@ -30,8 +30,9 @@ public class CancelandStopIntentHandler implements RequestHandler {
     @Override
     public Optional<Response> handle(HandlerInput input) {
         return input.getResponseBuilder()
-                .withSpeech("Halt die fresse")
-                .withSimpleCard("ColorSession", "Halt die fresse")
+                .withSpeech("Bis zum nächsten Mal")
+                .withSimpleCard("ColorSession", "Bis zum nächsten Mal")
+                .withShouldEndSession(true)
                 .build();
     }
 }
