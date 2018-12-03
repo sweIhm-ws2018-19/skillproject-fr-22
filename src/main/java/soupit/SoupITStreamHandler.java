@@ -26,12 +26,9 @@ import main.java.soupit.handlers.*;
 
 public class SoupITStreamHandler extends SkillStreamHandler {
 
-
-
     private static Skill getSkill() {
 
-        return Skills.standard()
-                .addRequestHandlers(
+        return Skills.standard().addRequestHandlers(
                         new LaunchRequestHandler(),
                         new CancelandStopIntentHandler(),
                         new SessionEndedRequestHandler(),

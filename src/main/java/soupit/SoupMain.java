@@ -15,7 +15,9 @@ import org.json.simple.parser.*;
 
 
 
-public class Test {
+public class SoupMain {
+
+
     public static final RezeptArrayList REZEPT_ARRAY_LIST = new RezeptArrayList(new KartoffelcremeSuppe());
 
 
