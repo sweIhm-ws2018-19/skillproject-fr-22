@@ -3,6 +3,9 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>alexa-skills-kit-samples</groupId>
     <artifactId>colorpicker</artifactId>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
     <packaging>jar</packaging>
     <version>1.0</version>
     <name>colorpicker</name>
