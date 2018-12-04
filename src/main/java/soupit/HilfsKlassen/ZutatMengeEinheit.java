@@ -30,7 +30,7 @@ public class ZutatMengeEinheit {
                     if(menge == 0.5) string = "eine halbe";
                     else if (menge == 1/3) string = "eine drittel";
                     else string = "eine " +(int)(1/menge)+"tel";
-            }else {
+                }else {
                     if(menge - (int) menge == 0 ) string =""+(int)menge;
                     else string = ""+menge;                                               //TODO
                 }                                                    //TODO 2 1/3 != 2.33333333 !
@@ -78,7 +78,7 @@ public class ZutatMengeEinheit {
                 }                                                //TODO
             }else{
                 if(menge == 1) string = "ein";
-                else if(menge< 1){
+                else if(menge < 1){
                     if (menge == 0.5) string = "ein halbes";
                     else if (menge == 1/3) string = "ein drittel";
                     else string = "ein " +(int)(1/menge)+"tel";
