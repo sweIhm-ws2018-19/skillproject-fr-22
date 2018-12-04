@@ -36,7 +36,7 @@ public class LaunchRequestHandler implements RequestHandler {
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        String speechText = Strings.WELCOME;
+        String speechText = "hallo  <say-as interpret-as=\"fraction\">1/3</say-as>. ";//Strings.WELCOME;
         String repromptText = Strings.REPROMPT;
         return input.getResponseBuilder()
                 .withSimpleCard("Soup IT", speechText)
