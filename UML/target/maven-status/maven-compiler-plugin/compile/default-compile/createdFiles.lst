@@ -1,8 +1,0 @@
-main\java\colorpicker\handlers\WhatsMyColorIntentHandler.class
-main\java\colorpicker\handlers\SessionEndedRequestHandler.class
-main\java\colorpicker\handlers\CancelandStopIntentHandler.class
-main\java\colorpicker\handlers\HelpIntentHandler.class
-main\java\colorpicker\handlers\LaunchRequestHandler.class
-main\java\colorpicker\ColorPickerStreamHandler.class
-main\java\colorpicker\handlers\FallbackIntentHandler.class
-main\java\colorpicker\handlers\MyColorIsIntentHandler.class
