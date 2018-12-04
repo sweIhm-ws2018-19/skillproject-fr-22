@@ -2,8 +2,8 @@ package main.java.soupit.HilfsKlassen;
 
 public class ZutatMengeEinheit {
     Zutat zutat;
-    double menge;
-    Einheit einheit;
+    private double menge;
+    private Einheit einheit;
 
     public ZutatMengeEinheit(Zutat zutat, double menge, Einheit einheit) {
         this.zutat = zutat;

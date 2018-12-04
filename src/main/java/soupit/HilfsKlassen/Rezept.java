@@ -1,7 +1,7 @@
 package main.java.soupit.HilfsKlassen;
 
 import java.util.Arrays;
-
+// kein test da abstrakt
 public abstract class Rezept {
     public ZutatMengeEinheit[] zumeng;
     String name;

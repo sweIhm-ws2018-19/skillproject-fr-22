@@ -2,12 +2,14 @@ package main.java.soupit.handlers;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
-class HelpIntentHandlerTest {
+class HelpIntentHandlerTest extends HelpIntentHandler{
 
     @Test
     void canHandleTest() {
+        String test = "test";
+        assertFalse(super.canHandle(null));
     }
 
     @Test
