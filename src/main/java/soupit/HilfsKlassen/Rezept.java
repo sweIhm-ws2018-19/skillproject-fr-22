@@ -2,7 +2,7 @@ package main.java.soupit.HilfsKlassen;
 
 import java.util.Arrays;
 
-public abstract class Rezept {
+public class Rezept {
     public ZutatMengeEinheit[] zumeng;
     String name;
     ZutatMengeEinheit[] optionaleZutaten;

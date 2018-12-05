@@ -17,16 +17,24 @@ import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.LaunchRequest;
 import com.amazon.ask.model.Response;
+import com.sun.javafx.collections.MappingChange;
 import main.java.soupit.HilfsKlassen.RezeptArrayList;
 import main.java.soupit.Lists.Strings;
 import main.java.soupit.HilfsKlassen.Rezepte.KartoffelcremeSuppe;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
+import java.io.FileReader;
+import java.util.Iterator;
+import java.util.Map;
 import java.util.Optional;
 
 import static com.amazon.ask.request.Predicates.requestType;
 
 public class LaunchRequestHandler implements RequestHandler {
     public static final RezeptArrayList REZEPT_ARRAY_LIST = new RezeptArrayList(new KartoffelcremeSuppe());
+
 
 
     @Override
@@ -36,12 +44,14 @@ public class LaunchRequestHandler implements RequestHandler {
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        String speechText = "hallo  <say-as interpret-as=\"fraction\">1/3</say-as>. ";//Strings.WELCOME;
-        String repromptText = Strings.REPROMPT;
+
+        String speechText = Strings.WELCOME;
         return input.getResponseBuilder()
                 .withSimpleCard("Soup IT", speechText)
                 .withSpeech(speechText)
-                .withReprompt(repromptText)
                 .build();
     }
+
+
 }
+
