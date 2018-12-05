@@ -1,6 +1,9 @@
 package main.java.soupit.HilfsKlassen.Rezepte;
 
-import main.java.soupit.HilfsKlassen.*;
+import main.java.soupit.HilfsKlassen.EinheitenListe;
+import main.java.soupit.HilfsKlassen.Rezept;
+import main.java.soupit.HilfsKlassen.ZutatMengeEinheit;
+import main.java.soupit.HilfsKlassen.ZutatenListe;
 
 public class KartoffelcremeSuppe extends Rezept {
 

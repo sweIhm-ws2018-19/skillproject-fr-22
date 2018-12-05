@@ -43,7 +43,9 @@ public class IngredientIntentHandler implements RequestHandler {
         // Check for favorite color and create output to user.
         if (ingredientSlot != null) {
             // Store the user's favorite color in the Session and create response.
-            String[] strinGredients = ingredientSlot.getValue().split("\\s");
+            //String[] strinGredients = ingredientSlot.getValue().split("\\s");
+
+            String[] strinGredients = {"kartoffeln"};
             Zutat[] ingredients = new Zutat[strinGredients.length];
             for(int i = 0;i<strinGredients.length; i++){
                 ingredients[i] = new Zutat(strinGredients[i],"f");
@@ -52,16 +54,18 @@ public class IngredientIntentHandler implements RequestHandler {
             input.getAttributesManager().setSessionAttributes(Collections.singletonMap("Ingredient", ingredients));
             Rezept bestRecipe  = REZEPT_ARRAY_LIST.getBestFitting(ingredients);
             if (bestRecipe != null){
-                speechText = "mit diesen Zutaten kannst du eine "+bestRecipe+ " kochen ";
+                speechText = "mit diesen Zutaten kannst du eine "+bestRecipe+ " kochen. ";
                 speechText += "dafür brauchst du ";
-                for(ZutatMengeEinheit zum:bestRecipe.zumeng){
-                    speechText += zum.mengeToString() +" ";
-                    speechText += zum.einheitToString() +" ";
-                    speechText += zum.zutatToString() +" ";
+                for(ZutatMengeEinheit zum:bestRecipe.zumeng) {
+                    speechText += zum.mengeToString() + " ";
+                    speechText += zum.einheitToString() + " ";
+                    speechText += zum.zutatToString() + " <break time=\"1s\"/> ";
+
                 }
             }else{
                 speechText = "Ich habe leider kein Rezept mit diesen Zutaten auf Lager. ich werde daran arbeiten! ";
             }
+
 
 
 

@@ -1,0 +1,30 @@
+{
+  "zutaten": {
+    "kartoffel": "f",
+    "zwiebel": "f"
+  },
+  "einheiten": {
+    "gramm":"n"
+  },
+  "rezepte": {
+    "kartoffelcremesuppe": {
+      "zutaten": {
+        "kartoffel": {
+          "einheit": "gramm",
+          "menge": "0.5"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.3"
+        }
+      },
+      "schritte": {
+        "schritt_1": "schäle ",
+        "schritt_2": "sun1"
+      }
+    },
+    "rezept2": {
+    }
+  }
+}
+
