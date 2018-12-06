@@ -59,8 +59,8 @@
         <sourceDirectory>src</sourceDirectory>
         <resources>
             <resource>
-                <directory>src/main/java/soupit/handlers</directory>
-                <targetPath>main/java/soupit/handlers</targetPath>
+                <directory>data</directory>
+                <targetPath>data</targetPath>
                 <includes>
                     <include>**/*.json</include>
                 </includes>

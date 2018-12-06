@@ -56,10 +56,14 @@ public class IngredientIntentHandler implements RequestHandler {
             if (bestRecipe != null){
                 speechText = "mit diesen Zutaten kannst du eine "+bestRecipe+ " kochen. ";
                 speechText += "dafür brauchst du ";
-                for(ZutatMengeEinheit zum:bestRecipe.zumeng) {
+                for(int i =0; i<bestRecipe.zumeng.length; i++) {
+                    ZutatMengeEinheit zum = bestRecipe.zumeng[i];
+                    if(i == bestRecipe.zumeng.length -1) speechText += " und ";
                     speechText += zum.mengeToString() + " ";
                     speechText += zum.einheitToString() + " ";
-                    speechText += zum.zutatToString() + " <break time=\"1s\"/> ";
+                    speechText += zum.zutatToString() + " <break time=\"1s\"/>";
+                    if (i < bestRecipe.zumeng.length -2) speechText += ", ";
+                    if(i == bestRecipe.zumeng.length -1) speechText += ". ";
 
                 }
             }else{

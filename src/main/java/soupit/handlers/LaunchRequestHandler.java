@@ -18,12 +18,10 @@ import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.LaunchRequest;
 import com.amazon.ask.model.Response;
 import main.java.soupit.HilfsKlassen.*;
-import main.java.soupit.HilfsKlassen.Rezepte.KartoffelcremeSuppe;
 import main.java.soupit.Lists.Strings;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-import java.io.FileReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Iterator;
@@ -49,7 +47,7 @@ public class LaunchRequestHandler implements RequestHandler {
     public Optional<Response> handle(HandlerInput input) {
 
         try {
-            InputStream stream = getClass().getClassLoader().getResourceAsStream("main/java/soupit/handlers/rezepte.json");
+            InputStream stream = getClass().getClassLoader().getResourceAsStream("data/rezepte.json");
             Object obj = new JSONParser().parse(new InputStreamReader(stream));
             JSONObject jsonObject = (JSONObject) obj;
             Map rezepte = (Map) jsonObject.get("rezepte");
