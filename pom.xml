@@ -8,7 +8,7 @@
     </properties>
     <packaging>jar</packaging>
     <version>1.0</version>
-    <name>colorpicker</name>
+    <name>soupit</name>
     <url>http://developer.amazon.com/ask</url>
     <licenses>
         <license>
@@ -37,7 +37,6 @@
             <version>4.11</version>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>com.amazon.alexa</groupId>
             <artifactId>ask-sdk</artifactId>
@@ -60,10 +59,14 @@
         <sourceDirectory>src</sourceDirectory>
         <resources>
             <resource>
-                <directory>src/Json</directory>
+                <directory>src/main/java/soupit/handlers</directory>
+                <targetPath>main/java/soupit/handlers</targetPath>
                 <includes>
                     <include>**/*.json</include>
                 </includes>
+                <excludes>
+                    <exclude></exclude>
+                </excludes>
             </resource>
         </resources>
         <pluginManagement>

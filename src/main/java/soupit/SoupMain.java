@@ -3,9 +3,12 @@ package main.java.soupit;
 import main.java.soupit.HilfsKlassen.*;
 
 import java.io.FileReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Iterator;
 import java.util.Map;
 
+import main.java.soupit.handlers.LaunchRequestHandler;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.*;
 
@@ -21,7 +24,9 @@ public class SoupMain {
     public static void main(String... args) {
 
         try {
-            Object obj = new JSONParser().parse(new FileReader("src\\main\\java\\rezepte.json"));
+
+            InputStream stream = SoupMain.class.getClassLoader().getResourceAsStream("/data/rezepte.json");
+            Object obj = new JSONParser().parse(new InputStreamReader(stream));
             JSONObject jsonObject = (JSONObject) obj;
             Map rezepte = (Map) jsonObject.get("rezepte");
             Map zutatenMitGeschlecht = (Map) jsonObject.get("zutaten");
@@ -30,7 +35,7 @@ public class SoupMain {
                 addRecipes(s, rezepte,zutatenMitGeschlecht, einheitenMitGeschlecht);
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println(e.getStackTrace());
         }
 
         String[] strinGredients = {"kartoffeln"};
@@ -54,6 +59,7 @@ public class SoupMain {
             speechText = "Ich habe leider kein Rezept mit diesen Zutaten auf Lager. ich werde daran arbeiten! ";
         }
 
+        System.out.println(LaunchRequestHandler.class.getClassLoader().getResourceAsStream("data/rezepte.json"));
         System.out.println(speechText);
 
     }

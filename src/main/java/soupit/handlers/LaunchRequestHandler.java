@@ -18,14 +18,18 @@ import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.LaunchRequest;
 import com.amazon.ask.model.Response;
 import main.java.soupit.HilfsKlassen.*;
+import main.java.soupit.HilfsKlassen.Rezepte.KartoffelcremeSuppe;
 import main.java.soupit.Lists.Strings;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 import java.io.FileReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Optional;
+
 
 import static com.amazon.ask.request.Predicates.requestType;
 
@@ -43,9 +47,10 @@ public class LaunchRequestHandler implements RequestHandler {
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        String speechText = Strings.WELCOME;
+
         try {
-            Object obj = new JSONParser().parse(new FileReader("main\\java\\rezepte.json"));
+            InputStream stream = getClass().getClassLoader().getResourceAsStream("main/java/soupit/handlers/rezepte.json");
+            Object obj = new JSONParser().parse(new InputStreamReader(stream));
             JSONObject jsonObject = (JSONObject) obj;
             Map rezepte = (Map) jsonObject.get("rezepte");
             Map zutatenMitGeschlecht = (Map) jsonObject.get("zutaten");
@@ -53,11 +58,10 @@ public class LaunchRequestHandler implements RequestHandler {
             for (String s : alleRezepte) {
                 addRecipes(s, rezepte,zutatenMitGeschlecht, einheitenMitGeschlecht);
             }
-            speechText = (String) einheitenMitGeschlecht.get("kartoffel");
         } catch (Exception e) {
-            speechText = e.getMessage();
+           e.getMessage();
         }
-
+        String speechText = Strings.WELCOME;
         return input.getResponseBuilder()
                 .withSimpleCard("Soup IT", speechText)
                 .withSpeech(speechText)
