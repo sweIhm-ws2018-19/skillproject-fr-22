@@ -17,7 +17,7 @@ public class SoupMain {
 
 
     public static final RezeptArrayList REZEPT_ARRAY_LIST = new RezeptArrayList();
-    public static final String[] alleRezepte = {"kartoffelcremesuppe"};
+    public static final String[] alleRezepte = {"kartoffelcremesuppe","möhrencremesuppe"};
 
 
 
@@ -38,7 +38,7 @@ public class SoupMain {
             System.out.println(e.getStackTrace());
         }
 
-        String[] strinGredients = {"kartoffeln"};
+        String[] strinGredients = {"möhren"};
         Zutat[] ingredients = new Zutat[strinGredients.length];
         for(int i = 0;i<strinGredients.length; i++){
             ingredients[i] = new Zutat(strinGredients[i],"f");

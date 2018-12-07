@@ -43,9 +43,7 @@ public class IngredientIntentHandler implements RequestHandler {
         // Check for favorite color and create output to user.
         if (ingredientSlot != null) {
             // Store the user's favorite color in the Session and create response.
-            //String[] strinGredients = ingredientSlot.getValue().split("\\s");
-
-            String[] strinGredients = {"kartoffeln"};
+            String[] strinGredients = ingredientSlot.getValue().split("\\s");
             Zutat[] ingredients = new Zutat[strinGredients.length];
             for(int i = 0;i<strinGredients.length; i++){
                 ingredients[i] = new Zutat(strinGredients[i],"f");
