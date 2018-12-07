@@ -1,5 +1,3 @@
-package soupit.HilfsKlassen;
-
 import org.junit.jupiter.api.Test;
 
 class ZutatTest {

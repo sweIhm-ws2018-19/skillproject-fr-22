@@ -1,4 +1,3 @@
-
 class EinheitTest {
 
     Einheit test1 = new Einheit(null,null);
