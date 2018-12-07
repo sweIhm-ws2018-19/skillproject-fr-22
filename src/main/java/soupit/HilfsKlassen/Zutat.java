@@ -1,4 +1,4 @@
-package main.java.soupit.HilfsKlassen;
+package soupit.HilfsKlassen;
 
 public class Zutat {
     public final String zutat;

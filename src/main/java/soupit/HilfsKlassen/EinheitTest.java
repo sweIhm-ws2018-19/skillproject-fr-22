@@ -1,4 +1,6 @@
-package main.java.soupit.HilfsKlassen;
+package soupit.HilfsKlassen;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class EinheitTest {
 

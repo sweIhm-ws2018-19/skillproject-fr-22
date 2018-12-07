@@ -1,4 +1,4 @@
-package main.java.soupit.HilfsKlassen;
+package soupit.HilfsKlassen;
 
 
 public enum ZutatenListe {

@@ -1,4 +1,4 @@
-package main.java.soupit.HilfsKlassen;
+package soupit.HilfsKlassen;
 
 public class Einheit {
     public final String einheit;

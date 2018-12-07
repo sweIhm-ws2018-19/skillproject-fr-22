@@ -56,7 +56,6 @@
     </dependencies>
 
     <build>
-        <sourceDirectory>src</sourceDirectory>
         <resources>
             <resource>
                 <directory>data</directory>
