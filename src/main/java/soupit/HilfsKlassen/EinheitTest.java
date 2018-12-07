@@ -1,7 +1,5 @@
 package main.java.soupit.HilfsKlassen;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class EinheitTest {
 
     Einheit test1 = new Einheit(null,null);

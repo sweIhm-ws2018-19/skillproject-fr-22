@@ -23,12 +23,12 @@ public class ZutatMengeEinheit {
 
     public String mengeToString() {
         String string;
-        if (einheit != EinheitenListe.NULL.get()) {
+        if (! einheit.einheit.equals("null")) {
             if (einheit.grammatGeschlecht.equals("f")){
                 if(menge == 1) string = "eine";
                 else if (menge<1){
                     if(menge == 0.5) string = "eine halbe";
-                    else if (menge == 1/3) string = "eine drittel";
+                    else if (menge == 0.3) string = "eine drittel";
                     else string = "eine " +(int)(1/menge)+"tel";
                 }else {
                     if(menge - (int) menge == 0 ) string =""+(int)menge;
@@ -38,7 +38,7 @@ public class ZutatMengeEinheit {
                 if(menge == 1 )string = "ein";
                 else if(menge<1){
                     if(menge== 0.5)string = "einen halben";
-                    else if(menge == 1/3) string = "einen drittel";
+                    else if(menge == 0.3) string = "einen drittel";
                     else string = "einen " +(int)(1/menge)+"tel";
                 }else {
                     if(menge - (int) menge == 0 ) string =""+(int)menge;
@@ -48,7 +48,7 @@ public class ZutatMengeEinheit {
                 if(menge == 1) string = "ein";
                 else if(menge< 1){
                     if (menge == 0.5) string = "ein halbes";
-                    else if (menge == 1/3) string = "ein drittel";
+                    else if (menge == 0.3) string = "ein drittel";
                     else string = "ein " +(int)(1/menge)+"tel";
                 }else {
                     if(menge - (int) menge == 0 ) string =""+(int)menge;
@@ -60,7 +60,7 @@ public class ZutatMengeEinheit {
                 if(menge == 1) string = "eine";
                 else if (menge<1){
                     if(menge == 0.5) string = "eine halbe";
-                    else if (menge == 1/3) string = "eine drittel";
+                    else if (menge == 0.3) string = "eine drittel";
                     else string = "eine " +(int)(1/menge)+"tel";
                 }else {
                     if(menge - (int) menge == 0 ) string =""+(int)menge;
@@ -70,7 +70,7 @@ public class ZutatMengeEinheit {
                 if(menge == 1 )string = "ein";
                 else if(menge<1){
                     if(menge== 0.5)string = "einen halben";
-                    else if(menge == 1/3) string = "einen drittel";
+                    else if(menge == 0.3) string = "einen drittel";
                     else string = "einen " +(int)(1/menge)+"tel";
                 }else {
                     if(menge - (int) menge == 0 ) string =""+(int)menge;
@@ -80,7 +80,7 @@ public class ZutatMengeEinheit {
                 if(menge == 1) string = "ein";
                 else if(menge < 1){
                     if (menge == 0.5) string = "ein halbes";
-                    else if (menge == 1/3) string = "ein drittel";
+                    else if (menge == 0.3) string = "ein drittel";
                     else string = "ein " +(int)(1/menge)+"tel";
                 }else {
                     if(menge - (int) menge == 0 ) string =""+(int)menge;
@@ -92,6 +92,8 @@ public class ZutatMengeEinheit {
     }
 
     public String einheitToString(){
+        if (einheit.einheit.equals("null")) return "";
+        else
         return einheit.toString();
     }
 }

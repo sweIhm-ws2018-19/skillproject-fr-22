@@ -17,16 +17,25 @@ import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.LaunchRequest;
 import com.amazon.ask.model.Response;
-import main.java.soupit.HilfsKlassen.RezeptArrayList;
+import main.java.soupit.HilfsKlassen.*;
 import main.java.soupit.Lists.Strings;
-import main.java.soupit.HilfsKlassen.Rezepte.KartoffelcremeSuppe;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.Iterator;
+import java.util.Map;
 import java.util.Optional;
+
 
 import static com.amazon.ask.request.Predicates.requestType;
 
 public class LaunchRequestHandler implements RequestHandler {
-    public static final RezeptArrayList REZEPT_ARRAY_LIST = new RezeptArrayList(new KartoffelcremeSuppe());
+    public static final RezeptArrayList REZEPT_ARRAY_LIST = new RezeptArrayList();
+    public static final String[] alleRezepte = {"kartoffelcremesuppe","möhrencremesuppe"};
+
+
 
 
     @Override
@@ -36,12 +45,55 @@ public class LaunchRequestHandler implements RequestHandler {
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        String speechText = "hallo  <say-as interpret-as=\"fraction\">1/3</say-as>. ";//Strings.WELCOME;
-        String repromptText = Strings.REPROMPT;
+
+        try {
+            InputStream stream = getClass().getClassLoader().getResourceAsStream("data/rezepte.json");
+            Object obj = new JSONParser().parse(new InputStreamReader(stream));
+            JSONObject jsonObject = (JSONObject) obj;
+            Map rezepte = (Map) jsonObject.get("rezepte");
+            Map zutatenMitGeschlecht = (Map) jsonObject.get("zutaten");
+            Map einheitenMitGeschlecht = (Map) jsonObject.get("einheiten");
+            for (String s : alleRezepte) {
+                addRecipes(s, rezepte,zutatenMitGeschlecht, einheitenMitGeschlecht);
+            }
+        } catch (Exception e) {
+           e.getMessage();
+        }
+        String speechText = Strings.WELCOME;
         return input.getResponseBuilder()
                 .withSimpleCard("Soup IT", speechText)
                 .withSpeech(speechText)
-                .withReprompt(repromptText)
                 .build();
     }
+    private static void addRecipes(String rezeptname, Map rezepte, Map zutatenMitGeschlecht, Map einheitenMitGeschlecht) {
+
+
+        Map rezept = (Map) rezepte.get(rezeptname);
+        Map zutaten = (Map) rezept.get("zutaten");
+        ZutatMengeEinheit zumeng[] = new ZutatMengeEinheit[zutaten.size()];
+
+        Iterator<Map.Entry<String,Map>> it = zutaten.entrySet().iterator();
+        int counter = 0;
+        while(it.hasNext()){
+
+            Map.Entry<String,Map> next = it.next();
+            Map nextMap = next.getValue();
+            String zutatString = (String) zutaten.keySet().toArray()[counter];
+            Zutat zutat = new Zutat(zutatString,(String) zutatenMitGeschlecht.get(zutatString));
+            String einheitString = (String) nextMap.get("einheit");
+            Einheit einheit = new Einheit(einheitString,(String) einheitenMitGeschlecht.get(einheitString));
+            double menge = Double.parseDouble((String)(nextMap.get("menge")));
+
+            zumeng[counter] = new ZutatMengeEinheit(zutat,menge,einheit);
+            counter++;
+        }
+        REZEPT_ARRAY_LIST.add(new Rezept(rezeptname,zumeng));
+
+
+
+    }
+
+
+
 }
+

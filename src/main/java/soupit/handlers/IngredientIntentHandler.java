@@ -52,16 +52,22 @@ public class IngredientIntentHandler implements RequestHandler {
             input.getAttributesManager().setSessionAttributes(Collections.singletonMap("Ingredient", ingredients));
             Rezept bestRecipe  = REZEPT_ARRAY_LIST.getBestFitting(ingredients);
             if (bestRecipe != null){
-                speechText = "mit diesen Zutaten kannst du eine "+bestRecipe+ " kochen ";
+                speechText = "mit diesen Zutaten kannst du eine "+bestRecipe+ " kochen. ";
                 speechText += "dafür brauchst du ";
-                for(ZutatMengeEinheit zum:bestRecipe.zumeng){
-                    speechText += zum.mengeToString() +" ";
-                    speechText += zum.einheitToString() +" ";
-                    speechText += zum.zutatToString() +" ";
+                for(int i =0; i<bestRecipe.zumeng.length; i++) {
+                    ZutatMengeEinheit zum = bestRecipe.zumeng[i];
+                    if(i == bestRecipe.zumeng.length -1) speechText += " und ";
+                    speechText += zum.mengeToString() + " ";
+                    speechText += zum.einheitToString() + " ";
+                    speechText += zum.zutatToString() + " <break time=\"1s\"/>";
+                    if (i < bestRecipe.zumeng.length -2) speechText += ", ";
+                    if(i == bestRecipe.zumeng.length -1) speechText += ". ";
+
                 }
             }else{
                 speechText = "Ich habe leider kein Rezept mit diesen Zutaten auf Lager. ich werde daran arbeiten! ";
             }
+
 
 
 
