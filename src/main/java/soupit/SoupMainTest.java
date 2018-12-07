@@ -1,4 +1,4 @@
-package main.java.soupit;
+package soupit;
 
 import org.junit.jupiter.api.Test;
 

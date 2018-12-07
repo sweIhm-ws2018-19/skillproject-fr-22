@@ -11,17 +11,12 @@
      the specific language governing permissions and limitations under the License.
 */
 
-package main.java.soupit;
+package soupit;
 
 import com.amazon.ask.Skill;
 import com.amazon.ask.SkillStreamHandler;
 import com.amazon.ask.Skills;
-//import main.java.soupit.HilfsKlassen.RezeptArrayList.KartoffelcremeSuppe;
-//import main.java.soupit.HilfsKlassen.Rezept;
-//import main.java.soupit.HilfsKlassen.RezeptArrayList.KartoffelcremeSuppe;
-//import main.java.soupit.HilfsKlassen.HilfsKlassen;
-//import main.java.soupit.HilfsKlassen.Zutat;
-import main.java.soupit.handlers.*;
+import soupit.handlers.*;
 
 
 public class SoupITStreamHandler extends SkillStreamHandler {
@@ -29,13 +24,13 @@ public class SoupITStreamHandler extends SkillStreamHandler {
     private static Skill getSkill() {
 
         return Skills.standard().addRequestHandlers(
-                        new LaunchRequestHandler(),
-                        new CancelandStopIntentHandler(),
-                        new SessionEndedRequestHandler(),
-                        new HelpIntentHandler(),
-                        new FallbackIntentHandler(),
-                        new IngredientIntentHandler()
-                )
+                new LaunchRequestHandler(),
+                new CancelandStopIntentHandler(),
+                new SessionEndedRequestHandler(),
+                new HelpIntentHandler(),
+                new FallbackIntentHandler(),
+                new IngredientIntentHandler()
+        )
                 .withSkillId("amzn1.ask.skill.88e3acae-7fca-4ec5-985c-220521f6d2ef")
                 .build();
     }

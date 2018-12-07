@@ -1,10 +1,10 @@
-package main.java.soupit.handlers;
+package soupit.handlers;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CancelandStopIntentHandlerTest extends CancelandStopIntentHandler{
+class CancelandStopIntentHandlerTest extends soupit.handlers.CancelandStopIntentHandler {
 
     @Test
     void canHandleTest() {

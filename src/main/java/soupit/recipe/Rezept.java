@@ -1,8 +1,8 @@
-package soupit.HilfsKlassen;
+package soupit.recipe;
 
 import java.util.Arrays;
-// kein test da abstrakt
-public abstract class Rezept {
+
+public class Rezept {
     public ZutatMengeEinheit[] zumeng;
     String name;
     ZutatMengeEinheit[] optionaleZutaten;
@@ -24,7 +24,7 @@ public abstract class Rezept {
     }
 
     public void addOptions(ZutatMengeEinheit...optionaleZutaten){
-       this.optionaleZutaten = Arrays.copyOf(optionaleZutaten,optionaleZutaten.length);
+        this.optionaleZutaten = Arrays.copyOf(optionaleZutaten,optionaleZutaten.length);
     }
 
 

@@ -1,6 +1,6 @@
-package main.java.soupit;
+package soupit;
 
-import main.java.soupit.HilfsKlassen.*;
+import soupit.recipe.*;
 
 import java.io.FileReader;
 import java.io.InputStream;
@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
 import java.util.Iterator;
 import java.util.Map;
 
-import main.java.soupit.handlers.LaunchRequestHandler;
+import soupit.handlers.LaunchRequestHandler;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.*;
 

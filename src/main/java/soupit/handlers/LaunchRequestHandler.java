@@ -11,16 +11,20 @@
      the specific language governing permissions and limitations under the License.
 */
 
-package main.java.soupit.handlers;
+package soupit.handlers;
 
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.LaunchRequest;
 import com.amazon.ask.model.Response;
-import main.java.soupit.HilfsKlassen.*;
-import main.java.soupit.Lists.Strings;
+
+
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+
+import soupit.recipe.*;
+import soupit.Lists.Strings;
+
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -57,7 +61,7 @@ public class LaunchRequestHandler implements RequestHandler {
                 addRecipes(s, rezepte,zutatenMitGeschlecht, einheitenMitGeschlecht);
             }
         } catch (Exception e) {
-           e.getMessage();
+            e.getMessage();
         }
         String speechText = Strings.WELCOME;
         return input.getResponseBuilder()

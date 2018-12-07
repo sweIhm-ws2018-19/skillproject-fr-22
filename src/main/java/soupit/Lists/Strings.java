@@ -1,4 +1,4 @@
-package main.java.soupit.Lists;
+package soupit.Lists;
 
 public class Strings {
     public static final String TEMPLATE = "";

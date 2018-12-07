@@ -1,4 +1,4 @@
-package soupit.HilfsKlassen;
+package soupit.recipe;
 
 public class Einheit {
     public final String einheit;

@@ -1,4 +1,4 @@
-package main.java.soupit.handlers;
+package soupit.handlers;
 
 import org.junit.jupiter.api.Test;
 

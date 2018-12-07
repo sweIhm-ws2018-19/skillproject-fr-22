@@ -1,4 +1,4 @@
-package main.java.soupit.handlers;
+package soupit.handlers;
 
 
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
@@ -9,17 +9,15 @@ import com.amazon.ask.model.Request;
 import com.amazon.ask.model.Response;
 import com.amazon.ask.model.Slot;
 import com.amazon.ask.response.ResponseBuilder;
-import main.java.soupit.HilfsKlassen.ZutatMengeEinheit;
-import main.java.soupit.Lists.Strings;
-import main.java.soupit.HilfsKlassen.Rezept;
-import main.java.soupit.HilfsKlassen.Zutat;
+import soupit.recipe.*;
+import soupit.Lists.Strings;
 
 import java.util.Collections;
 import java.util.Map;
 import java.util.Optional;
 
 import static com.amazon.ask.request.Predicates.intentName;
-import static main.java.soupit.handlers.LaunchRequestHandler.REZEPT_ARRAY_LIST;
+import static soupit.handlers.LaunchRequestHandler.REZEPT_ARRAY_LIST;
 
 public class IngredientIntentHandler implements RequestHandler {
     @Override
@@ -48,7 +46,7 @@ public class IngredientIntentHandler implements RequestHandler {
             for(int i = 0;i<strinGredients.length; i++){
                 ingredients[i] = new Zutat(strinGredients[i],"f");
             }
-            
+
             input.getAttributesManager().setSessionAttributes(Collections.singletonMap("Ingredient", ingredients));
             Rezept bestRecipe  = REZEPT_ARRAY_LIST.getBestFitting(ingredients);
             if (bestRecipe != null){

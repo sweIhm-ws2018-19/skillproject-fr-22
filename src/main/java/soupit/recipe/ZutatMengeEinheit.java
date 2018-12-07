@@ -1,11 +1,11 @@
-package soupit.HilfsKlassen;
+package soupit.recipe;
 
 public class ZutatMengeEinheit {
-    Zutat zutat;
-    private double menge;
-    private Einheit einheit;
+    soupit.recipe.Zutat zutat;
+    double menge;
+    soupit.recipe.Einheit einheit;
 
-    public ZutatMengeEinheit(Zutat zutat, double menge, Einheit einheit) {
+    public ZutatMengeEinheit(soupit.recipe.Zutat zutat, double menge, soupit.recipe.Einheit einheit) {
         this.zutat = zutat;
         this.menge = menge;
         this.einheit = einheit;
@@ -78,7 +78,7 @@ public class ZutatMengeEinheit {
                 }                                                //TODO
             }else{
                 if(menge == 1) string = "ein";
-                else if(menge < 1){
+                else if(menge< 1){
                     if (menge == 0.5) string = "ein halbes";
                     else if (menge == 0.3) string = "ein drittel";
                     else string = "ein " +(int)(1/menge)+"tel";
@@ -94,6 +94,6 @@ public class ZutatMengeEinheit {
     public String einheitToString(){
         if (einheit.einheit.equals("null")) return "";
         else
-        return einheit.toString();
+            return einheit.toString();
     }
 }
