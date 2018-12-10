@@ -48,7 +48,7 @@ public class IngredientIntentHandler implements RequestHandler {
             }
 
             input.getAttributesManager().setSessionAttributes(Collections.singletonMap("Ingredient", ingredients));
-            Rezept bestRecipe  = REZEPT_ARRAY_LIST.getBestFitting(ingredients);
+            Rezept bestRecipe  = REZEPT_ARRAY_LIST.getFitting(ingredients);
             if (bestRecipe != null){
                 speechText = "mit diesen Zutaten kannst du eine "+bestRecipe+ " kochen. ";
                 speechText += "dafür brauchst du ";

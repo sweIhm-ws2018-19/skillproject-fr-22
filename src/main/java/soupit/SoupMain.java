@@ -2,9 +2,9 @@ package soupit;
 
 import soupit.recipe.*;
 
-import java.io.FileReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Map;
 
@@ -46,20 +46,20 @@ public class SoupMain {
 
         String speechText;
 
-        Rezept bestRecipe  = REZEPT_ARRAY_LIST.getBestFitting(ingredients);
-        if (bestRecipe != null){
-            speechText = "mit diesen Zutaten kannst du eine "+bestRecipe+ " kochen. ";
-            speechText += "dafür brauchst du ";
-            for(int i =0; i<bestRecipe.zumeng.length; i++) {
-                ZutatMengeEinheit zum = bestRecipe.zumeng[i];
-                if(i == bestRecipe.zumeng.length -1) speechText += " und ";
-                speechText += zum.mengeToString() + " ";
-                speechText += zum.einheitToString() + " ";
-                speechText += zum.zutatToString() + " <break time=\"1s\"/>";
-                if (i < bestRecipe.zumeng.length -2) speechText += ", ";
-                if(i == bestRecipe.zumeng.length -1) speechText += ". ";
+        Map<Integer,ArrayList<Rezept>> map = REZEPT_ARRAY_LIST.getFitting(ingredients);
+        if (!map.isEmpty()) {
+            speechText = "mit diesen Zutaten kannst du eine " + " kochen. ";
+//            speechText += "dafür brauchst du ";
+//            for(int i =0; i<bestRecipe.zumeng.length; i++) {
+//                ZutatMengeEinheit zum = bestRecipe.zumeng[i];
+//                if(i == bestRecipe.zumeng.length -1) speechText += " und ";
+//                speechText += zum.mengeToString() + " ";
+//                speechText += zum.einheitToString() + " ";
+//                speechText += zum.zutatToString() + " <break time=\"1s\"/>";
+//                if (i < bestRecipe.zumeng.length -2) speechText += ", ";
+//                if(i == bestRecipe.zumeng.length -1) speechText += ". ";
 
-            }
+
         }else{
             speechText = "Ich habe leider kein Rezept mit diesen Zutaten auf Lager. ich werde daran arbeiten! ";
         }
