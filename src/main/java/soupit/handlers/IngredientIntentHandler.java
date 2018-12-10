@@ -70,7 +70,7 @@ public class IngredientIntentHandler implements RequestHandler {
                         } else {
                             speechText.append(list.get(i));
                             speechText.append(" kochen. ");
-                            speechText.append("Sag mir den Namen der Suppe die du kochen möchtest ");
+                            speechText.append("Sag mir welche Suppe du kochen möchtest ");
                             ////PROGRAMSTATE GET_NAME_OF_SOUP
                         }
                     }
@@ -83,7 +83,7 @@ public class IngredientIntentHandler implements RequestHandler {
                     speechText.append(list.get(1));
                     speechText.append("und ");
                     speechText.append(list.get(2));
-                    speechText.append(" wenn dir eins davon gefällt sage mir den Namen des Rezeptes, oder weiter, wenn du mehr hören möchtest ");
+                    speechText.append(" sag mir welche davon dir gefallen hat, oder weiter, wenn du mehr hören möchtest ");
 
 
 //              Iterator<Map.Entry<Integer,ArrayList<Rezept>>> i = descendingMap.entrySet().iterator();
