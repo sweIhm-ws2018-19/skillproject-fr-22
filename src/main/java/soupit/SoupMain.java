@@ -1,12 +1,11 @@
 package soupit;
 
+import javafx.collections.transformation.SortedList;
 import soupit.recipe.*;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 import soupit.handlers.LaunchRequestHandler;
 import org.json.simple.JSONObject;
@@ -17,8 +16,7 @@ public class SoupMain {
 
 
     public static final RezeptArrayList REZEPT_ARRAY_LIST = new RezeptArrayList();
-    public static final String[] alleRezepte = {"kartoffelcremesuppe","möhrencremesuppe"};
-
+    public static final String[] alleRezepte = {"kartoffelcremesuppe", "möhrencremesuppe"};
 
 
     public static void main(String... args) {
@@ -32,23 +30,69 @@ public class SoupMain {
             Map zutatenMitGeschlecht = (Map) jsonObject.get("zutaten");
             Map einheitenMitGeschlecht = (Map) jsonObject.get("einheiten");
             for (String s : alleRezepte) {
-                addRecipes(s, rezepte,zutatenMitGeschlecht, einheitenMitGeschlecht);
+                addRecipes(s, rezepte, zutatenMitGeschlecht, einheitenMitGeschlecht);
             }
         } catch (Exception e) {
-            System.out.println(e.getStackTrace());
+            System.out.println(e.getMessage());
         }
 
-        String[] strinGredients = {"möhren"};
+        String[] strinGredients = {"kartoffeln", "möhren"};
         Zutat[] ingredients = new Zutat[strinGredients.length];
-        for(int i = 0;i<strinGredients.length; i++){
-            ingredients[i] = new Zutat(strinGredients[i],"f");
+        for (int i = 0; i < strinGredients.length; i++) {
+            ingredients[i] = new Zutat(strinGredients[i], "f");
         }
 
-        String speechText;
+        StringBuilder speechText;
 
-        Map<Integer,ArrayList<Rezept>> map = REZEPT_ARRAY_LIST.getFitting(ingredients);
-        if (!map.isEmpty()) {
-            speechText = "mit diesen Zutaten kannst du eine " + " kochen. ";
+        NavigableMap<Integer, ArrayList<Rezept>> map = REZEPT_ARRAY_LIST.getFitting(ingredients);
+        ArrayList<Rezept> list = treeMapToSortedList(map);
+        if (!list.isEmpty()) {
+            speechText = new StringBuilder("Mit diesen Zutaten kannst du ");
+            int listSize = list.size();
+            if (listSize == 1){
+                speechText.append("eine ");
+                speechText.append(list.get(0));
+                speechText.append(" kochen. möchtest du das tun ?");
+                ////PROGRAMSTATE COOK_SOUP_YES_NO
+            }
+            if (listSize <= 3) {
+                for (int i = 0; i < listSize; i++) {
+                    speechText.append("eine ");
+                    if (i < listSize - 2) {
+                        speechText.append(list.get(i));
+                        speechText.append(", ");
+                    } else if (i == listSize - 2) {
+                        speechText.append(list.get(i));
+                        speechText.append(" oder ");
+                    } else {
+                        speechText.append(list.get(i));
+                        speechText.append(" kochen. ");
+                        speechText.append("Sag mir den Namen der Suppe die du kochen möchtest ");
+                        ////PROGRAMSTATE GET_NAME_OF_SOUP
+                    }
+                }
+            }else{
+                speechText = new StringBuilder(" für diese Zutaten fallen mir ");
+                speechText.append(listSize);
+                speechText.append(" Rezepte ein. zu deinen Zutaten passen am besten die folgenden 3 Rezepte: ");
+                speechText.append(list.get(0));
+                speechText.append(", ");
+                speechText.append(list.get(1));
+                speechText.append("und ");
+                speechText.append(list.get(2));
+                speechText.append(" wenn dir eins davon gefällt sage mir den Namen des Rezeptes, oder weiter, wenn du mehr hören möchtest ");
+
+
+//              Iterator<Map.Entry<Integer,ArrayList<Rezept>>> i = descendingMap.entrySet().iterator();
+//              while (i.hasNext()){
+//                  ArrayList<Rezept> list = i.next().getValue();
+//                  for(Rezept r:list){
+//
+//                  }
+//
+//              }
+
+
 //            speechText += "dafür brauchst du ";
 //            for(int i =0; i<bestRecipe.zumeng.length; i++) {
 //                ZutatMengeEinheit zum = bestRecipe.zumeng[i];
@@ -59,12 +103,11 @@ public class SoupMain {
 //                if (i < bestRecipe.zumeng.length -2) speechText += ", ";
 //                if(i == bestRecipe.zumeng.length -1) speechText += ". ";
 
-
-        }else{
-            speechText = "Ich habe leider kein Rezept mit diesen Zutaten auf Lager. ich werde daran arbeiten! ";
+            }
+        } else {
+            speechText = new StringBuilder("Ich habe leider kein Rezept mit diesen Zutaten auf Lager. ich werde daran arbeiten! ");
         }
 
-        System.out.println(LaunchRequestHandler.class.getClassLoader().getResourceAsStream("data/rezepte.json"));
         System.out.println(speechText);
 
     }
@@ -76,27 +119,32 @@ public class SoupMain {
         Map zutaten = (Map) rezept.get("zutaten");
         ZutatMengeEinheit zumeng[] = new ZutatMengeEinheit[zutaten.size()];
 
-        Iterator<Map.Entry<String,Map>> it = zutaten.entrySet().iterator();
+        Iterator<Map.Entry<String, Map>> it = zutaten.entrySet().iterator();
         int counter = 0;
-        while(it.hasNext()){
+        while (it.hasNext()) {
 
-            Map.Entry<String,Map> next = it.next();
+            Map.Entry<String, Map> next = it.next();
             Map nextMap = next.getValue();
             String zutatString = (String) zutaten.keySet().toArray()[counter];
-            Zutat zutat = new Zutat(zutatString,(String) zutatenMitGeschlecht.get(zutatString));
+            Zutat zutat = new Zutat(zutatString, (String) zutatenMitGeschlecht.get(zutatString));
             String einheitString = (String) nextMap.get("einheit");
-            Einheit einheit = new Einheit(einheitString,(String) einheitenMitGeschlecht.get(einheitString));
-            double menge = Double.parseDouble((String)(nextMap.get("menge")));
+            Einheit einheit = new Einheit(einheitString, (String) einheitenMitGeschlecht.get(einheitString));
+            double menge = Double.parseDouble((String) (nextMap.get("menge")));
 
-            zumeng[counter] = new ZutatMengeEinheit(zutat,menge,einheit);
+            zumeng[counter] = new ZutatMengeEinheit(zutat, menge, einheit);
             counter++;
         }
-        REZEPT_ARRAY_LIST.add(new Rezept(rezeptname,zumeng));
-
+        REZEPT_ARRAY_LIST.add(new Rezept(rezeptname, zumeng));
 
 
     }
 
 
-
+    private static ArrayList<Rezept> treeMapToSortedList(Map<Integer, ArrayList<Rezept>> map) {                              //TODO Refactor this method to be in some other class
+        ArrayList<Rezept> list = new ArrayList<>();
+        for (ArrayList<Rezept> sublist : map.values()) {
+            list.addAll(sublist);
+        }
+        return list;
+    }
 }

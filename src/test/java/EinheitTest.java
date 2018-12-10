@@ -1,3 +1,7 @@
+import soupit.recipe.Einheit;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 class EinheitTest {
 
     Einheit test1 = new Einheit(null,null);

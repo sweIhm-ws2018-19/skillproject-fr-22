@@ -1,17 +1,14 @@
 package soupit.recipe;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class RezeptArrayList extends ArrayList<Rezept> {
     public RezeptArrayList(Rezept...r){
         super.addAll(Arrays.asList(r));
     }
 
-    public Map<Integer,ArrayList<Rezept>> getFitting(Zutat...ingredients) {
-        Map<Integer,ArrayList<Rezept>> recipeToAccordance = new HashMap<>();
+    public NavigableMap<Integer,ArrayList<Rezept>> getFitting(Zutat...ingredients) {
+        TreeMap<Integer,ArrayList<Rezept>> recipeToAccordance = new TreeMap<>();
         for(Rezept r:this){
             int accordance = r.checkAccordance(ingredients);
             if(accordance > 0){
@@ -23,6 +20,6 @@ public class RezeptArrayList extends ArrayList<Rezept> {
                 }
             }
         }
-        return recipeToAccordance;
+        return recipeToAccordance.descendingMap();
     }
 }
