@@ -27,7 +27,8 @@
     "esslöffel": "m",
     "milliliter": "m",
     "stängel": "m",
-    "prise": "f",
+    "prise": "f"
+  },
     "rezepte": {
       "kartoffelcremesuppe": {
         "zutaten": {
@@ -263,5 +264,4 @@
 
     }
   }
-}
 
