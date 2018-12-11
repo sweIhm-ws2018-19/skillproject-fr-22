@@ -1,13 +1,11 @@
 package soupit;
 
-import javafx.collections.transformation.SortedList;
 import soupit.recipe.*;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.*;
 
-import soupit.handlers.LaunchRequestHandler;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.*;
 
@@ -36,7 +34,7 @@ public class SoupMain {
             System.out.println(e.getMessage());
         }
 
-        String[] strinGredients = {"kartoffeln", "möhren"};
+        String[] strinGredients = {"möhren"};
         Zutat[] ingredients = new Zutat[strinGredients.length];
         for (int i = 0; i < strinGredients.length; i++) {
             ingredients[i] = new Zutat(strinGredients[i], "f");
@@ -55,7 +53,7 @@ public class SoupMain {
                 speechText.append(" kochen. möchtest du das tun ?");
                 ////PROGRAMSTATE COOK_SOUP_YES_NO
             }
-            if (listSize <= 3) {
+            else if (listSize <= 3) {
                 for (int i = 0; i < listSize; i++) {
                     speechText.append("eine ");
                     if (i < listSize - 2) {
@@ -119,7 +117,7 @@ public class SoupMain {
         Map zutaten = (Map) rezept.get("zutaten");
         ZutatMengeEinheit zumeng[] = new ZutatMengeEinheit[zutaten.size()];
 
-        Iterator<Map.Entry<String, Map>> it = zutaten.entrySet().iterator();
+        Iterator<Map.Entry<String, Map>> it = zutaten.entrySet().iterator();                                //TODO foreachloop better
         int counter = 0;
         while (it.hasNext()) {
 

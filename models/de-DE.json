@@ -82,9 +82,47 @@
             "ich habe {Ingredient} ",
             "ich habe {Ingredient} im kühlschrank"
           ]
+        },
+        {
+          "name": "NameRecipeIntent",
+          "slots": [
+            {
+              "name": "Recipe",
+              "type": "Recipe"
+            }
+          ],
+          "samples": [
+            "ich möchte die {Recipe} kochen",
+            "{Recipe}",
+            "die {Recipe}"
+          ]
+        },
+        {
+          "name": "RecipeYesOrNoIntent",
+          "slots": [],
+          "samples": [
+            "No",
+            "Yes"
+          ]
         }
       ],
-      "types": []
+      "types": [
+        {
+          "name": "Recipe",
+          "values": [
+            {
+              "name": {
+                "value": "Möhrencremesuppe"
+              }
+            },
+            {
+              "name": {
+                "value": "Kartoffelcremesuppe"
+              }
+            }
+          ]
+        }
+      ]
     }
   }
 }

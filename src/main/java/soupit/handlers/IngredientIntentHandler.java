@@ -9,12 +9,14 @@ import com.amazon.ask.model.Request;
 import com.amazon.ask.model.Response;
 import com.amazon.ask.model.Slot;
 import com.amazon.ask.response.ResponseBuilder;
-import soupit.recipe.*;
 import soupit.Lists.Strings;
+import soupit.SoupITStreamHandler;
+import soupit.recipe.*;
 
 import java.util.*;
 
 import static com.amazon.ask.request.Predicates.intentName;
+import static soupit.SoupITStreamHandler.ProgramState;
 import static soupit.handlers.LaunchRequestHandler.REZEPT_ARRAY_LIST;
 
 public class IngredientIntentHandler implements RequestHandler {
@@ -50,15 +52,15 @@ public class IngredientIntentHandler implements RequestHandler {
             NavigableMap<Integer, ArrayList<Rezept>> map = REZEPT_ARRAY_LIST.getFitting(ingredients);
             ArrayList<Rezept> list = treeMapToSortedList(map);
             if (!list.isEmpty()) {
-                speechText = new StringBuilder("Mit diesen Zutaten kannst du ");
+                speechText = new StringBuilder("In Ordnung. Mit diesen Zutaten kannst du ");
                 int listSize = list.size();
                 if (listSize == 1) {
                     speechText.append("eine ");
                     speechText.append(list.get(0));
                     speechText.append(" kochen. möchtest du das tun ?");
-                    ////PROGRAMSTATE COOK_SOUP_YES_NO
+                    SoupITStreamHandler.recipeToDecideOn = list.get(0);
                 }
-                if (listSize <= 3) {
+                else if (listSize <= 3) {
                     for (int i = 0; i < listSize; i++) {
                         speechText.append("eine ");
                         if (i < listSize - 2) {
@@ -71,6 +73,7 @@ public class IngredientIntentHandler implements RequestHandler {
                             speechText.append(list.get(i));
                             speechText.append(" kochen. ");
                             speechText.append("Sag mir welche Suppe du kochen möchtest ");
+                            ProgramState = Strings.NAME_OF_SOUP_STATE;
                             ////PROGRAMSTATE GET_NAME_OF_SOUP
                         }
                     }
@@ -83,7 +86,7 @@ public class IngredientIntentHandler implements RequestHandler {
                     speechText.append(list.get(1));
                     speechText.append("und ");
                     speechText.append(list.get(2));
-                    speechText.append(" sag mir welche davon dir gefallen hat, oder weiter, wenn du mehr hören möchtest ");
+                    speechText.append(" sag mir welche davon dir gefallen hat, oder weiter, wenn du mehr hören möchtest ");   //TODO 4 recipes will read all, 5 as 3+2
 
 
 //              Iterator<Map.Entry<Integer,ArrayList<Rezept>>> i = descendingMap.entrySet().iterator();

@@ -69,6 +69,7 @@ public class LaunchRequestHandler implements RequestHandler {
                 .withSpeech(speechText)
                 .build();
     }
+
     private static void addRecipes(String rezeptname, Map rezepte, Map zutatenMitGeschlecht, Map einheitenMitGeschlecht) {
 
 

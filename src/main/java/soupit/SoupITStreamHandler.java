@@ -17,9 +17,13 @@ import com.amazon.ask.Skill;
 import com.amazon.ask.SkillStreamHandler;
 import com.amazon.ask.Skills;
 import soupit.handlers.*;
+import soupit.recipe.Rezept;
 
 
 public class SoupITStreamHandler extends SkillStreamHandler {
+
+    public static String ProgramState;                              //TODO refactor this to be in a different class where all sessionattrubites are stored. alternatively DynampDB
+    public static Rezept recipeToDecideOn;
 
     private static Skill getSkill() {
 
@@ -29,7 +33,9 @@ public class SoupITStreamHandler extends SkillStreamHandler {
                 new SessionEndedRequestHandler(),
                 new HelpIntentHandler(),
                 new FallbackIntentHandler(),
-                new IngredientIntentHandler()
+                new IngredientIntentHandler(),
+                new NameRecipeIntent(),
+                new RecipeYesOrNoIntent()
         )
                 .withSkillId("amzn1.ask.skill.88e3acae-7fca-4ec5-985c-220521f6d2ef")
                 .build();

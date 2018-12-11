@@ -17,6 +17,7 @@ import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
 import com.amazon.ask.model.SessionEndedRequest;
+import soupit.recipe.RezeptArrayList;
 
 import java.util.Optional;
 
@@ -31,6 +32,7 @@ public class SessionEndedRequestHandler implements RequestHandler {
     @Override
     public Optional<Response> handle(HandlerInput input) {
         // any cleanup logic goes here
+        LaunchRequestHandler.REZEPT_ARRAY_LIST.clear();
         return input.getResponseBuilder().build();
     }
 }
