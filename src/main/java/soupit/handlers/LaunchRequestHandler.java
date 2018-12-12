@@ -37,7 +37,7 @@ import static com.amazon.ask.request.Predicates.requestType;
 
 public class LaunchRequestHandler implements RequestHandler {
     public static final RezeptArrayList REZEPT_ARRAY_LIST = new RezeptArrayList();
-    public static final String[] alleRezepte = {"kartoffelcremesuppe","möhrencremesuppe"};
+    public static final String[] alleRezepte = {"kartoffelcremesuppe", "möhrencremesuppe","zucchinicremesuppe","möhren und kartoffeleintopf"};
 
 
 
@@ -50,6 +50,15 @@ public class LaunchRequestHandler implements RequestHandler {
     @Override
     public Optional<Response> handle(HandlerInput input) {
 
+        readJson();
+        String speechText = Strings.WELCOME;
+        return input.getResponseBuilder()
+                .withSimpleCard("Soup IT", speechText)
+                .withSpeech(speechText)
+                .build();
+    }
+
+    private void readJson() {
         try {
             InputStream stream = getClass().getClassLoader().getResourceAsStream("data/rezepte.json");
             Object obj = new JSONParser().parse(new InputStreamReader(stream));
@@ -63,11 +72,6 @@ public class LaunchRequestHandler implements RequestHandler {
         } catch (Exception e) {
             e.getMessage();
         }
-        String speechText = Strings.WELCOME;
-        return input.getResponseBuilder()
-                .withSimpleCard("Soup IT", speechText)
-                .withSpeech(speechText)
-                .build();
     }
 
     private static void addRecipes(String rezeptname, Map rezepte, Map zutatenMitGeschlecht, Map einheitenMitGeschlecht) {

@@ -14,7 +14,7 @@ public class SoupMain {
 
 
     public static final RezeptArrayList REZEPT_ARRAY_LIST = new RezeptArrayList();
-    public static final String[] alleRezepte = {"kartoffelcremesuppe", "möhrencremesuppe"};
+    public static final String[] alleRezepte = {"kartoffelcremesuppe", "möhrencremesuppe","zucchinicremesuppe","möhren und kartoffeleintopf"};
 
 
     public static void main(String... args) {

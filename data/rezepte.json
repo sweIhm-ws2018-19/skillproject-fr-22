@@ -19,7 +19,8 @@
     "salz": "n",
     "pfeffer": "m",
     "muskat": "m",
-    "schinken- oder speckwürfel": "f"
+    "schinken- oder speckwürfel": "f",
+    "zucchini": "f"
   },
   "einheiten": {
     "gramm": "n",
@@ -29,239 +30,232 @@
     "stängel": "m",
     "prise": "f"
   },
-    "rezepte": {
-      "kartoffelcremesuppe": {
-        "zutaten": {
-          "kartoffel": {
-            "einheit": "gramm",
-            "menge": "125"
-          },
-          "zwiebel": {
-            "einheit": "null",
-            "menge": "0.25"
-          },
-          "gemüsebrühe": {
-            "einheit": "milliliter",
-            "menge": "115"
-          },
-          "öl": {
-            "einheit": "esslöffel",
-            "menge": "0.5"
-          },
-          "sahne": {
-            "einheit": "milliliter",
-            "menge": "40"
-          },
-          "petersilie": {
-            "einheit": "stängel",
-            "menge": "0.5"
-          },
-          "salz": {
-            "einheit": "prise",
-            "menge": "1"
-          },
-          "pfeffer": {
-            "einheit": "prise",
-            "menge": "1"
-          },
-          "muskat": {
-            "einheit": "prise",
-            "menge": "0.5"
-          },
-          "schinken- oder speckwürfel": {
-            "einheit": "gramm",
-            "menge": "25"
-          }
+  "rezepte": {
+    "kartoffelcremesuppe": {
+      "zutaten": {
+        "kartoffel": {
+          "einheit": "gramm",
+          "menge": "125"
         },
-        "schritte": {
-          "schritt 1": "Schäle die Kartoffeln und schneide sie in kleine Stücke. ",
-          "schritt 2": "Schäle die Zwiebel und schneide sie klein. ",
-          "schritt 3": "Öl im Topf erwärmen. Gebe die Zwiebeln hinzu und brate diese bei niedriger Hitze unter Rühren kurz an.",
-          "schritt 4": "Gebe die Kartoffelstücke sowie Gemüsebrühe hinzu und lasse die Suppe fünfzehn Minuten bei niedriger Hitze köcheln.",
-          "schritt 5": "Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren. ",
-          "schritt 6": "Die Suppe wieder auf die Kochplatte stellen. Die Sahne hinzugeben und unter Rühren erhitzen. Währenddessen Petersilie klein hacken. ",
-          "schritt 7": "Gebe Salz, Pfeffer und Muskat hinzu und schmecke die Suppe ab. ",
-          "schritt 8": "Suppe auf die Teller verteilen, mit Petersilie bestreuen und heiß servieren. "
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "115"
+        },
+        "öl": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "sahne": {
+          "einheit": "milliliter",
+          "menge": "40"
+        },
+        "petersilie": {
+          "einheit": "stängel",
+          "menge": "0.5"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "muskat": {
+          "einheit": "prise",
+          "menge": "0.5"
+        },
+        "schinken- oder speckwürfel": {
+          "einheit": "gramm",
+          "menge": "25"
         }
       },
-      "möhrencremesuppe": {
-        "zutaten": {
-          "möhre": {
-            "einheit": "gramm",
-            "menge": "150"
-          },
-          "kartoffel": {
-            "einheit": "gramm",
-            "menge": "50"
-          },
-          "zwiebel": {
-            "einheit": "null",
-            "menge": "0.3"
-          },
-          "gemüsebrühe": {
-            "einheit": "milliliter",
-            "menge": "150"
-          },
-          "sahne": {
-            "einheit": "milliliter",
-            "menge": "12"
-          },
-          "knoblauchzehe": {
-            "einheit": "null",
-            "menge": "0.3"
-          },
-          "salz": {
-            "einheit": "prise",
-            "menge": "1"
-          },
-          "pfeffer": {
-            "einheit": "prise",
-            "menge": "1"
-          },
-          "olivenöl": {
-            "einheit": "teelöffel",
-            "menge": "1"
-          },
-          "saure sahne": {
-            "einheit": "milliliter",
-            "menge": "40"
-          },
-          "paprikapulver ": {
-            "einheit": "teelöffel",
-            "menge": "0.3"
-          },
-          "pinienkerne": {
-            "einheit": "gramm",
-            "menge": "12"
-          },
-          "orangensaft": {
-            "einheit": "milliliter",
-            "menge": "75"
-          },
-          "basilikumpesto": {
-            "einheit": "gramm",
-            "menge": "12"
-          }
-        },
-        "schritte": {
-          "schritt 1": "Möhren, Kartoffeln, Zwiebeln und Knoblauch schälen und jeweils in kleine Stücke schneiden. ",
-          "schritt 2": "Ölivenöl im Topf leicht erhitzen. Möhren, Kartoffeln, Zwiebel und Knoblauch hinzugeben und alles etwa fünf Minuten lang  dünsten.",
-          "schritt 3": "Gemüsebrühe, Orangensaft, Salz und Pfeffer zugeben und die Suppe zwanzig Minuten lang bei niedriger Hitze köcheln lassen.",
-          "schritt 4": "Währenddessen Pinienkerne in einer Pfanne auf dem Herd ohne Öl rösten.",
-          "schritt 5": "Sahne dazugeben. Anschließend die Suppe einige Minuten abkühlen lassen und mit einem Stabmixer pürieren.",
-          "schritt 6": "Saure Sahne mit Basilikum Pesto verrühren. Die Suppe abschmecken, mit der Pestocreme und den gerösteten Pinienkernen toppen und heiß servieren"
-        }
-      },
-      "zucchinicremesuppe": {
-        "zutaten": {
-          "zucchini": {
-            "einheit": "gramm",
-            "menge": "125"
-          },
-          "zwiebel": {
-            "einheit": "gramm",
-            "menge": "12"
-          },
-          "knoblauchzehe": {
-            "einheit": "null",
-            "menge": "0.25"
-          },
-          "gemüsebrühe": {
-            "einheit": "milliliter",
-            "menge": "125"
-          },
-          "butter": {
-            "einheit": "gramm",
-            "menge": "2.5"
-          },
-          "schmelzkäse": {
-            "einheit": "gramm",
-            "menge": "10"
-          },
-          "salz": {
-            "einheit": "teelöffel",
-            "menge": "0.25"
-          },
-          "pfeffer": {
-            "einheit": "prise",
-            "menge": "0.5"
-          },
-          "": {
-            "einheit": "",
-            "menge": ""
-          },
-          "sahne": {
-            "einheit": "gramm",
-            "menge": "50"
-          }
-        },
-        "schritte":{
-          "schritt 1":"Die Zucchini in kleine Stücke schneiden.",
-          "schritt 2":"Die Zwiebel und Knoblauchzehe schälen und klein schneiden.",
-          "schritt 3":"Butter im Topf erwärmen, Zwiebeln und Knoblauch hinzugeben und bei niedriger Hitze unter Rühren kurz anbraten.",
-          "schritt 4":"Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
-          "schritt 5":"Die Suppe wieder auf die Kochplatte stellen. Den Schmelzkäse hinzugeben und unter Rühren erhitzen.",
-          "schritt 6":"Salz und Pfeffer hinzugeben und Suppe abschmecken. ",
-          "schritt 7":"Die Suppe auf die Teller verteilen und heiß servieren"
-        }
-      },
-      "möhren und kartoffeleintopf": {
-        "zutaten": {
-          "möhren": {
-            "einheit": "gramm",
-            "menge": "100"
-        },
-          "kartoffeln": {
-            "einheit": "gramm",
-            "menge": "50"
-          },
-          "zwiebel": {
-            "einheit": "null",
-            "menge": "0.5"
-          },
-          "gemüsebrühe": {
-            "einheit": "milliliter",
-            "menge": "125"
-          },
-          "butter": {
-            "einheit": "gramm",
-            "menge": "5"
-          },
-          "perersilie": {
-            "einheit": "stängel",
-            "menge": "0.5"
-          },
-          "salz": {
-            "einheit": "teelöffel",
-            "menge": "0.25"
-          },
-          "pfeffer": {
-            "einheit": "prise",
-            "menge": "0.5"
-          },
-          "muskat": {
-            "einheit": "prise",
-            "menge": "0.5"
-          },
-          "schinkenspeck": {
-            "einheit": "gramm",
-            "menge": "25"
-          }
-        },
-        "schritte":{
-          "schritt 1":"Die Möhren und Kartoffeln mit dem Schäler schälen und in kleine Stücke schneiden.",
-          "schritt 2":"Die Zwiebel schälen und klein schneiden.",
-          "schritt 3":"Butter oder Olivenöl im Topf erwärmen, Zwiebeln hinzugeben und bei niedriger Hitze unter Rühren kurz anbraten.",
-          "schritt 4":"Karottenstücke kurz mit anbraten. Mehl sowie Gemüsebrühe hinzugeben und die Suppe 15 Minuten bei niedriger Hitze köcheln lassen.",
-          "schritt 5":"Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
-          "schritt 6":"Petersilie klein hacken.",
-          "schritt 7":"Salz, Pfeffer und Muskat hinzugeben und Suppe abschmecken. TON",
-          "schritt 8":"Die Suppe auf die Teller verteilen und heiß servieren"
-        }
-
+      "schritte": {
+        "schritt 1": "Schäle die Kartoffeln und schneide sie in kleine Stücke. ",
+        "schritt 2": "Schäle die Zwiebel und schneide sie klein. ",
+        "schritt 3": "Öl im Topf erwärmen. Gebe die Zwiebeln hinzu und brate diese bei niedriger Hitze unter Rühren kurz an.",
+        "schritt 4": "Gebe die Kartoffelstücke sowie Gemüsebrühe hinzu und lasse die Suppe fünfzehn Minuten bei niedriger Hitze köcheln.",
+        "schritt 5": "Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren. ",
+        "schritt 6": "Die Suppe wieder auf die Kochplatte stellen. Die Sahne hinzugeben und unter Rühren erhitzen. Währenddessen Petersilie klein hacken. ",
+        "schritt 7": "Gebe Salz, Pfeffer und Muskat hinzu und schmecke die Suppe ab. ",
+        "schritt 8": "Suppe auf die Teller verteilen, mit Petersilie bestreuen und heiß servieren. "
       }
-
-
+    },
+    "möhrencremesuppe": {
+      "zutaten": {
+        "möhre": {
+          "einheit": "gramm",
+          "menge": "150"
+        },
+        "kartoffel": {
+          "einheit": "gramm",
+          "menge": "50"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.3"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "150"
+        },
+        "sahne": {
+          "einheit": "milliliter",
+          "menge": "12"
+        },
+        "knoblauchzehe": {
+          "einheit": "null",
+          "menge": "0.3"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "olivenöl": {
+          "einheit": "teelöffel",
+          "menge": "1"
+        },
+        "saure sahne": {
+          "einheit": "milliliter",
+          "menge": "40"
+        },
+        "paprikapulver ": {
+          "einheit": "teelöffel",
+          "menge": "0.3"
+        },
+        "pinienkerne": {
+          "einheit": "gramm",
+          "menge": "12"
+        },
+        "orangensaft": {
+          "einheit": "milliliter",
+          "menge": "75"
+        },
+        "basilikumpesto": {
+          "einheit": "gramm",
+          "menge": "12"
+        }
+      },
+      "schritte": {
+        "schritt 1": "Möhren, Kartoffeln, Zwiebeln und Knoblauch schälen und jeweils in kleine Stücke schneiden. ",
+        "schritt 2": "Ölivenöl im Topf leicht erhitzen. Möhren, Kartoffeln, Zwiebel und Knoblauch hinzugeben und alles etwa fünf Minuten lang  dünsten.",
+        "schritt 3": "Gemüsebrühe, Orangensaft, Salz und Pfeffer zugeben und die Suppe zwanzig Minuten lang bei niedriger Hitze köcheln lassen.",
+        "schritt 4": "Währenddessen Pinienkerne in einer Pfanne auf dem Herd ohne Öl rösten.",
+        "schritt 5": "Sahne dazugeben. Anschließend die Suppe einige Minuten abkühlen lassen und mit einem Stabmixer pürieren.",
+        "schritt 6": "Saure Sahne mit Basilikum Pesto verrühren. Die Suppe abschmecken, mit der Pestocreme und den gerösteten Pinienkernen toppen und heiß servieren"
+      }
+    },
+    "zucchinicremesuppe": {
+      "zutaten": {
+        "zucchini": {
+          "einheit": "gramm",
+          "menge": "125"
+        },
+        "zwiebel": {
+          "einheit": "gramm",
+          "menge": "12"
+        },
+        "knoblauchzehe": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "125"
+        },
+        "butter": {
+          "einheit": "gramm",
+          "menge": "2.5"
+        },
+        "schmelzkäse": {
+          "einheit": "gramm",
+          "menge": "10"
+        },
+        "salz": {
+          "einheit": "teelöffel",
+          "menge": "0.25"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "0.5"
+        },
+        "sahne": {
+          "einheit": "gramm",
+          "menge": "50"
+        }
+      },
+      "schritte": {
+        "schritt 1": "Die Zucchini in kleine Stücke schneiden.",
+        "schritt 2": "Die Zwiebel und Knoblauchzehe schälen und klein schneiden.",
+        "schritt 3": "Butter im Topf erwärmen, Zwiebeln und Knoblauch hinzugeben und bei niedriger Hitze unter Rühren kurz anbraten.",
+        "schritt 4": "Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
+        "schritt 5": "Die Suppe wieder auf die Kochplatte stellen. Den Schmelzkäse hinzugeben und unter Rühren erhitzen.",
+        "schritt 6": "Salz und Pfeffer hinzugeben und Suppe abschmecken. ",
+        "schritt 7": "Die Suppe auf die Teller verteilen und heiß servieren"
+      }
+    },
+    "möhren und kartoffeleintopf": {
+      "zutaten": {
+        "möhren": {
+          "einheit": "gramm",
+          "menge": "100"
+        },
+        "kartoffeln": {
+          "einheit": "gramm",
+          "menge": "50"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.5"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "125"
+        },
+        "butter": {
+          "einheit": "gramm",
+          "menge": "5"
+        },
+        "perersilie": {
+          "einheit": "stängel",
+          "menge": "0.5"
+        },
+        "salz": {
+          "einheit": "teelöffel",
+          "menge": "0.25"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "0.5"
+        },
+        "muskat": {
+          "einheit": "prise",
+          "menge": "0.5"
+        },
+        "schinkenspeck": {
+          "einheit": "gramm",
+          "menge": "25"
+        }
+      },
+      "schritte": {
+        "schritt 1": "Die Möhren und Kartoffeln mit dem Schäler schälen und in kleine Stücke schneiden.",
+        "schritt 2": "Die Zwiebel schälen und klein schneiden.",
+        "schritt 3": "Butter oder Olivenöl im Topf erwärmen, Zwiebeln hinzugeben und bei niedriger Hitze unter Rühren kurz anbraten.",
+        "schritt 4": "Karottenstücke kurz mit anbraten. Mehl sowie Gemüsebrühe hinzugeben und die Suppe 15 Minuten bei niedriger Hitze köcheln lassen.",
+        "schritt 5": "Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
+        "schritt 6": "Petersilie klein hacken.",
+        "schritt 7": "Salz, Pfeffer und Muskat hinzugeben und Suppe abschmecken. TON",
+        "schritt 8": "Die Suppe auf die Teller verteilen und heiß servieren"
+      }
     }
   }
+}
 
