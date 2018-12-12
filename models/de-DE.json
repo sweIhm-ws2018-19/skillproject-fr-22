@@ -99,10 +99,28 @@
         },
         {
           "name": "RecipeYesOrNoIntent",
-          "slots": [],
+          "slots": [
+            {
+              "name": "YesNo",
+              "type": "YesNo"
+            }
+          ],
           "samples": [
-            "No",
-            "Yes"
+            "Nein",
+            "Ja"
+          ]
+        },
+        {
+          "name": "YesNoTestIntent",
+          "slots": [
+            {
+              "name": "YesNo",
+              "type": "YesNo"
+            }
+          ],
+          "samples": [
+            "Nein",
+            "Ja"
           ]
         }
       ],
@@ -118,6 +136,21 @@
             {
               "name": {
                 "value": "Kartoffelcremesuppe"
+              }
+            }
+          ]
+        },
+        {
+          "name": "YesNo",
+          "values": [
+            {
+              "name": {
+                "value": "Ja"
+              }
+            },
+            {
+              "name": {
+                "value": "Nein"
               }
             }
           ]
