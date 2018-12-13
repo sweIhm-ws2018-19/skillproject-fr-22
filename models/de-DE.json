@@ -72,7 +72,7 @@
           "slots": [
             {
               "name": "Ingredient",
-              "type": "AMAZON.Food"
+              "type": "Ingredients"
             }
           ],
           "samples": [
@@ -188,6 +188,10 @@
               }
             }
           ]
+        },
+        {
+          "name": "Ingredients",
+          "values": []
         }
       ]
     }

@@ -1,4 +1,4 @@
-﻿{
+{
   "zutaten": {
     "karotte": "f",
     "kartoffel": "f",
@@ -57,7 +57,24 @@
     "schinkenspeck":"m",
     "champignon":"m",
     "butter":"f",
-    "mehl":"n"
+    "mehl":"n",
+    "sauerrahm":"m",
+    "majoran":"m",
+    "toastbrot":"n",
+    "milch":"f",
+    "hühnerbrühe":"f",
+    "brunnenkresse":"f",
+    "frühlingszwiebel":"f",
+    "baguette":"n",
+    "geriebener käse":"m",
+    "paprika":"f",
+    "schlagsahne":"f",
+    "geriebener parmesan":"m",
+    "basillikum":"m",
+    "oregano":"m",
+    "gurke":"f",
+    "dill":"m",
+    "bärlauch":"m"
   },
   "einheiten": {
     "gramm": "n",
@@ -67,7 +84,9 @@
     "stängel": "m",
     "prise": "f",
     "schuss": "m",
-    "bund": "m"
+    "bund": "m",
+    "scheibe":"f",
+    "hand voll":"f"
   },
   "rezepte": {
     "kartoffelcremesuppe": {
@@ -408,11 +427,11 @@
         },
         "zwiebel": {
           "einheit": "null",
-          "menge": ""
+          "menge": "0.15"
         },
         "knoblauchzehe": {
           "einheit": "null",
-          "menge": ""
+          "menge": "0.15"
         },
         "gemüsebrühe": {
           "einheit": "milliliter",
@@ -457,9 +476,9 @@
         "schritt 7": "Die Suppe mit einem Stabmixer pürieren, abschmecken und heiß servieren."
       }
     },
-    "erbsen suppe": {
+    "erbsensuppe": {
       "zutaten": {
-        "tiefgekühlte erbsen": {
+        "tiefgekühlte erbse": {
           "einheit": "gramm",
           "menge": "250"
         },
@@ -763,6 +782,60 @@
         "schritt 6":"Anschließend die restlichen Lauchringe hinzufügen und diese kurz heiß werden lassen. Nach Bedarf mit Salz, Pfeffer und Muskat abschmecken und heiß servieren."
       }
     },
+    "möhren und kartoffeleintopf": {
+      "zutaten": {
+        "kartoffel": {
+          "einheit": "gramm",
+          "menge": "50"
+        },
+        "möhre": {
+          "einheit": "gramm",
+          "menge": "100"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "zwiebel"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "125"
+        },
+        "olivenöl": {
+          "einheit": "teelöffel",
+          "menge": "1"
+        },
+        "petersilie": {
+          "einheit": "stängel",
+          "menge": "0.5"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "muskat": {
+          "einheit": "prise",
+          "menge": "0.5"
+        },
+        "schinkenspeck": {
+          "einheit": "gramm",
+          "menge": "25"
+        }
+      },
+      "schritte":{
+        "schritt 1":"Schäle die Möhren und Kartoffeln und schneide sie in kleine Stücke.",
+        "schritt 2":"Schäle die Zwiebel und schneide sie klein.",
+        "schritt 3":"Butter oder Olivenöl im Topf erwärmen. Gebe die Zwiebeln hinzu und brate sie bei niedriger Hitze unter Rühren kurz an.",
+        "schritt 4":"Brate die Karottenstücke kurz mit an. Gebe Mehl sowie Gemüsebrühe hinzu und lasse die Suppe fünfzehn Minuten bei niedriger Hitze köcheln.",
+        "schritt 5":"Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
+        "schritt 6":"Petersilie klein hacken.",
+        "schritt 7":"Gebe Salz, Pfeffer und Muskat hinzu und schmecke die Suppe ab.",
+        "schritt 8":"Suppe auf die Teller verteilen, mit Petersilie bestreuen und heiß servieren."
+      }
+    },
     "champignoncreme suppe": {
       "zutaten": {
         "champignon": {
@@ -801,7 +874,456 @@
         "schritt 4":"Die Champignons in die Suppe geben, mit der Sahne verfeinern und die Suppe mit Salz und Pfeffer abschmecken. ",
         "schritt 5":"Die Suppe auf die Teller verteilen und mit Petersilie garniert servieren."
       }
+    },
+    "champignon kartoffelsuppe": {
+      "zutaten": {
+        "champignon": {
+          "einheit": "gramm",
+          "menge": "50"
+        },
+        "kartoffel": {
+          "einheit": "gramm",
+          "menge": "50"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "200"
+        },
+        "butter": {
+          "einheit": "gramm",
+          "menge": "10"
+        },
+        "mehl": {
+          "einheit": "gramm",
+          "menge": "10"
+        },
+        "sauerrahm": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "majoran": {
+          "einheit": "prise",
+          "menge": "0.5"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        }
+      },
+      "schritte":{
+        "schritt 1":"Schneide die Champignons in Scheiben und die Kartoffeln in kleine Würfel. und zusammen in Salzwasser weich kochen.",
+        "schritt 2":"Gebe die Champignonscheiben und Kartoffelstücke zur Gemüsebrühe hinzu und koche das Gemüse etwa fünfzehn Minuten lang. Schäle und schneide währenddessen die Zwiebel in kleine Stücke.",
+        "schritt 3":"Röste die Zwiebel in Butter an. Gebe anschliessend etwas Mehl hinzu und röste sie, bis sie goldbraun werden.",
+        "schritt 4":"Die Zwiebel mit einem Teil des Kochwassers aufgießen, verrühren und zur Suppe geben. ",
+        "schritt 5":"Suppe mit Rahm verfeinern und mit Salz, Pfeffer und Majoran abschmecken."
+      }
+    },
+    "kürbissuppe": {
+      "zutaten": {
+        "kürbis": {
+          "einheit": "gramm",
+          "menge": "75"
+        },
+        "zwiebel": {
+          "einheit": "gramm",
+          "menge": "7.5"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "65"
+        },
+        "butter": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "milch": {
+          "einheit": "milliliter",
+          "menge": "37.5"
+        },
+        "muskat": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "cayenne pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "kürbiskernöl": {
+          "einheit": "teelöffel",
+          "menge": "0.25"
+        },
+        "toastbrot": {
+          "einheit": "scheibe",
+          "menge": "1"
+        }
+      },
+      "schritte":{
+        "schritt 1":"Schäle die Zwiebel und schneide sie in kleine Stücke.",
+        "schritt 2":"Wasche und putze den Kürbis. Entferne die Kerne mit einem Löffel schneide ihn danach in kleine Stücke.",
+        "schritt 3":"Butter im Topf zerlassen. Anschließend Zwiebeln und Kürbis darin andünsten.",
+        "schritt 4":"Mit Salz, Pfeffer, einer Prise Cayennepfeffer und Muskat würzen.",
+        "schritt 5":"Gemüsebrühe sowie Milch oder Sahne zugießen und aufkochen. Zugedeckt bei mittlerer Hitze zwanzig Minuten kochen lassen.<break time=\"2s\"/> Währenddessen eine oder mehrere Scheiben Toastbrot in Stücke schneiden. Etwas Butter in einer beschichteten Pfanne erhitzen und die Brotwürfel darin goldbraun anbraten.",
+        "schritt 6":"Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
+        "schritt 7":"Die Suppe mit Salz und Pfeffer abschmecken. Mit den Toastbrotwürfel sowie ein wenig Kürbiskernöl beträufelt servieren."
+      }
+    },
+    "kalte avokadosuppe": {
+      "zutaten": {
+        "avocado": {
+          "einheit": "null",
+          "menge": "0.5"
+        },
+        "hühnerbrühe": {
+          "einheit": "milliliter",
+          "menge": "125"
+        },
+        "sahne": {
+          "einheit": "milliliter",
+          "menge": "40"
+        },
+        "zitronensaft": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "schnittlauch": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        }
+      },
+      "schritte":{
+        "schritt 1":"Avocados schälen und entkernen. Fruchtfleisch im Mixer pürieren. Sahne hinzugießen und einige Sekunden mitquirlen, bis die Mischung geschmeidig ist.",
+        "schritt 2":"Brühe und Zitronensaft angießen, salzen und pfeffern. Noch einmal glattpürieren.",
+        "schritt 3":"Gut gekühlt oder bei Zimmertemparatur servieren. Nach Wunsch mit einem Klecks saurer oder süßer Sahne und gehacktem Schnittlauch garnieren.",
+        "schritt 4":"Nach Wunsch kann die Suppe auch warm serviert werden.",
+        "schritt 5":"Avocadosuppe sollte so bald wie möglich nach der Zubereitung serviert werden, da sich die Suppe trotz Zitronensaft verfärben kann."
+      }
+    },
+    "brunnenkressesuppe": {
+      "zutaten": {
+        "brunnenkresse": {
+          "einheit": "gramm",
+          "menge": "75"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "frühlingszwiebel": {
+          "einheit": "null",
+          "menge": "0.5"
+        },
+        "hühnerbrühe": {
+          "einheit": "milliliter",
+          "menge": "125"
+        },
+        "wasser": {
+          "einheit": "milliliter",
+          "menge": "50"
+        },
+        "butter": {
+          "einheit": "gramm",
+          "menge": "15"
+        },
+        "mehl": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        }
+      },
+      "schritte":{
+        "schritt 1":"Schäle die Zwiebel und wasche die Frühlingszwiebeln sowie Brunnenkresse. Anschließend Zwiebel, Frühlingszwiebel und Brunnenkresse grob hacken.",
+        "schritt 2":"Butter in einem Topf erhitzen. Zwiebel, Frühlingszwiebel und Brunnenkresse uner Rühren drei Minuten anbraten, bis das Gemüse weich ist.",
+        "schritt 3":"Mehl darüberstäuben und gut unterrühren. Nach und nach Brühe und Wasser in den Topf geben und verrühren, bis die Mischung glatt ist.",
+        "schritt 4":"Unter Rühren aufkochen, bis die Suppe eindickt. Zugedeckt bei kleiner Hitze zehn Minutenlang sieden lassen, bis die Brunnenkresse gar ist.",
+        "schritt 5":"Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
+        "schritt 6":"Salz und Pfeffer hinzugeben und die Suppe abschmecken. Nach Wunsch mit einem Klecks saurer oder süßer Sahne verzieren."
+      }
+    },
+    "zwiebelsuppe": {
+      "zutaten": {
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "1"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "375"
+        },
+        "butter": {
+          "einheit": "gramm",
+          "menge": "10"
+        },
+        "mehl": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "zucker": {
+          "einheit": "teelöffel",
+          "menge": "0.25"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "baguette": {
+          "einheit": "null",
+          "menge": "0.5"
+        },
+        "geriebener käse": {
+          "einheit": "gramm",
+          "menge": "15"
+        }
+      },
+      "schritte":{
+        "schritt 1":"Schäle die Zwiebeln und schneide sie in feine Ringe.",
+        "schritt 2":"Butter im Topf erwärmen, Zwiebelringe hinzugeben und bei niedriger Hitze etwa fünfzehn Minuten schmoren, bis sie weich sind.",
+        "schritt 3":"Zucker und Mehl darüberstäuben und unter Rühren nochmals ein bis zwei Minuten lang schmoren.",
+        "schritt 4":"Gemüsebrühe angießen bei niedriger Hitze etwa zwanzig Minuten köcheln lassen.<break time=\"2s\"/> Währenddessen den Ofen auf hundertachtzig Grad vorheizen. Das Baguette in Scheiben schneiden, mit Käse bestreuen etwa zehn Minuten backen.",
+        "schritt 5":"Die Suppe mit Salz und Pfeffer abschmecken und heiß servieren."
+      }
+
+
+    },
+    "paprikacremsuppe": {
+      "zutaten": {
+        "paprika": {
+          "einheit": "gramm",
+          "menge": "100"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "200"
+        },
+        "butter": {
+          "einheit": "gramm",
+          "menge": "7.5"
+        },
+        "mehl": {
+          "einheit": "gramm",
+          "menge": "7.5"
+        },
+        "schlagsahne": {
+          "einheit": "milliliter",
+          "menge": "15"
+        },
+        "salz": {
+          "einheit": "teelöffel",
+          "menge": "0.25"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "geriebener parmesan": {
+          "einheit": "gramm",
+          "menge": "25"
+        }
+
+
+      },
+      "schritte":{
+        "schritt 1":"Die gelben und roten Paprikaschoten in sehr kleine Stücke schneiden.",
+        "schritt 2":"Butter im Topf erwärmen. Mehl hinzugeben und unter Rühren und geringer Hitze etwa eine Minute lang anschwitzen.",
+        "schritt 3":"Die Paprikaschoten hinzugeben und kurz mit anbraten.",
+        "schritt 4":"Mit Gemüsebrühe ablöschen und die Suppe fünfzehn Minuten köcheln lassen.",
+        "schritt 5":"Geriebenen Parmesan und Sahne hinzugeben und die Suppe paar Minuten abkühlen lassen. Anschließend mit einem Stabmixer pürieren.",
+        "schritt 6":"Die Suppe mit Kräutersalz und Pfeffer abschmecken und servieren."
+      }
+    },
+    "tomatencremsuppe": {
+      "zutaten": {
+        "tomate": {
+          "einheit": "gramm",
+          "menge": "175"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "knoblauchzehe": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "125"
+        },
+        "butter": {
+          "einheit": "gramm",
+          "menge": "7.5"
+        },
+        "tomatenmark": {
+          "einheit": "gramm",
+          "menge": "10"
+        },
+        "schlagsahne": {
+          "einheit": "milliliter",
+          "menge": "25"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "zucker": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "oregano": {
+          "einheit": "teelöffel",
+          "menge": "0.5"
+        },
+        "basilikum": {
+          "einheit": "gramm",
+          "menge": "20"
+        },
+        "petersilie": {
+          "einheit": "gramm",
+          "menge": "20"
+        }
+      },
+      "schritte":{
+        "schritt 1":"Schäle die Zwiebel und den Knoblauch und schneide beides in kleine Stücke.",
+        "schritt 2":"Wasche die Tomaten und schneide sie in kleine Würfel.",
+        "schritt 3":"Butter im Topf erhitzen, Zwiebel und Knoblauch hinzugeben und etwa fünf Minuten lang bei niedriger Hitze dünsten.",
+        "schritt 4":"Die Tomatenstücke, Tomtatenmark und Gemüsebrühe hinzugeben und etwa zehn Minuten lang köcheln lassen.",
+        "schritt 5":"Salz, Zucker und Oregano oder Pizzagewürz dazugeben und die Suppe für weitere fünf Minuten köcheln lassen.",
+        "schritt 6":"Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
+        "schritt 7":"Schlagsahne, Basilikumblätter und Petersilie hinzugeben. Suppe kurz erwärmen und warm servieren."
+      }
+    },
+    "gurkencremsuppe": {
+      "zutaten": {
+        "gurke": {
+          "einheit": "gramm",
+          "menge": "125"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "1"
+        },
+        "knoblauchzehe": {
+          "einheit": "null",
+          "menge": "0.5"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "125"
+        },
+        "butter": {
+          "einheit": "gramm",
+          "menge": "5"
+        },
+        "mehl": {
+          "einheit": "gramm",
+          "menge": "5"
+        },
+        "schlagsahne": {
+          "einheit": "milliliter",
+          "menge": "50"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "zirtonensaft": {
+          "einheit": "teelöffel",
+          "menge": "0.25"
+        },
+        "dill": {
+          "einheit": "gramm",
+          "menge": "10"
+        }
+
+      },
+      "schritte":{
+        "schritt 1":"Schäle die Zwiebel und den Knoblauch und schneide beides in kleine Stücke.",
+        "schritt 2":"Wasche die Gurke und schneide sie in sehr kleine Würfel.",
+        "schritt 3":"Butter im Topf erhitzen, Zwiebel und Knoblauch hinzugeben und etwa fünf Minuten lang bei niedriger Hitze dünsten.",
+        "schritt 4":"Die Gurkenstücke und Gemüsebrühe hinzugeben und etwa fünf Minuten lang köcheln lassen.",
+        "schritt 5":"Sahne mit dem Mehl verrühren und zur Suppe hinzugeben. Salz und Pfeffer ebenfalls hinzugeben und die Suppe für weitere fünf Minuten köcheln lassen.",
+        "schritt 6":"Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
+        "schritt 7":"Zitronensaft und Dill hinzugeben und die Suppe abschmecken. Suppe kurz erwärmen und warm servieren."
+      }
+    },
+    "bärlauchsuppe": {
+      "zutaten": {
+        "kartoffel": {
+          "einheit": "gramm",
+          "menge": "100"
+        },
+        "bärlauch": {
+          "einheit": "hand voll",
+          "menge": "0.25"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "250"
+        },
+        "butter": {
+          "einheit": "gramm",
+          "menge": "5"
+        },
+        "mehl": {
+          "einheit": "esslöffel",
+          "menge": "2.5"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        }
+      },
+      "schritte":{
+        "schritt 1":"Schäle die Kartoffeln, schneide sie in kleine Stücke und koche sie etwa zehn Minuten in Wasser vor.<break time=\"2s\"/> Wasser anschließend abgießen und die gekochten Kartoffelstücke beiseite legen.",
+        "schritt 2":"Butter im Topf erwärmen, Mehl hinzugeben und bei niedriger Hitze etwa zwei bis drei Minuten anschwitzen.",
+        "schritt 3":"Gemüsebrühe zugeben und bei niedriger Hitze etwa fünf Minuten köcheln lassen.",
+        "schritt 4":"Die vorgekochten Kartoffelstücke und Bärlauch hinzugeben und etwa fünf Minuten kochen.",
+        "schritt 5":"Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
+        "schritt 6":"Die Suppe mit Salz und Pfeffer abschmecken und heiß servieren."
+      }
+
     }
   }
 }
-

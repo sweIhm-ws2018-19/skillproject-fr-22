@@ -88,7 +88,7 @@ public class IngredientIntentHandler implements RequestHandler {
                         if (i < listSize - 2) {
                             speechText.append(", ");
                         } else if (i == listSize - 2) {
-                            speechText.append(" oder ");
+                            speechText.append(", oder ");
                         } else {
                             speechText.append(". Welche suppe wählst du?");
                         }

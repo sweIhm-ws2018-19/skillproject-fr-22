@@ -14,7 +14,7 @@ import org.json.simple.parser.*;
 public class SoupMain {
 
 
-    public static final RezeptArrayList REZEPT_ARRAY_LIST = new RezeptArrayList();
+
     public static final String[] alleRezepte = {"kartoffelcremesuppe", "möhrencremesuppe","zucchinicremesuppe","möhren und kartoffeleintopf","tomatensuppe","tomaten kokos suppe"};
 
 
@@ -23,13 +23,15 @@ public class SoupMain {
         try {
 
             InputStream stream = SoupMain.class.getClassLoader().getResourceAsStream("data/rezepte.json");
-            Object obj = new JSONParser().parse(new InputStreamReader(stream));
+            Object obj = new JSONParser().parse(new InputStreamReader(stream,"UTF-8"));
             JSONObject jsonObject = (JSONObject) obj;
             Map rezepte = (Map) jsonObject.get("rezepte");
             Map zutatenMitGeschlecht = (Map) jsonObject.get("zutaten");
             Map einheitenMitGeschlecht = (Map) jsonObject.get("einheiten");
-            for (String s : alleRezepte) {
-                addRecipes(s, rezepte, zutatenMitGeschlecht, einheitenMitGeschlecht);
+            Object [] alleRezepte =  ((Map) jsonObject.get("rezepte")).keySet().toArray();
+            for (Object s : alleRezepte) {
+                String lol = s.toString();
+                addRecipes(s.toString(), rezepte, zutatenMitGeschlecht, einheitenMitGeschlecht);
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -63,7 +65,7 @@ public class SoupMain {
             zumeng[counter] = new ZutatMengeEinheit(zutat, menge, einheit);
             counter++;
         }
-        REZEPT_ARRAY_LIST.add(new Rezept(rezeptname, zumeng));
+        SessionAttributes.recipes.add(new Rezept(rezeptname, zumeng));
 
 
     }
@@ -79,7 +81,7 @@ public class SoupMain {
 
 
 
-            NavigableMap<Integer, ArrayList<Rezept>> map = REZEPT_ARRAY_LIST.getFitting(ingredients);
+            NavigableMap<Integer, ArrayList<Rezept>> map = SessionAttributes.recipes.getFitting(ingredients);
             ArrayList<Rezept> listwithAll = treeMapToSortedList(map);
             List<Rezept> list;
             if (listwithAll.size() > 6) {
