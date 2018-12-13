@@ -17,7 +17,7 @@ public class Rezept {
         int count =0;
         for(Zutat zut:z){
             for(ZutatMengeEinheit zum:zumeng){
-                if (zum.zutat.equals(zut))count++;
+                if (zum.zutat.equals(zut)) count++;
             }
         }
         return count;

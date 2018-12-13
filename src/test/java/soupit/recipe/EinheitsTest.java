@@ -1,5 +1,7 @@
 package soupit.recipe;
 
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
@@ -9,6 +11,7 @@ class EinheitsTest {
     private Einheit nullTest = new Einheit(null,null);
     private Einheit stringTest = new Einheit(test,test);
 
+    @Test
     void toStringTest() {
         assertNull(nullTest.toString());
         assertEquals(test,stringTest.toString());
