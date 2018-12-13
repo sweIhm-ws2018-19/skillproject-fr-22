@@ -1,4 +1,4 @@
-{
+﻿{
   "zutaten": {
     "karotte": "f",
     "kartoffel": "f",
@@ -6,11 +6,12 @@
     "knoblauchzehe": "f",
     "olivenöl": "n",
     "saure sahne": "f",
-    "paprikapulver": "n",
+    "papriapulver": "n",
     "pinienkerne": "f",
     "orangensaft": "m",
     "basilikumpesto": "n",
     "kürbis": "m",
+    "hokkaido kürbis": "m",
     "zwiebel": "f",
     "gemüsebrühe": "f",
     "öl": "n",
@@ -19,12 +20,44 @@
     "salz": "n",
     "pfeffer": "m",
     "muskat": "m",
-    "schinken- oder speckwürfel": "f",
+    "schinken oder speckwürfel": "f",
     "zucchini": "f",
-    "tomate":"f",
-    "tomatenmark":"n",
-    "ingwerstück":"n",
-    "cayenne pfeffer":"m"
+    "tomate": "f",
+    "tomatenmark": "n",
+    "ingwerstück": "n",
+    "cayenne pfeffer": "m",
+    "kokosmilch": "f",
+    "gelbe currypaste": "f",
+    "koriander": "m",
+    "möhrensaft": "m",
+    "tiefgekühlte erbse": "f",
+    "wasser": "n",
+    "mandelmus": "n",
+    "walnusskern": "m",
+    "walnussöl": "n",
+    "zitronensaft": "m",
+    "minze": "f",
+    "currypulver": "n",
+    "sonnenblumenkern": "m",
+    "agavendicksaft": "m",
+    "rote chilischote": "f",
+    "pastinake": "f",
+    "rapsöl": "n",
+    "limette": "f",
+    "blattspinat": "m",
+    "avocado": "f",
+    "ungesüßter mandeldrink": "m",
+    "ungesüßter sanddornsaft": "m",
+    "gemahlene mandel": "f",
+    "misaopaste": "f",
+    "schittlauch": "m",
+    "lauch": "m",
+    "sellerieknolle": "f",
+    "schmelzkäse":"m",
+    "schinkenspeck":"m",
+    "champignon":"m",
+    "butter":"f",
+    "mehl":"n"
   },
   "einheiten": {
     "gramm": "n",
@@ -32,7 +65,9 @@
     "esslöffel": "m",
     "milliliter": "m",
     "stängel": "m",
-    "prise": "f"
+    "prise": "f",
+    "schuss": "m",
+    "bund": "m"
   },
   "rezepte": {
     "kartoffelcremesuppe": {
@@ -73,7 +108,7 @@
           "einheit": "prise",
           "menge": "0.5"
         },
-        "schinken- oder speckwürfel": {
+        "schinken oder speckwürfel": {
           "einheit": "gramm",
           "menge": "25"
         }
@@ -189,7 +224,7 @@
         },
         "pfeffer": {
           "einheit": "prise",
-          "menge": "0.5"
+          "menge": "1"
         },
         "sahne": {
           "einheit": "gramm",
@@ -208,7 +243,7 @@
     },
     "möhren und kartoffeleintopf": {
       "zutaten": {
-        "möhren": {
+        "möhre": {
           "einheit": "gramm",
           "menge": "100"
         },
@@ -238,13 +273,13 @@
         },
         "pfeffer": {
           "einheit": "prise",
-          "menge": "0.5"
+          "menge": "1"
         },
         "muskat": {
           "einheit": "prise",
           "menge": "0.5"
         },
-        "schinken- oder speckwürfel": {
+        "schinkenspeck": {
           "einheit": "gramm",
           "menge": "25"
         }
@@ -288,11 +323,11 @@
         },
         "salz": {
           "einheit": "prise",
-          "menge": "0.5"
+          "menge": "1"
         },
         "pfeffer": {
           "einheit": "prise",
-          "menge": "0.5"
+          "menge": "1"
         },
         "zucker": {
           "einheit": "prise",
@@ -308,8 +343,8 @@
         "schritt 6": "Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren."
       }
     },
-    "tomaten kokos suppe":{
-      "zutaten":{
+    "tomaten kokos suppe": {
+      "zutaten": {
         "tomate": {
           "einheit": "gramm",
           "menge": "130"
@@ -320,7 +355,7 @@
         },
         "knoblauchzehe": {
           "einheit": "null",
-          "menge": "0.2"
+          "menge": "0.3"
         },
         "gemüsebrühe": {
           "einheit": "milliliter",
@@ -340,14 +375,14 @@
         },
         "salz": {
           "einheit": "prise",
-          "menge": "0.5"
+          "menge": "1"
         },
         "cayenne pfeffer": {
           "einheit": "prise",
           "menge": "0.25"
         },
         "paprikapulver": {
-          "einheit": "prise",
+          "einheit": "priese",
           "menge": "0.5"
         },
         "zucker": {
@@ -355,14 +390,470 @@
           "menge": "0.25"
         }
       },
+      "schritte": {
+        "schritt 1": "Zwiebel, Knoblauch und Ingwer schälen, klein schneiden und in Öl andünsten.",
+        "schritt 2": "Tomaten anritzen, mit kochendem Wasser übergießen und die Haut entfernen.",
+        "schritt 3": "Tomaten vierteln und in den Topf dazugeben.",
+        "schritt 4": "Gemüsebrühe,<break time=\"1s\"/> Salz, <break time=\"1s\"/>Pfeffer, <break time=\"1s\"/>Paprikapulver <break time=\"1s\"/> und Zucker dazugeben, kurz aufkochen und zehn Minten lang kochen lassen.",
+        "schritt 5": "Die Suppe mit einem Stabmixer fein pürieren.",
+        "schritt 6": "Die Kokosmilch dazugeben und vier Minuten bei niedriger Hitze köcheln lassen.",
+        "schritt 7": "Suppe mit Salz und Pfeffer abschmecken und heiß servieren. "
+      }
+    },
+    "kürbis kokos suppe": {
+      "zutaten": {
+        "hokkaido kürbis": {
+          "einheit": "gramm",
+          "menge": "110"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": ""
+        },
+        "knoblauchzehe": {
+          "einheit": "null",
+          "menge": ""
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "65"
+        },
+        "öl": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "salz": {
+          "einheit": "teelöffel",
+          "menge": "0.25"
+        },
+        "pfeffer": {
+          "einheit": "teelöffel",
+          "menge": "0.25"
+        },
+        "möhrensaft": {
+          "einheit": "milliliter",
+          "menge": "50"
+        },
+        "kokosilch": {
+          "einheit": "milliliter",
+          "menge": "33"
+        },
+        "gelbe currypaste": {
+          "einheit": "teelöffel",
+          "menge": "0.25"
+        },
+        "koriander": {
+          "einheit": "stängel",
+          "menge": "0.5"
+        }
+      },
+      "schritte": {
+        "schritt 1": "Schäle die Zwiebel und den Knoblauch und schneide beides in kleine Stücke.",
+        "schritt 2": "Wasche den Koriander oder die Petersilie und schneide es klein.",
+        "schritt 3": "Wasche den Kürbis und schneide die entsprechende Menge in kleine Stücke.",
+        "schritt 4": "Öl im Topf erwärmen. Zwiebel, <break time=\"1s\"/> Knoblauch, <break time=\"1s\"/> Koriander <break time=\"1s\"/> und Kürbisstücke hinzugeben und etwa fünf Minuten unter Rühren dünsten.",
+        "schritt 5": "Gemüsebrühe, Möhrensaft und Currypaste hinzugeben und die Suppe etwa fünfzehn Minuten köcheln lassen.",
+        "schritt 6": "Kokosmilch, Salz und Pfeffer hinzugeben und weitere drei Minuten erhitzen.",
+        "schritt 7": "Die Suppe mit einem Stabmixer pürieren, abschmecken und heiß servieren."
+      }
+    },
+    "erbsen suppe": {
+      "zutaten": {
+        "tiefgekühlte erbsen": {
+          "einheit": "gramm",
+          "menge": "250"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.5"
+        },
+        "wasser": {
+          "einheit": "milliliter",
+          "menge": "300"
+        },
+        "olivenöl": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "mandelmus": {
+          "einheit": "gramm",
+          "menge": "20"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "petersilie": {
+          "einheit": "gramm",
+          "menge": "20"
+        },
+        "walnusskern": {
+          "einheit": "gramm",
+          "menge": "60"
+        },
+        "minze": {
+          "einheit": "gramm",
+          "menge": "5"
+        },
+        "walnussöl": {
+          "einheit": "milliliter",
+          "menge": "60"
+        },
+        "zitronensaft": {
+          "einheit": "esslöffel",
+          "menge": "1"
+        },
+        "sonnenblumenkern": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "currypulver": {
+          "einheit": "teelöffel",
+          "menge": "0.375 "
+        },
+        "agavendicksaft": {
+          "einheit": "schuss",
+          "menge": "1"
+        },
+        "rote chilischote": {
+          "einheit": "null",
+          "menge": "0.25"
+        }
+      },
+      "schritte": {
+        "schritt 1": "Zwiebel schälen, klein schneiden und kurz in Olivenöl andünsten.",
+        "schritt 2": "Wasser und Erbsen dazugeben und unter Rühren zwölf Minuten kochen. Beachte dabei, dass die Erbsen leicht anbrennen können.",
+        "schritt 3": "Die Suppe mit einem Stabmixer pürieren. Mit Weißwein, Salz und Pfeffer abschmecken und heiß servieren. ",
+        "schritt 4": "Mandelmus unterheben und mit Salz und Pfeffer würzen.",
+        "schritt 5": "Walnüsse in einer Pfanne ohne Fett anrösten. Währenddessen Petersilie waschen und abzupfen.",
+        "schritt 6": "Petersilie, <break time=\"1s\"/> Walnüsse, <break time=\"1s\"/> Minze, <break time=\"1s\"/> Walnussöl, <break time=\"1s\"/> Zitronensaft, <break time=\"1s\"/> Salz und Pfeffer im Mixer pürieren.",
+        "schritt 7": "Sonnenblumenkerne mit Currypulver in Olivenöl anrösten. Einen Schuss Agavendicksaft oder Ahornsirup ",
+        "schritt 8": "Zu guter Letzt Suppe mit Petersilien-Pesto und den Sonnenblumenkernen anrichten und genießen. "
+      }
+    },
+    "pastinaken möhren suppe": {
+      "zutaten": {
+        "pastinake": {
+          "einheit": "gramm",
+          "menge": "75"
+        },
+        "möhre": {
+          "einheit": "gramm",
+          "menge": "125"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.5"
+        },
+        "ingwerstück": {
+          "einheit": "null",
+          "menge": "0.5"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "250"
+        },
+        "rapsöl": {
+          "einheit": "esslöffel",
+          "menge": "250"
+        },
+        "kokosmilch": {
+          "einheit": "milliliter",
+          "menge": "50"
+        },
+        "orangensaft": {
+          "einheit": "milliliter",
+          "menge": "12"
+        },
+        "currypulver": {
+          "einheit": "prise",
+          "menge": "0.5"
+        },
+        "zucker": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "limette": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        }
+      },
+      "schritte": {
+        "schritt 1": "Schäle die Pastinaken und Möhren und schneide beides in Scheiben.",
+        "schritt 2": "Ingwer und Schalotten ebenfalls schälen und fein hacken.",
+        "schritt 3": "Öl im Topf erhitzen und die Schalotten und den Ingwer kurz dünsten. Pastinaken und Möhren zugeben und kurz mitbraten.",
+        "schritt 4": "Mit Gemüsebrühe, Kokosmilch und Orangensaft ablöschen und etwa zwanzig Minuten köcheln lassen.",
+        "schritt 5": "Die Suppe kurz abkühlen lassen und mit einem Pürierstab pürieren.",
+        "schritt 6": "Die Suppe mit Salz, <break time=\"1s\"/> Peffer, <break time=\"1s\"/> Currypulver, <break time=\"1s\"/> Zucker und Limette abschmecken und heiß servieren."
+      }
+    },
+    "kalte spinatsuppe": {
+      "zutaten": {
+        "blattspinat": {
+          "einheit": "gramm",
+          "menge": "10"
+        },
+        "avocado": {
+          "einheit": "null",
+          "menge": "0.125"
+        },
+        "ungesüßter mandeldrink": {
+          "einheit": "milliliter",
+          "menge": "93"
+        },
+        "ungesüßter sanddornsaft": {
+          "einheit": "milliliter",
+          "menge": "31"
+        },
+        "gemahlene mandel": {
+          "einheit": "gramm",
+          "menge": "4"
+        },
+        "misopaste": {
+          "einheit": "gramm",
+          "menge": "2.5"
+        },
+        "agavendicksaft": {
+          "einheit": "teelöffel",
+          "menge": "0.5"
+        },
+        "paprikapulver": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "zitronensaft": {
+          "einheit": "teelöffel",
+          "menge": "1"
+        },
+        "petersilie": {
+          "einheit": "bund",
+          "menge": "0.125"
+        },
+        "schnittlauch": {
+          "einheit": "bund",
+          "menge": "0.25"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        }
+      },
+      "schritte": {
+        "schritt 1": "Mandeln in einer Pfanne ohne Fett goldbraun rösten und auf einem Teller abkühlen lassen.",
+        "schritt 2": "Spinat verlesen und waschen. Schnittlauch und Petersilie waschen. Von dem Spinat und der Petersilie etwas für die Dekoration beiseitelegen. ",
+        "schritt 3": "Avocado längs halbieren, den Kern entfernen und das Fruchtfleisch herauslösen.",
+        "schritt 4": "Avocado, <break time=\"1s\"/> Mandeln, <break time=\"1s\"/> Mandeldrink, <break time=\"1s\"/> Sanddornsaft, <break time=\"1s\"/> Spinat, <break time=\"1s\"/> Petersilie, <break time=\"1s\"/> Schnittlauch, <break time=\"1s\"/> Misopaste und Agavendicksaft in einen Mixer geben und pürieren.",
+        "schritt 5": "Die Suppe mit Salz, Pfeffer, Paprikapulver und Zitronensaft kräftig abschmecken und bis zum Servieren in den Kühlschrank stellen.",
+        "schritt 6": "Die Suppe nochmal durchrühren, auf die Teller verteilen und mit Spinat und Petersilie dekorieren."
+      }
+    },
+    "kartoffelsuppe": {
+      "zutaten": {
+        "kartoffel": {
+          "einheit": "gramm",
+          "menge": "100"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "knoblauchzehe": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "karotte": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "lauch": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "sellerieknolle": {
+          "einheit": "gramm",
+          "menge": "7.5"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "212.5"
+        },
+        "öl": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        }
+      },
+      "schritte": {
+        "schritt 1": "Schäle die Zwiebel, den Knoblauch und Karotte und schneide alles klein.",
+        "schritt 2": "Putze den den Lauch und Sellerie und schneide es ebenfalls in kleine Stücke.",
+        "schritt 3": "Öl im Topf erwärmen. Zwiebel, <break time=\"1s\"/> Knoblauch, <break time=\"1s\"/> Karotte, <break time=\"1s\"/> Lauch und Sellerie hinzugeben und alles bei niedriger Hitze vier Minuten unter gelegentlichem Rühren andünsten. ",
+        "schritt 4": "Gebe die Kartoffelstücke sowie Gemüsebrühe hinzu und lasse die Suppe fünfzehn Minuten bei niedriger Hitze köcheln.",
+        "schritt 5": "Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
+        "schritt 6": "Die Suppe mit Salz und Pfeffer abschmecken, nochmals erwärmen und heiß servieren."
+      }
+    },
+    "kartoffel lauchsuppe": {
+      "zutaten": {
+        "kartoffel": {
+          "einheit": "gramm",
+          "menge": "150"
+        },
+        "möhre": {
+          "einheit": "null",
+          "menge": "0.75"
+        },
+        "lauch": {
+          "einheit": "gramm",
+          "menge": "150"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "375"
+        },
+        "öl": {
+          "einheit": "milliliter",
+          "menge": "375"
+        },
+        "schmelzkäse": {
+          "einheit": "gramm",
+          "menge": "10"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "muskat": {
+          "einheit": "prise",
+          "menge": "0.5"
+        }
+      },
       "schritte":{
-        "schritt 1":"Zwiebel, Knoblauch und Ingwer schälen, klein schneiden und in Öl andünsten.",
-        "schritt 2":"Tomaten anritzen, mit kochendem Wasser übergießen und die Haut entfernen.",
-        "schritt 3":"Tomaten vierteln und in den Topf dazugeben.",
-        "schritt 4":"Gemüsebrühe      Salz       Pfeffer      Paprikapulver      und Zuckerdazugeben, kurz aufkochen und zehn Minten lang kochen lassen.",
-        "schritt 5":"Die Suppe mit einem Stabmixer fein pürieren.",
-        "schritt 6":"Die Kokosmilch dazugeben und vier Minuten bei niedriger Hitze köcheln lassen.",
-        "schritt 7":"Suppe mit Salz und Pfeffer abschmecken und heiß servieren. "
+        "schritt 1":"Schäle die Kartoffeln und Möhren und schneide alles in kleine Stücke. ",
+        "schritt 2":"Putze den Lauch. Schneide den Lauchs in feine Ringe und lege einen kleinen Teil davon beiseite.",
+        "schritt 3":"Öl im Topf erwärmen. Lauch, Kartoffeln und Möhren hinzugeben und unter ständigem Rühren kurz anbraten.",
+        "schritt 4":"Mit Gemüsebrühe ablöschen und die Suppe etwa fünfzehn Minuten bei geriner Hitze köcheln lassen.",
+        "schritt 5":"Schmelzkäse oder Schmand zur Suppe hinzugeben. Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
+        "schritt 6":"Anschließend die restlichen Lauchringe hinzufügen und diese kurz heiß werden lassen. Nach Bedarf mit Salz, Pfeffer und Muskat abschmecken und heiß servieren."
+      }
+    },
+    "möhren und kartoffeleintopf": {
+      "zutaten": {
+        "kartoffel": {
+          "einheit": "gramm",
+          "menge": "50"
+        },
+        "möhre": {
+          "einheit": "gramm",
+          "menge": "100"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "zwiebel"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "125"
+        },
+        "olivenöl": {
+          "einheit": "teelöffel",
+          "menge": "1"
+        },
+        "petersilie": {
+          "einheit": "stängel",
+          "menge": "0.5"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "muskat": {
+          "einheit": "prise",
+          "menge": "0.5"
+        },
+        "schinkenspeck": {
+          "einheit": "gramm",
+          "menge": "25"
+        }
+      },
+      "schritte":{
+        "schritt 1":"Schäle die Möhren und Kartoffeln und schneide sie in kleine Stücke.",
+        "schritt 2":"Schäle die Zwiebel und schneide sie klein.",
+        "schritt 3":"Butter oder Olivenöl im Topf erwärmen. Gebe die Zwiebeln hinzu und brate sie bei niedriger Hitze unter Rühren kurz an.",
+        "schritt 4":"Brate die Karottenstücke kurz mit an. Gebe Mehl sowie Gemüsebrühe hinzu und lasse die Suppe fünfzehn Minuten bei niedriger Hitze köcheln.",
+        "schritt 5":"Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
+        "schritt 6":"Petersilie klein hacken.",
+        "schritt 7":"Gebe Salz, Pfeffer und Muskat hinzu und schmecke die Suppe ab.",
+        "schritt 8":"Suppe auf die Teller verteilen, mit Petersilie bestreuen und heiß servieren."
+      }
+    },
+    "champignoncreme suppe": {
+      "zutaten": {
+        "champignon": {
+          "einheit": "gramm",
+          "menge": "65"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "175"
+        },
+        "butter": {
+          "einheit": "gramm",
+          "menge": "7.5"
+        },
+        "mehl": {
+          "einheit": "gramm",
+          "menge": "7.5"
+        },
+        "sahne": {
+          "einheit": "milliliter",
+          "menge": "25"
+        },
+        "petersilie": {
+          "einheit": "stängel",
+          "menge": "0.5"
+        }
+      },
+      "schritte":{
+        "schritt 1":"Putze die Champignons und schneide sie in kleine Scheiben. ",
+        "schritt 2":"Öl in einer Pfanne erhitzen und die Champignonscheiben darin von allen Seiten fünf bis acht Minuten braten. ",
+        "schritt 3":"Butter in einem Topf zerlassen. Das Mehl einrühren und mit der Gemüsebrühe unter Rühren ablöschen.",
+        "schritt 4":"Die Champignons in die Suppe geben, mit der Sahne verfeinern und die Suppe mit Salz und Pfeffer abschmecken. ",
+        "schritt 5":"Die Suppe auf die Teller verteilen und mit Petersilie garniert servieren."
       }
     }
   }
