@@ -208,7 +208,7 @@
           "einheit": "gramm",
           "menge": "100"
         },
-        "kartoffeln": {
+        "kartoffel": {
           "einheit": "gramm",
           "menge": "50"
         },
@@ -240,7 +240,7 @@
           "einheit": "prise",
           "menge": "0.5"
         },
-        "schinkenspeck": {
+        "schinken- oder speckwürfel": {
           "einheit": "gramm",
           "menge": "25"
         }
