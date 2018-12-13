@@ -1,9 +1,11 @@
-import org.junit.jupiter.api.Test;
+package soupit.recipe;
 
-import soupit.recipe.*;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
+
+
 
 class ZutatMengeEinheitTest {
 

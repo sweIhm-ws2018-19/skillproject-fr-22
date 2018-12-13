@@ -1,3 +1,5 @@
+package soupit.recipe;
+
 import org.junit.jupiter.api.Test;
 
 class RezeptArrayListTest {
