@@ -1,2 +1,2 @@
-soupit\handlers\RecipeYesOrNoIntent.class
 soupit\handlers\NameRecipeIntent.class
+soupit\handlers\YesNoIntent.class

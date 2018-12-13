@@ -7,5 +7,8 @@ public class Strings {
     public static final String REPROMPT = "Sage eine Zutat und ich schlage dir ein Supppenrezept vor";
     public static final String NAME_OF_SOUP_STATE = "NameOfSoupState";
     public static final String INITIAL_STATE = "InitialState";
+    public static final String SOUP_YES_NO_STATE = "SoupYesNoState";
+    public static final String INGREDIENTSAVAILIABLE= "IngredientsAvaliable";
+
 
 }

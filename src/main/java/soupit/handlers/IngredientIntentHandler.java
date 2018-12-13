@@ -52,41 +52,44 @@ public class IngredientIntentHandler implements RequestHandler {
             NavigableMap<Integer, ArrayList<Rezept>> map = REZEPT_ARRAY_LIST.getFitting(ingredients);
             ArrayList<Rezept> list = treeMapToSortedList(map);
             if (!list.isEmpty()) {
-                speechText = new StringBuilder("In Ordnung. Mit diesen Zutaten kannst du ");
+                speechText = new StringBuilder("ich kann dir anhand der genannten Zutaten ");
                 int listSize = list.size();
+                speechText.append(listSize);
+                speechText.append(" Rezept");
+                if(listSize > 1) speechText.append("e");
+                speechText.append(" vorschlagen: ");
                 if (listSize == 1) {
-                    speechText.append("eine ");
-                    speechText.append(list.get(0));
-                    speechText.append(" kochen. möchtest du das tun ?");
+                   speechText.append(list.get(0));
                     SoupITStreamHandler.recipeToDecideOn = list.get(0);
                 }
                 else if (listSize <= 3) {
                     for (int i = 0; i < listSize; i++) {
-                        speechText.append("eine ");
+                        speechText.append(list.get(i));
                         if (i < listSize - 2) {
-                            speechText.append(list.get(i));
                             speechText.append(", ");
                         } else if (i == listSize - 2) {
-                            speechText.append(list.get(i));
                             speechText.append(" oder ");
                         } else {
-                            speechText.append(list.get(i));
-                            speechText.append(" kochen. ");
-                            speechText.append("Sag mir welche Suppe du kochen möchtest ");
+                            speechText.append(". wähle eine Suppe");
                             ProgramState = Strings.NAME_OF_SOUP_STATE;
                             ////PROGRAMSTATE GET_NAME_OF_SOUP
                         }
                     }
                 } else {
-                    speechText = new StringBuilder(" für diese Zutaten fallen mir ");
-                    speechText.append(listSize);
-                    speechText.append(" Rezepte ein. zu deinen Zutaten passen am besten die folgenden 3 Rezepte: ");
                     speechText.append(list.get(0));
                     speechText.append(", ");
                     speechText.append(list.get(1));
-                    speechText.append("und ");
+                    speechText.append(", ");
                     speechText.append(list.get(2));
-                    speechText.append(" sag mir welche davon dir gefallen hat, oder weiter, wenn du mehr hören möchtest ");   //TODO 4 recipes will read all, 5 as 3+2
+                    speechText.append(" und ");
+                    int remainingRecipesCount = listSize-3;
+                    speechText.append(remainingRecipesCount);
+                    speechText.append(" weitere");
+                    if (remainingRecipesCount == 1) speechText.append("s");
+                    speechText.append(". ");
+                    speechText.append("wähle eine Suppe oder sage: weitere anhören ");               //TODO class Sessionattributes
+                    //Index of List set to some variable -3
+
 
 
 //              Iterator<Map.Entry<Integer,ArrayList<Rezept>>> i = descendingMap.entrySet().iterator();

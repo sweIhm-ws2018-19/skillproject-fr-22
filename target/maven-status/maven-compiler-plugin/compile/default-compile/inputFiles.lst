@@ -3,9 +3,7 @@ D:\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\handlers\HelpInte
 D:\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\handlers\IngredientIntentHandler.java
 D:\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\Lists\Strings.java
 D:\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\recipe\RezeptArrayList.java
-D:\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\SoupMainTest.java
 D:\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\handlers\FallbackIntentHandler.java
-D:\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\handlers\RecipeYesOrNoIntent.java
 D:\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\handlers\SessionEndedRequestHandler.java
 D:\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\handlers\SessionEndedRequestHandlerTest.java
 D:\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\SoupITStreamHandler.java
@@ -15,6 +13,7 @@ D:\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\handlers\NameReci
 D:\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\recipe\Einheit.java
 D:\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\handlers\LaunchRequestHandler.java
 D:\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\handlers\FallbackIntentHandlerTest.java
+D:\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\handlers\YesNoIntent.java
 D:\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\recipe\Zutat.java
 D:\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\handlers\IngredientIntentHandlerTest.java
 D:\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\handlers\CancelandStopIntentHandlerTest.java
