@@ -1,9 +1,9 @@
 package soupit.recipe;
 
 public class ZutatMengeEinheit {
-    soupit.recipe.Zutat zutat;
-    double menge;
-    soupit.recipe.Einheit einheit;
+    private Zutat zutat;
+    private double menge;
+    private Einheit einheit;
 
     public ZutatMengeEinheit(soupit.recipe.Zutat zutat, double menge, soupit.recipe.Einheit einheit) {
         this.zutat = zutat;
@@ -23,8 +23,8 @@ public class ZutatMengeEinheit {
 
     public String mengeToString() {
         String string;
-        if (! einheit.einheit.equals("null")) {
-            if (einheit.grammatGeschlecht.equals("f")){
+        if (! einheitToString().equals("null")) {
+            if (einheit.getGrammatGeschlecht().equals("f")){
                 if(menge == 1) string = "eine";
                 else if (menge<1){
                     if(menge == 0.5) string = "eine halbe";
@@ -34,7 +34,7 @@ public class ZutatMengeEinheit {
                     if(menge - (int) menge == 0 ) string =""+(int)menge;
                     else string = ""+menge;                                               //TODO
                 }                                                    //TODO 2 1/3 != 2.33333333 !
-            }else if (einheit.grammatGeschlecht.equals("m")){
+            }else if (einheit.getGrammatGeschlecht().equals("m")){
                 if(menge == 1 )string = "ein";
                 else if(menge<1){
                     if(menge== 0.5)string = "einen halben";
@@ -56,7 +56,7 @@ public class ZutatMengeEinheit {
                 }
             }
         }else{ //einheit null
-            if (zutat.grammatGeschlecht.equals("f")){
+            if (zutat.getGrammatGeschlecht().equals("f")){
                 if(menge == 1) string = "eine";
                 else if (menge<1){
                     if(menge == 0.5) string = "eine halbe";
@@ -66,7 +66,7 @@ public class ZutatMengeEinheit {
                     if(menge - (int) menge == 0 ) string =""+(int)menge;
                     else string = ""+menge;                                               //TODO
                 }                                               //TODO
-            }else if (zutat.grammatGeschlecht.equals("m")){
+            }else if (zutat.getGrammatGeschlecht().equals("m")){
                 if(menge == 1 )string = "ein";
                 else if(menge<1){
                     if(menge== 0.5)string = "einen halben";
@@ -91,9 +91,11 @@ public class ZutatMengeEinheit {
         return string;
     }
 
-    public String einheitToString(){
-        if (einheit.einheit.equals("null")) return "";
-        else
-            return einheit.toString();
+    private String einheitToString(){
+        return einheit.getEinheit().equals("null")?"":einheit.toString();
+    }
+
+    public Zutat getZutat() {
+        return zutat;
     }
 }

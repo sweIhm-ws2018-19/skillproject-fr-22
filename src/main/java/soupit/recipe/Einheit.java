@@ -1,8 +1,8 @@
 package soupit.recipe;
 
 public class Einheit {
-    public final String einheit;
-    public final String grammatGeschlecht;
+    private final String einheit; //private setzen
+    private final String grammatGeschlecht;
 
     public Einheit(String einheit, String grammatGeschlecht){
         this.einheit = einheit;
@@ -13,4 +13,13 @@ public class Einheit {
     public String toString() {
         return einheit;
     }
+
+    String getEinheit() {
+        return einheit;
+    }
+
+    String getGrammatGeschlecht() {
+        return grammatGeschlecht;
+    }
+
 }

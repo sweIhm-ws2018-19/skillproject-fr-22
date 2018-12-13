@@ -2,8 +2,7 @@ package soupit.recipe;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 class EinheitsTest {
     private String test = "test";
@@ -16,8 +15,14 @@ class EinheitsTest {
         assertNull(nullTest.toString());
         assertEquals(test,stringTest.toString());
     }
-
-
-
-
+    @Test
+    void getEinheitTest() {
+        assertNull(nullTest.getEinheit());
+        assertEquals(test,stringTest.getEinheit());
+    }
+    @Test
+    void getGrammatGeschlechtTest() {
+        assertNull(nullTest.getGrammatGeschlecht());
+        assertEquals(test,stringTest.getGrammatGeschlecht());
+    }
 }

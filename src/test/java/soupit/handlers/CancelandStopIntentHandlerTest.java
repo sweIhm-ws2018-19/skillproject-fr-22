@@ -1,15 +1,25 @@
 package soupit.handlers;
 
-import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import com.amazon.ask.dispatcher.request.handler.HandlerInput;
+import org.junit.Test;
+import org.mockito.Mockito;
+
+import static org.junit.Assert.assertTrue;
+import static org.mockito.Matchers.any;
+import static org.mockito.Mockito.when;
 
 class CancelandStopIntentHandlerTest extends soupit.handlers.CancelandStopIntentHandler {
 
+    private CancelandStopIntentHandler handler;
+
+
     @Test
     void canHandleTest() {
-        assertFalse(super.canHandle(null));
-        //assertTrue(super.canHandle("hi"));
+            final HandlerInput inputMock = Mockito.mock(HandlerInput.class);
+            when(inputMock.matches(any())).thenReturn(true);
+            assertTrue(handler.canHandle(inputMock));
+
     }
 
     @Test

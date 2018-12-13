@@ -1,8 +1,8 @@
 package soupit.recipe;
 
 public class Zutat {
-    public final String zutat;
-    final String grammatGeschlecht;
+    private final String zutat;
+    private final String grammatGeschlecht;
 
     public Zutat(String zutat,String grammatGeschlecht){
         this.zutat = zutat;
@@ -16,5 +16,9 @@ public class Zutat {
     @Override
     public String toString() {
         return zutat;
+    }
+
+    public String getGrammatGeschlecht() {
+        return grammatGeschlecht;
     }
 }
