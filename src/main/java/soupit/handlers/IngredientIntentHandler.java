@@ -63,7 +63,12 @@ public class IngredientIntentHandler implements RequestHandler {
 
             NavigableMap<Integer, ArrayList<Rezept>> map = REZEPT_ARRAY_LIST.getFitting(ingredients);
             ArrayList<Rezept> listwithAll = treeMapToSortedList(map);
-            List<Rezept> list = listwithAll.subList(0,6);
+            List<Rezept> list;
+            if (listwithAll.size() > 6) {
+                list = listwithAll.subList(0,7);
+            }else {
+                list = listwithAll;
+            }
 
             if (!list.isEmpty()) {
                 speechText = new StringBuilder("ich kann dir anhand der genannten Zutaten ");
@@ -85,7 +90,7 @@ public class IngredientIntentHandler implements RequestHandler {
                         } else if (i == listSize - 2) {
                             speechText.append(" oder ");
                         } else {
-                            speechText.append(". wähle eine Suppe");
+                            speechText.append(". Wähle eine Suppe");
                         }
                     }
                 } else {
