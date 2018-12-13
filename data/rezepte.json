@@ -20,7 +20,11 @@
     "pfeffer": "m",
     "muskat": "m",
     "schinken- oder speckwürfel": "f",
-    "zucchini": "f"
+    "zucchini": "f",
+    "tomate":"f",
+    "tomatenmark":"n",
+    "ingwerstück":"n",
+    "cayenne pfeffer":"m"
   },
   "einheiten": {
     "gramm": "n",
@@ -254,6 +258,111 @@
         "schritt 6": "Petersilie klein hacken.",
         "schritt 7": "Salz, Pfeffer und Muskat hinzugeben und Suppe abschmecken. TON",
         "schritt 8": "Die Suppe auf die Teller verteilen und heiß servieren"
+      }
+    },
+    "tomatensuppe": {
+      "zutaten": {
+        "tomate": {
+          "einheit": "gramm",
+          "menge": "175"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "knoblauchzehe": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "175"
+        },
+        "öl": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "tomatenmark": {
+          "einheit": "teelöffel",
+          "menge": "0.5"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "0.5"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "0.5"
+        },
+        "zucker": {
+          "einheit": "prise",
+          "menge": "0.5"
+        }
+      },
+      "schritte": {
+        "schritt 1": "Schäle die Zwiebel und den Knoblauch und schneide beides in kleine Stücke.",
+        "schritt 2": "Wasche die Tomaten und schneide sie in kleine Würfel.",
+        "schritt 3": "Öl im Topf erhitzen, Zwiebel und Knoblauch hinzugeben und etwa fünf Minuten lang bei ",
+        "schritt 4": "Die Tomatenstücke und Tomtatenmark hinzugeben und etwa zehn Minuten lang köcheln ",
+        "schritt 5": "Mit Gemüsebrühe ablöschen. Salz, Pfeffer und Zucker dazugeben und die Suppe für weitere fünf Minuten köcheln lassen.",
+        "schritt 6": "Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren."
+      }
+    },
+    "tomaten kokos suppe":{
+      "zutaten":{
+        "tomate": {
+          "einheit": "gramm",
+          "menge": "130"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "knoblauchzehe": {
+          "einheit": "null",
+          "menge": "0.2"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "32"
+        },
+        "öl": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "kokosmilch": {
+          "einheit": "milliliter",
+          "menge": "65"
+        },
+        "ingwerstück": {
+          "einheit": "null",
+          "menge": "0.5"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "0.5"
+        },
+        "cayenne pfeffer": {
+          "einheit": "prise",
+          "menge": "0.25"
+        },
+        "paprikapulver": {
+          "einheit": "priese",
+          "menge": "0.5"
+        },
+        "zucker": {
+          "einheit": "teelöffel",
+          "menge": "0.25"
+        }
+      },
+      "schritte":{
+        "schritt 1":"Zwiebel, Knoblauch und Ingwer schälen, klein schneiden und in Öl andünsten.",
+        "schritt 2":"Tomaten anritzen, mit kochendem Wasser übergießen und die Haut entfernen.",
+        "schritt 3":"Tomaten vierteln und in den Topf dazugeben.",
+        "schritt 4":"Gemüsebrühe      Salz       Pfeffer      Paprikapulver      und Zuckerdazugeben, kurz aufkochen und zehn Minten lang kochen lassen.",
+        "schritt 5":"Die Suppe mit einem Stabmixer fein pürieren.",
+        "schritt 6":"Die Kokosmilch dazugeben und vier Minuten bei niedriger Hitze köcheln lassen.",
+        "schritt 7":"Suppe mit Salz und Pfeffer abschmecken und heiß servieren. "
       }
     }
   }
