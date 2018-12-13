@@ -11,13 +11,11 @@ import com.amazon.ask.model.Slot;
 import com.amazon.ask.response.ResponseBuilder;
 import soupit.Lists.Strings;
 import soupit.SessionAttributes;
-import soupit.SoupITStreamHandler;
 import soupit.recipe.*;
 
 import java.util.*;
 
 import static com.amazon.ask.request.Predicates.intentName;
-import static soupit.handlers.LaunchRequestHandler.REZEPT_ARRAY_LIST;
 
 public class IngredientIntentHandler implements RequestHandler {
     @Override
@@ -61,7 +59,7 @@ public class IngredientIntentHandler implements RequestHandler {
             input.getAttributesManager().setSessionAttributes(Collections.singletonMap("Ingredient", ingredients));
 
 
-            NavigableMap<Integer, ArrayList<Rezept>> map = REZEPT_ARRAY_LIST.getFitting(ingredients);
+            NavigableMap<Integer, ArrayList<Rezept>> map = SessionAttributes.recipes.getFitting(ingredients);
             ArrayList<Rezept> listwithAll = treeMapToSortedList(map);
             List<Rezept> list;
             if (listwithAll.size() > 6) {
@@ -80,7 +78,9 @@ public class IngredientIntentHandler implements RequestHandler {
                 if (listSize == 1) {
                    speechText.append(list.get(0));
                    speechText.append(" Möchtest du diese Suppe kochen?");
-                    SessionAttributes.recipeToDecideOn= list.get(0);
+                   SessionAttributes.recipeToDecideOn= list.get(0);
+                   SessionAttributes.programState = Strings.SOUP_YES_NO_STATE;
+
                 }
                 else if (listSize <= 3) {
                     for (int i = 0; i < listSize; i++) {
@@ -90,7 +90,7 @@ public class IngredientIntentHandler implements RequestHandler {
                         } else if (i == listSize - 2) {
                             speechText.append(" oder ");
                         } else {
-                            speechText.append(". Wähle eine Suppe");
+                            speechText.append(". Welche suppe wählst du?");
                         }
                     }
                 } else {
@@ -108,8 +108,6 @@ public class IngredientIntentHandler implements RequestHandler {
                     speechText.append("wähle eine Suppe oder sage: weitere anhören ");
                     SessionAttributes.matchingRecipes = list;
                     SessionAttributes.matchingRecipesIndex = 3;
-                    //Index of List set to some variable -3
-
 
 
 //              Iterator<Map.Entry<Integer,ArrayList<Rezept>>> i = descendingMap.entrySet().iterator();

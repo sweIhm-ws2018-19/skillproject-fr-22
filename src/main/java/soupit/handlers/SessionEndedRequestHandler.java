@@ -32,7 +32,6 @@ public class SessionEndedRequestHandler implements RequestHandler {
     @Override
     public Optional<Response> handle(HandlerInput input) {
         // any cleanup logic goes here
-        LaunchRequestHandler.REZEPT_ARRAY_LIST.clear();
         return input.getResponseBuilder().build();
     }
 }

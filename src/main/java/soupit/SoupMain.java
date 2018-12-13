@@ -1,7 +1,5 @@
 package soupit;
 
-import com.amazon.ask.dispatcher.request.handler.HandlerInput;
-import com.amazon.ask.model.Slot;
 import soupit.recipe.*;
 
 import java.io.InputStream;
@@ -11,7 +9,6 @@ import java.util.*;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.*;
 
-import static soupit.handlers.LaunchRequestHandler.REZEPT_ARRAY_LIST;
 
 
 public class SoupMain {

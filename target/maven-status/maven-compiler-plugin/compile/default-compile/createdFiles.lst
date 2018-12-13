@@ -1,5 +1,5 @@
-soupit\recipe\Cooker.class
-soupit\handlers\MoreRecipesIntent.class
 soupit\SessionAttributes.class
+soupit\recipe\Cooker.class
 soupit\handlers\NameRecipeIntent.class
+soupit\handlers\MoreRecipesIntent.class
 soupit\handlers\YesNoIntent.class

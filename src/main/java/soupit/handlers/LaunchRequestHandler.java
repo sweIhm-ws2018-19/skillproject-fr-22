@@ -22,6 +22,7 @@ import com.amazon.ask.model.Response;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
+import soupit.SessionAttributes;
 import soupit.recipe.*;
 import soupit.Lists.Strings;
 
@@ -36,7 +37,6 @@ import java.util.Optional;
 import static com.amazon.ask.request.Predicates.requestType;
 
 public class LaunchRequestHandler implements RequestHandler {
-    public static final RezeptArrayList REZEPT_ARRAY_LIST = new RezeptArrayList();
     public static final String[] alleRezepte = {"kartoffelcremesuppe", "möhrencremesuppe","zucchinicremesuppe","möhren und kartoffeleintopf","tomatensuppe","tomaten kokos suppe"};
 
 
@@ -96,7 +96,7 @@ public class LaunchRequestHandler implements RequestHandler {
             zumeng[counter] = new ZutatMengeEinheit(zutat,menge,einheit);
             counter++;
         }
-        REZEPT_ARRAY_LIST.add(new Rezept(rezeptname,zumeng));
+        SessionAttributes.recipes.add(new Rezept(rezeptname,zumeng));
 
 
 
