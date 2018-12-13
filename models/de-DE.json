@@ -130,12 +130,37 @@
           "values": [
             {
               "name": {
-                "value": "Möhrencremesuppe"
+                "value": "zucchinicremesuppe",
+                "synonyms": [
+                  "zucchini creme suppe",
+                  "zucchini cremesuppe"
+                ]
               }
             },
             {
               "name": {
-                "value": "Kartoffelcremesuppe"
+                "value": "möhren und kartoffeleintopf",
+                "synonyms": [
+                  "möhren und kartoffel eintopf"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Möhrencremesuppe",
+                "synonyms": [
+                  "möhren creme suppe",
+                  "möhren cremesuppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Kartoffelcremesuppe",
+                "synonyms": [
+                  "kartoffel creme suppe",
+                  "kartoffel cremesuppe"
+                ]
               }
             }
           ]
