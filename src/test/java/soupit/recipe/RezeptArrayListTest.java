@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 class RezeptArrayListTest {
 
     @Test
-    void getBestFittingTest() {
+    void getFittingTest() {
         //wie zum henker soll das hier getestet werden...
     }
 }

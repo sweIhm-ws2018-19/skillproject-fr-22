@@ -28,7 +28,6 @@ class ZutatMengeEinheitTest {
 
 
 
-
     private ZutatMengeEinheit standardTest = new ZutatMengeEinheit(standardZutat,1,standardEinheit);
     private ZutatMengeEinheit standardMehrzahl = new ZutatMengeEinheit(standardZutat,2,standardEinheit);
     private ZutatMengeEinheit standardHalbe = new ZutatMengeEinheit(standardZutat,0.5,standardEinheit);
@@ -39,7 +38,6 @@ class ZutatMengeEinheitTest {
     private ZutatMengeEinheit männlichEinzahl = new ZutatMengeEinheit(männlicheZutat,2,standardEinheit);
     private ZutatMengeEinheit männlichMehrzahl = new ZutatMengeEinheit(männlicheZutat,2,standardEinheit);
     private ZutatMengeEinheit männlichHalbe = new ZutatMengeEinheit(männlicheZutat,0.5,standardEinheit);
-
 
 
 

@@ -3,17 +3,17 @@ package soupit.recipe;
 import java.util.Arrays;
 
 public class Rezept {
-    public ZutatMengeEinheit[] zumeng;
-    String name;
-    ZutatMengeEinheit[] optionaleZutaten;
+    private ZutatMengeEinheit[] zumeng;
+    private String name;
+    private ZutatMengeEinheit[] optionaleZutaten;
 
-    public  Rezept(String name, ZutatMengeEinheit...zumeng){
+    public  Rezept(String name, ZutatMengeEinheit...zumeng) {
         this.zumeng = zumeng;
         this.name = name;
     }
 
 
-    int checkAccordance(Zutat...z){
+    int checkAccordance(Zutat...z) {
         int count =0;
         for(Zutat zut:z){
             for(ZutatMengeEinheit zum:zumeng){
@@ -23,7 +23,7 @@ public class Rezept {
         return count;
     }
 
-    public void addOptions(ZutatMengeEinheit...optionaleZutaten){
+    public void addOptions(ZutatMengeEinheit...optionaleZutaten) {
         this.optionaleZutaten = Arrays.copyOf(optionaleZutaten,optionaleZutaten.length);
     }
 
