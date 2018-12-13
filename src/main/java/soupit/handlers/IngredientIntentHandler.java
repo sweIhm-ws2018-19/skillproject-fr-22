@@ -10,13 +10,13 @@ import com.amazon.ask.model.Response;
 import com.amazon.ask.model.Slot;
 import com.amazon.ask.response.ResponseBuilder;
 import soupit.Lists.Strings;
+import soupit.SessionAttributes;
 import soupit.SoupITStreamHandler;
 import soupit.recipe.*;
 
 import java.util.*;
 
 import static com.amazon.ask.request.Predicates.intentName;
-import static soupit.SoupITStreamHandler.ProgramState;
 import static soupit.handlers.LaunchRequestHandler.REZEPT_ARRAY_LIST;
 
 public class IngredientIntentHandler implements RequestHandler {
@@ -38,6 +38,18 @@ public class IngredientIntentHandler implements RequestHandler {
         StringBuilder speechText;
 
         // Check for favorite color and create output to user.
+        speechText = getSpeechResponse(input, ingredientSlot);
+
+
+        ResponseBuilder responseBuilder = input.getResponseBuilder();
+
+        responseBuilder.withSpeech(speechText.toString())
+                .withShouldEndSession(false);
+        return responseBuilder.build();
+    }
+
+    private StringBuilder getSpeechResponse(HandlerInput input, Slot ingredientSlot) {
+        StringBuilder speechText;
         if (ingredientSlot != null) {
             // Store the user's favorite color in the Session and create response.
             String[] strinGredients = ingredientSlot.getValue().split("\\s");
@@ -50,7 +62,9 @@ public class IngredientIntentHandler implements RequestHandler {
 
 
             NavigableMap<Integer, ArrayList<Rezept>> map = REZEPT_ARRAY_LIST.getFitting(ingredients);
-            ArrayList<Rezept> list = treeMapToSortedList(map);
+            ArrayList<Rezept> listwithAll = treeMapToSortedList(map);
+            List<Rezept> list = listwithAll.subList(0,6);
+
             if (!list.isEmpty()) {
                 speechText = new StringBuilder("ich kann dir anhand der genannten Zutaten ");
                 int listSize = list.size();
@@ -60,7 +74,8 @@ public class IngredientIntentHandler implements RequestHandler {
                 speechText.append(" vorschlagen: ");
                 if (listSize == 1) {
                    speechText.append(list.get(0));
-                    SoupITStreamHandler.recipeToDecideOn = list.get(0);
+                   speechText.append(" Möchtest du diese Suppe kochen?");
+                    SessionAttributes.recipeToDecideOn= list.get(0);
                 }
                 else if (listSize <= 3) {
                     for (int i = 0; i < listSize; i++) {
@@ -71,8 +86,6 @@ public class IngredientIntentHandler implements RequestHandler {
                             speechText.append(" oder ");
                         } else {
                             speechText.append(". wähle eine Suppe");
-                            ProgramState = Strings.NAME_OF_SOUP_STATE;
-                            ////PROGRAMSTATE GET_NAME_OF_SOUP
                         }
                     }
                 } else {
@@ -87,7 +100,9 @@ public class IngredientIntentHandler implements RequestHandler {
                     speechText.append(" weitere");
                     if (remainingRecipesCount == 1) speechText.append("s");
                     speechText.append(". ");
-                    speechText.append("wähle eine Suppe oder sage: weitere anhören ");               //TODO class Sessionattributes
+                    speechText.append("wähle eine Suppe oder sage: weitere anhören ");
+                    SessionAttributes.matchingRecipes = list;
+                    SessionAttributes.matchingRecipesIndex = 3;
                     //Index of List set to some variable -3
 
 
@@ -123,15 +138,7 @@ public class IngredientIntentHandler implements RequestHandler {
 
         }else{
             speechText = new StringBuilder("tut mir leid, das habe ich nicht verstanden. kannst du das wiederholen ?");
-        }
-
-
-
-        ResponseBuilder responseBuilder = input.getResponseBuilder();
-
-        responseBuilder.withSpeech(speechText.toString())
-                .withShouldEndSession(false);
-        return responseBuilder.build();
+        } return speechText;
     }
 
     private static ArrayList<Rezept> treeMapToSortedList(Map<Integer, ArrayList<Rezept>> map) {                              //TODO Refactor this method to be in some other class

@@ -16,13 +16,11 @@ package soupit.handlers;
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
-import com.amazon.ask.model.SessionEndedRequest;
-import soupit.Lists.Strings;
+import soupit.SessionAttributes;
 
 import java.util.Optional;
 
 import static com.amazon.ask.request.Predicates.intentName;
-import static soupit.SoupITStreamHandler.ProgramState;
 
 public class CancelandStopIntentHandler implements RequestHandler {
     @Override
@@ -32,8 +30,7 @@ public class CancelandStopIntentHandler implements RequestHandler {
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        LaunchRequestHandler.REZEPT_ARRAY_LIST.clear();
-        ProgramState = Strings.INITIAL_STATE;
+        SessionAttributes.clear();
         return input.getResponseBuilder()
                 .withSpeech("Bis zum nächsten Mal")
                 .withShouldEndSession(true)

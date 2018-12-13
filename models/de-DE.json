@@ -122,6 +122,15 @@
             "Nein",
             "Ja"
           ]
+        },
+        {
+          "name": "MoreRecipesIntent",
+          "slots": [],
+          "samples": [
+            "mehr Rezepte",
+            "weitere",
+            "weitere anhören"
+          ]
         }
       ],
       "types": [
