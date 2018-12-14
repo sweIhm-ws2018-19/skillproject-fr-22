@@ -30,7 +30,7 @@ public class ZutatMengeEinheit {
                     if(menge == 0.5) string = "eine halbe";
                     else if (menge == 0.3) string = "eine drittel";
                     else if(menge == 0.15) string ="eine sekstel";
-                    else string = "eine " +(int)(1/menge)+"tel";
+                    else string = "eine " +doubletToString(menge);
                 }else {
                     if(menge - (int) menge == 0 ) string =""+(int)menge;
                     else string = doubletToString(menge);
@@ -41,7 +41,7 @@ public class ZutatMengeEinheit {
                     if(menge== 0.5)string = "einen halben";
                     else if(menge == 0.3) string = "einen drittel";
                     else if(menge == 0.15) string ="einen sekstel";
-                    else string = "einen " +(int)(1/menge)+"tel";
+                    else string = "einen " +doubletToString(menge);
                 }else {
                     if(menge - (int) menge == 0 ) string =""+(int)menge;
                     else string = doubletToString(menge);
@@ -53,7 +53,7 @@ public class ZutatMengeEinheit {
                     if (menge == 0.5) string = "ein halbes";
                     else if (menge == 0.3) string = "ein drittel";
                     else if(menge == 0.15) string ="ein sekstel";
-                    else string = "ein " +(int)(1/menge)+"tel";
+                    else string = "ein " +doubletToString(menge);
                 }else {
                     if(menge - (int) menge == 0 ) string =""+(int)menge;
                     else string = doubletToString(menge);
@@ -67,7 +67,7 @@ public class ZutatMengeEinheit {
                     if(menge == 0.5) string = "eine halbe";
                     else if (menge == 0.3) string = "eine drittel";
                     else if(menge == 0.15) string ="eine sekstel";
-                    else string = "eine " +(int)(1/menge)+"tel";
+                    else string = "eine " +doubletToString(menge);
                 }else {
                     if(menge - (int) menge == 0 ) string =""+(int)menge;
                     else string = doubletToString(menge);
@@ -79,7 +79,7 @@ public class ZutatMengeEinheit {
                     if(menge== 0.5)string = "einen halben";
                     else if(menge == 0.3) string = "einen drittel";
                     else if(menge == 0.15) string ="einen sekstel";
-                    else string = "einen " +(int)(1/menge)+"tel";
+                    else string = "einen " +doubletToString(menge);
                 }else {
                     if(menge - (int) menge == 0 ) string =""+(int)menge;
                     else string = doubletToString(menge);
@@ -91,7 +91,7 @@ public class ZutatMengeEinheit {
                     if (menge == 0.5) string = "ein halbes";
                     else if (menge == 0.3) string = "ein drittel";
                     else if(menge == 0.15) string ="ein sekstel";
-                    else string = "ein " +(int)(1/menge)+"tel";
+                    else string = "ein " +doubletToString(menge);
                 }else {
                     if(menge - (int) menge == 0 ) string =""+(int)menge;
                     else string = doubletToString(menge);
@@ -106,9 +106,14 @@ public class ZutatMengeEinheit {
     }
 
     private String doubletToString(double number){
-        String fraction = new Rational(number).toString();
-        return "<say-as interpret-as=\"fraction\">"+fraction+"</say-as>";
-
+        Rational rational = new Rational(number);
+        if(rational.getNum() == 1){
+            return String.valueOf((int) (1/menge))+"tel";
+        }
+        else {
+            String fraction = rational.toString();
+            return "<say-as interpret-as=\"fraction\">" + fraction + "</say-as>";
+        }
     }
 
     public Zutat getZutat() {

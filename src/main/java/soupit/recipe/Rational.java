@@ -25,9 +25,6 @@ public class Rational {
         }else if(num == denom){
             return "1";
         }else{
-            String whole = String.valueOf(num/denom);
-            String top = String.valueOf(num%denom);
-            String bot = String.valueOf(denom);
             shorten();
             return String.valueOf(num/denom)+" "+String.valueOf(num%denom)+"/"+String.valueOf(denom);
 
@@ -40,5 +37,10 @@ public class Rational {
 
     private int gcm(int a, int b) {
         return b == 0 ? a : gcm(b, a % b);
+    }
+
+    public int getNum(){
+        shorten();
+        return num;
     }
 }
