@@ -1,12 +1,24 @@
 package soupit.handlers;
 
-import org.junit.jupiter.api.Test;
+import com.amazon.ask.dispatcher.request.handler.HandlerInput;
+import org.junit.Test;
+import org.mockito.Mockito;
+
+import static org.junit.Assert.assertTrue;
+import static org.mockito.Matchers.any;
+import static org.mockito.Mockito.when;
 
 class FallbackIntentHandlerTest extends FallbackIntentHandler{
 
+    private FallbackIntentHandler handler;
+
     @Test
     void canHandleTest() {
-        //assertFalse(super.canHandle(null));
+
+        final HandlerInput inputMock = Mockito.mock(HandlerInput.class);
+        when(inputMock.matches(any())).thenReturn(true);
+        assertTrue(handler.canHandle(inputMock));
+
     }
 
     @Test

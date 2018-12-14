@@ -1,7 +1,5 @@
 package soupit.recipe;
 
-import java.util.Arrays;
-
 public class Rezept {
     private ZutatMengeEinheit[] zumeng;
     private String name;
@@ -23,9 +21,9 @@ public class Rezept {
         return count;
     }
 
-    public void addOptions(ZutatMengeEinheit...optionaleZutaten) {
-        this.optionaleZutaten = Arrays.copyOf(optionaleZutaten,optionaleZutaten.length);
-    }
+    //public void addOptions(ZutatMengeEinheit...optionaleZutaten) {
+    //    this.optionaleZutaten = Arrays.copyOf(optionaleZutaten,optionaleZutaten.length);
+    //}
 
 
     public String toString() {
