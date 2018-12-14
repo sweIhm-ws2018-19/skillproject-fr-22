@@ -30,7 +30,7 @@ public class YesNoIntent implements RequestHandler {
             if (SessionAttributes.programState.equals(Strings.SOUP_YES_NO_STATE)) {
                 if (yesNoSlot.getValue().equalsIgnoreCase("ja")){
                     SessionAttributes.currentRecipe = SessionAttributes.recipeToDecideOn;
-                    speechText = "du hast dich für " + SessionAttributes.currentRecipe + " entschieden";
+                    speechText = "Wie viele Portionen möchtest du kochen ?";
                 }else{
                     speechText = "tut mir leid dass ich nicht helfen konnte.";
                 }

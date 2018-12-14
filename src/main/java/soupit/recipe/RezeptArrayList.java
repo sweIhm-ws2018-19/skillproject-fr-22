@@ -26,7 +26,7 @@ public class RezeptArrayList extends ArrayList<Rezept> {
     public Rezept find(String recipeName){
         String recipenameNoSpaces = recipeName.replaceAll("\\s","");
         for(Rezept r:this){
-            if(r.toString().equals(recipenameNoSpaces)) return r;
+            if(r.toString().replaceAll("\\s","").equals(recipenameNoSpaces)) return r;
         }
         return null;
     }

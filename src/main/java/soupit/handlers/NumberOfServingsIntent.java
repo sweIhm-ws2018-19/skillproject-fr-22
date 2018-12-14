@@ -5,17 +5,16 @@ import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.*;
 import soupit.SessionAttributes;
 
-
 import java.util.Map;
 import java.util.Optional;
 
 import static com.amazon.ask.request.Predicates.intentName;
 
-public class NameRecipeIntent implements RequestHandler {
+public class NumberOfServingsIntent implements RequestHandler {
 
     @Override
     public boolean canHandle(HandlerInput input) {
-        return input.matches(intentName("NameRecipeIntent"));
+        return input.matches(intentName("NumberOfServingsIntent"));
     }
 
     @Override
@@ -24,12 +23,10 @@ public class NameRecipeIntent implements RequestHandler {
         IntentRequest intentRequest = (IntentRequest) request;
         Intent intent = intentRequest.getIntent();
         Map<String, Slot> slots = intent.getSlots();
-        Slot recipeSlot = slots.get("Recipe");
+        Slot numberSlot = slots.get("Number");
         String speechText;
-        if(recipeSlot != null){
-            if(SessionAttributes.setCurrentRecipe(recipeSlot.getValue())){
-                speechText = "Wie viele Portionen möchtest du kochen?";
-            }else speechText = "entschuldigung, dieses rezept habe ich nicht gefunden, kannst du es noch einmal wiederholen? ";
+        if(numberSlot != null){
+            speechText = "du willst "+numberSlot.getValue() +" Portionen kochen.";
         }else{
             speechText = "das habe ich leider nicht verstanden";
         }
