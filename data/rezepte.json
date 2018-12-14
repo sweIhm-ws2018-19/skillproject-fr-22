@@ -1,4 +1,4 @@
-﻿{
+{
   "zutaten": {
     "karotte": "f",
     "kartoffel": "f",
@@ -781,7 +781,7 @@
         },
         "zwiebel": {
           "einheit": "null",
-          "menge": "zwiebel"
+          "menge": "0.25"
         },
         "gemüsebrühe": {
           "einheit": "milliliter",
@@ -1859,7 +1859,7 @@
       }
 
     },
-    "kübis lauchsuppe": {
+    "kürbis lauchsuppe": {
       "zutaten": {
         "kürbis": {
           "einheit": "gramm",

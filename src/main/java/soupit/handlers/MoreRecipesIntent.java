@@ -29,7 +29,9 @@ public class MoreRecipesIntent implements RequestHandler {
             speechText.append("folgende Rezepte mit diesen Zutaten kochen: ");
             for (; index < list.size(); index++) {
                 speechText.append(list.get(index));
-                speechText.append(" ");
+                if(remainingRecipesCount > 1){
+                    speechText.append(", ");
+                }
                 remainingRecipesCount--;
                 if(remainingRecipesCount == 1){
                     speechText.append("und ");

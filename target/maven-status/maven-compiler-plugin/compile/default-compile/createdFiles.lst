@@ -1,5 +1,6 @@
 soupit\SessionAttributes.class
 soupit\recipe\Cooker.class
+soupit\recipe\Rational.class
 soupit\SoupMain.class
 soupit\handlers\NameRecipeIntent.class
 soupit\recipe\RezeptArrayList.class

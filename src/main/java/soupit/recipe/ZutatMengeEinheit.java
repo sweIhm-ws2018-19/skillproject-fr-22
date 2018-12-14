@@ -29,30 +29,35 @@ public class ZutatMengeEinheit {
                 else if (menge<1){
                     if(menge == 0.5) string = "eine halbe";
                     else if (menge == 0.3) string = "eine drittel";
+                    else if(menge == 0.15) string ="eine sekstel";
                     else string = "eine " +(int)(1/menge)+"tel";
                 }else {
                     if(menge - (int) menge == 0 ) string =""+(int)menge;
-                    else string = ""+menge;                                               //TODO
-                }                                                    //TODO 2 1/3 != 2.33333333 !
+                    else string = doubletToString(menge);
+                }
             }else if (einheit.getGrammatGeschlecht().equals("m")){
                 if(menge == 1 )string = "einen";
                 else if(menge<1){
                     if(menge== 0.5)string = "einen halben";
                     else if(menge == 0.3) string = "einen drittel";
+                    else if(menge == 0.15) string ="einen sekstel";
                     else string = "einen " +(int)(1/menge)+"tel";
                 }else {
                     if(menge - (int) menge == 0 ) string =""+(int)menge;
-                    else string = ""+menge;                                               //TODO
-                }                                               //TODO
+                    else string = doubletToString(menge);
+
+                }
             }else{
                 if(menge == 1) string = "ein";
                 else if(menge< 1){
                     if (menge == 0.5) string = "ein halbes";
                     else if (menge == 0.3) string = "ein drittel";
+                    else if(menge == 0.15) string ="ein sekstel";
                     else string = "ein " +(int)(1/menge)+"tel";
                 }else {
                     if(menge - (int) menge == 0 ) string =""+(int)menge;
-                    else string = ""+menge;                                               //TODO
+                    else string = doubletToString(menge);
+
                 }
             }
         }else{ //einheit null
@@ -61,35 +66,37 @@ public class ZutatMengeEinheit {
                 else if (menge<1){
                     if(menge == 0.5) string = "eine halbe";
                     else if (menge == 0.3) string = "eine drittel";
+                    else if(menge == 0.15) string ="eine sekstel";
                     else string = "eine " +(int)(1/menge)+"tel";
                 }else {
                     if(menge - (int) menge == 0 ) string =""+(int)menge;
-                    else string = ""+menge;                                               //TODO
-                }                                               //TODO
+                    else string = doubletToString(menge);
+
+                }
             }else if (zutat.getGrammatGeschlecht().equals("m")){
                 if(menge == 1 )string = "ein";
                 else if(menge<1){
                     if(menge== 0.5)string = "einen halben";
                     else if(menge == 0.3) string = "einen drittel";
+                    else if(menge == 0.15) string ="einen sekstel";
                     else string = "einen " +(int)(1/menge)+"tel";
                 }else {
                     if(menge - (int) menge == 0 ) string =""+(int)menge;
-                    else string = ""+menge;                                               //TODO
-                }                                                //TODO
+                    else string = doubletToString(menge);
+
+                }
             }else{
                 if(menge == 1) string = "ein";
                 else if(menge< 1){
                     if (menge == 0.5) string = "ein halbes";
                     else if (menge == 0.3) string = "ein drittel";
+                    else if(menge == 0.15) string ="ein sekstel";
                     else string = "ein " +(int)(1/menge)+"tel";
                 }else {
                     if(menge - (int) menge == 0 ) string =""+(int)menge;
-                    else string = ""+menge;                                               //TODO
-                }                                               //TODO
+                    else string = doubletToString(menge);
+                }
             }
-        }
-        if(string.contains(".")){
-           string =  string.replaceAll("\\.","komma");
         }
         return string;
     }
@@ -98,10 +105,10 @@ public class ZutatMengeEinheit {
         return einheit.getEinheit().equals("null")?"":einheit.toString();
     }
 
-    private String fractionToString(double number){
+    private String doubletToString(double number){
+        String fraction = new Rational(number).toString();
+        return "<say-as interpret-as=\"fraction\">"+fraction+"</say-as>";
 
-
-        return null;
     }
 
     public Zutat getZutat() {

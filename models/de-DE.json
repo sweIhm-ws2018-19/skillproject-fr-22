@@ -144,47 +144,129 @@
           "values": [
             {
               "name": {
-                "value": "brokkolicremesuppe"
+                "value": "fischsuppe mit räucherlachs",
+                "synonyms": [
+                  "fisch suppe mit räucher lachs",
+                  "fisch suppe mit räucherlachs"
+                ]
               }
             },
             {
               "name": {
-                "value": "selleriecremesuppe"
+                "value": "tomatenfischsuppe",
+                "synonyms": [
+                  "tomaten fischsuppe",
+                  "tomaten fisch suppe"
+                ]
               }
             },
             {
               "name": {
-                "value": "selleriesuppe"
+                "value": "fischsuppe",
+                "synonyms": [
+                  "fisch suppe"
+                ]
               }
             },
             {
               "name": {
-                "value": "süßkartoffelsuppe"
+                "value": "rote bete kartoffelsuppe",
+                "synonyms": [
+                  "rote bete kartoffel suppe"
+                ]
               }
             },
             {
               "name": {
-                "value": "mie nudelsuppe"
+                "value": "kürbis lauchsuppe",
+                "synonyms": [
+                  "kürbis lauch suppe"
+                ]
               }
             },
             {
               "name": {
-                "value": "frische gemüsebrühe"
+                "value": "vegetarische linsensuppe",
+                "synonyms": [
+                  "vegetarische linsen suppe"
+                ]
               }
             },
             {
               "name": {
-                "value": "kohlrabi kartoffelsuppe"
+                "value": "brokkolicremesuppe",
+                "synonyms": [
+                  "brokkoli creme suppe",
+                  "brokkoli cremesuppe",
+                  "brokkolicreme suppe"
+                ]
               }
             },
             {
               "name": {
-                "value": "spargelsuppe"
+                "value": "selleriecremesuppe",
+                "synonyms": [
+                  "sellerie cremesuppe",
+                  "selleriecreme suppe",
+                  "sellerie creme suppe"
+                ]
               }
             },
             {
               "name": {
-                "value": "spargel rucolasuppe"
+                "value": "selleriesuppe",
+                "synonyms": [
+                  "sellerie suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "süßkartoffelsuppe",
+                "synonyms": [
+                  "süß kartoffel suppe",
+                  "süßkartoffel suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "mie nudelsuppe",
+                "synonyms": [
+                  "mie nudel suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "frische gemüsebrühe",
+                "synonyms": [
+                  "frische gemüse brühe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "kohlrabi kartoffelsuppe",
+                "synonyms": [
+                  "kohlrabi kartoffel suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "spargelsuppe",
+                "synonyms": [
+                  "spargel suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "spargel rucolasuppe",
+                "synonyms": [
+                  "spargel rucola suppe"
+                ]
               }
             },
             {
