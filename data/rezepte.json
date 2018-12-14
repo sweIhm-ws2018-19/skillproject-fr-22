@@ -70,11 +70,39 @@
     "paprika":"f",
     "schlagsahne":"f",
     "geriebener parmesan":"m",
-    "basillikum":"m",
+    "basilikum":"m",
     "oregano":"m",
     "gurke":"f",
     "dill":"m",
-    "bärlauch":"m"
+    "bärlauch":"m",
+    "grüner spargel":"m",
+    "rucola":"f",
+    "speisestärke":"f",
+    "weißer spargel":"m",
+    "weißwein":"m",
+    "kohlrabi":"m",
+    "creme fresch":"f",
+    "schnittlauch":"m",
+    "petersilienwurzel":"f",
+    "pfefferkorn":"n",
+    "lorbeerblatt":"n",
+    "rote paprika":"f",
+    "knollensellerie":"f",
+    "porree":"m",
+    "gefrorene erbsen":"f",
+    "sonnenblumenöl":"n",
+    "sesamöl":"n",
+    "sojasoße":"f",
+    "mie nudel":"f",
+    "paprikapulver":"n",
+    "süßkartoffel":"f",
+    "rote chillischote":"f",
+    "selleriegrün":"n",
+    "brokkoli":"m",
+    "linsen":"f",
+    "kümmelpulver":"n",
+    "suppengemüse":"n"
+
   },
   "einheiten": {
     "gramm": "n",
@@ -258,60 +286,6 @@
         "schritt 5": "Die Suppe wieder auf die Kochplatte stellen. Den Schmelzkäse hinzugeben und unter Rühren erhitzen.",
         "schritt 6": "Salz und Pfeffer hinzugeben und Suppe abschmecken. ",
         "schritt 7": "Die Suppe auf die Teller verteilen und heiß servieren"
-      }
-    },
-    "möhren und kartoffeleintopf": {
-      "zutaten": {
-        "möhre": {
-          "einheit": "gramm",
-          "menge": "100"
-        },
-        "kartoffel": {
-          "einheit": "gramm",
-          "menge": "50"
-        },
-        "zwiebel": {
-          "einheit": "null",
-          "menge": "0.5"
-        },
-        "gemüsebrühe": {
-          "einheit": "milliliter",
-          "menge": "125"
-        },
-        "butter": {
-          "einheit": "gramm",
-          "menge": "5"
-        },
-        "perersilie": {
-          "einheit": "stängel",
-          "menge": "0.5"
-        },
-        "salz": {
-          "einheit": "teelöffel",
-          "menge": "0.25"
-        },
-        "pfeffer": {
-          "einheit": "prise",
-          "menge": "1"
-        },
-        "muskat": {
-          "einheit": "prise",
-          "menge": "0.5"
-        },
-        "schinkenspeck": {
-          "einheit": "gramm",
-          "menge": "25"
-        }
-      },
-      "schritte": {
-        "schritt 1": "Die Möhren und Kartoffeln mit dem Schäler schälen und in kleine Stücke schneiden.",
-        "schritt 2": "Die Zwiebel schälen und klein schneiden.",
-        "schritt 3": "Butter oder Olivenöl im Topf erwärmen, Zwiebeln hinzugeben und bei niedriger Hitze unter Rühren kurz anbraten.",
-        "schritt 4": "Karottenstücke kurz mit anbraten. Mehl sowie Gemüsebrühe hinzugeben und die Suppe 15 Minuten bei niedriger Hitze köcheln lassen.",
-        "schritt 5": "Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
-        "schritt 6": "Petersilie klein hacken.",
-        "schritt 7": "Salz, Pfeffer und Muskat hinzugeben und Suppe abschmecken. TON",
-        "schritt 8": "Die Suppe auf die Teller verteilen und heiß servieren"
       }
     },
     "tomatensuppe": {
@@ -1119,7 +1093,7 @@
 
 
     },
-    "paprikacremsuppe": {
+    "paprikacremesuppe": {
       "zutaten": {
         "paprika": {
           "einheit": "gramm",
@@ -1165,7 +1139,7 @@
         "schritt 6":"Die Suppe mit Kräutersalz und Pfeffer abschmecken und servieren."
       }
     },
-    "tomatencremsuppe": {
+    "tomatencremesuppe": {
       "zutaten": {
         "tomate": {
           "einheit": "gramm",
@@ -1226,7 +1200,7 @@
         "schritt 7":"Schlagsahne, Basilikumblätter und Petersilie hinzugeben. Suppe kurz erwärmen und warm servieren."
       }
     },
-    "gurkencremsuppe": {
+    "gurkencremesuppe": {
       "zutaten": {
         "gurke": {
           "einheit": "gramm",
@@ -1325,8 +1299,559 @@
       }
 
     },
+    "spargel rucolasuppe": {
+      "zutaten": {
+        "grüner spargel": {
+          "einheit": "gramm",
+          "menge": "85"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.15"
+        },
+        "knoblauchzehe": {
+          "einheit": "null",
+          "menge": "0.16"
+        },
+        "rucola": {
+          "einheit": "gramm",
+          "menge": "7.5"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "150"
+        },
+        "butter": {
+          "einheit": "gramm",
+          "menge": "5"
+        },
+        "schlagsahne": {
+          "einheit": "milliliter",
+          "menge": "35"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "zucker": {
+          "einheit": "teelöffel",
+          "menge": "0.15"
+        },
+        "speisestärke": {
+          "einheit": "gramm",
+          "menge": "5"
+        },
+        "basilikum": {
+          "einheit": "stängel",
+          "menge": "0.5"
+        }
+      },
+      "schritte":{
+        "schritt 1":"Schäle die Zwiebel und den Knoblauch und schneide beides in kleine Stücke.",
+        "schritt 2":"Schäle das untere Drittel der grünen Spargel und schneide die Spargel in dünne Scheiben.",
+        "schritt 3":"Butter im Topf erhitzen, Zwiebel und Knoblauch hinzugeben und etwa drei Minuten lang bei niedriger Hitze dünsten.",
+        "schritt 4":"Spargel, Gemüsebrühe, Salz, Pfeffer und Zucker hinzugeben und etwa fünfzehn Minuten lang köcheln lassen.",
+        "schritt 5":"Sahne, Speisestärke, Rucola und Basilikum dazugeben und die Suppe für weitere zwei Minuten köcheln lassen.",
+        "schritt 6":"Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
+        "schritt 7":"Suppe kurz aufkochen, abschmecken und warm servieren."
+      }
+
+    },
+    "spargelsuppe": {
+      "zutaten": {
+        "weißer spargel": {
+          "einheit": "gramm",
+          "menge": "83.5"
+        },
+        "wasser": {
+          "einheit": "milliliter",
+          "menge": "250"
+        },
+        "butter": {
+          "einheit": "gramm",
+          "menge": "10"
+        },
+        "mehl": {
+          "einheit": "gramm",
+          "menge": "6.5"
+        },
+        "sahne": {
+          "einheit": "milliliter",
+          "menge": "25"
+        },
+        "zucker": {
+          "einheit": "teelöffel",
+          "menge": "0.25"
+        },
+        "weißwein": {
+          "einheit": "teelöffel",
+          "menge": "0.5"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        }
+      },
+      "schritte":{
+        "schritt 1":"Schäle den Spargel und schneide sie in ein Zentimeter lange Stücke.",
+        "schritt 2":"Wasser in den Topf gießen. Spargel, Zucker und Butter hinzufügen und etwa fünfzehn Minuten lang kochen.",
+        "schritt 3":"Mehl mit Creme Fresch oder Sahne verrühren und in die Suppe einrühren. Die Suppe für weitere fünf Minuten köcheln lassen.",
+        "schritt 4":"Die Suppe mit Weißwein, Salz und Pfeffer abschmecken und heiß servieren."
+      }
+
+    },
+    "kohlrabi kartoffelsuppe": {
+      "zutaten": {
+        "kohlrabi": {
+          "einheit": "gramm",
+          "menge": "100"
+        },
+        "kartoffel": {
+          "einheit": "gramm",
+          "menge": "100"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "150"
+        },
+        "creme fresch": {
+          "einheit": "milliliter",
+          "menge": "15"
+        },
+        "salz": {
+          "einheit": "teelöffel",
+          "menge": "0.25"
+        },
+        "pfeffer": {
+          "einheit": "teelöffel",
+          "menge": "0.25"
+        },
+        "muskat": {
+          "einheit": "prise",
+          "menge": "0.5"
+        },
+        "schnittlauch": {
+          "einheit": "bund",
+          "menge": "0.25"
+        }
+      },
+
+      "schritte":{
+        "schritt 1":"Schäle den Kohlrabi und die Kartoffeln und schneide beides in Stücke.",
+        "schritt 2":"Die Kohlrabi und Kartoffelstücke mit Gemüsebrühe in einen Topf geben und etwa zwanzig Minuten lang bei leichter Hitze kochen.<break time=\"2s\"/> Währenddessen Schnittlauch waschen und in kleine Röllchen schneiden.",
+        "schritt 3":"Creme Fresch, Salz, Pfeffer und Muskat hinzugeben und die Suppe nochmal fünf Minuten kurz erwärmen.",
+        "schritt 4":"Die Suppe mit einem Stabmixer pürieren und mit Schnittlauch garniert servieren."
+      }
+    },
+    "frische gemüsebrühe": {
+      "zutaten": {
+        "karotte": {
+          "einheit": "null",
+          "menge": "1"
+        },
+        "sellerieknolle": {
+          "einheit": "null",
+          "menge": "0.125"
+        },
+        "petersilienwurzel": {
+          "einheit": "null",
+          "menge": "0.5"
+        },
+        "lauch": {
+          "einheit": "stängel",
+          "menge": "0.25"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.5"
+        },
+        "wasser": {
+          "einheit": "milliliter",
+          "menge": "625"
+        },
+        "olivenöl": {
+          "einheit": "esslöffel",
+          "menge": "0.75"
+        },
+        "butter": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "lorbeerblatt": {
+          "einheit": "null",
+          "menge": "0.5"
+        },
+        "pfefferkorn": {
+          "einheit": "null",
+          "menge": "5"
+        }
+      },
+      "schritte":{
+        "schritt 1":"Zwiebeln schälen und halbieren und in einer Pfanne mit Butter anrösten.",
+        "schritt 2":"Sellerie, Karotten und Petersilienwurzel schälen und in große Stücke schneiden. Lauch ebenfalls in grobe Stücke schneiden.",
+        "schritt 3":"Das Gemüse bis auf die Zwiebel in Olivenöl vier Minuten lang andünsten.",
+        "schritt 4":"Kaltes Wasser angießen und Zwiebelhälften, Lorbeerblätter und Pfefferkörner zugeben.",
+        "schritt 5":"Die Brühe aufkochen und zugedeckt bei mittlerer Hitze eine halbe Stunde lang kochen.",
+        "schritt 6":"Die Brühe durch ein sehr feines Sieb oder Mulltuch passieren und mit Salz und Pfeffer würzen."
+      }
+    },
+    "mie nudelsuppe": {
+      "zutaten": {
+        "rote paprika": {
+          "einheit": "gramm",
+          "menge": "20"
+        },
+        "knollensellerie": {
+          "einheit": "gramm",
+          "menge": "35"
+        },
+        "porree": {
+          "einheit": "gramm",
+          "menge": "15"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.15"
+        },
+        "knoblauchzehe": {
+          "einheit": "null",
+          "menge": "0.15"
+        },
+        "gefrorene erbsen": {
+          "einheit": "gramm",
+          "menge": "30"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "120"
+        },
+        "sonnenblumenöl": {
+          "einheit": "milliliter",
+          "menge": "2.5"
+        },
+        "sesamöl": {
+          "einheit": "milliliter",
+          "menge": "2.5"
+        },
+        "ingwerstück": {
+          "einheit": "null",
+          "menge": "0.5"
+        },
+        "orangensaft": {
+          "einheit": "milliliter",
+          "menge": "35"
+        },
+        "sojasoße": {
+          "einheit": "gramm",
+          "menge": "3.5"
+        },
+        "mie nudel": {
+          "einheit": "gramm",
+          "menge": "20"
+        },
+        "paprikapulver": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        }
+      },
+      "schritte":{
+        "schritt 1":"Schäle die Zwiebel, den Knoblauch und den Ingwer und schneide alles in kleine Stücke.",
+        "schritt 2":"Paprika, Knollensellerie und Porree putzen und in kleine Stücke schneiden.",
+        "schritt 3":"Sonnenblumen- und Sesamöl in einem Topf erwärmen. Zwiebel, Knoblauch, Ingwer und Paprika hinzugeben und etwa drei Minuten lang dünsten.",
+        "schritt 4":"Sellerie, Porree, Gemüsebrühe und Orangensaft zugeben und etwa fünfzehn Minuten lang bei leichter Hitze köcheln lassen.",
+        "schritt 5":"Mie-Nudeln, Erbsen und Sojasoße hinzugeben und die Suppe nochmals nach der Zeit gemäß der Packungsanweisung der Nudeln kochen.",
+        "schritt 6":"Mie-Nudel-Suppe mit Salz, Pfeffer und Paprikapulver abschmecken und servieren."
+      }
+
+    },
+    "süßkartoffelsuppe": {
+      "zutaten": {
+        "süßkartoffel": {
+          "einheit": "gramm",
+          "menge": "225"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "knoblauchzehe": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "225"
+        },
+        "öl": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "creme fresch": {
+          "einheit": "gramm",
+          "menge": "25"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "rote chillischote": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "petersilie": {
+          "einheit": "stängel",
+          "menge": "0.5"
+        }
+      },
+      "schritte":{
+        "schritt 1":"Schäle die Zwiebel und den Knoblauch und schneide beides in kleine Stücke.",
+        "schritt 2":"Schäle die Süßkartoffeln und schneide sie in kleine Würfel.",
+        "schritt 3":"Chilischote längs aufschneiden, Kerne entfernen und Fruchtfleisch hacken.",
+        "schritt 4":"Öl in einem Topf erhitzen, Zwiebel und Knoblauch darin glasig dünsten. Die Hälfte der gehackten Chili zugeben und kurz mitdünsten.",
+        "schritt 5":"Gebe die Süßkartoffeln hinzu und brate sie kurz mit an.",
+        "schritt 6":"Mit Gemüsebrühe ablöschen und Suppe etwa fünfzehn Minuten köcheln lassen. Währenddessen Petersilie waschen und klein hacken.",
+        "schritt 7":"Die Suppe mit der Hälfte der Creme Fresch sehr fein pürieren und mit Salz abschmecken.",
+        "schritt 8":"Suppe auf die Teller verteilen und mit je einem Klecks Creme Fresch, restlicher Chili und Petersilie garnieren."
+      }
+
+    },
+    "selleriesuppe": {
+      "zutaten": {
+        "sellerieknolle": {
+          "einheit": "gramm",
+          "menge": "225"
+        },
+        "selleriegrün": {
+          "einheit": "bund",
+          "menge": "0.25"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "250"
+        },
+        "olivenöl": {
+          "einheit": "esslöffel",
+          "menge": "1.5"
+        },
+        "sahne": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        }
+      },
+
+      "schritte":{
+        "schritt 1":"Wasche die Sellerieblätter und schüttel sie trocken. Schäle die Sellerieknolle und schneide sie in kleine Würfel.",
+        "schritt 2":"Schäle die Zwiebel und schneide sie klein.",
+        "schritt 3":"Ein Drittel der vorgegebenen Olivenölmenge im Topf erhitzen und die Zwiebeln darin anschwitzen.",
+        "schritt 4":"Selleriegrün, Selleriewürfel und Gemüsebrühe hinzufügen und etwa fünfzehn bis zwanzig Minuten köcheln lassen.",
+        "schritt 5":"Sahne hinzufügen und die Suppe fein pürieren.",
+        "schritt 6":"Die Suppe mit Salz und Pfeffer abschmecken, auf x Teller verteilen und mit Olivenöl beträufeln."
+      }
+    },
+    "selleriecremesuppe": {
+      "zutaten": {
+        "kartoffel": {
+          "einheit": "gramm",
+          "menge": "25"
+        },
+        "knollensellerie": {
+          "einheit": "gramm",
+          "menge": "185"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "125"
+        },
+        "öl": {
+          "einheit": "esslöffel",
+          "menge": "0.25"
+        },
+        "creme fresch": {
+          "einheit": "gramm",
+          "menge": "20"
+        },
+        "petersilie": {
+          "einheit": "stängel",
+          "menge": "1"
+        },
+        "toastbrot": {
+          "einheit": "scheibe",
+          "menge": "1"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        }
+      },
+      "schritte":{
+        "schritt 1":"Schäle die Zwiebel und die Kartoffel und schneide beides in Würfel.",
+        "schritt 2":"Sellerie putzen, waschen und ebenfalls in Würfel schneiden.",
+        "schritt 3":"Öl im Topf erhitzen und Zwiebeln darin glasig dünsten. Kartoffeln und Sellerie hinzugeben und kurz mit andünsten.",
+        "schritt 4":"Mit Gemüsebrühe ablöschen, das ganze aufkochen lassen und zugedeckt etwa zwanzig Minuten bei mittlerer Hitze köcheln lassen.<break time=\"2s\"/> Währenddessen Brot in kleine Stücke schneiden und in einer beschichteten Pfanne ohne Fett bei schwacher Hitze unter regelmäßigem Wenden rösten.",
+        "schritt 5":"Nehme einen Esslöffel Selleriewürfel aus der Suppe und stelle sie zur Seite. Restliches Gemüse in der Brühe mit einem Pürierstab pürieren.",
+        "schritt 6":"Die Suppe mit Salz und Pfeffer abschmecken. Die Petersilie waschen, trocken tupfen und fein hacken.",
+        "schritt 7":"Die Suppe mit einem Klecks Creme Fresch, den Brotstückchen, Selleriewürfelchen und Petersilie bestreut servieren."
+      }
+
+    },
+    "brokkolicremesuppe": {
+      "zutaten": {
+        "brokkoli": {
+          "einheit": "gramm",
+          "menge": "150"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "knoblauchzehe": {
+          "einheit": "null",
+          "menge": "0.5"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "190"
+        },
+        "butter": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "sahne": {
+          "einheit": "milliliter",
+          "menge": "50"
+        },
+        "petersilie": {
+          "einheit": "bund",
+          "menge": "0.5"
+        },
+        "oregano": {
+          "einheit": "teelöffel",
+          "menge": "0.25"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        }
+      },
+      "schritte":{
+        "schritt 1":"Den Brokkoli grob zerschneiden und einige Röschen beiseite legen.",
+        "schritt 2":"Schäle die Zwiebel und den Knoblauch und schneide beides klein.",
+        "schritt 3":"Butter im Topf erhitzen, Zwiebelwürfel und Knoblauch dazugeben und etwa fünf Minuten dünsten.",
+        "schritt 4":"Etwa zwei Drittel der Brokkolistücke hinzugeben, mit Gemüsebrühe aufgießen und zugedeckt etwa fünfzehn Minuten köcheln lassen.",
+        "schritt 5":"Die Suppe einige Minuten abkühlen lassen. Anschließend mit einem Stabmixer fein pürieren.",
+        "schritt 6":"Sahne und das restliche Drittel Brokkolistücke hinzugeben und die Suppe noch einmal etwa fünf Minuten kochen lassen.",
+        "schritt 7":"Die Suppe mit Salz, Pfeffer und Oregano abschmecken und mit gehackter Petersilie bestreut servieren."
+      }
+
+    },
+    "vegetarische linsensuppe": {
+      "zutaten": {
+        "linsen": {
+          "einheit": "gramm",
+          "menge": "60"
+        },
+        "kartoffel": {
+          "einheit": "null",
+          "menge": "1"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "suppengemüse": {
+          "einheit": "bund",
+          "menge": "0.25"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "300"
+        },
+        "öl": {
+          "einheit": "esslöffel",
+          "menge": "0.75"
+        },
+        "petersilie": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "lorbeerblatt": {
+          "einheit": "null",
+          "menge": "0.5"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "kümmelpulver": {
+          "einheit": "prise",
+          "menge": "1"
+        }
+      },
+      "schritte":{
+        "schritt 1":"Die Linsen in reichlich Wasser ohne Salz aufkochen und etwa fünfzehn Minuten köcheln lassen.<break time=\"2s\"/> Schäle in der Zwischenzeit die Kartoffeln und schneide sie in kleine Würfel. Putze das Suppengemüse und schneide es ebenfalls in kleine Stücke.",
+        "schritt 2":"Die Linsen in ein Sieb abgießen und abtropfen lassen.",
+        "schritt 3":"In einem großen Topf das Gemüse mit Öl andünsten, Kartoffelwürfel hinzufügen und mit der Gemüsebrühe ablöschen.",
+        "schritt 4":"Die Lorbeerblätter und die vorgekochten Linsen hinzufügen. Die Linsensuppe solange kochen, bis die Kartoffelwürfel weich sind.",
+        "schritt 5":"Petersilie waschen und klein hacken.",
+        "schritt 6":"Gehackte Petersilie hinzufügen und die Suppe mit Salz, Pfeffer und Kümmel abschmecken.",
+        "schritt 7":"Dazu passt wunderbar frisches Baguette oder Ciabatta Brot."
+      }
+
+    },
     "": {
       "zutaten": {
+        "": {
+          "einheit": "",
+          "menge": ""
+        },
         "": {
           "einheit": "",
           "menge": ""
@@ -1361,7 +1886,8 @@
         "schritt 2":"",
         "schritt 3":"",
         "schritt 4":"",
-        "schritt 5":""
+        "schritt 5":"",
+        "schritt 6":""
       }
     },
     "": {
@@ -1393,6 +1919,10 @@
         "": {
           "einheit": "",
           "menge": ""
+        },
+        "": {
+          "einheit": "",
+          "menge": ""
         }
       },
       "schritte":{
@@ -1400,7 +1930,140 @@
         "schritt 2":"",
         "schritt 3":"",
         "schritt 4":"",
-        "schritt 5":""
+        "schritt 5":"",
+        "schritt 6":""
+      }
+    },
+    "": {
+      "zutaten": {
+        "": {
+          "einheit": "",
+          "menge": ""
+        },
+        "": {
+          "einheit": "",
+          "menge": ""
+        },
+        "": {
+          "einheit": "",
+          "menge": ""
+        },
+        "": {
+          "einheit": "",
+          "menge": ""
+        },
+        "": {
+          "einheit": "",
+          "menge": ""
+        },
+        "": {
+          "einheit": "",
+          "menge": ""
+        },
+        "": {
+          "einheit": "",
+          "menge": ""
+        },
+        "": {
+          "einheit": "",
+          "menge": ""
+        }
+      },
+      "schritte":{
+        "schritt 1":"",
+        "schritt 2":"",
+        "schritt 3":"",
+        "schritt 4":"",
+        "schritt 5":"",
+        "schritt 6":""
+      }
+    },
+    "": {
+      "zutaten": {
+        "": {
+          "einheit": "",
+          "menge": ""
+        },
+        "": {
+          "einheit": "",
+          "menge": ""
+        },
+        "": {
+          "einheit": "",
+          "menge": ""
+        },
+        "": {
+          "einheit": "",
+          "menge": ""
+        },
+        "": {
+          "einheit": "",
+          "menge": ""
+        },
+        "": {
+          "einheit": "",
+          "menge": ""
+        },
+        "": {
+          "einheit": "",
+          "menge": ""
+        },
+        "": {
+          "einheit": "",
+          "menge": ""
+        }
+      },
+      "schritte":{
+        "schritt 1":"",
+        "schritt 2":"",
+        "schritt 3":"",
+        "schritt 4":"",
+        "schritt 5":"",
+        "schritt 6":""
+      }
+    },
+    "": {
+      "zutaten": {
+        "": {
+          "einheit": "",
+          "menge": ""
+        },
+        "": {
+          "einheit": "",
+          "menge": ""
+        },
+        "": {
+          "einheit": "",
+          "menge": ""
+        },
+        "": {
+          "einheit": "",
+          "menge": ""
+        },
+        "": {
+          "einheit": "",
+          "menge": ""
+        },
+        "": {
+          "einheit": "",
+          "menge": ""
+        },
+        "": {
+          "einheit": "",
+          "menge": ""
+        },
+        "": {
+          "einheit": "",
+          "menge": ""
+        }
+      },
+      "schritte":{
+        "schritt 1":"",
+        "schritt 2":"",
+        "schritt 3":"",
+        "schritt 4":"",
+        "schritt 5":"",
+        "schritt 6":""
       }
     }
   }
