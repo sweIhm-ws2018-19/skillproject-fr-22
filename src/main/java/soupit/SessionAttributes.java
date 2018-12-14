@@ -24,7 +24,11 @@ public class SessionAttributes {
     }
 
 
-    public static void setCurrentRecipe(){
-
+    public static boolean setCurrentRecipe(String recipeName){
+        if(recipes.find(recipeName) == null){
+            return false;
+        }
+        currentRecipe = recipes.find(recipeName);
+        return true;
     }
 }

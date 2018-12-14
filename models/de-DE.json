@@ -72,7 +72,7 @@
           "slots": [
             {
               "name": "Ingredient",
-              "type": "Ingredients"
+              "type": "AMAZON.Food"
             }
           ],
           "samples": [
@@ -98,38 +98,20 @@
           ]
         },
         {
-          "name": "RecipeYesOrNoIntent",
-          "slots": [
-            {
-              "name": "YesNo",
-              "type": "YesNo"
-            }
-          ],
-          "samples": [
-            "Nein",
-            "Ja"
-          ]
-        },
-        {
-          "name": "YesNoTestIntent",
-          "slots": [
-            {
-              "name": "YesNo",
-              "type": "YesNo"
-            }
-          ],
-          "samples": [
-            "Nein",
-            "Ja"
-          ]
-        },
-        {
           "name": "MoreRecipesIntent",
           "slots": [],
           "samples": [
             "mehr Rezepte",
             "weitere",
             "weitere anhören"
+          ]
+        },
+        {
+          "name": "YesNoIntent",
+          "slots": [],
+          "samples": [
+            "nein",
+            "ja"
           ]
         }
       ],
@@ -191,7 +173,13 @@
         },
         {
           "name": "Ingredients",
-          "values": []
+          "values": [
+            {
+              "name": {
+                "value": "rote chilischote"
+              }
+            }
+          ]
         }
       ]
     }
