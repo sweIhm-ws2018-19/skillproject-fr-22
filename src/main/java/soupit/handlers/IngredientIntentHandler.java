@@ -71,13 +71,14 @@ public class IngredientIntentHandler implements RequestHandler {
             if (!list.isEmpty()) {
                 speechText = new StringBuilder("ich kann dir anhand der genannten Zutaten ");
                 int listSize = list.size();
-                speechText.append(listSize);
+                if (listSize == 1)speechText.append("ein");
+                else speechText.append(listSize);
                 speechText.append(" Rezept");
                 if(listSize > 1) speechText.append("e");
                 speechText.append(" vorschlagen: ");
                 if (listSize == 1) {
                    speechText.append(list.get(0));
-                   speechText.append(" Möchtest du diese Suppe kochen?");
+                   speechText.append(". Möchtest du diese Suppe kochen?");
                    SessionAttributes.recipeToDecideOn= list.get(0);
                    SessionAttributes.programState = Strings.SOUP_YES_NO_STATE;
 

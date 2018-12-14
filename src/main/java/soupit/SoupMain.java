@@ -20,6 +20,7 @@ public class SoupMain {
 
     public static void main(String... args) {
 
+
         try {
 
             InputStream stream = SoupMain.class.getClassLoader().getResourceAsStream("data/rezepte.json");
@@ -40,7 +41,20 @@ public class SoupMain {
         String speechText = getSpeechResponse("kartoffeln");
 
         System.out.println(speechText);
+        speechText = "";
+        SessionAttributes.setCurrentRecipe("kalte spinatsuppe");
+        ZutatMengeEinheit [] zumArray = SessionAttributes.getCurrentRecipeZumeng();
+        for(int i =0; i<zumArray.length; i++) {
+            ZutatMengeEinheit zum = zumArray[i];
+            if (i == zumArray.length - 1) speechText += " und ";
+            speechText += zum.mengeToString() + " ";
+            speechText += zum.einheitToString() + " ";
+            speechText += zum.zutatToString() + " <break time=\"1s\"/>";
+            if (i < zumArray.length - 2) speechText += ", ";
+            if (i == zumArray.length - 1) speechText += ". ";
+        }
 
+        System.out.println(speechText);
     }
 
     private static void addRecipes(String rezeptname, Map rezepte, Map zutatenMitGeschlecht, Map einheitenMitGeschlecht) {

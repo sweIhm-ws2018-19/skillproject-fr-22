@@ -23,7 +23,7 @@ public class ZutatMengeEinheit {
 
     public String mengeToString() {
         String string;
-        if (! einheitToString().equals("null")) {
+        if (! einheit.toString().equals("null")) {
             if (einheit.getGrammatGeschlecht().equals("f")){
                 if(menge == 1) string = "eine";
                 else if (menge<1){
@@ -35,7 +35,7 @@ public class ZutatMengeEinheit {
                     else string = ""+menge;                                               //TODO
                 }                                                    //TODO 2 1/3 != 2.33333333 !
             }else if (einheit.getGrammatGeschlecht().equals("m")){
-                if(menge == 1 )string = "ein";
+                if(menge == 1 )string = "einen";
                 else if(menge<1){
                     if(menge== 0.5)string = "einen halben";
                     else if(menge == 0.3) string = "einen drittel";
@@ -88,11 +88,20 @@ public class ZutatMengeEinheit {
                 }                                               //TODO
             }
         }
+        if(string.contains(".")){
+           string =  string.replaceAll("\\.","komma");
+        }
         return string;
     }
 
-    private String einheitToString(){
+    public String einheitToString(){
         return einheit.getEinheit().equals("null")?"":einheit.toString();
+    }
+
+    private String fractionToString(double number){
+
+
+        return null;
     }
 
     public Zutat getZutat() {

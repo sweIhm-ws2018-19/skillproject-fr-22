@@ -3,6 +3,7 @@ package soupit;
 import soupit.Lists.Strings;
 import soupit.recipe.Rezept;
 import soupit.recipe.RezeptArrayList;
+import soupit.recipe.ZutatMengeEinheit;
 
 import java.util.List;
 
@@ -30,5 +31,9 @@ public class SessionAttributes {
         }
         currentRecipe = recipes.find(recipeName);
         return true;
+    }
+
+    public static ZutatMengeEinheit[] getCurrentRecipeZumeng(){
+        return currentRecipe.getZumeng();
     }
 }

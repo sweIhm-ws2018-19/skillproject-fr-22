@@ -1,5 +1,9 @@
 soupit\SessionAttributes.class
 soupit\recipe\Cooker.class
+soupit\SoupMain.class
 soupit\handlers\NameRecipeIntent.class
+soupit\recipe\RezeptArrayList.class
 soupit\handlers\MoreRecipesIntent.class
+soupit\SoupITStreamHandler.class
+soupit\handlers\NumberOfServingsIntent.class
 soupit\handlers\YesNoIntent.class
