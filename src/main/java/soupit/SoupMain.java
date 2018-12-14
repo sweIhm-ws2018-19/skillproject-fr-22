@@ -85,7 +85,7 @@ public class SoupMain {
             ArrayList<Rezept> listwithAll = treeMapToSortedList(map);
             List<Rezept> list;
             if (listwithAll.size() > 6) {
-                list = listwithAll.subList(0,7);
+                list = listwithAll.subList(0,6);
             }else {
                 list = listwithAll;
             }
