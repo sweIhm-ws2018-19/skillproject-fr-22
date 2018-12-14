@@ -19,7 +19,6 @@ class CancelandStopIntentHandlerTest extends soupit.handlers.CancelandStopIntent
             final HandlerInput inputMock = Mockito.mock(HandlerInput.class);
             when(inputMock.matches(any())).thenReturn(true);
             assertTrue(handler.canHandle(inputMock));
-
     }
 
     @Test
