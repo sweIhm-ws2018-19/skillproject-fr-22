@@ -34,7 +34,9 @@ public class YesNoIntent implements RequestHandler {
                 }else{
                     speechText = "tut mir leid dass ich nicht helfen konnte.";
                 }
-            } else {
+            } else if (SessionAttributes.programState.equals(Strings.INGREDIENTSAVAILIABLE)){
+                speechText = "Super! Sobald du mit dem Kochen anfangen möchtest, sage: Rezept starten ";
+            }else{
                 speechText = "nagut";
             }
 

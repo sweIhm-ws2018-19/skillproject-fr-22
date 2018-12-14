@@ -5,6 +5,7 @@ import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.*;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import soupit.Lists.Strings;
 import soupit.SessionAttributes;
 import soupit.SoupMain;
 import soupit.recipe.Zutat;
@@ -63,6 +64,7 @@ public class NumberOfServingsIntent implements RequestHandler {
                 if (i == zumArray.length - 1) speechText += ". ";
             }
             speechText += "Hast du alle Zutaten vorrätig? ";
+            SessionAttributes.programState = Strings.INGREDIENTSAVAILIABLE;
         }else{
             speechText = "das habe ich leider nicht verstanden";
         }

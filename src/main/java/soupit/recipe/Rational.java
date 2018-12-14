@@ -2,19 +2,21 @@ package soupit.recipe;
 
 public class Rational {
 
-    private int num, denom;
+    private int num = 1;
+    private int denom =1;
 
     public Rational(double d) {
         String s = String.valueOf(d);
         int digitsDec = s.length() - 1 - s.indexOf('.');
-
         int denom = 1;
         for(int i = 0; i < digitsDec; i++){
             d *= 10;
             denom *= 10;
         }
-        int num = (int) Math.round(d);
-        this.num = num; this.denom = denom;
+        int test  = (int) d;
+        this.num = (int ) Math.round(d);
+        this.denom = denom;
+
     }
 
 
@@ -31,8 +33,9 @@ public class Rational {
         }
     }
     private void shorten(){
-            num = num/gcm(denom,num);
-            denom = denom/gcm(denom,num);
+        int gcm = gcm(denom,num);
+            num = num/gcm;
+            denom = denom/gcm;
     }
 
     private int gcm(int a, int b) {

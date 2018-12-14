@@ -136,6 +136,30 @@
             "Ich möchte {Number} Portionen kochen ",
             "{Number}"
           ]
+        },
+        {
+          "name": "StartCookingIntent",
+          "slots": [],
+          "samples": [
+            "Starten",
+            "Anfangen",
+            "Mit dem Rezept starten",
+            "Mit dem Rezept anfangen",
+            "Mit dem Kochen beginnen",
+            "Ich bin bereit",
+            "Ich bin soweit",
+            "es kann losgehen",
+            "Alles klar",
+            "Los",
+            "Ok",
+            "ich bin startklar",
+            "Start",
+            "starte",
+            "los gehts",
+            "wir können anfangen ",
+            "okay ich bin bereit",
+            "Rezept starten"
+          ]
         }
       ],
       "types": [

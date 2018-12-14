@@ -42,7 +42,7 @@ public class SoupMain {
 
         System.out.println(speechText);
         speechText = "";
-        SessionAttributes.setCurrentRecipe("kalte spinatsuppe");
+        SessionAttributes.setCurrentRecipe("vegetarische linsensuppe");
         ZutatMengeEinheit [] zumArray = SessionAttributes.getCurrentRecipeZumeng();
         for(int i =0; i<zumArray.length; i++) {
             ZutatMengeEinheit zum = zumArray[i];

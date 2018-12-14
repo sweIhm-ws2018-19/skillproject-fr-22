@@ -35,7 +35,8 @@ public class SoupITStreamHandler extends SkillStreamHandler {
                 new NameRecipeIntent(),
                 new YesNoIntent(),
                 new MoreRecipesIntent(),
-                new NumberOfServingsIntent()
+                new NumberOfServingsIntent(),
+                new StartCookingIntent()
         )
                 .withSkillId("amzn1.ask.skill.88e3acae-7fca-4ec5-985c-220521f6d2ef")
                 .build();
