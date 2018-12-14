@@ -1,4 +1,4 @@
-{
+﻿{
   "zutaten": {
     "karotte": "f",
     "kartoffel": "f",
@@ -101,7 +101,20 @@
     "brokkoli":"m",
     "linsen":"f",
     "kümmelpulver":"n",
-    "suppengemüse":"n"
+    "suppengemüse":"n",
+    "apfelsaft":"m",
+    "rote bete":"f",
+    "schalotte":"f",
+    "meerrettich":"m",
+    "rote paprikaschote":"f",
+    "fischfond":"m",
+    "weißer seefisch":"m",
+    "geröstetes weißbrot":"n",
+    "anislikör":"n",
+    "fischfilet":"n",
+    "fischpaste":"f",
+    "räucherlachs":"m"
+
 
   },
   "einheiten": {
@@ -747,13 +760,67 @@
           "menge": "0.5"
         }
       },
-      "schritte": {
-        "schritt 1": "Schäle die Kartoffeln und Möhren und schneide alles in kleine Stücke. ",
-        "schritt 2": "Putze den Lauch. Schneide den Lauchs in feine Ringe und lege einen kleinen Teil davon beiseite.",
-        "schritt 3": "Öl im Topf erwärmen. Lauch, Kartoffeln und Möhren hinzugeben und unter ständigem Rühren kurz anbraten.",
-        "schritt 4": "Mit Gemüsebrühe ablöschen und die Suppe etwa fünfzehn Minuten bei geriner Hitze köcheln lassen.",
-        "schritt 5": "Schmelzkäse oder Schmand zur Suppe hinzugeben. Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
-        "schritt 6": "Anschließend die restlichen Lauchringe hinzufügen und diese kurz heiß werden lassen. Nach Bedarf mit Salz, Pfeffer und Muskat abschmecken und heiß servieren."
+      "schritte":{
+        "schritt 1":"Schäle die Kartoffeln und Möhren und schneide alles in kleine Stücke. ",
+        "schritt 2":"Putze den Lauch. Schneide den Lauchs in feine Ringe und lege einen kleinen Teil davon beiseite.",
+        "schritt 3":"Öl im Topf erwärmen. Lauch, Kartoffeln und Möhren hinzugeben und unter ständigem Rühren kurz anbraten.",
+        "schritt 4":"Mit Gemüsebrühe ablöschen und die Suppe etwa fünfzehn Minuten bei geriner Hitze köcheln lassen.",
+        "schritt 5":"Schmelzkäse oder Schmand zur Suppe hinzugeben. Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
+        "schritt 6":"Anschließend die restlichen Lauchringe hinzufügen und diese kurz heiß werden lassen. Nach Bedarf mit Salz, Pfeffer und Muskat abschmecken und heiß servieren."
+      }
+    },
+    "möhren und kartoffeleintopf": {
+      "zutaten": {
+        "kartoffel": {
+          "einheit": "gramm",
+          "menge": "50"
+        },
+        "möhre": {
+          "einheit": "gramm",
+          "menge": "100"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "zwiebel"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "125"
+        },
+        "olivenöl": {
+          "einheit": "teelöffel",
+          "menge": "1"
+        },
+        "petersilie": {
+          "einheit": "stängel",
+          "menge": "0.5"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "muskat": {
+          "einheit": "prise",
+          "menge": "0.5"
+        },
+        "schinkenspeck": {
+          "einheit": "gramm",
+          "menge": "25"
+        }
+      },
+      "schritte":{
+        "schritt 1":"Schäle die Möhren und Kartoffeln und schneide sie in kleine Stücke.",
+        "schritt 2":"Schäle die Zwiebel und schneide sie klein.",
+        "schritt 3":"Butter oder Olivenöl im Topf erwärmen. Gebe die Zwiebeln hinzu und brate sie bei niedriger Hitze unter Rühren kurz an.",
+        "schritt 4":"Brate die Karottenstücke kurz mit an. Gebe Mehl sowie Gemüsebrühe hinzu und lasse die Suppe fünfzehn Minuten bei niedriger Hitze köcheln.",
+        "schritt 5":"Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
+        "schritt 6":"Petersilie klein hacken.",
+        "schritt 7":"Gebe Salz, Pfeffer und Muskat hinzu und schmecke die Suppe ab.",
+        "schritt 8":"Suppe auf die Teller verteilen, mit Petersilie bestreuen und heiß servieren."
       }
     },
     "champignoncreme suppe": {
@@ -787,12 +854,12 @@
           "menge": "0.5"
         }
       },
-      "schritte": {
-        "schritt 1": "Putze die Champignons und schneide sie in kleine Scheiben. ",
-        "schritt 2": "Öl in einer Pfanne erhitzen und die Champignonscheiben darin von allen Seiten fünf bis acht Minuten braten. ",
-        "schritt 3": "Butter in einem Topf zerlassen. Das Mehl einrühren und mit der Gemüsebrühe unter Rühren ablöschen.",
-        "schritt 4": "Die Champignons in die Suppe geben, mit der Sahne verfeinern und die Suppe mit Salz und Pfeffer abschmecken. ",
-        "schritt 5": "Die Suppe auf die Teller verteilen und mit Petersilie garniert servieren."
+      "schritte":{
+        "schritt 1":"Putze die Champignons und schneide sie in kleine Scheiben. ",
+        "schritt 2":"Öl in einer Pfanne erhitzen und die Champignonscheiben darin von allen Seiten fünf bis acht Minuten braten. ",
+        "schritt 3":"Butter in einem Topf zerlassen. Das Mehl einrühren und mit der Gemüsebrühe unter Rühren ablöschen.",
+        "schritt 4":"Die Champignons in die Suppe geben, mit der Sahne verfeinern und die Suppe mit Salz und Pfeffer abschmecken. ",
+        "schritt 5":"Die Suppe auf die Teller verteilen und mit Petersilie garniert servieren."
       }
     },
     "champignon kartoffelsuppe": {
@@ -838,12 +905,12 @@
           "menge": "1"
         }
       },
-      "schritte": {
-        "schritt 1": "Schneide die Champignons in Scheiben und die Kartoffeln in kleine Würfel. und zusammen in Salzwasser weich kochen.",
-        "schritt 2": "Gebe die Champignonscheiben und Kartoffelstücke zur Gemüsebrühe hinzu und koche das Gemüse etwa fünfzehn Minuten lang. Schäle und schneide währenddessen die Zwiebel in kleine Stücke.",
-        "schritt 3": "Röste die Zwiebel in Butter an. Gebe anschliessend etwas Mehl hinzu und röste sie, bis sie goldbraun werden.",
-        "schritt 4": "Die Zwiebel mit einem Teil des Kochwassers aufgießen, verrühren und zur Suppe geben. ",
-        "schritt 5": "Suppe mit Rahm verfeinern und mit Salz, Pfeffer und Majoran abschmecken."
+      "schritte":{
+        "schritt 1":"Schneide die Champignons in Scheiben und die Kartoffeln in kleine Würfel. und zusammen in Salzwasser weich kochen.",
+        "schritt 2":"Gebe die Champignonscheiben und Kartoffelstücke zur Gemüsebrühe hinzu und koche das Gemüse etwa fünfzehn Minuten lang. Schäle und schneide währenddessen die Zwiebel in kleine Stücke.",
+        "schritt 3":"Röste die Zwiebel in Butter an. Gebe anschliessend etwas Mehl hinzu und röste sie, bis sie goldbraun werden.",
+        "schritt 4":"Die Zwiebel mit einem Teil des Kochwassers aufgießen, verrühren und zur Suppe geben. ",
+        "schritt 5":"Suppe mit Rahm verfeinern und mit Salz, Pfeffer und Majoran abschmecken."
       }
     },
     "kürbissuppe": {
@@ -893,17 +960,17 @@
           "menge": "1"
         }
       },
-      "schritte": {
-        "schritt 1": "Schäle die Zwiebel und schneide sie in kleine Stücke.",
-        "schritt 2": "Wasche und putze den Kürbis. Entferne die Kerne mit einem Löffel schneide ihn danach in kleine Stücke.",
-        "schritt 3": "Butter im Topf zerlassen. Anschließend Zwiebeln und Kürbis darin andünsten.",
-        "schritt 4": "Mit Salz, Pfeffer, einer Prise Cayennepfeffer und Muskat würzen.",
-        "schritt 5": "Gemüsebrühe sowie Milch oder Sahne zugießen und aufkochen. Zugedeckt bei mittlerer Hitze zwanzig Minuten kochen lassen.<break time=\"2s\"/> Währenddessen eine oder mehrere Scheiben Toastbrot in Stücke schneiden. Etwas Butter in einer beschichteten Pfanne erhitzen und die Brotwürfel darin goldbraun anbraten.",
-        "schritt 6": "Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
-        "schritt 7": "Die Suppe mit Salz und Pfeffer abschmecken. Mit den Toastbrotwürfel sowie ein wenig Kürbiskernöl beträufelt servieren."
+      "schritte":{
+        "schritt 1":"Schäle die Zwiebel und schneide sie in kleine Stücke.",
+        "schritt 2":"Wasche und putze den Kürbis. Entferne die Kerne mit einem Löffel schneide ihn danach in kleine Stücke.",
+        "schritt 3":"Butter im Topf zerlassen. Anschließend Zwiebeln und Kürbis darin andünsten.",
+        "schritt 4":"Mit Salz, Pfeffer, einer Prise Cayennepfeffer und Muskat würzen.",
+        "schritt 5":"Gemüsebrühe sowie Milch oder Sahne zugießen und aufkochen. Zugedeckt bei mittlerer Hitze zwanzig Minuten kochen lassen.<break time=\"2s\"/> Währenddessen eine oder mehrere Scheiben Toastbrot in Stücke schneiden. Etwas Butter in einer beschichteten Pfanne erhitzen und die Brotwürfel darin goldbraun anbraten.",
+        "schritt 6":"Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
+        "schritt 7":"Die Suppe mit Salz und Pfeffer abschmecken. Mit den Toastbrotwürfel sowie ein wenig Kürbiskernöl beträufelt servieren."
       }
     },
-    "kalte avocadosuppe": {
+    "kalte avokadosuppe": {
       "zutaten": {
         "avocado": {
           "einheit": "null",
@@ -934,12 +1001,12 @@
           "menge": "0.5"
         }
       },
-      "schritte": {
-        "schritt 1": "Avocados schälen und entkernen. Fruchtfleisch im Mixer pürieren. Sahne hinzugießen und einige Sekunden mitquirlen, bis die Mischung geschmeidig ist.",
-        "schritt 2": "Brühe und Zitronensaft angießen, salzen und pfeffern. Noch einmal glattpürieren.",
-        "schritt 3": "Gut gekühlt oder bei Zimmertemparatur servieren. Nach Wunsch mit einem Klecks saurer oder süßer Sahne und gehacktem Schnittlauch garnieren.",
-        "schritt 4": "Nach Wunsch kann die Suppe auch warm serviert werden.",
-        "schritt 5": "Avocadosuppe sollte so bald wie möglich nach der Zubereitung serviert werden, da sich die Suppe trotz Zitronensaft verfärben kann."
+      "schritte":{
+        "schritt 1":"Avocados schälen und entkernen. Fruchtfleisch im Mixer pürieren. Sahne hinzugießen und einige Sekunden mitquirlen, bis die Mischung geschmeidig ist.",
+        "schritt 2":"Brühe und Zitronensaft angießen, salzen und pfeffern. Noch einmal glattpürieren.",
+        "schritt 3":"Gut gekühlt oder bei Zimmertemparatur servieren. Nach Wunsch mit einem Klecks saurer oder süßer Sahne und gehacktem Schnittlauch garnieren.",
+        "schritt 4":"Nach Wunsch kann die Suppe auch warm serviert werden.",
+        "schritt 5":"Avocadosuppe sollte so bald wie möglich nach der Zubereitung serviert werden, da sich die Suppe trotz Zitronensaft verfärben kann."
       }
     },
     "brunnenkressesuppe": {
@@ -981,13 +1048,13 @@
           "menge": "1"
         }
       },
-      "schritte": {
-        "schritt 1": "Schäle die Zwiebel und wasche die Frühlingszwiebeln sowie Brunnenkresse. Anschließend Zwiebel, Frühlingszwiebel und Brunnenkresse grob hacken.",
-        "schritt 2": "Butter in einem Topf erhitzen. Zwiebel, Frühlingszwiebel und Brunnenkresse uner Rühren drei Minuten anbraten, bis das Gemüse weich ist.",
-        "schritt 3": "Mehl darüberstäuben und gut unterrühren. Nach und nach Brühe und Wasser in den Topf geben und verrühren, bis die Mischung glatt ist.",
-        "schritt 4": "Unter Rühren aufkochen, bis die Suppe eindickt. Zugedeckt bei kleiner Hitze zehn Minutenlang sieden lassen, bis die Brunnenkresse gar ist.",
-        "schritt 5": "Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
-        "schritt 6": "Salz und Pfeffer hinzugeben und die Suppe abschmecken. Nach Wunsch mit einem Klecks saurer oder süßer Sahne verzieren."
+      "schritte":{
+        "schritt 1":"Schäle die Zwiebel und wasche die Frühlingszwiebeln sowie Brunnenkresse. Anschließend Zwiebel, Frühlingszwiebel und Brunnenkresse grob hacken.",
+        "schritt 2":"Butter in einem Topf erhitzen. Zwiebel, Frühlingszwiebel und Brunnenkresse uner Rühren drei Minuten anbraten, bis das Gemüse weich ist.",
+        "schritt 3":"Mehl darüberstäuben und gut unterrühren. Nach und nach Brühe und Wasser in den Topf geben und verrühren, bis die Mischung glatt ist.",
+        "schritt 4":"Unter Rühren aufkochen, bis die Suppe eindickt. Zugedeckt bei kleiner Hitze zehn Minutenlang sieden lassen, bis die Brunnenkresse gar ist.",
+        "schritt 5":"Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
+        "schritt 6":"Salz und Pfeffer hinzugeben und die Suppe abschmecken. Nach Wunsch mit einem Klecks saurer oder süßer Sahne verzieren."
       }
     },
     "zwiebelsuppe": {
@@ -1029,13 +1096,15 @@
           "menge": "15"
         }
       },
-      "schritte": {
-        "schritt 1": "Schäle die Zwiebeln und schneide sie in feine Ringe.",
-        "schritt 2": "Butter im Topf erwärmen, Zwiebelringe hinzugeben und bei niedriger Hitze etwa fünfzehn Minuten schmoren, bis sie weich sind.",
-        "schritt 3": "Zucker und Mehl darüberstäuben und unter Rühren nochmals ein bis zwei Minuten lang schmoren.",
-        "schritt 4": "Gemüsebrühe angießen bei niedriger Hitze etwa zwanzig Minuten köcheln lassen.<break time=\"2s\"/> Währenddessen den Ofen auf hundertachtzig Grad vorheizen. Das Baguette in Scheiben schneiden, mit Käse bestreuen etwa zehn Minuten backen.",
-        "schritt 5": "Die Suppe mit Salz und Pfeffer abschmecken und heiß servieren."
+      "schritte":{
+        "schritt 1":"Schäle die Zwiebeln und schneide sie in feine Ringe.",
+        "schritt 2":"Butter im Topf erwärmen, Zwiebelringe hinzugeben und bei niedriger Hitze etwa fünfzehn Minuten schmoren, bis sie weich sind.",
+        "schritt 3":"Zucker und Mehl darüberstäuben und unter Rühren nochmals ein bis zwei Minuten lang schmoren.",
+        "schritt 4":"Gemüsebrühe angießen bei niedriger Hitze etwa zwanzig Minuten köcheln lassen.<break time=\"2s\"/> Währenddessen den Ofen auf hundertachtzig Grad vorheizen. Das Baguette in Scheiben schneiden, mit Käse bestreuen etwa zehn Minuten backen.",
+        "schritt 5":"Die Suppe mit Salz und Pfeffer abschmecken und heiß servieren."
       }
+
+
     },
     "paprikacremesuppe": {
       "zutaten": {
@@ -1071,14 +1140,16 @@
           "einheit": "gramm",
           "menge": "25"
         }
+
+
       },
-      "schritte": {
-        "schritt 1": "Die gelben und roten Paprikaschoten in sehr kleine Stücke schneiden.",
-        "schritt 2": "Butter im Topf erwärmen. Mehl hinzugeben und unter Rühren und geringer Hitze etwa eine Minute lang anschwitzen.",
-        "schritt 3": "Die Paprikaschoten hinzugeben und kurz mit anbraten.",
-        "schritt 4": "Mit Gemüsebrühe ablöschen und die Suppe fünfzehn Minuten köcheln lassen.",
-        "schritt 5": "Geriebenen Parmesan und Sahne hinzugeben und die Suppe paar Minuten abkühlen lassen. Anschließend mit einem Stabmixer pürieren.",
-        "schritt 6": "Die Suppe mit Kräutersalz und Pfeffer abschmecken und servieren."
+      "schritte":{
+        "schritt 1":"Die gelben und roten Paprikaschoten in sehr kleine Stücke schneiden.",
+        "schritt 2":"Butter im Topf erwärmen. Mehl hinzugeben und unter Rühren und geringer Hitze etwa eine Minute lang anschwitzen.",
+        "schritt 3":"Die Paprikaschoten hinzugeben und kurz mit anbraten.",
+        "schritt 4":"Mit Gemüsebrühe ablöschen und die Suppe fünfzehn Minuten köcheln lassen.",
+        "schritt 5":"Geriebenen Parmesan und Sahne hinzugeben und die Suppe paar Minuten abkühlen lassen. Anschließend mit einem Stabmixer pürieren.",
+        "schritt 6":"Die Suppe mit Kräutersalz und Pfeffer abschmecken und servieren."
       }
     },
     "tomatencremesuppe": {
@@ -1132,14 +1203,14 @@
           "menge": "20"
         }
       },
-      "schritte": {
-        "schritt 1": "Schäle die Zwiebel und den Knoblauch und schneide beides in kleine Stücke.",
-        "schritt 2": "Wasche die Tomaten und schneide sie in kleine Würfel.",
-        "schritt 3": "Butter im Topf erhitzen, Zwiebel und Knoblauch hinzugeben und etwa fünf Minuten lang bei niedriger Hitze dünsten.",
-        "schritt 4": "Die Tomatenstücke, Tomtatenmark und Gemüsebrühe hinzugeben und etwa zehn Minuten lang köcheln lassen.",
-        "schritt 5": "Salz, Zucker und Oregano oder Pizzagewürz dazugeben und die Suppe für weitere fünf Minuten köcheln lassen.",
-        "schritt 6": "Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
-        "schritt 7": "Schlagsahne, Basilikumblätter und Petersilie hinzugeben. Suppe kurz erwärmen und warm servieren."
+      "schritte":{
+        "schritt 1":"Schäle die Zwiebel und den Knoblauch und schneide beides in kleine Stücke.",
+        "schritt 2":"Wasche die Tomaten und schneide sie in kleine Würfel.",
+        "schritt 3":"Butter im Topf erhitzen, Zwiebel und Knoblauch hinzugeben und etwa fünf Minuten lang bei niedriger Hitze dünsten.",
+        "schritt 4":"Die Tomatenstücke, Tomtatenmark und Gemüsebrühe hinzugeben und etwa zehn Minuten lang köcheln lassen.",
+        "schritt 5":"Salz, Zucker und Oregano oder Pizzagewürz dazugeben und die Suppe für weitere fünf Minuten köcheln lassen.",
+        "schritt 6":"Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
+        "schritt 7":"Schlagsahne, Basilikumblätter und Petersilie hinzugeben. Suppe kurz erwärmen und warm servieren."
       }
     },
     "gurkencremesuppe": {
@@ -1188,15 +1259,16 @@
           "einheit": "gramm",
           "menge": "10"
         }
+
       },
-      "schritte": {
-        "schritt 1": "Schäle die Zwiebel und den Knoblauch und schneide beides in kleine Stücke.",
-        "schritt 2": "Wasche die Gurke und schneide sie in sehr kleine Würfel.",
-        "schritt 3": "Butter im Topf erhitzen, Zwiebel und Knoblauch hinzugeben und etwa fünf Minuten lang bei niedriger Hitze dünsten.",
-        "schritt 4": "Die Gurkenstücke und Gemüsebrühe hinzugeben und etwa fünf Minuten lang köcheln lassen.",
-        "schritt 5": "Sahne mit dem Mehl verrühren und zur Suppe hinzugeben. Salz und Pfeffer ebenfalls hinzugeben und die Suppe für weitere fünf Minuten köcheln lassen.",
-        "schritt 6": "Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
-        "schritt 7": "Zitronensaft und Dill hinzugeben und die Suppe abschmecken. Suppe kurz erwärmen und warm servieren."
+      "schritte":{
+        "schritt 1":"Schäle die Zwiebel und den Knoblauch und schneide beides in kleine Stücke.",
+        "schritt 2":"Wasche die Gurke und schneide sie in sehr kleine Würfel.",
+        "schritt 3":"Butter im Topf erhitzen, Zwiebel und Knoblauch hinzugeben und etwa fünf Minuten lang bei niedriger Hitze dünsten.",
+        "schritt 4":"Die Gurkenstücke und Gemüsebrühe hinzugeben und etwa fünf Minuten lang köcheln lassen.",
+        "schritt 5":"Sahne mit dem Mehl verrühren und zur Suppe hinzugeben. Salz und Pfeffer ebenfalls hinzugeben und die Suppe für weitere fünf Minuten köcheln lassen.",
+        "schritt 6":"Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
+        "schritt 7":"Zitronensaft und Dill hinzugeben und die Suppe abschmecken. Suppe kurz erwärmen und warm servieren."
       }
     },
     "bärlauchsuppe": {
@@ -1230,14 +1302,15 @@
           "menge": "1"
         }
       },
-      "schritte": {
-        "schritt 1": "Schäle die Kartoffeln, schneide sie in kleine Stücke und koche sie etwa zehn Minuten in Wasser vor.<break time=\"2s\"/> Wasser anschließend abgießen und die gekochten Kartoffelstücke beiseite legen.",
-        "schritt 2": "Butter im Topf erwärmen, Mehl hinzugeben und bei niedriger Hitze etwa zwei bis drei Minuten anschwitzen.",
-        "schritt 3": "Gemüsebrühe zugeben und bei niedriger Hitze etwa fünf Minuten köcheln lassen.",
-        "schritt 4": "Die vorgekochten Kartoffelstücke und Bärlauch hinzugeben und etwa fünf Minuten kochen.",
-        "schritt 5": "Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
-        "schritt 6": "Die Suppe mit Salz und Pfeffer abschmecken und heiß servieren."
+      "schritte":{
+        "schritt 1":"Schäle die Kartoffeln, schneide sie in kleine Stücke und koche sie etwa zehn Minuten in Wasser vor.<break time=\"2s\"/> Wasser anschließend abgießen und die gekochten Kartoffelstücke beiseite legen.",
+        "schritt 2":"Butter im Topf erwärmen, Mehl hinzugeben und bei niedriger Hitze etwa zwei bis drei Minuten anschwitzen.",
+        "schritt 3":"Gemüsebrühe zugeben und bei niedriger Hitze etwa fünf Minuten köcheln lassen.",
+        "schritt 4":"Die vorgekochten Kartoffelstücke und Bärlauch hinzugeben und etwa fünf Minuten kochen.",
+        "schritt 5":"Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
+        "schritt 6":"Die Suppe mit Salz und Pfeffer abschmecken und heiß servieren."
       }
+
     },
     "spargel rucolasuppe": {
       "zutaten": {
@@ -1290,15 +1363,16 @@
           "menge": "0.5"
         }
       },
-      "schritte": {
-        "schritt 1": "Schäle die Zwiebel und den Knoblauch und schneide beides in kleine Stücke.",
-        "schritt 2": "Schäle das untere Drittel der grünen Spargel und schneide die Spargel in dünne Scheiben.",
-        "schritt 3": "Butter im Topf erhitzen, Zwiebel und Knoblauch hinzugeben und etwa drei Minuten lang bei niedriger Hitze dünsten.",
-        "schritt 4": "Spargel, Gemüsebrühe, Salz, Pfeffer und Zucker hinzugeben und etwa fünfzehn Minuten lang köcheln lassen.",
-        "schritt 5": "Sahne, Speisestärke, Rucola und Basilikum dazugeben und die Suppe für weitere zwei Minuten köcheln lassen.",
-        "schritt 6": "Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
-        "schritt 7": "Suppe kurz aufkochen, abschmecken und warm servieren."
+      "schritte":{
+        "schritt 1":"Schäle die Zwiebel und den Knoblauch und schneide beides in kleine Stücke.",
+        "schritt 2":"Schäle das untere Drittel der grünen Spargel und schneide die Spargel in dünne Scheiben.",
+        "schritt 3":"Butter im Topf erhitzen, Zwiebel und Knoblauch hinzugeben und etwa drei Minuten lang bei niedriger Hitze dünsten.",
+        "schritt 4":"Spargel, Gemüsebrühe, Salz, Pfeffer und Zucker hinzugeben und etwa fünfzehn Minuten lang köcheln lassen.",
+        "schritt 5":"Sahne, Speisestärke, Rucola und Basilikum dazugeben und die Suppe für weitere zwei Minuten köcheln lassen.",
+        "schritt 6":"Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
+        "schritt 7":"Suppe kurz aufkochen, abschmecken und warm servieren."
       }
+
     },
     "spargelsuppe": {
       "zutaten": {
@@ -1339,12 +1413,13 @@
           "menge": "1"
         }
       },
-      "schritte": {
-        "schritt 1": "Schäle den Spargel und schneide sie in ein Zentimeter lange Stücke.",
-        "schritt 2": "Wasser in den Topf gießen. Spargel, Zucker und Butter hinzufügen und etwa fünfzehn Minuten lang kochen.",
-        "schritt 3": "Mehl mit Creme Fresch oder Sahne verrühren und in die Suppe einrühren. Die Suppe für weitere fünf Minuten köcheln lassen.",
-        "schritt 4": "Die Suppe mit Weißwein, Salz und Pfeffer abschmecken und heiß servieren."
+      "schritte":{
+        "schritt 1":"Schäle den Spargel und schneide sie in ein Zentimeter lange Stücke.",
+        "schritt 2":"Wasser in den Topf gießen. Spargel, Zucker und Butter hinzufügen und etwa fünfzehn Minuten lang kochen.",
+        "schritt 3":"Mehl mit Creme Fresch oder Sahne verrühren und in die Suppe einrühren. Die Suppe für weitere fünf Minuten köcheln lassen.",
+        "schritt 4":"Die Suppe mit Weißwein, Salz und Pfeffer abschmecken und heiß servieren."
       }
+
     },
     "kohlrabi kartoffelsuppe": {
       "zutaten": {
@@ -1381,11 +1456,12 @@
           "menge": "0.25"
         }
       },
-      "schritte": {
-        "schritt 1": "Schäle den Kohlrabi und die Kartoffeln und schneide beides in Stücke.",
-        "schritt 2": "Die Kohlrabi und Kartoffelstücke mit Gemüsebrühe in einen Topf geben und etwa zwanzig Minuten lang bei leichter Hitze kochen.<break time=\"2s\"/> Währenddessen Schnittlauch waschen und in kleine Röllchen schneiden.",
-        "schritt 3": "Creme Fresch, Salz, Pfeffer und Muskat hinzugeben und die Suppe nochmal fünf Minuten kurz erwärmen.",
-        "schritt 4": "Die Suppe mit einem Stabmixer pürieren und mit Schnittlauch garniert servieren."
+
+      "schritte":{
+        "schritt 1":"Schäle den Kohlrabi und die Kartoffeln und schneide beides in Stücke.",
+        "schritt 2":"Die Kohlrabi und Kartoffelstücke mit Gemüsebrühe in einen Topf geben und etwa zwanzig Minuten lang bei leichter Hitze kochen.<break time=\"2s\"/> Währenddessen Schnittlauch waschen und in kleine Röllchen schneiden.",
+        "schritt 3":"Creme Fresch, Salz, Pfeffer und Muskat hinzugeben und die Suppe nochmal fünf Minuten kurz erwärmen.",
+        "schritt 4":"Die Suppe mit einem Stabmixer pürieren und mit Schnittlauch garniert servieren."
       }
     },
     "frische gemüsebrühe": {
@@ -1431,13 +1507,13 @@
           "menge": "5"
         }
       },
-      "schritte": {
-        "schritt 1": "Zwiebeln schälen und halbieren und in einer Pfanne mit Butter anrösten.",
-        "schritt 2": "Sellerie, Karotten und Petersilienwurzel schälen und in große Stücke schneiden. Lauch ebenfalls in grobe Stücke schneiden.",
-        "schritt 3": "Das Gemüse bis auf die Zwiebel in Olivenöl vier Minuten lang andünsten.",
-        "schritt 4": "Kaltes Wasser angießen und Zwiebelhälften, Lorbeerblätter und Pfefferkörner zugeben.",
-        "schritt 5": "Die Brühe aufkochen und zugedeckt bei mittlerer Hitze eine halbe Stunde lang kochen.",
-        "schritt 6": "Die Brühe durch ein sehr feines Sieb oder Mulltuch passieren und mit Salz und Pfeffer würzen."
+      "schritte":{
+        "schritt 1":"Zwiebeln schälen und halbieren und in einer Pfanne mit Butter anrösten.",
+        "schritt 2":"Sellerie, Karotten und Petersilienwurzel schälen und in große Stücke schneiden. Lauch ebenfalls in grobe Stücke schneiden.",
+        "schritt 3":"Das Gemüse bis auf die Zwiebel in Olivenöl vier Minuten lang andünsten.",
+        "schritt 4":"Kaltes Wasser angießen und Zwiebelhälften, Lorbeerblätter und Pfefferkörner zugeben.",
+        "schritt 5":"Die Brühe aufkochen und zugedeckt bei mittlerer Hitze eine halbe Stunde lang kochen.",
+        "schritt 6":"Die Brühe durch ein sehr feines Sieb oder Mulltuch passieren und mit Salz und Pfeffer würzen."
       }
     },
     "mie nudelsuppe": {
@@ -1507,14 +1583,15 @@
           "menge": "1"
         }
       },
-      "schritte": {
-        "schritt 1": "Schäle die Zwiebel, den Knoblauch und den Ingwer und schneide alles in kleine Stücke.",
-        "schritt 2": "Paprika, Knollensellerie und Porree putzen und in kleine Stücke schneiden.",
-        "schritt 3": "Sonnenblumen- und Sesamöl in einem Topf erwärmen. Zwiebel, Knoblauch, Ingwer und Paprika hinzugeben und etwa drei Minuten lang dünsten.",
-        "schritt 4": "Sellerie, Porree, Gemüsebrühe und Orangensaft zugeben und etwa fünfzehn Minuten lang bei leichter Hitze köcheln lassen.",
-        "schritt 5": "Mie-Nudeln, Erbsen und Sojasoße hinzugeben und die Suppe nochmals nach der Zeit gemäß der Packungsanweisung der Nudeln kochen.",
-        "schritt 6": "Mie-Nudel-Suppe mit Salz, Pfeffer und Paprikapulver abschmecken und servieren."
+      "schritte":{
+        "schritt 1":"Schäle die Zwiebel, den Knoblauch und den Ingwer und schneide alles in kleine Stücke.",
+        "schritt 2":"Paprika, Knollensellerie und Porree putzen und in kleine Stücke schneiden.",
+        "schritt 3":"Sonnenblumen- und Sesamöl in einem Topf erwärmen. Zwiebel, Knoblauch, Ingwer und Paprika hinzugeben und etwa drei Minuten lang dünsten.",
+        "schritt 4":"Sellerie, Porree, Gemüsebrühe und Orangensaft zugeben und etwa fünfzehn Minuten lang bei leichter Hitze köcheln lassen.",
+        "schritt 5":"Mie-Nudeln, Erbsen und Sojasoße hinzugeben und die Suppe nochmals nach der Zeit gemäß der Packungsanweisung der Nudeln kochen.",
+        "schritt 6":"Mie-Nudel-Suppe mit Salz, Pfeffer und Paprikapulver abschmecken und servieren."
       }
+
     },
     "süßkartoffelsuppe": {
       "zutaten": {
@@ -1559,16 +1636,17 @@
           "menge": "0.5"
         }
       },
-      "schritte": {
-        "schritt 1": "Schäle die Zwiebel und den Knoblauch und schneide beides in kleine Stücke.",
-        "schritt 2": "Schäle die Süßkartoffeln und schneide sie in kleine Würfel.",
-        "schritt 3": "Chilischote längs aufschneiden, Kerne entfernen und Fruchtfleisch hacken.",
-        "schritt 4": "Öl in einem Topf erhitzen, Zwiebel und Knoblauch darin glasig dünsten. Die Hälfte der gehackten Chili zugeben und kurz mitdünsten.",
-        "schritt 5": "Gebe die Süßkartoffeln hinzu und brate sie kurz mit an.",
-        "schritt 6": "Mit Gemüsebrühe ablöschen und Suppe etwa fünfzehn Minuten köcheln lassen. Währenddessen Petersilie waschen und klein hacken.",
-        "schritt 7": "Die Suppe mit der Hälfte der Creme Fresch sehr fein pürieren und mit Salz abschmecken.",
-        "schritt 8": "Suppe auf die Teller verteilen und mit je einem Klecks Creme Fresch, restlicher Chili und Petersilie garnieren."
+      "schritte":{
+        "schritt 1":"Schäle die Zwiebel und den Knoblauch und schneide beides in kleine Stücke.",
+        "schritt 2":"Schäle die Süßkartoffeln und schneide sie in kleine Würfel.",
+        "schritt 3":"Chilischote längs aufschneiden, Kerne entfernen und Fruchtfleisch hacken.",
+        "schritt 4":"Öl in einem Topf erhitzen, Zwiebel und Knoblauch darin glasig dünsten. Die Hälfte der gehackten Chili zugeben und kurz mitdünsten.",
+        "schritt 5":"Gebe die Süßkartoffeln hinzu und brate sie kurz mit an.",
+        "schritt 6":"Mit Gemüsebrühe ablöschen und Suppe etwa fünfzehn Minuten köcheln lassen. Währenddessen Petersilie waschen und klein hacken.",
+        "schritt 7":"Die Suppe mit der Hälfte der Creme Fresch sehr fein pürieren und mit Salz abschmecken.",
+        "schritt 8":"Suppe auf die Teller verteilen und mit je einem Klecks Creme Fresch, restlicher Chili und Petersilie garnieren."
       }
+
     },
     "selleriesuppe": {
       "zutaten": {
@@ -1605,13 +1683,14 @@
           "menge": "1"
         }
       },
-      "schritte": {
-        "schritt 1": "Wasche die Sellerieblätter und schüttel sie trocken. Schäle die Sellerieknolle und schneide sie in kleine Würfel.",
-        "schritt 2": "Schäle die Zwiebel und schneide sie klein.",
-        "schritt 3": "Ein Drittel der vorgegebenen Olivenölmenge im Topf erhitzen und die Zwiebeln darin anschwitzen.",
-        "schritt 4": "Selleriegrün, Selleriewürfel und Gemüsebrühe hinzufügen und etwa fünfzehn bis zwanzig Minuten köcheln lassen.",
-        "schritt 5": "Sahne hinzufügen und die Suppe fein pürieren.",
-        "schritt 6": "Die Suppe mit Salz und Pfeffer abschmecken, auf x Teller verteilen und mit Olivenöl beträufeln."
+
+      "schritte":{
+        "schritt 1":"Wasche die Sellerieblätter und schüttel sie trocken. Schäle die Sellerieknolle und schneide sie in kleine Würfel.",
+        "schritt 2":"Schäle die Zwiebel und schneide sie klein.",
+        "schritt 3":"Ein Drittel der vorgegebenen Olivenölmenge im Topf erhitzen und die Zwiebeln darin anschwitzen.",
+        "schritt 4":"Selleriegrün, Selleriewürfel und Gemüsebrühe hinzufügen und etwa fünfzehn bis zwanzig Minuten köcheln lassen.",
+        "schritt 5":"Sahne hinzufügen und die Suppe fein pürieren.",
+        "schritt 6":"Die Suppe mit Salz und Pfeffer abschmecken, auf x Teller verteilen und mit Olivenöl beträufeln."
       }
     },
     "selleriecremesuppe": {
@@ -1657,15 +1736,16 @@
           "menge": "1"
         }
       },
-      "schritte": {
-        "schritt 1": "Schäle die Zwiebel und die Kartoffel und schneide beides in Würfel.",
-        "schritt 2": "Sellerie putzen, waschen und ebenfalls in Würfel schneiden.",
-        "schritt 3": "Öl im Topf erhitzen und Zwiebeln darin glasig dünsten. Kartoffeln und Sellerie hinzugeben und kurz mit andünsten.",
-        "schritt 4": "Mit Gemüsebrühe ablöschen, das ganze aufkochen lassen und zugedeckt etwa zwanzig Minuten bei mittlerer Hitze köcheln lassen.<break time=\"2s\"/> Währenddessen Brot in kleine Stücke schneiden und in einer beschichteten Pfanne ohne Fett bei schwacher Hitze unter regelmäßigem Wenden rösten.",
-        "schritt 5": "Nehme einen Esslöffel Selleriewürfel aus der Suppe und stelle sie zur Seite. Restliches Gemüse in der Brühe mit einem Pürierstab pürieren.",
-        "schritt 6": "Die Suppe mit Salz und Pfeffer abschmecken. Die Petersilie waschen, trocken tupfen und fein hacken.",
-        "schritt 7": "Die Suppe mit einem Klecks Creme Fresch, den Brotstückchen, Selleriewürfelchen und Petersilie bestreut servieren."
+      "schritte":{
+        "schritt 1":"Schäle die Zwiebel und die Kartoffel und schneide beides in Würfel.",
+        "schritt 2":"Sellerie putzen, waschen und ebenfalls in Würfel schneiden.",
+        "schritt 3":"Öl im Topf erhitzen und Zwiebeln darin glasig dünsten. Kartoffeln und Sellerie hinzugeben und kurz mit andünsten.",
+        "schritt 4":"Mit Gemüsebrühe ablöschen, das ganze aufkochen lassen und zugedeckt etwa zwanzig Minuten bei mittlerer Hitze köcheln lassen.<break time=\"2s\"/> Währenddessen Brot in kleine Stücke schneiden und in einer beschichteten Pfanne ohne Fett bei schwacher Hitze unter regelmäßigem Wenden rösten.",
+        "schritt 5":"Nehme einen Esslöffel Selleriewürfel aus der Suppe und stelle sie zur Seite. Restliches Gemüse in der Brühe mit einem Pürierstab pürieren.",
+        "schritt 6":"Die Suppe mit Salz und Pfeffer abschmecken. Die Petersilie waschen, trocken tupfen und fein hacken.",
+        "schritt 7":"Die Suppe mit einem Klecks Creme Fresch, den Brotstückchen, Selleriewürfelchen und Petersilie bestreut servieren."
       }
+
     },
     "brokkolicremesuppe": {
       "zutaten": {
@@ -1710,14 +1790,380 @@
           "menge": "1"
         }
       },
-      "schritte": {
-        "schritt 1": "Den Brokkoli grob zerschneiden und einige Röschen beiseite legen.",
-        "schritt 2": "Schäle die Zwiebel und den Knoblauch und schneide beides klein.",
-        "schritt 3": "Butter im Topf erhitzen, Zwiebelwürfel und Knoblauch dazugeben und etwa fünf Minuten dünsten.",
-        "schritt 4": "Etwa zwei Drittel der Brokkolistücke hinzugeben, mit Gemüsebrühe aufgießen und zugedeckt etwa fünfzehn Minuten köcheln lassen.",
-        "schritt 5": "Die Suppe einige Minuten abkühlen lassen. Anschließend mit einem Stabmixer fein pürieren.",
-        "schritt 6": "Sahne und das restliche Drittel Brokkolistücke hinzugeben und die Suppe noch einmal etwa fünf Minuten kochen lassen.",
-        "schritt 7": "Die Suppe mit Salz, Pfeffer und Oregano abschmecken und mit gehackter Petersilie bestreut servieren."
+      "schritte":{
+        "schritt 1":"Den Brokkoli grob zerschneiden und einige Röschen beiseite legen.",
+        "schritt 2":"Schäle die Zwiebel und den Knoblauch und schneide beides klein.",
+        "schritt 3":"Butter im Topf erhitzen, Zwiebelwürfel und Knoblauch dazugeben und etwa fünf Minuten dünsten.",
+        "schritt 4":"Etwa zwei Drittel der Brokkolistücke hinzugeben, mit Gemüsebrühe aufgießen und zugedeckt etwa fünfzehn Minuten köcheln lassen.",
+        "schritt 5":"Die Suppe einige Minuten abkühlen lassen. Anschließend mit einem Stabmixer fein pürieren.",
+        "schritt 6":"Sahne und das restliche Drittel Brokkolistücke hinzugeben und die Suppe noch einmal etwa fünf Minuten kochen lassen.",
+        "schritt 7":"Die Suppe mit Salz, Pfeffer und Oregano abschmecken und mit gehackter Petersilie bestreut servieren."
+      }
+
+    },
+    "vegetarische linsensuppe": {
+      "zutaten": {
+        "linsen": {
+          "einheit": "gramm",
+          "menge": "60"
+        },
+        "kartoffel": {
+          "einheit": "null",
+          "menge": "1"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "suppengemüse": {
+          "einheit": "bund",
+          "menge": "0.25"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "300"
+        },
+        "öl": {
+          "einheit": "esslöffel",
+          "menge": "0.75"
+        },
+        "petersilie": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "lorbeerblatt": {
+          "einheit": "null",
+          "menge": "0.5"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "kümmelpulver": {
+          "einheit": "prise",
+          "menge": "1"
+        }
+      },
+      "schritte":{
+        "schritt 1":"Die Linsen in reichlich Wasser ohne Salz aufkochen und etwa fünfzehn Minuten köcheln lassen.<break time=\"2s\"/> Schäle in der Zwischenzeit die Kartoffeln und schneide sie in kleine Würfel. Putze das Suppengemüse und schneide es ebenfalls in kleine Stücke.",
+        "schritt 2":"Die Linsen in ein Sieb abgießen und abtropfen lassen.",
+        "schritt 3":"In einem großen Topf das Gemüse mit Öl andünsten, Kartoffelwürfel hinzufügen und mit der Gemüsebrühe ablöschen.",
+        "schritt 4":"Die Lorbeerblätter und die vorgekochten Linsen hinzufügen. Die Linsensuppe solange kochen, bis die Kartoffelwürfel weich sind.",
+        "schritt 5":"Petersilie waschen und klein hacken.",
+        "schritt 6":"Gehackte Petersilie hinzufügen und die Suppe mit Salz, Pfeffer und Kümmel abschmecken.",
+        "schritt 7":"Dazu passt wunderbar frisches Baguette oder Ciabatta Brot."
+      }
+
+    },
+    "kübis lauchsuppe": {
+      "zutaten": {
+        "kürbis": {
+          "einheit": "gramm",
+          "menge": "125"
+        },
+        "lauch": {
+          "einheit": "gramm",
+          "menge": "85"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "175"
+        },
+        "apfelsaft": {
+          "einheit": "milliliter",
+          "menge": "30"
+        },
+        "butter": {
+          "einheit": "esslöffel",
+          "menge": "0.25"
+        },
+        "schlagsahne": {
+          "einheit": "milliliter",
+          "menge": "25"
+        },
+        "muskat": {
+          "einheit": "prise",
+          "menge": "0.5"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "zucker": {
+          "einheit": "prise",
+          "menge": "1"
+        }
+      },
+      "schritte":{
+        "schritt 1":"Halbiere den Hokkaido-Kürbis, entkerne ihn und schneide die entsprechende Menge in grobe Stücke.",
+        "schritt 2":"Lauch putzen und waschen, längs halbieren und das Weiße in Stücke schneiden. Das Hellgrüne des Lauchs in feine Stücke schneiden.",
+        "schritt 3":"Schäle die Zwiebel und schneide sie klein.",
+        "schritt 4":"Butter im Topf erhitzen. Zwiebeln hinzugeben und bei mittlerer Hitze glasig dünsten.",
+        "schritt 5":"Die Kürbissücke, Lauchstücke und eine Prise Zucker zugeben und fünf Minuten mitdünsten.",
+        "schritt 6":"Apfelsaft und Gemüsebrühe zugießen, zugedeckt aufkochen und zwanzig Minuten köcheln lassen.",
+        "schritt 7":"Schlagsahne hinzugeben und die Suppe kurz aufkochen. Anschließend die Suppe mit einem Stabmixer fein pürieren.",
+        "schritt 8":"Die Suppe mit Salz, Pfeffer und frisch geriebener Muskatnuss würzen und mit den hellgrünen Lauchstücken garnieren."
+      }
+    },
+    "rote bete kartoffelsuppe": {
+      "zutaten": {
+        "rote bete": {
+          "einheit": "gramm",
+          "menge": "150"
+        },
+        "kartoffel": {
+          "einheit": "null",
+          "menge": "2"
+        },
+        "schalotte": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "300"
+        },
+        "öl": {
+          "einheit": "esslöffel",
+          "menge": "1.25"
+        },
+        "sahne": {
+          "einheit": "milliliter",
+          "menge": "25"
+        },
+        "meerrettich": {
+          "einheit": "teelöffel",
+          "menge": "0.25"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        }
+      },
+      "schritte":{
+        "schritt 1":"Schäle die Rote Bete und schneide sie in kleine Würfel. Verwende am besten Handschuhe, da die Rote Bete Knollen ziemlich intensiv färben.",
+        "schritt 2":"Schäle die Kartoffeln und Schalotte und schneide beides in kleine Stücke.",
+        "schritt 3":"Ein fünftel der benötigten Menge Öl im Topf erhitzen und Schalotten darin einige Minuten lang andünsten.",
+        "schritt 4":"Rote Bete und etwa zwei Drittel der Kartoffelstücke hinzugeben und kurz mit anbraten.",
+        "schritt 5":"Die Suppe mit Brühe abschlöschen, mit Salz und Pfeffer würzen und etwa fünfundzwanzig Minuten lang köcheln lassen.<break time=\"2s\"/> In der Zwischenzeit die restlichen kleinen Kartoffelwürfel in Öl in einer Pfanne kunsprig anbraten und mit Salz und Pfeffer würzen.",
+        "schritt 6":"Die Suppe mit einem Stabmixer pürieren und mit Salz, Pfeffer und Meerrettich abschmecken.",
+        "schritt 7":"Mit den angebratenen Kartoffelwürfel und der Sahne als Schlieren auf der Suppe anrichten."
+
+      }
+    },
+    "fischsuppe": {
+      "zutaten": {
+        "rote paprikaschote": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "lauch": {
+          "einheit": "stängel",
+          "menge": "0.25"
+        },
+        "möhre": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "knoblauchzehe": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "tomate": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "fischfond": {
+          "einheit": "milliliter",
+          "menge": "100"
+        },
+        "wasser": {
+          "einheit": "milliliter",
+          "menge": "100"
+        },
+        "weißer seefisch": {
+          "einheit": "gramm",
+          "menge": "100"
+        },
+        "geröstetes weißbrot": {
+          "einheit": "scheibe",
+          "menge": "0.5"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "olivenöl": {
+          "einheit": "esslöffel",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        }
+      },
+      "schritte":{
+        "schritt 1":"Weiche die Paprikaschote in warmen Wasser ein.",
+        "schritt 2":"Putze den Lauch und schneide ihn klein. Möhre, Zwiebel und Knoblauch schälen und ebenfalls klein schneiden.",
+        "schritt 3":"Den Fisch kalt abspülen, trockentupfen und in größere Stücke schneiden.",
+        "schritt 4":"Den Fond und das Wasser in einem Topf zum Kochen bringen und die Fischstücke darin bei schwacher Hitze acht Minuten ziehen lassen.",
+        "schritt 5":"Öl in einem zweiten Topf erhitzen. Zwiebel, Knoblauch und Lauch dazugeben und unter Rühren bei mittlerer Hitze fünf Minuten anbraten.",
+        "schritt 6":"Die Tomate waschen, klein schneiden und hinzugeben. Die Fischbrühe aus dem anderem Topf angießen und zum Kochen bringen. Die Fischstücke beiseite stellen.",
+        "schritt 7":"Die eingeweichte Paprikaschote grob zerkleinern und mit Salz und Pfeffer würzen. Gewürzpaste",
+        "schritt 8":"Geröstetes Weißbrot im Mörser zerkleinern, Paprikaschote und etwas Fischbrühe aus dem Topf hinzugeben und alles zu einer Gewürzpaste zerstampfen.",
+        "schritt 9":"Die Würzpaste unter die Suppe mischen und bei mittlerer Hitze weitere zehn Minuten kochen.",
+        "schritt 10":"Die Suppe nach Belieben pürieren, die Fischstücke hinzugeben und bei schwacher Hitze nochmal zwei Minuten ziehen lassen."
+      }
+    },
+    "tomatenfischsuppe": {
+      "zutaten": {
+        "tomate": {
+          "einheit": "gramm",
+          "menge": "125"
+        },
+        "champignon": {
+          "einheit": "gramm",
+          "menge": "25"
+        },
+        "frühlingszwiebel": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "knoblauchzehe": {
+          "einheit": "null",
+          "menge": "0.5"
+        },
+        "fischfond": {
+          "einheit": "milliliter",
+          "menge": "100"
+        },
+        "olivenöl": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "anislikör": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "fischfilet": {
+          "einheit": "gramm",
+          "menge": "125"
+        },
+        "basilikum": {
+          "einheit": "stängel",
+          "menge": "0.5"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        }
+      },
+      "schritte":{
+        "schritt 1":"Die Fischfilets kalt abspülen, mit Küchenpapier trockentupfen und in mundgerechte Stücke schneiden.",
+        "schritt 2":"Tomaten waschen und klein schneiden. Champignongs putzen und in feine Scheiben schneiden.",
+        "schritt 3":"Frühlingszwiebeln putzen, waschen und in feine Ringe schneiden. Den Knoblauch schälen und hacken.",
+        "schritt 4":"Öl im Topf erhitzen. Champignons, Zwiebelringe und Knoblauch kurz anbraten.",
+        "schritt 5":"Mit Fischfond, Wasser und nach Belieben Likör ablöschen. Die Tomaten hinzugeben und zugedeckt zehn Minuten köcheln lassen.",
+        "schritt 6":"Die Fischstücke einlegen, zugedeckt bei schwacher Hitze etwa sieben Minuten ziehen lassen.",
+        "schritt 7":"Die Suppe mit Salz und Pfeffer abschmecken und mit Basilikumblättern garniert servieren."
+      }
+    },
+    "fischsuppe mit räucherlachs": {
+      "zutaten": {
+        "möhre": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "fischfond": {
+          "einheit": "milliliter",
+          "menge": "100"
+        },
+        "wasser": {
+          "einheit": "milliliter",
+          "menge": "100"
+        },
+        "butter": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "schlagsahne": {
+          "einheit": "gramm",
+          "menge": "50"
+        },
+        "mehl": {
+          "einheit": "gramm",
+          "menge": "7.5"
+        },
+        "fischpaste": {
+          "einheit": "gramm",
+          "menge": "10"
+        },
+        "toastbrot": {
+          "einheit": "scheibe",
+          "menge": "0.5"
+        },
+        "räucherlachs": {
+          "einheit": "gramm",
+          "menge": "37.5"
+        },
+        "dill": {
+          "einheit": "gramm",
+          "menge": "5"
+        },
+        "zucker": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "zitronensaft": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        }
+      },
+      "schritte":{
+        "schritt 1":"Schäle die Zwiebel und Möhre und schneide beides in feine Würfel.",
+        "schritt 2":"Butter im Topf erhitzen und Möhre und Zwiebel darin andünsten.",
+        "schritt 3":"Mit Mehl bestäuben und kurz anschwitzen. Gebe den Fischfond, das Wasser sowie die Sahne hinzu.",
+        "schritt 4":"Rühre die Fischpaste ein und lass die Suppe unter Rühren kurz aufkochen. Die Suppe zugedeckt etwa acht Minuten köcheln lassen.<break time=\"2s\"/> Währenddessen Toast im Toaster rösten und dann in Würfel Schneiden. Den Räucherlachs ebenso in kleine Stücke schneiden.",
+        "schritt 5":"Dill waschen, trocken schütteln und fein schneiden.",
+        "schritt 6":"Schmecke die Suppe mit Salz, Pfeffer, Zitronensaft und etwas Zucker ab.",
+        "schritt 7":"Gib Dill und den Räucherlachs hinzu. Beides kurz in der Suppe erhitzen.",
+        "schritt 8":"Suppe mit den Toastwürfeln bestreuen und servieren."
       }
     }
   }
