@@ -3,19 +3,13 @@ jdk:
  - oraclejdk8
 
 install:
-  - mvn -N io.takari:maven:wrapper
-  - ./mvnw install
+ - mvn -N io.takari:maven:wrapper
+ - ./mvnw install
 
+addons:
+ sonarcloud:
+  organization: "sweihmws2018-19"
 
 script:
-  mvn org.apache.maven.plugins:maven-assembly-plugin:2.6:assembly -DdescriptorId=jar-with-dependencies package
-
-#deploy:
-#  provider: lambda
-#  function_name: "SoupIT"
-#  region: "us-east-1"
-#  role: "arn:aws:iam::003574095462:role/lambda_basic_execution"
-#  runtime: "java8"
-#  handler_name: "SoupITStreamHandler"
-#  access_key_id: "ASIAQBVIILZTBGYUIQSR"
-#  secret_access_key: "6KvFFOXjP2YWngE5uyDII57mvLeiu7wt8WUQkFWE"
+ - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
+ - mvn org.apache.maven.plugins:maven-assembly-plugin:2.6:assembly -DdescriptorId=jar-with-dependencies package

@@ -1,7 +1,7 @@
 package soupit.handlers;
 
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 import static org.junit.Assert.assertTrue;
@@ -19,5 +19,13 @@ class SessionEndedRequestHandlerTest {
 
     @Test
     void handleTest() {
+    }
+
+    @Test
+    void canHandle() {
+    }
+
+    @Test
+    void handle() {
     }
 }

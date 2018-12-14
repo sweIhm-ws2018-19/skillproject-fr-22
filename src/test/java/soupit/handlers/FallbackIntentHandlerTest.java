@@ -1,14 +1,14 @@
 package soupit.handlers;
 
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.when;
 
-class FallbackIntentHandlerTest extends FallbackIntentHandler{
+class FallbackIntentHandlerTest {
 
     private FallbackIntentHandler handler;
 

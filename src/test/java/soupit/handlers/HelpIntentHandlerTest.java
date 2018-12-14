@@ -8,7 +8,7 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
-class HelpIntentHandlerTest extends HelpIntentHandler{
+class HelpIntentHandlerTest {
 
     private HelpIntentHandler handler;
 
