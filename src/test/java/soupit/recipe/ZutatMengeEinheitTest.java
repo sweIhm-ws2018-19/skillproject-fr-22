@@ -9,15 +9,15 @@ import static org.junit.jupiter.api.Assertions.*;
 class ZutatMengeEinheitTest {
 
     private Einheit standardEinheit = new Einheit("kilo","n");
-    private Einheit nullEinheit = new Einheit("null","");
+    //private Einheit nullEinheit = new Einheit("null","");
     private Einheit leereEinheit = new Einheit("","");
 
 
 
 
     private Zutat standardZutat = new Zutat("milch","f");
-    private Zutat standardZutatTrue = new Zutat("milch","f");
-    private Zutat nullZutat = new Zutat(null,null);
+    //private Zutat standardZutatTrue = new Zutat("milch","f");
+    //private Zutat nullZutat = new Zutat(null,null);
     private Zutat leereZutat = new Zutat("","");
     private Zutat kartoffelZutat = new Zutat("kartoffel","f");
     private Zutat zwiebelZutat = new Zutat("zwiebel","f");
@@ -32,7 +32,7 @@ class ZutatMengeEinheitTest {
     private ZutatMengeEinheit standardTest = new ZutatMengeEinheit(standardZutat,1,standardEinheit);
     private ZutatMengeEinheit standardMehrzahl = new ZutatMengeEinheit(standardZutat,2,standardEinheit);
     private ZutatMengeEinheit standardHalbe = new ZutatMengeEinheit(standardZutat,0.5,standardEinheit);
-    private ZutatMengeEinheit nullTest = new ZutatMengeEinheit(nullZutat,1,nullEinheit);
+    private ZutatMengeEinheit nullTest = new ZutatMengeEinheit(null,0,null);
     private ZutatMengeEinheit leererTest = new ZutatMengeEinheit(leereZutat,2,leereEinheit);
     private ZutatMengeEinheit kartoffelEinzahl = new ZutatMengeEinheit(kartoffelZutat,1,standardEinheit);
     private ZutatMengeEinheit kartoffelMehrzahl = new ZutatMengeEinheit(kartoffelZutat,2,standardEinheit);
@@ -66,6 +66,6 @@ class ZutatMengeEinheitTest {
     @Test
     void getZutatTest() {
         assertNull(nullTest.getZutat());
-        assertEquals(standardZutatTrue,standardTest.getZutat());
+        assertEquals(standardZutat,standardTest.getZutat());
     }
 }

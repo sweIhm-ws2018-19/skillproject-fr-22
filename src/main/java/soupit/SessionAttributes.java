@@ -7,7 +7,7 @@ import soupit.recipe.RezeptArrayList;
 import java.util.List;
 
 public class SessionAttributes {
-    public static RezeptArrayList recipes;
+    public static RezeptArrayList recipes = new RezeptArrayList();
     public static List matchingRecipes;
     public static int matchingRecipesIndex;
     public static Rezept recipeToDecideOn;
@@ -24,7 +24,11 @@ public class SessionAttributes {
     }
 
 
-    public static void setCurrentRecipe(){
-
+    public static boolean setCurrentRecipe(String recipeName){
+        if(recipes.find(recipeName) == null){
+            return false;
+        }
+        currentRecipe = recipes.find(recipeName);
+        return true;
     }
 }

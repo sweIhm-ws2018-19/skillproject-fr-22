@@ -5,7 +5,6 @@ import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.*;
 import soupit.Lists.Strings;
 import soupit.SessionAttributes;
-import soupit.SoupITStreamHandler;
 
 import java.util.Map;
 import java.util.Optional;
@@ -24,19 +23,19 @@ public class YesNoIntent implements RequestHandler {
         IntentRequest intentRequest = (IntentRequest) request;
         Intent intent = intentRequest.getIntent();
         Map<String, Slot> slots = intent.getSlots();
-        Slot yesNoSlot = slots.get("YesNo");
+        Slot yesNoSlot = slots.get("YesOrNo");
         String speechText;
         if (yesNoSlot != null) {
 
             if (SessionAttributes.programState.equals(Strings.SOUP_YES_NO_STATE)) {
-                if (yesNoSlot.equals("yes")) {
+                if (yesNoSlot.getValue().equalsIgnoreCase("ja")){
                     SessionAttributes.currentRecipe = SessionAttributes.recipeToDecideOn;
                     speechText = "du hast dich für " + SessionAttributes.currentRecipe + " entschieden";
                 }else{
                     speechText = "tut mir leid dass ich nicht helfen konnte.";
                 }
             } else {
-                speechText = "";
+                speechText = "nagut";
             }
 
         } else speechText = "das habe ich leider nicht verstanden";

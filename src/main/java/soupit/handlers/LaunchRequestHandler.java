@@ -37,7 +37,7 @@ import java.util.Optional;
 import static com.amazon.ask.request.Predicates.requestType;
 
 public class LaunchRequestHandler implements RequestHandler {
-    public static final String[] alleRezepte = {"kartoffelcremesuppe", "möhrencremesuppe","zucchinicremesuppe","möhren und kartoffeleintopf","tomatensuppe","tomaten kokos suppe"};
+    //public static final String[] alleRezepte = {"kartoffelcremesuppe", "möhrencremesuppe","zucchinicremesuppe","möhren und kartoffeleintopf","tomatensuppe","tomaten kokos suppe"};
 
 
 
@@ -66,8 +66,9 @@ public class LaunchRequestHandler implements RequestHandler {
             Map rezepte = (Map) jsonObject.get("rezepte");
             Map zutatenMitGeschlecht = (Map) jsonObject.get("zutaten");
             Map einheitenMitGeschlecht = (Map) jsonObject.get("einheiten");
-            for (String s : alleRezepte) {
-                addRecipes(s, rezepte,zutatenMitGeschlecht, einheitenMitGeschlecht);
+            Object [] alleRezepte =  ((Map) jsonObject.get("rezepte")).keySet().toArray();
+            for (Object o : alleRezepte) {
+                addRecipes(o.toString(), rezepte,zutatenMitGeschlecht, einheitenMitGeschlecht);
             }
         } catch (Exception e) {
             e.getMessage();

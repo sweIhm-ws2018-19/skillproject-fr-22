@@ -63,7 +63,7 @@ public class IngredientIntentHandler implements RequestHandler {
             ArrayList<Rezept> listwithAll = treeMapToSortedList(map);
             List<Rezept> list;
             if (listwithAll.size() > 6) {
-                list = listwithAll.subList(0,7);
+                list = listwithAll.subList(0,6);
             }else {
                 list = listwithAll;
             }
@@ -88,7 +88,7 @@ public class IngredientIntentHandler implements RequestHandler {
                         if (i < listSize - 2) {
                             speechText.append(", ");
                         } else if (i == listSize - 2) {
-                            speechText.append(" oder ");
+                            speechText.append(", oder ");
                         } else {
                             speechText.append(". Welche suppe wählst du?");
                         }

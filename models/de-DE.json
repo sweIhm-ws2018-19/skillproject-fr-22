@@ -98,32 +98,6 @@
           ]
         },
         {
-          "name": "RecipeYesOrNoIntent",
-          "slots": [
-            {
-              "name": "YesNo",
-              "type": "YesNo"
-            }
-          ],
-          "samples": [
-            "Nein",
-            "Ja"
-          ]
-        },
-        {
-          "name": "YesNoTestIntent",
-          "slots": [
-            {
-              "name": "YesNo",
-              "type": "YesNo"
-            }
-          ],
-          "samples": [
-            "Nein",
-            "Ja"
-          ]
-        },
-        {
           "name": "MoreRecipesIntent",
           "slots": [],
           "samples": [
@@ -131,12 +105,172 @@
             "weitere",
             "weitere anhören"
           ]
+        },
+        {
+          "name": "YesNoIntent",
+          "slots": [
+            {
+              "name": "YesOrNo",
+              "type": "YesNo"
+            }
+          ],
+          "samples": [
+            "{YesOrNo}"
+          ]
         }
       ],
       "types": [
         {
           "name": "Recipe",
           "values": [
+            {
+              "name": {
+                "value": "bärlauchsuppe",
+                "synonyms": [
+                  "bärlauch suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "gurkencremesuppe",
+                "synonyms": [
+                  "gurken cremesuppe",
+                  "gurkencreme suppe",
+                  "gurken creme suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "tomatencremsuppe",
+                "synonyms": [
+                  "tomatencreme suppe",
+                  "tomaten cremesuppe",
+                  "tomaten creme suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "paprikacremsuppe",
+                "synonyms": [
+                  "paprika cremesuppe",
+                  "paprikacreme suppe",
+                  "paprika creme suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "zwiebelsuppe",
+                "synonyms": [
+                  "zwiebel suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "brunnenkressesuppe",
+                "synonyms": [
+                  "brunnenkresse suppe",
+                  "brunnen kressesuppe",
+                  "brunnen kresse suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "kalte avokadosuppe",
+                "synonyms": [
+                  "kalte avocado suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "kürbissuppe",
+                "synonyms": [
+                  "kürbis suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "champignon kartoffelsuppe",
+                "synonyms": [
+                  "champignon kartoffel suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "champignoncreme suppe",
+                "synonyms": [
+                  "champignoncremesuppe",
+                  "champignon cremesuppe",
+                  "champignon creme suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "kartoffel lauchsuppe",
+                "synonyms": [
+                  "kartoffel lauch suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "kartoffelsuppe",
+                "synonyms": [
+                  "kartoffel suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "kalte spinatsuppe",
+                "synonyms": [
+                  "kalte spinat suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "pastinaken möhren suppe",
+                "synonyms": [
+                  "pastinaken möhren suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "erbsensuppe",
+                "synonyms": [
+                  "erbsen suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "kürbis kokos suppe"
+              }
+            },
+            {
+              "name": {
+                "value": "tomaten kokos suppe"
+              }
+            },
+            {
+              "name": {
+                "value": "tomatensuppe",
+                "synonyms": [
+                  "tomaten suppe"
+                ]
+              }
+            },
             {
               "name": {
                 "value": "zucchinicremesuppe",
@@ -185,6 +319,41 @@
             {
               "name": {
                 "value": "Nein"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Ingredients",
+          "values": [
+            {
+              "name": {
+                "value": "papriapulver"
+              }
+            },
+            {
+              "name": {
+                "value": "olivenöl"
+              }
+            },
+            {
+              "name": {
+                "value": "knoblauchzehe"
+              }
+            },
+            {
+              "name": {
+                "value": "möhre"
+              }
+            },
+            {
+              "name": {
+                "value": "kartoffel"
+              }
+            },
+            {
+              "name": {
+                "value": "karotte"
               }
             }
           ]
