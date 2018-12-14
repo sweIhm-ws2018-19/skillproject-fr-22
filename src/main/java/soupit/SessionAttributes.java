@@ -14,6 +14,8 @@ public class SessionAttributes {
     public static Rezept recipeToDecideOn;
     public static Rezept currentRecipe;
     public static String programState;
+    public static String[] steps;
+    public static int stepTracker;
 
     public static void clear() {
         recipes.clear();
@@ -22,6 +24,7 @@ public class SessionAttributes {
         currentRecipe = null;
         programState = Strings.INITIAL_STATE;
         matchingRecipesIndex = 0;
+        stepTracker = 0;
     }
 
 

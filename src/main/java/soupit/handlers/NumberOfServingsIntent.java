@@ -37,22 +37,7 @@ public class NumberOfServingsIntent implements RequestHandler {
             int numberOfServings = Integer.parseInt(numberSlot.getValue());
             String servingNumber = numberOfServings == 1 ? "eine Portion" : numberOfServings+" Portionen";
             speechText = "Für eine "+SessionAttributes.currentRecipe+" für " + servingNumber + " benötigst du einige Zutaten. Lege dir folgendes bereit. ";
-//            try {
-//                InputStream stream = SoupMain.class.getClassLoader().getResourceAsStream("data/rezepte.json");
-//                Object obj = new JSONParser().parse(new InputStreamReader(stream));
-//                JSONObject jsonObject = (JSONObject) obj;
-//                Map recipes =  (Map) jsonObject.get("rezepte");
-//                Map recipe = (Map) recipes.get(SessionAttributes.currentRecipe.toString());
-//                Map jsonsteps  = (Map) recipe.get("schritte");
-//                Object[] objectsteps = jsonsteps.values().toArray();
-//                String[] steps = new String[objectsteps.length];
-//                for(int i=0; i <objectsteps.length; i++){
-//                    steps[i] = objectsteps[i].toString();
-//                }
-//
-//            } catch (Exception e) {
-//                e.getMessage();
-//            }
+
 
             ZutatMengeEinheit [] zumArray = SessionAttributes.getCurrentRecipeZumeng();
             for(int i =0; i<zumArray.length; i++) {

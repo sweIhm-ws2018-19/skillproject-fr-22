@@ -160,6 +160,29 @@
             "okay ich bin bereit",
             "Rezept starten"
           ]
+        },
+        {
+          "name": "NextStepIntent",
+          "slots": [],
+          "samples": [
+            "bin fertig",
+            "ich bin fertig",
+            "fertig",
+            "weiter"
+          ]
+        },
+        {
+          "name": "RepeatStepIntent",
+          "slots": [],
+          "samples": [
+            "das war zu viel ",
+            "das war zu schnell",
+            "nochmal bitte",
+            "bitte nochmal",
+            "wiederholen bitte",
+            "wiederholen ",
+            "schritt wiederholen"
+          ]
         }
       ],
       "types": [

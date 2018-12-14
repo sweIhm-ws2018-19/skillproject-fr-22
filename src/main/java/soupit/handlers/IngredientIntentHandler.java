@@ -111,25 +111,7 @@ public class IngredientIntentHandler implements RequestHandler {
                     SessionAttributes.matchingRecipesIndex = 3;
 
 
-//              Iterator<Map.Entry<Integer,ArrayList<Rezept>>> i = descendingMap.entrySet().iterator();
-//              while (i.hasNext()){
-//                  ArrayList<Rezept> list = i.next().getValue();
-//                  for(Rezept r:list){
-//
-//                  }
-//
-//              }
 
-
-//            speechText += "dafür brauchst du ";
-//            for(int i =0; i<bestRecipe.zumeng.length; i++) {
-//                ZutatMengeEinheit zum = bestRecipe.zumeng[i];
-//                if(i == bestRecipe.zumeng.length -1) speechText += " und ";
-//                speechText += zum.mengeToString() + " ";
-//                speechText += zum.einheitToString() + " ";
-//                speechText += zum.zutatToString() + " <break time=\"1s\"/>";
-//                if (i < bestRecipe.zumeng.length -2) speechText += ", ";
-//                if(i == bestRecipe.zumeng.length -1) speechText += ". ";
 
                 }
             } else {
