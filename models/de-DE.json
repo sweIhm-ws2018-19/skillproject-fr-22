@@ -108,10 +108,14 @@
         },
         {
           "name": "YesNoIntent",
-          "slots": [],
+          "slots": [
+            {
+              "name": "YesOrNo",
+              "type": "YesNo"
+            }
+          ],
           "samples": [
-            "nein",
-            "ja"
+            "{YesOrNo}"
           ]
         }
       ],
@@ -176,7 +180,32 @@
           "values": [
             {
               "name": {
-                "value": "rote chilischote"
+                "value": "papriapulver"
+              }
+            },
+            {
+              "name": {
+                "value": "olivenöl"
+              }
+            },
+            {
+              "name": {
+                "value": "knoblauchzehe"
+              }
+            },
+            {
+              "name": {
+                "value": "möhre"
+              }
+            },
+            {
+              "name": {
+                "value": "kartoffel"
+              }
+            },
+            {
+              "name": {
+                "value": "karotte"
               }
             }
           ]
