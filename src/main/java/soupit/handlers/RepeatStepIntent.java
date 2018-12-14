@@ -11,7 +11,7 @@ import static com.amazon.ask.request.Predicates.intentName;
 
 public class RepeatStepIntent implements RequestHandler {
     public boolean canHandle(HandlerInput input) {
-        return input.matches(intentName("StartCookingIntent"));
+        return input.matches(intentName("RepeatStepIntent"));
     }
 
     @Override
