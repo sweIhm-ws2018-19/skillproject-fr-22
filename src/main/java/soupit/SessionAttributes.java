@@ -36,6 +36,7 @@ public class SessionAttributes {
         return true;
     }
 
+
     public static ZutatMengeEinheit[] getCurrentRecipeZumeng(){
         return currentRecipe.getZumeng();
     }

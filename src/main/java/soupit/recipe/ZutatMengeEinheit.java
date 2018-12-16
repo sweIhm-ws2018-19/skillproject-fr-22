@@ -119,4 +119,8 @@ public class ZutatMengeEinheit {
     public Zutat getZutat() {
         return zutat;
     }
+
+    public void multiplyIngredients(int mulitplicator){
+        this.menge*=mulitplicator;
+    }
 }
