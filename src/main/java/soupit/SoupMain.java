@@ -1,5 +1,6 @@
 package soupit;
 
+import soupit.handlers.CancelandStopIntentHandler;
 import soupit.recipe.*;
 
 import java.io.InputStream;
@@ -15,11 +16,12 @@ public class SoupMain {
 
 
 
-    public static final String[] alleRezepte = {"kartoffelcremesuppe", "möhrencremesuppe","zucchinicremesuppe","möhren und kartoffeleintopf","tomatensuppe","tomaten kokos suppe"};
 
 
     public static void main(String... args) {
-
+        double d = 1/3d;
+        d*=3;
+        System.out.println(d);
 
         try {
 
@@ -38,11 +40,9 @@ public class SoupMain {
             System.out.println(e.getMessage());
         }
 
-        String speechText = getSpeechResponse("kartoffeln");
-
-        System.out.println(speechText);
-        speechText = "";
-        SessionAttributes.setCurrentRecipe("vegetarische linsensuppe");
+        String speechText  = "";
+        SessionAttributes.setCurrentRecipe("möhrencremesuppe");
+        SessionAttributes.currentRecipe.multiplyZumeng(3);
         ZutatMengeEinheit [] zumArray = SessionAttributes.getCurrentRecipeZumeng();
         for(int i =0; i<zumArray.length; i++) {
             ZutatMengeEinheit zum = zumArray[i];
@@ -54,10 +54,11 @@ public class SoupMain {
             if (i == zumArray.length - 1) speechText += ". ";
         }
 
+
         System.out.println(speechText);
     }
 
-    private static void addRecipes(String rezeptname, Map rezepte, Map zutatenMitGeschlecht, Map einheitenMitGeschlecht) {
+    private static void addRecipes(String rezeptname, Map rezepte, Map alleZutaten, Map<String,Map<String,String>> einheiten) {
 
 
         Map rezept = (Map) rezepte.get(rezeptname);
@@ -71,10 +72,12 @@ public class SoupMain {
             Map.Entry<String, Map> next = it.next();
             Map nextMap = next.getValue();
             String zutatString = (String) zutaten.keySet().toArray()[counter];
-            Zutat zutat = new Zutat(zutatString, (String) zutatenMitGeschlecht.get(zutatString));
+            Zutat zutat = new Zutat(zutatString, (String) alleZutaten.get(zutatString));
             String einheitString = (String) nextMap.get("einheit");
-            Einheit einheit = new Einheit(einheitString, (String) einheitenMitGeschlecht.get(einheitString));
+            Einheit einheit = new Einheit(einheitString,einheiten.get(einheitString).get("gender"),einheiten.get(einheitString).get("plural"));
             double menge = Double.parseDouble((String) (nextMap.get("menge")));
+            if (menge == 0.3) menge = 1/3d;
+            if (menge == 0.15) menge = 1/6d;
 
             zumeng[counter] = new ZutatMengeEinheit(zutat, menge, einheit);
             counter++;

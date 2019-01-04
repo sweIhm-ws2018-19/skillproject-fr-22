@@ -19,6 +19,7 @@ import com.amazon.ask.model.LaunchRequest;
 import com.amazon.ask.model.Response;
 
 
+import javafx.util.Pair;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
@@ -65,44 +66,47 @@ public class LaunchRequestHandler implements RequestHandler {
             Object obj = new JSONParser().parse(new InputStreamReader(stream));
             JSONObject jsonObject = (JSONObject) obj;
             Map rezepte = (Map) jsonObject.get("rezepte");
-            Map zutatenMitGeschlecht = (Map) jsonObject.get("zutaten");
-            Map einheitenMitGeschlecht = (Map) jsonObject.get("einheiten");
+            Map zutaten = (Map) jsonObject.get("zutaten");
+            Map einheiten = (Map) jsonObject.get("einheiten");
             Object [] alleRezepte =  ((Map) jsonObject.get("rezepte")).keySet().toArray();
             for (Object o : alleRezepte) {
-                addRecipes(o.toString(), rezepte,zutatenMitGeschlecht, einheitenMitGeschlecht);
+                addRecipes(o.toString(), rezepte,zutaten, einheiten);
             }
         } catch (Exception e) {
             e.getMessage();
         }
     }
 
-    private static void addRecipes(String rezeptname, Map rezepte, Map zutatenMitGeschlecht, Map einheitenMitGeschlecht) {
+
+    private static void addRecipes(String rezeptname, Map rezepte, Map alleZutaten, Map<String,Map<String,String>> einheiten) {
 
 
         Map rezept = (Map) rezepte.get(rezeptname);
         Map zutaten = (Map) rezept.get("zutaten");
         ZutatMengeEinheit zumeng[] = new ZutatMengeEinheit[zutaten.size()];
 
-        Iterator<Map.Entry<String,Map>> it = zutaten.entrySet().iterator();
+        Iterator<Map.Entry<String, Map>> it = zutaten.entrySet().iterator();                                //TODO foreachloop better
         int counter = 0;
-        while(it.hasNext()){
+        while (it.hasNext()) {
 
-            Map.Entry<String,Map> next = it.next();
+            Map.Entry<String, Map> next = it.next();
             Map nextMap = next.getValue();
             String zutatString = (String) zutaten.keySet().toArray()[counter];
-            Zutat zutat = new Zutat(zutatString,(String) zutatenMitGeschlecht.get(zutatString));
+            Zutat zutat = new Zutat(zutatString, (String) alleZutaten.get(zutatString));
             String einheitString = (String) nextMap.get("einheit");
-            Einheit einheit = new Einheit(einheitString,(String) einheitenMitGeschlecht.get(einheitString));
-            double menge = Double.parseDouble((String)(nextMap.get("menge")));
+            Einheit einheit = new Einheit(einheitString,einheiten.get(einheitString).get("gender"),einheiten.get(einheitString).get("plural"));
+            double menge = Double.parseDouble((String) (nextMap.get("menge")));
+            if (menge == 0.3) menge = 1/3d;
+            if (menge == 0.15) menge = 1/6d;
 
-            zumeng[counter] = new ZutatMengeEinheit(zutat,menge,einheit);
+            zumeng[counter] = new ZutatMengeEinheit(zutat, menge, einheit);
             counter++;
         }
-        SessionAttributes.recipes.add(new Rezept(rezeptname,zumeng));
-
+        SessionAttributes.recipes.add(new Rezept(rezeptname, zumeng));
 
 
     }
+
 
 
 

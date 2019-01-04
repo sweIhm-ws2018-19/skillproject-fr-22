@@ -102,7 +102,9 @@ public class ZutatMengeEinheit {
     }
 
     public String einheitToString(){
-        return einheit.getEinheit().equals("null")?"":einheit.toString();
+        if(einheit.getEinheit().equals("null")) return "";
+        if(menge>1) return einheit.getPlural();
+        return einheit.toString();
     }
 
     private String doubletToString(double number){
