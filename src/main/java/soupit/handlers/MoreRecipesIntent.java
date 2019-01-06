@@ -3,6 +3,7 @@ package soupit.handlers;
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.*;
+import soupit.PersistentAttributes;
 import soupit.SessionAttributes;
 
 import java.util.List;
@@ -39,7 +40,7 @@ public class MoreRecipesIntent implements RequestHandler {
             }
             speechText.append(". Welche wählst du ? ");
         }
-
+        PersistentAttributes.setLastSentence(speechText.toString(),input);
         return input.getResponseBuilder()
                 .withSpeech(speechText.toString())
                 .withShouldEndSession(false)

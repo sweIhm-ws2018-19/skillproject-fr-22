@@ -2,11 +2,13 @@ package soupit.recipe;
 
 public class Rezept {
     private ZutatMengeEinheit[] zumeng;
+    private String[] steps;
     private String name;
 
-    public  Rezept(String name, ZutatMengeEinheit...zumeng) {
+    public  Rezept(String name,String[] steps, ZutatMengeEinheit[] zumeng) {
         this.zumeng = zumeng;
         this.name = name;
+        this.steps = steps;
     }
 
 
@@ -36,6 +38,10 @@ public class Rezept {
         for(ZutatMengeEinheit zum:zumeng){
             zum.multiplyIngredients(multiplicator);
         }
+    }
+
+    public String[] getSteps(){
+        return steps;
     }
 
     //    this.optionaleZutaten = Arrays.copyOf(optionaleZutaten,optionaleZutaten.length);

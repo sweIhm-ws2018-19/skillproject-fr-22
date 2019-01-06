@@ -18,11 +18,10 @@ import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.LaunchRequest;
 import com.amazon.ask.model.Response;
 
-
-import javafx.util.Pair;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
+import soupit.PersistentAttributes;
 import soupit.SessionAttributes;
 import soupit.recipe.*;
 import soupit.Lists.Strings;
@@ -38,7 +37,6 @@ import java.util.Optional;
 import static com.amazon.ask.request.Predicates.requestType;
 
 public class LaunchRequestHandler implements RequestHandler {
-    //public static final String[] alleRezepte = {"kartoffelcremesuppe", "möhrencremesuppe","zucchinicremesuppe","möhren und kartoffeleintopf","tomatensuppe","tomaten kokos suppe"};
 
 
 
@@ -52,13 +50,29 @@ public class LaunchRequestHandler implements RequestHandler {
     public Optional<Response> handle(HandlerInput input) {
 
         readJson();
-        String speechText = Strings.WELCOME;
+        String speechText = Strings.WELCOME ;
+
+        Map<String, Object> persistentAttributes = input.getAttributesManager().getPersistentAttributes();
+        if(persistentAttributes.get("programState") == null){
+            persistentAttributes.put("programState", Strings.INITIAL_STATE);
+            input.getAttributesManager().setPersistentAttributes(persistentAttributes);
+            input.getAttributesManager().savePersistentAttributes();
+        }
+        if (PersistentAttributes.getRecipeName(input) != null){
+            speechText = "möchtest du mit der Zubereitung deiner "+ PersistentAttributes.getRecipeName(input)+" fortfahren?";
+        }
+
+
+
+
         return input.getResponseBuilder()
                 .withSimpleCard("Soup IT", speechText)
                 .withSpeech(speechText)
                 .withShouldEndSession(false)
                 .build();
     }
+
+
 
     private void readJson() {
         try {
@@ -77,12 +91,17 @@ public class LaunchRequestHandler implements RequestHandler {
         }
     }
 
-
     private static void addRecipes(String rezeptname, Map rezepte, Map alleZutaten, Map<String,Map<String,String>> einheiten) {
 
 
         Map rezept = (Map) rezepte.get(rezeptname);
         Map zutaten = (Map) rezept.get("zutaten");
+        Map jsonsteps  = (Map) rezept.get("schritte");
+        Object[] objectsteps = jsonsteps.values().toArray();
+        String[] steps = new String[objectsteps.length];
+        for(int i=0; i <objectsteps.length; i++){
+            steps[i] = objectsteps[i].toString();
+        }
         ZutatMengeEinheit zumeng[] = new ZutatMengeEinheit[zutaten.size()];
 
         Iterator<Map.Entry<String, Map>> it = zutaten.entrySet().iterator();                                //TODO foreachloop better
@@ -102,7 +121,7 @@ public class LaunchRequestHandler implements RequestHandler {
             zumeng[counter] = new ZutatMengeEinheit(zutat, menge, einheit);
             counter++;
         }
-        SessionAttributes.recipes.add(new Rezept(rezeptname, zumeng));
+        SessionAttributes.recipes.add(new Rezept(rezeptname,steps, zumeng));
 
 
     }
@@ -111,4 +130,7 @@ public class LaunchRequestHandler implements RequestHandler {
 
 
 }
+
+//persat
+// rezeptname, stepcount
 

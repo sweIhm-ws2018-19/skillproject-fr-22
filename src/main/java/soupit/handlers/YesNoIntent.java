@@ -4,6 +4,7 @@ import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.*;
 import soupit.Lists.Strings;
+import soupit.PersistentAttributes;
 import soupit.SessionAttributes;
 
 import java.util.Map;
@@ -30,6 +31,7 @@ public class YesNoIntent implements RequestHandler {
             if (SessionAttributes.programState.equals(Strings.SOUP_YES_NO_STATE)) {
                 if (yesNoSlot.getValue().equalsIgnoreCase("ja")){
                     SessionAttributes.currentRecipe = SessionAttributes.recipeToDecideOn;
+                    PersistentAttributes.setRecipeName(SessionAttributes.recipeToDecideOn.toString(),input);
                     speechText = "Wie viele Portionen möchtest du kochen ?";
                 }else{
                     speechText = "tut mir leid dass ich nicht helfen konnte.";
@@ -47,7 +49,7 @@ public class YesNoIntent implements RequestHandler {
         } else speechText = "das habe ich leider nicht verstanden";
 
 
-
+        PersistentAttributes.setLastSentence(speechText,input);
         return input.getResponseBuilder()
                 .withSpeech(speechText)
                 .withShouldEndSession(false)

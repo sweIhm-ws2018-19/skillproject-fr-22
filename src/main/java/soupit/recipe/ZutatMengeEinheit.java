@@ -95,6 +95,7 @@ public class ZutatMengeEinheit {
 
             if(rounded == 1) return  "ein "+doubleToString(menge - rounded);
             else {
+                if (rounded == 0) return doubleToString(menge - rounded);
                 return  "" + rounded + "" + doubleToString(menge - rounded);
             }
         }

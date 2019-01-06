@@ -6,6 +6,7 @@ import com.amazon.ask.model.*;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import soupit.Lists.Strings;
+import soupit.PersistentAttributes;
 import soupit.SessionAttributes;
 import soupit.SoupMain;
 import soupit.recipe.Zutat;
@@ -35,7 +36,6 @@ public class NumberOfServingsIntent implements RequestHandler {
         String speechText;
         if(numberSlot != null){
             int numberOfServings = Integer.parseInt(numberSlot.getValue());
-            SessionAttributes.numberOfServings = numberOfServings;
             SessionAttributes.currentRecipe.multiplyZumeng(numberOfServings);
             String servingNumber = numberOfServings == 1 ? "eine Portion" : numberOfServings+" Portionen";
             speechText = "Für eine "+SessionAttributes.currentRecipe+" für " + servingNumber + " benötigst du einige Zutaten. Lege dir folgendes bereit. ";
@@ -57,6 +57,7 @@ public class NumberOfServingsIntent implements RequestHandler {
             speechText = "das habe ich leider nicht verstanden";
         }
 
+        PersistentAttributes.setLastSentence(speechText,input);
         return input.getResponseBuilder()
                 .withSpeech(speechText)
                 .withShouldEndSession(false)

@@ -17,6 +17,7 @@ import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
 import com.amazon.ask.model.SessionEndedRequest;
+import soupit.PersistentAttributes;
 import soupit.SessionAttributes;
 import soupit.recipe.RezeptArrayList;
 
@@ -33,6 +34,7 @@ public class SessionEndedRequestHandler implements RequestHandler {
     @Override
     public Optional<Response> handle(HandlerInput input) {
         SessionAttributes.clear();
-        return input.getResponseBuilder().withShouldEndSession(true).build();
+        PersistentAttributes.clear(input);
+        return input.getResponseBuilder().withSpeech("ich fahre herunter").withSimpleCard("schüss joey", "schüüüüs").withShouldEndSession(true).build();
     }
 }

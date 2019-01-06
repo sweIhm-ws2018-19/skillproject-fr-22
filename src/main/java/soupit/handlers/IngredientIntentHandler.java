@@ -10,6 +10,7 @@ import com.amazon.ask.model.Response;
 import com.amazon.ask.model.Slot;
 import com.amazon.ask.response.ResponseBuilder;
 import soupit.Lists.Strings;
+import soupit.PersistentAttributes;
 import soupit.SessionAttributes;
 import soupit.recipe.*;
 
@@ -38,7 +39,7 @@ public class IngredientIntentHandler implements RequestHandler {
         // Check for favorite color and create output to user.
         speechText = getSpeechResponse(input, ingredientSlot);
 
-
+        PersistentAttributes.setLastSentence(speechText.toString(),input);
         ResponseBuilder responseBuilder = input.getResponseBuilder();
 
         responseBuilder.withSpeech(speechText.toString())

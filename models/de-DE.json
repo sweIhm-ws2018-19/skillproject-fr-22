@@ -172,9 +172,11 @@
           ]
         },
         {
-          "name": "RepeatStepIntent",
+          "name": "RepeatIntent",
           "slots": [],
           "samples": [
+            "noch einmal bitte",
+            "noch einmal",
             "das war zu viel ",
             "das war zu schnell",
             "nochmal bitte",

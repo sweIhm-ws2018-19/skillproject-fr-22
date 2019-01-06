@@ -1,6 +1,5 @@
 package soupit;
 
-import soupit.handlers.CancelandStopIntentHandler;
 import soupit.recipe.*;
 
 import java.io.InputStream;
@@ -19,10 +18,7 @@ public class SoupMain {
 
 
     public static void main(String... args) {
-        double d = 1/3d;
-        d*=3;
-        System.out.println(d);
-
+        List<Rezept> list ;
         try {
 
             InputStream stream = SoupMain.class.getClassLoader().getResourceAsStream("data/rezepte.json");
@@ -33,7 +29,6 @@ public class SoupMain {
             Map einheitenMitGeschlecht = (Map) jsonObject.get("einheiten");
             Object [] alleRezepte =  ((Map) jsonObject.get("rezepte")).keySet().toArray();
             for (Object s : alleRezepte) {
-                String lol = s.toString();
                 addRecipes(s.toString(), rezepte, zutatenMitGeschlecht, einheitenMitGeschlecht);
             }
         } catch (Exception e) {
@@ -54,7 +49,6 @@ public class SoupMain {
             if (i == zumArray.length - 1) speechText += ". ";
         }
 
-
         System.out.println(speechText);
     }
 
@@ -63,6 +57,12 @@ public class SoupMain {
 
         Map rezept = (Map) rezepte.get(rezeptname);
         Map zutaten = (Map) rezept.get("zutaten");
+        Map jsonsteps  = (Map) rezept.get("schritte");
+        Object[] objectsteps = jsonsteps.values().toArray();
+        String[] steps = new String[objectsteps.length];
+        for(int i=0; i <objectsteps.length; i++){
+            steps[i] = objectsteps[i].toString();
+        }
         ZutatMengeEinheit zumeng[] = new ZutatMengeEinheit[zutaten.size()];
 
         Iterator<Map.Entry<String, Map>> it = zutaten.entrySet().iterator();                                //TODO foreachloop better
@@ -82,7 +82,7 @@ public class SoupMain {
             zumeng[counter] = new ZutatMengeEinheit(zutat, menge, einheit);
             counter++;
         }
-        SessionAttributes.recipes.add(new Rezept(rezeptname, zumeng));
+        SessionAttributes.recipes.add(new Rezept(rezeptname,steps, zumeng));
 
 
     }
@@ -186,5 +186,8 @@ public class SoupMain {
         return list;
     }
 
+    public  static int bla(){
+        return 1;
+    }
 
 }

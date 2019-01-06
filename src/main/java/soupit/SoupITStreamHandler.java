@@ -17,7 +17,6 @@ import com.amazon.ask.Skill;
 import com.amazon.ask.SkillStreamHandler;
 import com.amazon.ask.Skills;
 import soupit.handlers.*;
-import soupit.recipe.Rezept;
 
 
 public class SoupITStreamHandler extends SkillStreamHandler {
@@ -38,9 +37,11 @@ public class SoupITStreamHandler extends SkillStreamHandler {
                 new NumberOfServingsIntent(),
                 new StartCookingIntent(),
                 new NextStepIntent(),
-                new RepeatStepIntent()
+                new RepeatIntent()
         )
                 .withSkillId("amzn1.ask.skill.88e3acae-7fca-4ec5-985c-220521f6d2ef")
+                .withTableName("dynamoRezepteTabelle")
+                .withAutoCreateTable(true)
                 .build();
     }
 

@@ -3,6 +3,7 @@ package soupit.handlers;
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.*;
+import soupit.PersistentAttributes;
 import soupit.SessionAttributes;
 
 
@@ -27,13 +28,13 @@ public class NameRecipeIntent implements RequestHandler {
         Slot recipeSlot = slots.get("Recipe");
         String speechText;
         if(recipeSlot != null){
-            if(SessionAttributes.setCurrentRecipe(recipeSlot.getValue())){
+            if(PersistentAttributes.setRecipeName(recipeSlot.getValue(),input)){
                 speechText = "Wie viele Portionen möchtest du kochen?";
             }else speechText = "entschuldigung, dieses rezept habe ich nicht gefunden, kannst du es noch einmal wiederholen? ";
         }else{
             speechText = "das habe ich leider nicht verstanden";
         }
-
+        PersistentAttributes.setLastSentence(speechText,input);
         return input.getResponseBuilder()
                 .withSpeech(speechText)
                 .withShouldEndSession(false)
