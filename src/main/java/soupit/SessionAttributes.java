@@ -16,6 +16,7 @@ public class SessionAttributes {
     public static String programState;
     public static String[] steps;
     public static int stepTracker;
+    public static int numberOfServings = 0;
 
     public static void clear() {
         recipes.clear();

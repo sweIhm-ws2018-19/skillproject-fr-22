@@ -42,7 +42,7 @@ public class SoupMain {
 
         String speechText  = "";
         SessionAttributes.setCurrentRecipe("möhrencremesuppe");
-        SessionAttributes.currentRecipe.multiplyZumeng(3);
+        SessionAttributes.currentRecipe.multiplyZumeng(5);
         ZutatMengeEinheit [] zumArray = SessionAttributes.getCurrentRecipeZumeng();
         for(int i =0; i<zumArray.length; i++) {
             ZutatMengeEinheit zum = zumArray[i];
@@ -185,4 +185,6 @@ public class SoupMain {
         }
         return list;
     }
+
+
 }

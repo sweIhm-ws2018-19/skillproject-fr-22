@@ -1,5 +1,6 @@
 package soupit.recipe;
 
+
 public class ZutatMengeEinheit {
     private Zutat zutat;
     private double menge;
@@ -22,83 +23,63 @@ public class ZutatMengeEinheit {
     }
 
     public String mengeToString() {
-        String string;
+
         if (! einheit.toString().equals("null")) {
             if (einheit.getGrammatGeschlecht().equals("f")){
-                if(menge == 1) string = "eine";
+                if(menge == 1) return "eine";
                 else if (menge<1){
-                    if(menge == 0.5) string = "eine halbe";
-                    else if (menge == 0.3) string = "eine drittel";
-                    else if(menge == 0.15) string ="eine sekstel";
-                    else string = "eine " +doubletToString(menge);
+                    if(menge == 0.5) return  "eine halbe";
+                    else return "eine " +NumberToString();
                 }else {
-                    if(menge - (int) menge == 0 ) string =""+(int)menge;
-                    else string = doubletToString(menge);
+                    return NumberToString();
                 }
             }else if (einheit.getGrammatGeschlecht().equals("m")){
-                if(menge == 1 )string = "einen";
+                if(menge == 1 )return  "einen";
                 else if(menge<1){
-                    if(menge== 0.5)string = "einen halben";
-                    else if(menge == 0.3) string = "einen drittel";
-                    else if(menge == 0.15) string ="einen sekstel";
-                    else string = "einen " +doubletToString(menge);
+                    if(menge== 0.5)return  "einen halben";
+                    else return  "einen " +NumberToString();
                 }else {
-                    if(menge - (int) menge == 0 ) string =""+(int)menge;
-                    else string = doubletToString(menge);
+                    return NumberToString();
 
                 }
             }else{
-                if(menge == 1) string = "ein";
+                if(menge == 1) return  "ein";
                 else if(menge< 1){
-                    if (menge == 0.5) string = "ein halbes";
-                    else if (menge == 0.3) string = "ein drittel";
-                    else if(menge == 0.15) string ="ein sekstel";
-                    else string = "ein " +doubletToString(menge);
+                    if (menge == 0.5) return  "ein halbes";
+                    else return  "ein " +NumberToString();
                 }else {
-                    if(menge - (int) menge == 0 ) string =""+(int)menge;
-                    else string = doubletToString(menge);
-
+                    return NumberToString();
                 }
             }
         }else{ //einheit null
             if (zutat.getGrammatGeschlecht().equals("f")){
-                if(menge == 1) string = "eine";
+                if(menge == 1) return  "eine";
                 else if (menge<1){
-                    if(menge == 0.5) string = "eine halbe";
-                    else if (menge == 0.3) string = "eine drittel";
-                    else if(menge == 0.15) string ="eine sekstel";
-                    else string = "eine " +doubletToString(menge);
+                    if(menge == 0.5) return  "eine halbe";
+                    else return  "eine " +NumberToString();
                 }else {
-                    if(menge - (int) menge == 0 ) string =""+(int)menge;
-                    else string = doubletToString(menge);
+                return NumberToString();
 
                 }
             }else if (zutat.getGrammatGeschlecht().equals("m")){
-                if(menge == 1 )string = "ein";
+                if(menge == 1 )return  "ein";
                 else if(menge<1){
-                    if(menge== 0.5)string = "einen halben";
-                    else if(menge == 0.3) string = "einen drittel";
-                    else if(menge == 0.15) string ="einen sekstel";
-                    else string = "einen " +doubletToString(menge);
+                    if(menge== 0.5)return  "einen halben";
+                    else return  "einen " +NumberToString();
                 }else {
-                    if(menge - (int) menge == 0 ) string =""+(int)menge;
-                    else string = doubletToString(menge);
+                    return NumberToString();
 
                 }
             }else{
-                if(menge == 1) string = "ein";
+                if(menge == 1) return  "ein";
                 else if(menge< 1){
-                    if (menge == 0.5) string = "ein halbes";
-                    else if (menge == 0.3) string = "ein drittel";
-                    else if(menge == 0.15) string ="ein sekstel";
-                    else string = "ein " +doubletToString(menge);
+                    if (menge == 0.5) return  "ein halbes";
+                    else return  "ein " +NumberToString();
                 }else {
-                    if(menge - (int) menge == 0 ) string =""+(int)menge;
-                    else string = doubletToString(menge);
+                    return NumberToString();
                 }
             }
         }
-        return string;
     }
 
     public String einheitToString(){
@@ -107,10 +88,40 @@ public class ZutatMengeEinheit {
         return einheit.toString();
     }
 
-    private String doubletToString(double number){
+    private String NumberToString(){
+        int rounded = (int) menge;
+        if(menge - rounded == 0 ) return  String.valueOf((int)menge);
+        else{
+
+            if(rounded == 1) return  "ein "+doubleToString(menge - rounded);
+            else {
+                return  "" + rounded + "" + doubleToString(menge - rounded);
+            }
+        }
+
+    }
+
+    private String doubleToString(double number) {
+        int roundedTo2Decimals = (int) (number*100);
+
+        if (menge < 1 ) {
+            if (roundedTo2Decimals == 16) return "sekstel";
+            else if (roundedTo2Decimals == 33) return "drittel";
+            else if (roundedTo2Decimals == 66) return "zwei drittel";
+            else return useRationalToGetString(number);
+        }
+         else {
+            if (roundedTo2Decimals == 16) return "<say-as interpret-as=\"fraction\">" + "1/6" + "</say-as>";
+            else if (roundedTo2Decimals == 33) return "<say-as interpret-as=\"fraction\">" + "1/3" + "</say-as>";
+            else if (roundedTo2Decimals == 66) return "<say-as interpret-as=\"fraction\">" + "2/3" + "</say-as>";
+            else return useRationalToGetString(number);
+        }
+    }
+
+    private String useRationalToGetString(double number) {
         Rational rational = new Rational(number);
-        if(rational.getNum() == 1){
-            return String.valueOf((int) (1/menge))+"tel";
+        if(rational.getNum() == 1 && menge < 1){
+            return rational.getDenom()+"tel";
         }
         else {
             String fraction = rational.toString();
@@ -125,4 +136,6 @@ public class ZutatMengeEinheit {
     public void multiplyIngredients(int mulitplicator){
         this.menge*=mulitplicator;
     }
+
+
 }

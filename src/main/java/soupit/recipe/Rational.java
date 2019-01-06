@@ -13,7 +13,6 @@ public class Rational {
             d *= 10;
             denom *= 10;
         }
-        int test  = (int) d;
         this.num = (int ) Math.round(d);
         this.denom = denom;
 
@@ -45,5 +44,10 @@ public class Rational {
     public int getNum(){
         shorten();
         return num;
+    }
+
+    public int getDenom(){
+        shorten();
+        return denom;
     }
 }
