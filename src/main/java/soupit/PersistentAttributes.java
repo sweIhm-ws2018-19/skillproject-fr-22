@@ -1,18 +1,19 @@
 package soupit;
 
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
+import com.amazonaws.services.dynamodbv2.xspec.S;
+import soupit.Lists.Strings;
 
-import java.util.HashMap;
 import java.util.Map;
 
 
 public class PersistentAttributes {
 
 
-//    private static String recipeName;
-//    private Rezept recipe;
-//    private static int stepCount;
-//    private static String programState;
+//    recipeName
+//    stepCount
+//    programState
+
 
     public static String getRecipeName(HandlerInput input) {
         String recipeName = input.getAttributesManager().getPersistentAttributes().get("recipeName").toString();
@@ -37,9 +38,9 @@ public class PersistentAttributes {
         return Integer.parseInt(input.getAttributesManager().getPersistentAttributes().get("stepCount").toString());
     }
 
-    public static void setStepCount(int stepCount, HandlerInput input) {
+    public static void setStepCount(HandlerInput input) {
         Map<String, Object> persistentAttributes = input.getAttributesManager().getPersistentAttributes();
-        persistentAttributes.put("stepCount", String.valueOf(stepCount));
+        persistentAttributes.put("stepCount", String.valueOf(SessionAttributes.stepTracker));
         input.getAttributesManager().setPersistentAttributes(persistentAttributes);
         input.getAttributesManager().savePersistentAttributes();
 //        SessionAttributes.stepTracker = stepCount;
@@ -58,7 +59,9 @@ public class PersistentAttributes {
 
     public static void clear(HandlerInput input) {
         Map<String, Object> persistentAttributes = input.getAttributesManager().getPersistentAttributes();
-        //persistentAttributes.put("recipeName", null);
+        persistentAttributes.put("recipeName", null);
+        persistentAttributes.put("stepCount",String.valueOf(0));
+        persistentAttributes.put("programState",Strings.INITIAL_STATE);
         input.getAttributesManager().setPersistentAttributes(persistentAttributes);
         input.getAttributesManager().savePersistentAttributes();
     }
@@ -72,5 +75,24 @@ public class PersistentAttributes {
 
     public static String getLastSentence(HandlerInput input){
         return input.getAttributesManager().getPersistentAttributes().get("lastSentence").toString();
+    }
+
+    public static void download(HandlerInput input){
+        Map<String, Object> persistentAttributes = input.getAttributesManager().getPersistentAttributes();
+        if (persistentAttributes.get("stepCount") != null) {
+            SessionAttributes.stepTracker = Integer.parseInt(persistentAttributes.get("stepCount").toString());
+        }else{
+            SessionAttributes.stepTracker = 0;
+        }
+        if(persistentAttributes.get("recipeName") != null){
+            SessionAttributes.setCurrentRecipe(persistentAttributes.get("recipeName").toString());
+        }else{
+            SessionAttributes.currentRecipe = null;
+        }
+        if(persistentAttributes.get("programState") != null){
+            SessionAttributes.programState = persistentAttributes.get("programState").toString();
+        }else{
+            SessionAttributes.programState = Strings.INITIAL_STATE;
+        }
     }
 }

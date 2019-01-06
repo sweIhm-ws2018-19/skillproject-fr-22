@@ -52,14 +52,11 @@ public class LaunchRequestHandler implements RequestHandler {
         readJson();
         String speechText = Strings.WELCOME ;
 
-        Map<String, Object> persistentAttributes = input.getAttributesManager().getPersistentAttributes();
-        if(persistentAttributes.get("programState") == null){
-            persistentAttributes.put("programState", Strings.INITIAL_STATE);
-            input.getAttributesManager().setPersistentAttributes(persistentAttributes);
-            input.getAttributesManager().savePersistentAttributes();
-        }
-        if (PersistentAttributes.getRecipeName(input) != null){
+        PersistentAttributes.download(input);
+
+        if (SessionAttributes.currentRecipe != null){
             speechText = "möchtest du mit der Zubereitung deiner "+ PersistentAttributes.getRecipeName(input)+" fortfahren?";
+            //TODO
         }
 
 
