@@ -6,7 +6,6 @@
     "knoblauchzehe": "f",
     "olivenöl": "n",
     "saure sahne": "f",
-    "papriapulver": "n",
     "pinienkerne": "f",
     "orangensaft": "m",
     "basilikumpesto": "n",
@@ -113,13 +112,60 @@
     "anislikör": "n",
     "fischfilet": "n",
     "fischpaste": "f",
-    "räucherlachs": "m"
+    "räucherlachs": "m",
+    "fenchel": "m",
+    "gehackte tomate": "f",
+    "trockenen weißwein": "m",
+    "festfleischiges Fischfilet, zum Beispiel Seelachs, Kabeljau oder Zander": "n",
+    "geschälte riesengarnele":"f",
+    "orange":"f",
+    "thymian":"m",
+    "safran":"m",
+    "gehackte petersiele":"f",
+    "suppengrün":"n",
+    "fleischbrühe":"f",
+    "ausgelöste Krabben, zum Beispiel Nordseegarnelen":"f",
+    "limettensaft":"m",
+    "helle sojasoße":"f",
+    "rote linse":"f",
+    "curry":"n",
+    "geräucherte Forellenfilets":"n",
+    "seelachsfilet":"n",
+    "zitrone":"f",
+    "geräucherter lachs":"m",
+    "ei":"n",
+    "geschälte tomate":"f",
+    "hähnchenbrustfilet":"n",
+    "bambussprosse":"f",
+    "weißweinessig":"m",
+    "sambal oelek":"m",
+    "geflügelfond":"m",
+    "grüne currypaste":"f",
+    "glasnudel":"f",
+    "getroknete tomate":"f",
+    "schwarze olive":"f",
+    "sahneschmelzkäse":"m",
+    "fetakäse":"m",
+    "schwineschnitzel":"n",
+    "gyros gewürz":"n",
+    "gehobelter pamesankäse":"m",
+    "lasagneblätter":"f",
+    "hackfleisch":"n",
+    "passierte tomate":"f",
+    "chilliflocke":"f",
+    "zucker":"m",
+    "rinderbrühe":"f",
+    "rindfleisch":"n",
+    "paprikapulver edelsüß":"n",
+    "hähnchen":"n"
+
   },
   "einheiten": {
     "gramm": {
       "gender": "n",
       "plural": "gramm"
-    },"null": {
+    },
+    "null": {
       "gender": "n",
       "plural": ""
     },
@@ -158,6 +204,30 @@
     "hand voll": {
       "gender": "m",
       "plural": "hand voll"
+    },
+    "stück":{
+      "gender": "n",
+      "plural": "stück"
+    },
+    "dose":{
+      "gender": "f",
+      "plural": "dosen"
+    },
+    "tütchen":{
+      "gender": "n",
+      "plural": "tütchen"
+    },
+    "becher":{
+      "gender":"m",
+      "plural":"becher"
+    },
+    "stange":{
+      "gender":"f",
+      "plural":"stangen"
+    },
+    "glas":{
+      "gender":"n",
+      "plural":"gläser"
     }
   },
   "rezepte": {
@@ -745,7 +815,7 @@
       },
       "schritte": {
         "schritt 1": "Schäle die Zwiebel, den Knoblauch und Karotte und schneide alles klein.",
-        "schritt 2": "Putze den Lauch und Sellerie und schneide es ebenfalls in kleine Stücke.",
+        "schritt 2": "Putze den Lauch und den Sellerie und schneide es ebenfalls in kleine Stücke.",
         "schritt 3": "Öl im Topf erwärmen. Zwiebel, <break time=\"1s\"/> Knoblauch, <break time=\"1s\"/> Karotte, <break time=\"1s\"/> Lauch und Sellerie hinzugeben und alles bei niedriger Hitze vier Minuten unter gelegentlichem Rühren andünsten. ",
         "schritt 4": "Gebe die Kartoffelstücke sowie Gemüsebrühe hinzu und lasse die Suppe fünfzehn Minuten bei niedriger Hitze köcheln.",
         "schritt 5": "Die Suppe einige Minuten abkühlen lassen und mit einem Pürierstab pürieren.",
@@ -2179,6 +2249,825 @@
         "schritt 6": "Schmecke die Suppe mit Salz, Pfeffer, Zitronensaft und etwas Zucker ab.",
         "schritt 7": "Gib Dill und den Räucherlachs hinzu. Beides kurz in der Suppe erhitzen.",
         "schritt 8": "Suppe mit den Toastwürfeln bestreuen und servieren."
+      }
+    },
+    "Mediterrane Fischsuppe": {
+      "zutaten": {
+        "möhre": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.5"
+        },
+        "knoblauchzehe": {
+          "einheit": "null",
+          "menge": "0.5"
+        },
+        "fenchel": {
+          "einheit": "stück",
+          "menge": "0.25"
+        },
+        "gehackte tomate": {
+          "einheit": "dose",
+          "menge": "0.25"
+        },
+        "fischfond": {
+          "einheit": "milliliter",
+          "menge": "125"
+        },
+        "saure sahne": {
+          "einheit": "gramm",
+          "menge": "25"
+        },
+        "trockenen weißwein": {
+          "einheit": "milliliter",
+          "menge": "50"
+        },
+        "festfleischiges Fischfilet, zum Beispiel Seelachs, Kabeljau oder Zander": {
+          "einheit": "gramm",
+          "menge": "100"
+        },
+        "geschälte riesengarnele": {
+          "einheit": "null",
+          "menge": "1"
+        },
+        "orange": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "thymian": {
+          "einheit": "teelöffel",
+          "menge": "0.25"
+        },
+        "safran": {
+          "einheit": "tütchen",
+          "menge": "0.25"
+        },
+        "gehackte petersiele": {
+          "einheit": "teelöffel",
+          "menge": "1"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        }
+      },
+      "schritte": {
+        "schritt 1": "Schäle die Zwiebel und den Knoblauch und hacke beides klein.",
+        "schritt 2": "Schäle die Möhre. Schneide die Möhre in Scheiben und den Fenchel in Streifen.",
+        "schritt 3": "Zwiebeln, <break time=\"1s\"/> Knoblauch, <break time=\"1s\"/> Möhrenscheiben, <break time=\"1s\"/> Fenchelstreifen, <break time=\"1s\"/> die gehackten Tomaten, <break time=\"1s\"/> Fischfond, <break time=\"1s\"/> Weißwein und Thymian in den Topf geben, aufkochen und dann bei kleiner bis mittlerer Hitze etwa fünfzehn Minuten köcheln lassen.",
+        "schritt 4": "Fischfilets in kleine Würfel schneiden.",
+        "schritt 5": "Garnelen und Fischfiletwürfel dazugeben und sieben Minuten lang bei kleiner Hitze gar ziehen lassen.",
+        "schritt 6": "Orange auspressen und den Saft in die Suppe rühren.",
+        "schritt 7": "Die Suppe mit Salz, Pfeffer abschmecken und nach Belieben Schmand oder saure Sahne unterrühren.",
+        "schritt 8":"Mit frischer Petersilie bestreut servieren. Dazu passt zum Beispiel Baguette."
+      }
+
+    },
+    "krabbensuppe": {
+      "zutaten": {
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "suppengrün": {
+          "einheit": "bund",
+          "menge": "0.25"
+        },
+        "fleischbrühe": {
+          "einheit": "milliliter",
+          "menge": "125"
+        },
+        "butter": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "schlagsahne": {
+          "einheit": "gramm",
+          "menge": "87.5"
+        },
+        "weißwein": {
+          "einheit": "milliliter",
+          "menge": "62.5"
+        },
+        "ausgelöste Krabben, zum Beispiel Nordseegarnelen": {
+          "einheit": "gramm",
+          "menge": "62.5"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "dill": {
+          "einheit": "teelöffel",
+          "menge": "1"
+        }
+      },
+      "schritte": {
+        "schritt 1": "Schäle die Zwiebel. Putze und wasche das Suppengrün und schneide alles in feine Stücke.",
+        "schritt 2": "Butter im Topf erhitzen und das Gemüse darin unter Rühren andünsten.",
+        "schritt 3": "Die Fleischbrühe, den Weißwein und etwa zwei Drittel der Sahne angießen und fünfzehn Minuten köcheln lassen.",
+        "schritt 4": "Die Krabbel hinzugeben und bei kleiner Hitze in der Suppe erwärmen.",
+        "schritt 5": "Schmecke die Suppe mit Salz und Pfeffer ab und schlage die restliche Schlagsahne mit einem Rührgerät steif.",
+        "schritt 6": "Dill waschen, trocken schütteln und fein schneiden.",
+        "schritt 7": "Die Suppe mit einem Klecks Sahne und mit Dill garniert servieren."
+      }
+    },
+    "Thailändische Kokosmilchsuppe mit Garnelen": {
+      "zutaten": {
+        "garnelen": {
+          "einheit": "gramm",
+          "menge": "37.5"
+        },
+        "frühlingszwiebel": {
+          "einheit": "null",
+          "menge": "1"
+        },
+        "ingwer": {
+          "einheit": "stück",
+          "menge": "0.25"
+        },
+        "tomate": {
+          "einheit": "gramm",
+          "menge": "75"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "375"
+        },
+        "kokosmilch": {
+          "einheit": "milliliter",
+          "menge": "50"
+        },
+        "öl": {
+          "einheit": "eslöffel",
+          "menge": "0.25"
+        },
+        "rote chilischote": {
+          "einheit": "null",
+          "menge": "0.5"
+        },
+        "limettensaft": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "helle sojasoße": {
+          "einheit": "esslöffel",
+          "menge": "0.75"
+        }
+      },
+      "schritte": {
+        "schritt 1": "Gefrorene Garnelen beispielsweise im Wasserbad auftauen lassen. Frische Garnelen waschen und trocken tupfen.",
+        "schritt 2": "Frühlingszwiebeln waschen. Das Grüne für die Dekoration schräg in dünne Ringe schneiden und beiseite legen. Das Weiße der Frühlingszwiebel klein schneiden.",
+        "schritt 3": "Den Ingwer schälen und hacken. Die Chilischoten waschen und fein hacken.",
+        "schritt 4": "Die Tomaten waschen und in kleine Stücke schneiden.",
+        "schritt 5": "Öl im Topf erhitzen. Das weiße der Frühlingszwiebeln, den Ingwer sowie die Chilischote unter Rühren andünsten.",
+        "schritt 6": "Kokosmilch und Gemüsebrühe dazugeben und etwa vier Minuten köcheln lassen.",
+        "schritt 7": "Die Garnelen sowie Tomatenstücke hinzugeben und beides bei niedriger Hitze für zwei Minuten kochen.",
+        "schritt 8":"Mit Sojasoße und Limettensaft abschmecken. Mit dem Frühlingszwiebelgrün bestreuen."
+      }
+    },
+    "currycremesuppe": {
+      "zutaten": {
+        "zwiebel": {
+          "einheit": "gramm",
+          "menge": "50"
+        },
+        "rote linse": {
+          "einheit": "gramm",
+          "menge": "37.5"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "250"
+        },
+        "öl": {
+          "einheit": "esslöffel",
+          "menge": "0.25"
+        },
+        "creme fresch": {
+          "einheit": "becher",
+          "menge": "0.25"
+        },
+        "curry": {
+          "einheit": "teelöffel",
+          "menge": "0.75"
+        },
+        "geräucherte Forellenfilets": {
+          "einheit": "gramm",
+          "menge": "25"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        }
+      },
+      "schritte": {
+        "schritt 1": "Schäle die Zwiebeln und schneide sie in kleine Stücke.",
+        "schritt 2": "Öl im Topf erhitzen und die Zwiebelwürfel darin andünsten. Anschließend mit Curry bestreuen und kurz mitdünsten lassen.",
+        "schritt 3": "Linsen und Gemüsebrühe hinzugeben und mit Deckel etwa fünfzehn Minuten lang bei mittlerer Hitze köcheln lassen.",
+        "schritt 4": "Die Suppe kurz abkühlen lassen und mit einem Stabmixer fein pürieren.",
+        "schritt 5": "Crème légère unterrühren und die Suppe mit Salz und Pfeffer abschmecken.",
+        "schritt 6": "Forellenfilets in kleine Stücke schneiden und zu der Suppe servieren"
+      }
+    },
+    "gemüse fisch suppe": {
+      "zutaten": {
+        "kartoffel": {
+          "einheit": "null",
+          "menge": "1"
+        },
+        "möhre": {
+          "einheit": "null",
+          "menge": "1"
+        },
+        "lauch": {
+          "einheit": "stange",
+          "menge": "0.5"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "125"
+        },
+        "rapsöl": {
+          "einheit": "esslöffel",
+          "menge": "1"
+        },
+        "gehackte tomate": {
+          "einheit": "dose",
+          "menge": "0.25"
+        },
+        "seelachsfillet": {
+          "einheit": "null",
+          "menge": "1"
+        },
+        "zitrone": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "schnittlauch": {
+          "einheit": "teelöffel",
+          "menge": "1"
+        }
+      },
+      "schritte": {
+        "schritt 1": "Schäle die Kartoffeln sowie Möhren und schneide beides klein.",
+        "schritt 2": "Putze den Lauch und schneide sowohl das Weiße als auch das Grüne in Ringe.",
+        "schritt 3": "Öl im Topf erhitzen und Lauch, Möhren und Kartoffeln kurz anschwitzen.",
+        "schritt 4": "Mit Gemüsebrühe ablöschen und die gehackten Tomaten hinzugeben. Die Suppe bei schwacher Hitze etwa zehn Minuten köcheln lassen. <break time=\"2s\"/> Währenddessen Seelachsfilet waschen, trocken tupfen und in Stücke schneiden.",
+        "schritt 5": "Seelachsfiletstücke zur Suppe geben und einige Minuten gar ziehen lassen. Währenddessen Schnittlauch waschen und klein hacken.",
+        "schritt 6": "Die Suppe mit Salz, Pfeffer und Zitronensaft abschmecken und mit frischem Schnittlauch bestreut servieren."
+      }
+    },
+    "lachscremesuppe": {
+      "zutaten": {
+        "kartoffel": {
+          "einheit": "gramm",
+          "menge": "100"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "125"
+        },
+        "milch": {
+          "einheit": "milliliter",
+          "menge": "125"
+        },
+        "sahne": {
+          "einheit": "milliliter",
+          "menge": "25"
+        },
+        "tomatenmark": {
+          "einheit": "gramm",
+          "menge": "7.5"
+        },
+        "geräucherter lachs": {
+          "einheit": "gramm",
+          "menge": "15"
+        },
+        "dill": {
+          "einheit": "etwas",
+          "menge": "null"
+        }
+      },
+      "schritte": {
+        "schritt 1": "Schäle die Kartoffeln, schneide sie in kleine Stücke und koche sie etwa zehn Minuten in Wasser vor.",
+        "schritt 2": "Das Wasser abgießen. Milch, Sahne und Tomatenmark zu den Kartoffelstücken in den Topf hinzugeben und alles etwa fünf Minuten lang unter Rühren andünsten.<break time=\"2s\"/> Währenddessen Lachs in kleine Streifen schneiden.",
+        "schritt 3": "Gemüsebrühpulver oder Brühwürfel der Menge entsprechend hinzugeben. Lachs ebenfalls hinzugeben und Suppe etwa weitere drei Minuten köcheln lassen.<break time=\"2s\"/> Je nach Geschmack weitere Lachsstreifen sowie gehackten Dill zugeben.",
+        "schritt 4": "Die Suppe einige Minuten abkühlen lassen und mit einem Stabmixer kurz pürieren."
+      }
+    },
+    "flädlesuppe": {
+      "zutaten": {
+        "fleischbrühe": {
+          "einheit": "milliliter",
+          "menge": "250"
+        },
+        "mehl": {
+          "einheit": "gramm",
+          "menge": "50"
+        },
+        "ei": {
+          "einheit": "null",
+          "menge": "1"
+        },
+        "butter": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "milch": {
+          "einheit": "milliliter",
+          "menge": "62.5"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "schnittlauch": {
+          "einheit": "etwas",
+          "menge": "null"
+        }
+      },
+      "schritte": {
+        "schritt 1": "Mehl, Eier und Salz mit der Hälfte der Milch zu einem dicken, glatten Teig verrühren.",
+        "schritt 2": "Nach und nach mit der restlichen Milch verdünnen. Teig zugedeckt zwanzig Minuten quellen lassen.",
+        "schritt 3": "Anschließend jeweils einen Teil der Butter in der Pfanne erwärmen und den Teig zu dünnen Fladen ausbacken.",
+        "schritt 4": "Die Fladen aufrollen und in dünne Streifen schneiden.",
+        "schritt 5": "Schnittlauch fein schneiden.",
+        "schritt 6": "Die Flädle in die heiße Fleischbrühe geben und die Suppe mit Schnittlauch dekorieren."
+      }
+    },
+    "pekingsuppe": {
+      "zutaten": {
+        "frühlingszwiebel": {
+          "einheit": "bund",
+          "menge": "0.125"
+        },
+        "champignon": {
+          "einheit": "gramm",
+          "menge": "50"
+        },
+        "geschälte tomate": {
+          "einheit": "dose",
+          "menge": "0.25"
+        },
+        "hühnerbrühe": {
+          "einheit": "milliliter",
+          "menge": "250"
+        },
+        "hähnchenbrustfilet": {
+          "einheit": "gramm",
+          "menge": "50"
+        },
+        "bambussprosse": {
+          "einheit": "glas",
+          "menge": "0.25"
+        },
+        "tomatenmark": {
+          "einheit": "teelöffel",
+          "menge": "0.25"
+        },
+        "sojasoße": {
+          "einheit": "teelöffel",
+          "menge": "0.5"
+        },
+        "weißweinessig": {
+          "einheit": "esslöffel",
+          "menge": "0.25"
+        },
+        "sambal oelek": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "ei": {
+          "einheit": "null",
+          "menge": "0.5"
+        },
+        "speisestärke": {
+          "einheit": "teelöffel",
+          "menge": "0.25"
+        }
+      },
+      "schritte": {
+        "schritt 1": "Hähnchenbrustfilet waschen und in der Brühe etwa fünfzehn Minuten köcheln lassen.<break time=\"2s\"/> Währenddessen die Bambussprossen kurz in Wasser einlegen, abropfen lassen und andünsten.",
+        "schritt 2": "Hänchenbrustfilet rausnehmen, klein schneiden und zurück in die Brühe geben.",
+        "schritt 3": "Frühlingszwiebeln putzen, klein schneiden und mit Tomatenmark andünsten.",
+        "schritt 4": "Champignongs und Tomaten waschen und klein schneiden.",
+        "schritt 5": "Bambussprossen, Fühlingszwiebeln, Champignons, Tomaten, Sojasoße, Weißweinessig und Samal Oelek zur Brühe geben, aufkochen und fünf Minuen köcheln lassen.",
+        "schritt 6": "Eier verquirlen und einrühren.",
+        "schritt 7": "Nach Belieben Speisestärke mit einem Schuss kaltem Wasser anrühren und untermengen."
+      }
+    },
+    "scharfe glasnudelsuppe mit hähnchen": {
+      "zutaten": {
+        "zucchini": {
+          "einheit": "null",
+          "menge": "0.5"
+        },
+        "frühlingszwiebel": {
+          "einheit": "null",
+          "menge": "1"
+        },
+        "knoblauchzehe": {
+          "einheit": "null",
+          "menge": "0.5"
+        },
+        "ingwer": {
+          "einheit": "gramm",
+          "menge": "2.5"
+        },
+        "hähnchenbrustfillet": {
+          "einheit": "null",
+          "menge": "1"
+        },
+        "geflügelfond": {
+          "einheit": "milliliter",
+          "menge": "200"
+        },
+        "sesamöl": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "kokosmilch": {
+          "einheit": "milliliter",
+          "menge": "50"
+        },
+        "grüne currypaste": {
+          "einheit": "teelöffel",
+          "menge": "0.5"
+        },
+        "glasnudel": {
+          "einheit": "gramm",
+          "menge": "50"
+        },
+        "koriander": {
+          "einheit": "bund",
+          "menge": "0.25"
+        }
+      },
+      "schritte": {
+        "schritt 1": "Schäle den Knoblauch und Ingwer, schneide beides klein und röste es mit Sesamöl und Curry-Paste bei niedriger Hitze in einem Topf an.",
+        "schritt 2": "Hähnchenbrustfilet würfeln. Zucchini waschen, längs halbieren und schräg in Streifen schneiden.",
+        "schritt 3": "Hähnchenstücke und Zucchinistreifen hinzugeben und kurz mit anbraten.",
+        "schritt 4": "Mit Geflügelfond und Kokosmilch ablöschen und Suppe etwa 10 Minuten bei geringer Hitze köcheln lassen.<break time=\"2s\"/> Währenddessen parallel die Glasnudeln nach Packungsanweisung zubereiten und zur Suppe hinzugeben.",
+        "schritt 5": "Frühlingszwieben und Koriander waschen, klein schneiden und damit die Suppe garnieren."
+      }
+
+    },
+    "gyrossuppe": {
+      "zutaten": {
+        "zwiebel": {
+          "einheit": "gramm",
+          "menge": "50"
+        },
+        "knoblauchzehe": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "rote paprikaschote": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "getrocknete tomate": {
+          "einheit": "gramm",
+          "menge": "12.5"
+        },
+        "schwarze olive": {
+          "einheit": "gramm",
+          "menge": "6.25"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "125"
+        },
+        "olivenöl": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "creme fresch": {
+          "einheit": "gramm",
+          "menge": "18.75"
+        },
+        "sahneschmelzkäse": {
+          "einheit": "gramm",
+          "menge": "25"
+        },
+        "fetakäse": {
+          "einheit": "gramm",
+          "menge": "12.5"
+        },
+        "schweineschnitzel": {
+          "einheit": "gramm",
+          "menge": "100"
+        },
+        "tomatenmark": {
+          "einheit": "esslöffel",
+          "menge": "0.25"
+        },
+        "thymian": {
+          "einheit": "teelöffel",
+          "menge": "0.125"
+        },
+        "gyros gewürz": {
+          "einheit": "teelöffel",
+          "menge": "0.25"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        }
+      },
+      "schritte": {
+        "schritt 1": "Schäle die Zwiebel und den Knoblauch und schneide beides in kleine Würfel.",
+        "schritt 2": "Paprikaschoten waschen und putzen und in ein Zentimeter große Würfel schneiden. Getrocknete Tomaten und Oliven ebenfalls in kleine Stücke schneiden.",
+        "schritt 3": "Schweineschnitzel waschen, mit Küchenpapier trocken tupfen und in dünne Streifen schneiden. Würze das Fleisch mit Salz, Pfeffer, Thymian und Gyros-Gewürz.",
+        "schritt 4": "Öl im Topf erhitzen und das Fleisch darin anbraten, bis es durch ist.",
+        "schritt 5": "Tomatenmark hinzugeben und kurz mit anrösten.",
+        "schritt 6": "Paprika-, Zwiebel-, Knoblauchwürfel und Tomatenstücke zugeben und mit Brühe aufgießen.",
+        "schritt 7": "Alles einmal aufkochen. Oliven, Creme Fresch und Schmelzkäse unterrühren und zehn Minuten bei mittlerer Hitze köcheln lassen.<break time=\"2s\"/> Währenddessen Fetakäse in kleine Würfel schneiden.",
+        "schritt 8":"Die Suppe mit den Gewürzen nochmals abschmecken. Mit gewürfeltem Fetakäse und gehacktem Thymian servieren."
+      }
+    },
+    "lasagnesuppe": {
+      "zutaten": {
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "knoblauchzehe": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "möhre": {
+          "einheit": "gramm",
+          "menge": "25"
+        },
+        "fenchel": {
+          "einheit": "gramm",
+          "menge": "37.5"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "187.5"
+        },
+        "olivenöl": {
+          "einheit": "esslöffeln",
+          "menge": "0.5"
+        },
+        "creme fresch": {
+          "einheit": "gramm",
+          "menge": "25"
+        },
+        "lasagneblätter": {
+          "einheit": "null",
+          "menge": "1.5"
+        },
+        "hackfleisch": {
+          "einheit": "gramm",
+          "menge": "62.5"
+        },
+        "tomatenmark": {
+          "einheit": "esslöffel",
+          "menge": "0.25"
+        },
+        "passierte tomate": {
+          "einheit": "gramm",
+          "menge": "50"
+        },
+        "chilliflocke": {
+          "einheit": "etwas",
+          "menge": "null"
+        },
+        "zucker": {
+          "einheit": "etwas",
+          "menge": "null"
+        },
+        "zitronensaft": {
+          "einheit": "etwas",
+          "menge": "null"
+        },
+        "basilikum": {
+          "einheit": "etwas",
+          "menge": "null"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        }
+      },
+      "schritte": {
+        "schritt 1": "Lasagneblätter in mundgerechte Stücke brechen und nach Packungsanleitung gar kochen. Das Wasser anschließend abgießen.",
+        "schritt 2": "Zwiebel und Knoblauch abziehen und klein schneiden.",
+        "schritt 3": "Möhren schälen, Fenchel putzen und beides in kleine Würfel schneiden.",
+        "schritt 4": "Öl in einem Topf erhitzen. Hackfleisch darin unter Rühren anbraten und mit Salz und Pfeffer würzen.",
+        "schritt 5": "Zwiebel- und Knoblauchwürfel hinzugeben und ebenfalls andünsten. Nach und nach Möhren- und Fenchelwürfel mit andünsten, dann Tomatenmark zugeben.",
+        "schritt 6": "Passierte Tomaten und Brühe zufügen und etwa zwanzig Minuten mit Deckel bei mittlerer Hitze köcheln lassen.",
+        "schritt 7": "Nudelstücke hinzufügen. Die Suppe mit Salz, Pfeffer, Chiliflocken, Zucker und Zitronensaft abschmecken.",
+        "schritt 8":"Vor dem Servieren einen Klecks Creme Fresch, geriebenen Parmesan und Basilikum daraufgeben."
+      }
+    },
+    "hähnchen currysuppe": {
+      "zutaten": {
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.5"
+        },
+        "knoblauchzehe": {
+          "einheit": "null",
+          "menge": "1"
+        },
+        "champignon": {
+          "einheit": "gramm",
+          "menge": "150"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "500"
+        },
+        "öl": {
+          "einheit": "esslöffel",
+          "menge": "1"
+        },
+        "creme fresch": {
+          "einheit": "gramm",
+          "menge": "50"
+        },
+        "mehl": {
+          "einheit": "esslöffel",
+          "menge": "1"
+        },
+        "hähnchenbrustfilet": {
+          "einheit": "gramm",
+          "menge": "150"
+        },
+        "curry": {
+          "einheit": "teelöffel",
+          "menge": "1"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        }
+      },
+      "schritte": {
+        "schritt 1": "Schneide das Fleisch in Würfel und würze es mit Salz und Pfeffer.",
+        "schritt 2": "Wasche und putze die Champignons und schneide sie in feine Scheiben.",
+        "schritt 3": "Schäle die Zwiebel und den Knoblauch und schneide beides in kleine Stücke.",
+        "schritt 4": "Öl im Topf erhitzen und Zwiebeln und Knoblauch einige Minuten lang glasig dünsten.",
+        "schritt 5": "Das Mehl und den Curry vermischen, über die gedünsteten Zwiebeln geben und mit anschwitzen.",
+        "schritt 6": "Nach und nach mit heißer Brühe aufgießen und währenddessen mit dem Schneebesen zügig rühren, damit sich keine Klümpchen bilden. Die Suppe anschließend aufkochen lassen.",
+        "schritt 7": "Die Hähnchenstücke und die Champignonscheiben zugeben. Die Suppe unter gelegentlichem Rühren zwanzig Minuten köcheln lassen.",
+        "schritt 8":"Creme Fresch dazugeben, die Suppe nochmals abschmecken und warm servieren."
+      }
+    },
+    "gulaschsuppe": {
+      "zutaten": {
+        "rote paprikaschote": {
+          "einheit": "null",
+          "menge": "0.5"
+        },
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.5"
+        },
+        "rinderbrühe": {
+          "einheit": "milliliter",
+          "menge": "250"
+        },
+        "rindfleisch": {
+          "einheit": "gramm",
+          "menge": "125"
+        },
+        "öl": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "mehl": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "zucker": {
+          "einheit": "etwas",
+          "menge": "null"
+        },
+        "tomatenmark": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "paprikapulver edelsüß": {
+          "einheit": "etwas",
+          "menge": "null"
+        },
+        "oregano": {
+          "einheit": "etwas",
+          "menge": "null"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        }
+      },
+      "schritte": {
+        "schritt 1": "Wasche das Fleisch und tupfe es anschließend mit Küchenpapier trocken. Schneide das Fleisch in kleine Stücke.",
+        "schritt 2": "Schäle die Zwiebel und schneide sie in feine Würfel.",
+        "schritt 3": "Wasche die Paprikaschoten und schneide sie in kleine Stücke.",
+        "schritt 4": "Öl im Kochtopf erhitzen. Füge das Fleisch hinzu und brate es kräftig an.",
+        "schritt 5": "Jetzt kannst du die Zwiebel und Paprikawürfel hinzufügen und kurz mit anbraten.",
+        "schritt 6": "Tomatenmark unterrühren und mit Salz, Pfeffer und Paprikapulver würzen.",
+        "schritt 7": "Das Ganze mit Mehl bestäuben und nach und nach unter Rühren mit Rinderbrühe ablöschen.",
+        "schritt 8": "Anschließend die Suppe bei schwacher Hitze etwa dreißig Minuten lang zugedeckt schmoren lassen.",
+        "schritt 9": "Zuletzt mit Salz, Pfeffer, Paprikapulver und Zucker abschmecken. Die fertige Suppe kann jetzt mit Oregano garniert serviert werden."
+      }
+    },
+    "hühnersuppe": {
+      "zutaten": {
+        "karotte": {
+          "einheit": "gramm",
+          "menge": "125"
+        },
+        "seleriknolle": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "petersilienwurzel": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "knoblauchzehe": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "250"
+        },
+        "hähnchen": {
+          "einheit": "gramm",
+          "menge": "200"
+        },
+        "petersilie": {
+          "einheit": "stange",
+          "menge": "1"
+        },
+        "salz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        }
+      },
+      "schritte": {
+        "schritt 1": "Spüle das Hähnchenstück unter dem Wasserhahn ordentlich ab und schneide es in mehrere Stücke.",
+        "schritt 2": "Schäle die Karotten und den Sellerie und schneide Karotten, Sellerie und Petersilienwurzel in mundgerechte Stücke.",
+        "schritt 3": "Gib die Hähnchenstücke zusammen mit der Gemüsebrühe, den Karotten-, Sellerie- und Petersilienwurzelstücken in einen Topf und koche es etwa fünfunddreißig Minuten lang.",
+        "schritt 4": "Nehme nach den fünfunddreißig Minuten die Brathähnchenstücke aus dem Topf und trenne das Fleisch von Haut und Knochen.",
+        "schritt 5": "Jetzt kannst du das Fleisch in mundgerechte Stücke zurechtschneiden.",
+        "schritt 6": "Gib die klein geschnittenen Fleischstücke sowie nach Wunsch die vorgekochten Suppennudeln in die Suppe.",
+        "schritt 7": "Petersilie waschen und fein hacken. Petersilie hinzugeben, Suppe mit Salz und Pfeffer abschmecken."
       }
     }
   }
