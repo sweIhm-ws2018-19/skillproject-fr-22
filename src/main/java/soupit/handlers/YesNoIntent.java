@@ -45,7 +45,7 @@ public class YesNoIntent implements RequestHandler {
                 if(yesNoSlot.getValue().equalsIgnoreCase("ja")) {
                     speechText = "Super! Sobald du mit dem Kochen anfangen möchtest, sage: Rezept starten ";
                 }else{ // nein
-                    speechText = "<voice name=\"Brian\"><lang xml:lang=\"de-DE\">schade. da kann ich leider nichts machen</lang></voice>";
+                    speechText = "schade. soll ich die Zutaten auf eine Einkaufsliste schreiben, oder möchtest du eine andere suppe kochen ?";
                 }
             }else {
                 if(yesNoSlot.getValue().equalsIgnoreCase("ja")){

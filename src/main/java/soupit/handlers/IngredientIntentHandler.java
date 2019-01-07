@@ -40,6 +40,7 @@ public class IngredientIntentHandler implements RequestHandler {
         speechText = getSpeechResponse(input, ingredientSlot);
 
         PersistentAttributes.setLastSentence(speechText.toString(),input);
+        PersistentAttributes.setProgramState(Strings.INGREDIENT_NAMED_STATE,input);
         ResponseBuilder responseBuilder = input.getResponseBuilder();
 
         responseBuilder.withSpeech(speechText.toString())
@@ -82,7 +83,7 @@ public class IngredientIntentHandler implements RequestHandler {
                    speechText.append(". Möchtest du diese Suppe kochen?");
                    SessionAttributes.recipeToDecideOn= list.get(0);
                    SessionAttributes.programState = Strings.SOUP_YES_NO_STATE;
-
+                   PersistentAttributes.setProgramState(Strings.SOUP_YES_NO_STATE,input);
                 }
                 else if (listSize <= 3) {
                     for (int i = 0; i < listSize; i++) {

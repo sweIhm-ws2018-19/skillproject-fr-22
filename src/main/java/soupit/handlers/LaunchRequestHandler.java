@@ -58,7 +58,7 @@ public class LaunchRequestHandler implements RequestHandler {
             speechText = "möchtest du mit der Zubereitung deiner "+ SessionAttributes.currentRecipe+" fortfahren?";
         }
         else if (SessionAttributes.programState.equals(Strings.INITIAL_STATE)){
-            speechText = Strings.WELCOME;
+            speechText = Strings.getRandomWelcome();
         }else{
             speechText = "Willkommen zurück! "+PersistentAttributes.getLastSentence(input);
         }

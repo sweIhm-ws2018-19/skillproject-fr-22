@@ -53,6 +53,7 @@ public class NumberOfServingsIntent implements RequestHandler {
             }
             speechText += "Hast du alle Zutaten vorrätig? ";
             SessionAttributes.programState = Strings.INGREDIENTSAVAILIABLE;
+            PersistentAttributes.setProgramState(Strings.INGREDIENTSAVAILIABLE,input);
         }else{
             speechText = "das habe ich leider nicht verstanden";
         }
