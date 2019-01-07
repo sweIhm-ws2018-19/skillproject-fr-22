@@ -1,4 +1,5 @@
 soupit\recipe\Rational.class
+soupit\handlers\PauseIntent.class
 soupit\handlers\StartCookingIntent.class
 soupit\recipe\RezeptArrayList.class
 soupit\handlers\MoreRecipesIntent.class

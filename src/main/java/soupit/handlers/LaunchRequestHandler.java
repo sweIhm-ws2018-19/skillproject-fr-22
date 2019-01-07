@@ -63,6 +63,7 @@ public class LaunchRequestHandler implements RequestHandler {
             speechText =( (int) (Math.random()*2)) == 0 ?"Willkommen zurück. Dann können wir nun zum Kochen anfangen.": "Willkommen zurück. Lass uns mit dem Kochen der " + SessionAttributes.currentRecipe+" beginnen.";
             speechText += " "+SessionAttributes.steps[0];
             PersistentAttributes.setProgramState(Strings.COOKING_STATE,input);
+            PersistentAttributes.setLastSentence(SessionAttributes.steps[0], input);
         }
         else{
             speechText = "Willkommen zurück! "+PersistentAttributes.getLastSentence(input);

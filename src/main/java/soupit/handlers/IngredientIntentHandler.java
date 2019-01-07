@@ -19,6 +19,8 @@ import java.util.*;
 import static com.amazon.ask.request.Predicates.intentName;
 
 public class IngredientIntentHandler implements RequestHandler {
+
+    boolean setProgramState;
     @Override
     public boolean canHandle(HandlerInput input) {
         return input.matches(intentName("IngredientIntent"));
@@ -36,13 +38,17 @@ public class IngredientIntentHandler implements RequestHandler {
 
         StringBuilder speechText;
 
+
         // Check for favorite color and create output to user.
         speechText = getSpeechResponse(input, ingredientSlot);
 
-        PersistentAttributes.setLastSentence(speechText.toString(),input);
-        PersistentAttributes.setProgramState(Strings.INGREDIENT_NAMED_STATE,input);
-        ResponseBuilder responseBuilder = input.getResponseBuilder();
 
+        if(setProgramState) {
+            PersistentAttributes.setProgramState(Strings.INGREDIENT_NAMED_STATE,input);
+            PersistentAttributes.setLastSentence(speechText.toString(),input);
+        }
+
+        ResponseBuilder responseBuilder = input.getResponseBuilder();
         responseBuilder.withSpeech(speechText.toString())
                 .withShouldEndSession(false);
         return responseBuilder.build();
@@ -50,6 +56,7 @@ public class IngredientIntentHandler implements RequestHandler {
 
     private StringBuilder getSpeechResponse(HandlerInput input, Slot ingredientSlot) {
         StringBuilder speechText;
+        setProgramState = true;
         if (ingredientSlot != null) {
             // Store the user's favorite color in the Session and create response.
             String[] strinGredients = ingredientSlot.getValue().split("\\s");
@@ -114,10 +121,10 @@ public class IngredientIntentHandler implements RequestHandler {
 
 
 
-
                 }
             } else {
-                speechText = new StringBuilder("Ich habe leider kein Rezept mit diesen Zutaten auf Lager. ich werde daran arbeiten! ");
+                speechText = SessionAttributes.programState.equals(Strings.INITIAL_STATE) ? new StringBuilder("Ich habe leider kein Rezept mit diesen Zutaten auf Lager. ich werde daran arbeiten! "): new StringBuilder("Das habe ich leider nicht verstanden , kannst du das wiederholen?");
+                setProgramState = false;
             }
 
 
@@ -129,7 +136,7 @@ public class IngredientIntentHandler implements RequestHandler {
         } return speechText;
     }
 
-    private static ArrayList<Rezept> treeMapToSortedList(Map<Integer, ArrayList<Rezept>> map) {                              //TODO Refactor this method to be in some other class
+    private static ArrayList<Rezept> treeMapToSortedList(Map<Integer, ArrayList<Rezept>> map) {
         ArrayList<Rezept> list = new ArrayList<>();
         for (ArrayList<Rezept> sublist : map.values()) {
             list.addAll(sublist);

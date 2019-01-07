@@ -190,6 +190,7 @@
           "name": "PauseIntent",
           "slots": [],
           "samples": [
+            "warte",
             "Noch nicht anfangen",
             "Später anfangen",
             "Später beginnen",
@@ -366,7 +367,7 @@
             },
             {
               "name": {
-                "value": "tomatencremsuppe",
+                "value": "tomatencremesuppe",
                 "synonyms": [
                   "tomatencreme suppe",
                   "tomaten cremesuppe",

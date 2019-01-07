@@ -34,7 +34,7 @@ public class NameRecipeIntent implements RequestHandler {
         }else{
             speechText = "das habe ich leider nicht verstanden";
         }
-        PersistentAttributes.setLastSentence(speechText,input);
+        PersistentAttributes.setLastSentence("wie viele Portionen der "+SessionAttributes.currentRecipe+" möchtest du kochen?",input);
         return input.getResponseBuilder()
                 .withSpeech(speechText)
                 .withShouldEndSession(false)
