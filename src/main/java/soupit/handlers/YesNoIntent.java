@@ -51,7 +51,7 @@ public class YesNoIntent implements RequestHandler {
             }else {
                 if(yesNoSlot.getValue().equalsIgnoreCase("ja")){
                     if(SessionAttributes.programState.equals(Strings.COOKING_STATE)){
-                        speechText = "Okay. sage 'wiederholen' , wenn du den letzten Schritt noch einmal hören möchtest oder weiter, für den nächsten";
+                        speechText = "Okay. sage 'wiederholen' , wenn du den letzten Schritt noch einmal hören möchtest oder weiter, für den nächsten Schritt";
                         repeatStep = true;
                     }else{
                         speechText = SessionAttributes.programState;

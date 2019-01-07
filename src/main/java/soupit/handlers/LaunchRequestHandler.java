@@ -73,7 +73,6 @@ public class LaunchRequestHandler implements RequestHandler {
 
 
 
-
         return input.getResponseBuilder()
                 .withSimpleCard("Soup IT", speechText)
                 .withSpeech(speechText)
@@ -116,14 +115,14 @@ public class LaunchRequestHandler implements RequestHandler {
         Iterator<Map.Entry<String, Map>> it = zutaten.entrySet().iterator();                                //TODO foreachloop better
         int counter = 0;
         while (it.hasNext()) {
-
             Map.Entry<String, Map> next = it.next();
             Map nextMap = next.getValue();
             String zutatString = (String) zutaten.keySet().toArray()[counter];
             Zutat zutat = new Zutat(zutatString, (String) alleZutaten.get(zutatString));
             String einheitString = (String) nextMap.get("einheit");
             Einheit einheit = new Einheit(einheitString,einheiten.get(einheitString).get("gender"),einheiten.get(einheitString).get("plural"));
-            double menge = Double.parseDouble((String) (nextMap.get("menge")));
+            String mengeString = nextMap.get("menge").toString();
+            double menge = mengeString.equals("null")? 0 : Double.parseDouble((String) (nextMap.get("menge")));
             if (menge == 0.3) menge = 1/3d;
             if (menge == 0.15) menge = 1/6d;
 
@@ -134,6 +133,7 @@ public class LaunchRequestHandler implements RequestHandler {
 
 
     }
+
 
 
 

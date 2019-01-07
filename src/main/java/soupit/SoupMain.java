@@ -13,12 +13,15 @@ import org.json.simple.parser.*;
 
 public class SoupMain {
 
+   static  Object tester2 = new Object();
 
 
 
 
     public static void main(String... args) {
         List<Rezept> list ;
+        Object tester = new Object();
+
         try {
 
             InputStream stream = SoupMain.class.getClassLoader().getResourceAsStream("data/rezepte.json");
@@ -28,15 +31,22 @@ public class SoupMain {
             Map zutatenMitGeschlecht = (Map) jsonObject.get("zutaten");
             Map einheitenMitGeschlecht = (Map) jsonObject.get("einheiten");
             Object [] alleRezepte =  ((Map) jsonObject.get("rezepte")).keySet().toArray();
+
             for (Object s : alleRezepte) {
+                tester =s;
+                if(s.toString().equals("kartoffelsuppe")){
+                    int a = 0;
+                }
                 addRecipes(s.toString(), rezepte, zutatenMitGeschlecht, einheitenMitGeschlecht);
             }
         } catch (Exception e) {
+            System.out.println(tester);
+            System.out.println(tester2);
             System.out.println(e.getMessage());
         }
 
         String speechText  = "";
-        SessionAttributes.setCurrentRecipe("möhrencremesuppe");
+        SessionAttributes.setCurrentRecipe("kartoffelsuppe");
         SessionAttributes.currentRecipe.multiplyZumeng(5);
         ZutatMengeEinheit [] zumArray = SessionAttributes.getCurrentRecipeZumeng();
         for(int i =0; i<zumArray.length; i++) {
@@ -68,14 +78,15 @@ public class SoupMain {
         Iterator<Map.Entry<String, Map>> it = zutaten.entrySet().iterator();                                //TODO foreachloop better
         int counter = 0;
         while (it.hasNext()) {
-
             Map.Entry<String, Map> next = it.next();
             Map nextMap = next.getValue();
+            tester2 = nextMap;
             String zutatString = (String) zutaten.keySet().toArray()[counter];
             Zutat zutat = new Zutat(zutatString, (String) alleZutaten.get(zutatString));
             String einheitString = (String) nextMap.get("einheit");
             Einheit einheit = new Einheit(einheitString,einheiten.get(einheitString).get("gender"),einheiten.get(einheitString).get("plural"));
-            double menge = Double.parseDouble((String) (nextMap.get("menge")));
+            String mengeString = nextMap.get("menge").toString();
+            double menge = mengeString.equals("null")? 0 : Double.parseDouble((String) (nextMap.get("menge")));
             if (menge == 0.3) menge = 1/3d;
             if (menge == 0.15) menge = 1/6d;
 
@@ -186,8 +197,5 @@ public class SoupMain {
         return list;
     }
 
-    public  static int bla(){
-        return 1;
-    }
 
 }

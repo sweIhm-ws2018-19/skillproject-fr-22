@@ -1,5 +1,6 @@
 {
   "zutaten": {
+    "rinderbrühe":"f",
     "karotte": "f",
     "kartoffel": "f",
     "möhre": "f",
@@ -146,21 +147,24 @@
     "schwarze olive":"f",
     "sahneschmelzkäse":"m",
     "fetakäse":"m",
-    "schwineschnitzel":"n",
+    "schweineschnitzel":"n",
     "gyros gewürz":"n",
-    "gehobelter pamesankäse":"m",
+    "gehobelter parmesankäse":"m",
     "lasagneblätter":"f",
     "hackfleisch":"n",
     "passierte tomate":"f",
     "chilliflocke":"f",
     "zucker":"m",
-    "rinderbrühe":"f",
     "rindfleisch":"n",
     "paprikapulver edelsüß":"n",
     "hähnchen":"n"
 
   },
   "einheiten": {
+    "etwas":{
+      "gender":"n",
+      "plural":"etwas"
+    },
     "gramm": {
       "gender": "n",
       "plural": "gramm"
@@ -2383,7 +2387,7 @@
         "schritt 7": "Die Suppe mit einem Klecks Sahne und mit Dill garniert servieren."
       }
     },
-    "Thailändische Kokosmilchsuppe mit Garnelen": {
+    "Thailändische Kokos Garnelen suppe": {
       "zutaten": {
         "garnelen": {
           "einheit": "gramm",
@@ -2410,7 +2414,7 @@
           "menge": "50"
         },
         "öl": {
-          "einheit": "eslöffel",
+          "einheit": "esslöffel",
           "menge": "0.25"
         },
         "rote chilischote": {
@@ -2841,7 +2845,7 @@
           "menge": "187.5"
         },
         "olivenöl": {
-          "einheit": "esslöffeln",
+          "einheit": "esslöffel",
           "menge": "0.5"
         },
         "creme fresch": {

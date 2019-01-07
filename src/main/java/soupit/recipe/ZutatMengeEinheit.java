@@ -23,6 +23,7 @@ public class ZutatMengeEinheit {
     }
 
     public String mengeToString() {
+        if(einheit.toString().equals("etwas")) return "etwas";
 
         if (! einheit.toString().equals("null")) {
             if (einheit.getGrammatGeschlecht().equals("f")){
@@ -135,7 +136,7 @@ public class ZutatMengeEinheit {
     }
 
     public void multiplyIngredients(int mulitplicator){
-        this.menge*=mulitplicator;
+        if(!this.einheit.toString().equals("etwas"))  this.menge*=mulitplicator;
     }
 
 

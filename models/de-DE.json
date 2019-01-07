@@ -222,6 +222,125 @@
           "values": [
             {
               "name": {
+                "value": "hühnersuppe",
+                "synonyms": [
+                  "hühner suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "gulaschsuppe",
+                "synonyms": [
+                  "gulasch suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "hähnchen currysuppe",
+                "synonyms": [
+                  "hähnchencurry suppe",
+                  "hähnchen curry suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "lasagnesuppe",
+                "synonyms": [
+                  "lasagne suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "gyrossuppe",
+                "synonyms": [
+                  "gyros suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "scharfe glasnudelsuppe mit hähnchen",
+                "synonyms": [
+                  "scharfe glas nudelsuppe mit hähnchen",
+                  "scharfe glasnudel suppe mit hähnchen",
+                  "scharfe glas nudel suppe mit hähnchen"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "pekingsuppe",
+                "synonyms": [
+                  "peking suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "flädlesuppe",
+                "synonyms": [
+                  "flädle suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "lachscremesuppe",
+                "synonyms": [
+                  "lachs cremesuppe",
+                  "lachscreme suppe",
+                  "lachs creme suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "gemüse fisch suppe",
+                "synonyms": [
+                  "gemüse fischsuppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "currycremesuppe",
+                "synonyms": [
+                  "currycreme suppe",
+                  "curry cremesuppe",
+                  "curry creme suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "thailändische Kokos garnelensuppe",
+                "synonyms": [
+                  "thailändische Kokos garnelen suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "krabbensuppe",
+                "synonyms": [
+                  "krabben suppe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "mediterrane fischsuppe",
+                "synonyms": [
+                  "mediterrane fisch suppe"
+                ]
+              }
+            },
+            {
+              "name": {
                 "value": "fischsuppe mit räucherlachs",
                 "synonyms": [
                   "fisch suppe mit räucher lachs",
