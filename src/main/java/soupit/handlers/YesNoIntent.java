@@ -56,7 +56,8 @@ public class YesNoIntent implements RequestHandler {
                         speechText = SessionAttributes.programState;
                     }
                 }else { // nein
-                    speechText = "okay, nenne mir die Zutaten, die du für deine neue Suppe verwenden willst";
+                    speechText = "Okay. nenne mir die Zutaten, die du für deine neue Suppe verwenden willst";
+                    PersistentAttributes.clear(input);
                 }
             }
 
