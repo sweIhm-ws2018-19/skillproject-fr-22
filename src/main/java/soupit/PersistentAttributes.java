@@ -1,7 +1,6 @@
 package soupit;
 
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
-import com.amazonaws.services.dynamodbv2.xspec.S;
 import soupit.Lists.Strings;
 
 import java.util.Map;
@@ -43,7 +42,6 @@ public class PersistentAttributes {
         persistentAttributes.put("stepCount", String.valueOf(SessionAttributes.stepTracker));
         input.getAttributesManager().setPersistentAttributes(persistentAttributes);
         input.getAttributesManager().savePersistentAttributes();
-//        SessionAttributes.stepTracker = stepCount;
     }
 
     public static String getProgramState(HandlerInput input) {

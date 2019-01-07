@@ -50,14 +50,20 @@ public class LaunchRequestHandler implements RequestHandler {
     public Optional<Response> handle(HandlerInput input) {
 
         readJson();
-        String speechText = Strings.WELCOME ;
+        String speechText ;
 
         PersistentAttributes.download(input);
 
         if (SessionAttributes.currentRecipe != null){
-            speechText = "möchtest du mit der Zubereitung deiner "+ PersistentAttributes.getRecipeName(input)+" fortfahren?";
-            //TODO
+            speechText = "möchtest du mit der Zubereitung deiner "+ SessionAttributes.currentRecipe+" fortfahren?";
         }
+        else if (SessionAttributes.programState.equals(Strings.INITIAL_STATE)){
+            speechText = Strings.WELCOME;
+        }else{
+            speechText = "Willkommen zurück! "+PersistentAttributes.getLastSentence(input);
+        }
+
+
 
 
 

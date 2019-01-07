@@ -9,6 +9,9 @@ public class Strings {
     public static final String INITIAL_STATE = "InitialState";
     public static final String SOUP_YES_NO_STATE = "SoupYesNoState";
     public static final String INGREDIENTSAVAILIABLE= "IngredientsAvaliable";
+    public static final String CONTINUE_SOUP_YES_NO_STATE = "ContinueSoupYesNo";
+    public static final String COOKING_STATE = "CookingState";
+
 
 
 }

@@ -25,6 +25,7 @@ public class NextStepIntent implements RequestHandler {
             PersistentAttributes.setStepCount(input);
             if (SessionAttributes.stepTracker == SessionAttributes.steps.length-1) {
                 speechText += " Ich hoffe die Suppe schmeckt und wünsche einen guten Appetit. Bis zum nächsten Mal.";
+                PersistentAttributes.clear(input);
             }
         }else{
             speechText = "es gibt nichts mehr zu tun ausser die suppe zu essen!";

@@ -26,30 +26,45 @@ public class YesNoIntent implements RequestHandler {
         Map<String, Slot> slots = intent.getSlots();
         Slot yesNoSlot = slots.get("YesOrNo");
         String speechText;
+
+        boolean repeatStep = false;
+
         if (yesNoSlot != null) {
+
+
 
             if (SessionAttributes.programState.equals(Strings.SOUP_YES_NO_STATE)) {
                 if (yesNoSlot.getValue().equalsIgnoreCase("ja")){
                     SessionAttributes.currentRecipe = SessionAttributes.recipeToDecideOn;
                     PersistentAttributes.setRecipeName(SessionAttributes.recipeToDecideOn.toString(),input);
                     speechText = "Wie viele Portionen möchtest du kochen ?";
-                }else{
+                }else{ // nein
                     speechText = "tut mir leid dass ich nicht helfen konnte.";
                 }
             } else if (SessionAttributes.programState.equals(Strings.INGREDIENTSAVAILIABLE)){
                 if(yesNoSlot.getValue().equalsIgnoreCase("ja")) {
                     speechText = "Super! Sobald du mit dem Kochen anfangen möchtest, sage: Rezept starten ";
-                }else{
+                }else{ // nein
                     speechText = "<voice name=\"Brian\"><lang xml:lang=\"de-DE\">schade. da kann ich leider nichts machen</lang></voice>";
                 }
-            }else{
-                speechText = "nagut";
+            }else {
+                if(yesNoSlot.getValue().equalsIgnoreCase("ja")){
+                    if(SessionAttributes.programState.equals(Strings.COOKING_STATE)){
+                        speechText = "Okay. sage 'wiederholen' , wenn du den letzten Schritt noch einmal hören möchtest oder weiter, für den nächsten";
+                        repeatStep = true;
+                    }else{
+                        speechText = SessionAttributes.programState;
+                    }
+                }else { // nein
+                    speechText = "okay, nenne mir die Zutaten, die du für deine neue Suppe verwenden willst";
+                }
             }
 
         } else speechText = "das habe ich leider nicht verstanden";
 
+        if(repeatStep) PersistentAttributes.setLastSentence(SessionAttributes.steps[SessionAttributes.stepTracker],input);
+        else PersistentAttributes.setLastSentence(speechText,input);
 
-        PersistentAttributes.setLastSentence(speechText,input);
         return input.getResponseBuilder()
                 .withSpeech(speechText)
                 .withShouldEndSession(false)
