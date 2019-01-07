@@ -185,6 +185,34 @@
             "wiederholen ",
             "schritt wiederholen"
           ]
+        },
+        {
+          "name": "PauseIntent",
+          "slots": [],
+          "samples": [
+            "Noch nicht anfangen",
+            "Später anfangen",
+            "Später beginnen",
+            "Später kochen",
+            "Einen Moment",
+            "Halt",
+            "Warte bitte",
+            "Warten",
+            "kleinen Moment",
+            "Ich brauche noch kurz",
+            "ich brauche noch",
+            "noch nicht",
+            "moment",
+            "wart kurz",
+            "wart",
+            "hab es noch nicht ganz",
+            "brauch noch",
+            "brauche noch etwas",
+            "bitte warten",
+            "warte einen kleinen Moment noch",
+            "warte kurz",
+            "pause"
+          ]
         }
       ],
       "types": [

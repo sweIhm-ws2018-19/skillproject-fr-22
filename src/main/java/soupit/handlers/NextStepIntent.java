@@ -3,6 +3,7 @@ package soupit.handlers;
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
+import soupit.Lists.Strings;
 import soupit.PersistentAttributes;
 import soupit.SessionAttributes;
 
@@ -24,7 +25,8 @@ public class NextStepIntent implements RequestHandler {
             speechText = SessionAttributes.steps[++SessionAttributes.stepTracker];
             PersistentAttributes.setStepCount(input);
             if (SessionAttributes.stepTracker == SessionAttributes.steps.length-1) {
-                speechText += " Ich hoffe die Suppe schmeckt und wünsche einen guten Appetit. Bis zum nächsten Mal.";
+
+                speechText += Strings.getRandomFinish();
                 PersistentAttributes.clear(input);
             }
         }else{
