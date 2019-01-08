@@ -28,6 +28,7 @@ public class YesNoIntent implements RequestHandler {
         String speechText;
 
         boolean repeatStep = false;
+        boolean jumpBack = false;
 
         if (yesNoSlot != null) {
 
@@ -48,7 +49,16 @@ public class YesNoIntent implements RequestHandler {
                 }else{ // nein
                     speechText = "schade. soll ich die Zutaten auf eine Einkaufsliste schreiben, oder möchtest du eine andere suppe kochen ?";
                 }
-            }else {
+            }else  if(SessionAttributes.programState.equals(Strings.RESTART_YES_NO_STATE)){
+                if(yesNoSlot.getValue().equalsIgnoreCase("ja")){
+                    speechText = "Okay. welche Zutaten möchtest du für deine neue Suppe verwenden ?";
+                    PersistentAttributes.clear(input);
+                }else{ // nein
+                    speechText = "Okay. lass uns da weitermachen, wo wir aufgehört haben. "+PersistentAttributes.getLastSentence(input);
+                    jumpBack = true;
+                }
+            }
+            else {
                 if(yesNoSlot.getValue().equalsIgnoreCase("ja")){
                     if(SessionAttributes.programState.equals(Strings.COOKING_STATE)){
                         speechText = "Okay. sage 'wiederholen' , wenn du den letzten Schritt noch einmal hören möchtest oder weiter, für den nächsten Schritt";
@@ -65,7 +75,7 @@ public class YesNoIntent implements RequestHandler {
         } else speechText = "das habe ich leider nicht verstanden";
 
         if(repeatStep) PersistentAttributes.setLastSentence(SessionAttributes.steps[SessionAttributes.stepTracker],input);
-        else PersistentAttributes.setLastSentence(speechText,input);
+        if(!jumpBack) PersistentAttributes.setLastSentence(speechText,input);
 
         return input.getResponseBuilder()
                 .withSpeech(speechText)

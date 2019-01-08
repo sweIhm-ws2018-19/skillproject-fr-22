@@ -113,9 +113,11 @@ public class IngredientIntentHandler implements RequestHandler {
                     speechText.append(list.get(2));
                     speechText.append(" und ");
                     int remainingRecipesCount = listSize-3;
-                    speechText.append(remainingRecipesCount);
-                    speechText.append(" weitere");
-                    if (remainingRecipesCount == 1) speechText.append("s");
+                    if(remainingRecipesCount == 1) speechText.append("ein weiteres");
+                    else {
+                        speechText.append(remainingRecipesCount);
+                        speechText.append(" weitere");
+                    }
                     speechText.append(". ");
                     speechText.append("wähle eine Suppe oder sage: weitere anhören ");
                     SessionAttributes.matchingRecipes = list;
