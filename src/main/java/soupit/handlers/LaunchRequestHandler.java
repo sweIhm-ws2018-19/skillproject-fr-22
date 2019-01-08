@@ -72,7 +72,6 @@ public class LaunchRequestHandler implements RequestHandler {
 
 
 
-
         return input.getResponseBuilder()
                 .withSimpleCard("Soup IT", speechText)
                 .withSpeech(speechText)

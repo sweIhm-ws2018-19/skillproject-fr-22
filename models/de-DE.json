@@ -129,9 +129,15 @@
             {
               "name": "Number",
               "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "One",
+              "type": "One"
             }
           ],
           "samples": [
+            "{One} Portion",
+            "{One} ",
             "{Number} Portionen ",
             "Ich möchte {Number} Portionen kochen ",
             "{Number}"
@@ -699,6 +705,21 @@
             {
               "name": {
                 "value": "karotte"
+              }
+            }
+          ]
+        },
+        {
+          "name": "One",
+          "values": [
+            {
+              "name": {
+                "value": "ein"
+              }
+            },
+            {
+              "name": {
+                "value": "eine"
               }
             }
           ]

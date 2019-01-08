@@ -21,6 +21,7 @@ import static com.amazon.ask.request.Predicates.intentName;
 public class IngredientIntentHandler implements RequestHandler {
 
     boolean setProgramState;
+    boolean setLastSentence;
     @Override
     public boolean canHandle(HandlerInput input) {
         return input.matches(intentName("IngredientIntent"));
@@ -43,10 +44,8 @@ public class IngredientIntentHandler implements RequestHandler {
         speechText = getSpeechResponse(input, ingredientSlot);
 
 
-        if(setProgramState) {
-            PersistentAttributes.setProgramState(Strings.INGREDIENT_NAMED_STATE,input);
-            PersistentAttributes.setLastSentence(speechText.toString(),input);
-        }
+        if(setProgramState) PersistentAttributes.setProgramState(Strings.INGREDIENT_NAMED_STATE,input);
+        if(setLastSentence) PersistentAttributes.setLastSentence(speechText.toString(),input);
 
         ResponseBuilder responseBuilder = input.getResponseBuilder();
         responseBuilder.withSpeech(speechText.toString())
@@ -57,8 +56,9 @@ public class IngredientIntentHandler implements RequestHandler {
     private StringBuilder getSpeechResponse(HandlerInput input, Slot ingredientSlot) {
         StringBuilder speechText;
         setProgramState = true;
+        setLastSentence = true;
         if (ingredientSlot != null) {
-            // Store the user's favorite color in the Session and create response.
+
             String[] strinGredients = ingredientSlot.getValue().split("\\s");
             Zutat[] ingredients = new Zutat[strinGredients.length];
             for (int i = 0; i < strinGredients.length; i++) {
@@ -80,7 +80,7 @@ public class IngredientIntentHandler implements RequestHandler {
             if (!list.isEmpty()) {
                 speechText = new StringBuilder("ich kann dir anhand der genannten Zutaten ");
                 int listSize = list.size();
-                if (listSize == 1)speechText.append("ein");
+                if (listSize == 1)speechText.append("<emphasis level=\"strong\">ein</emphasis>");
                 else speechText.append(listSize);
                 speechText.append(" Rezept");
                 if(listSize > 1) speechText.append("e");
@@ -91,6 +91,8 @@ public class IngredientIntentHandler implements RequestHandler {
                    SessionAttributes.recipeToDecideOn= list.get(0);
                    SessionAttributes.programState = Strings.SOUP_YES_NO_STATE;
                    PersistentAttributes.setProgramState(Strings.SOUP_YES_NO_STATE,input);
+                   PersistentAttributes.setRecipeToDecideOn(input);
+                   setProgramState = false;
                 }
                 else if (listSize <= 3) {
                     for (int i = 0; i < listSize; i++) {
@@ -125,6 +127,7 @@ public class IngredientIntentHandler implements RequestHandler {
             } else {
                 speechText = SessionAttributes.programState.equals(Strings.INITIAL_STATE) ? new StringBuilder("Ich habe leider kein Rezept mit diesen Zutaten auf Lager. ich werde daran arbeiten! "): new StringBuilder("Das habe ich leider nicht verstanden , kannst du das wiederholen?");
                 setProgramState = false;
+                setLastSentence = false;
             }
 
 

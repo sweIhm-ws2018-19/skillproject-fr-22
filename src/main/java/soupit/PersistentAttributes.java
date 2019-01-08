@@ -60,8 +60,10 @@ public class PersistentAttributes {
         persistentAttributes.put("recipeName", null);
         persistentAttributes.put("stepCount",String.valueOf(0));
         persistentAttributes.put("programState",Strings.INITIAL_STATE);
+        persistentAttributes.put("recipeToDecideOn",null);
         input.getAttributesManager().setPersistentAttributes(persistentAttributes);
         input.getAttributesManager().savePersistentAttributes();
+        SessionAttributes.clear();
     }
 
     public static void setLastSentence(String lastSentence, HandlerInput input){
@@ -73,6 +75,13 @@ public class PersistentAttributes {
 
     public static String getLastSentence(HandlerInput input){
         return input.getAttributesManager().getPersistentAttributes().get("lastSentence").toString();
+    }
+
+    public static void setRecipeToDecideOn(HandlerInput input){
+        Map<String, Object> persistentAttributes = input.getAttributesManager().getPersistentAttributes();
+        persistentAttributes.put("recipeToDecideOn", SessionAttributes.recipeToDecideOn.toString());
+        input.getAttributesManager().setPersistentAttributes(persistentAttributes);
+        input.getAttributesManager().savePersistentAttributes();
     }
 
     public static void download(HandlerInput input){
@@ -91,6 +100,11 @@ public class PersistentAttributes {
             SessionAttributes.programState = persistentAttributes.get("programState").toString();
         }else{
             SessionAttributes.programState = Strings.INITIAL_STATE;
+        }
+        if(persistentAttributes.get("recipeToDecideOn") != null){
+            SessionAttributes.recipeToDecideOn = SessionAttributes.recipes.find(persistentAttributes.get("recipeToDecideOn").toString());
+        }else{
+            SessionAttributes.recipeToDecideOn = null;
         }
     }
 }

@@ -1,5 +1,8 @@
 package soupit;
 
+import com.amazon.ask.dispatcher.request.handler.HandlerInput;
+import com.amazon.ask.model.Slot;
+import soupit.Lists.Strings;
 import soupit.recipe.*;
 
 import java.io.InputStream;
@@ -21,6 +24,7 @@ public class SoupMain {
     public static void main(String... args) {
         List<Rezept> list ;
         Object tester = new Object();
+        
 
         try {
 
@@ -98,15 +102,17 @@ public class SoupMain {
 
     }
 
-    private static String getSpeechResponse(String ingredientss) {
+    private StringBuilder getSpeechResponse(HandlerInput input, Slot ingredientSlot) {
         StringBuilder speechText;
+        if (ingredientSlot != null) {
             // Store the user's favorite color in the Session and create response.
-            String[] strinGredients = ingredientss.split("\\s");
+            String[] strinGredients = ingredientSlot.getValue().split("\\s");
             Zutat[] ingredients = new Zutat[strinGredients.length];
             for (int i = 0; i < strinGredients.length; i++) {
                 ingredients[i] = new Zutat(strinGredients[i], "f");
             }
 
+            input.getAttributesManager().setSessionAttributes(Collections.singletonMap("Ingredient", ingredients));
 
 
             NavigableMap<Integer, ArrayList<Rezept>> map = SessionAttributes.recipes.getFitting(ingredients);
@@ -121,14 +127,18 @@ public class SoupMain {
             if (!list.isEmpty()) {
                 speechText = new StringBuilder("ich kann dir anhand der genannten Zutaten ");
                 int listSize = list.size();
-                speechText.append(listSize);
+                if (listSize == 1)speechText.append("ein");
+                else speechText.append(listSize);
                 speechText.append(" Rezept");
                 if(listSize > 1) speechText.append("e");
                 speechText.append(" vorschlagen: ");
                 if (listSize == 1) {
                     speechText.append(list.get(0));
-                    speechText.append(" Möchtest du diese Suppe kochen?");
+                    speechText.append(". Möchtest du diese Suppe kochen?");
                     SessionAttributes.recipeToDecideOn= list.get(0);
+                    SessionAttributes.programState = Strings.SOUP_YES_NO_STATE;
+                    PersistentAttributes.setProgramState(Strings.SOUP_YES_NO_STATE,input);
+                    PersistentAttributes.setRecipeToDecideOn(input);
                 }
                 else if (listSize <= 3) {
                     for (int i = 0; i < listSize; i++) {
@@ -136,9 +146,9 @@ public class SoupMain {
                         if (i < listSize - 2) {
                             speechText.append(", ");
                         } else if (i == listSize - 2) {
-                            speechText.append(" oder ");
+                            speechText.append(", oder ");
                         } else {
-                            speechText.append(". Wähle eine Suppe");
+                            speechText.append(". Welche suppe wählst du?");
                         }
                     }
                 } else {
@@ -156,38 +166,23 @@ public class SoupMain {
                     speechText.append("wähle eine Suppe oder sage: weitere anhören ");
                     SessionAttributes.matchingRecipes = list;
                     SessionAttributes.matchingRecipesIndex = 3;
-                    //Index of List set to some variable -3
 
 
-
-//              Iterator<Map.Entry<Integer,ArrayList<Rezept>>> i = descendingMap.entrySet().iterator();
-//              while (i.hasNext()){
-//                  ArrayList<Rezept> list = i.next().getValue();
-//                  for(Rezept r:list){
-//
-//                  }
-//
-//              }
-
-
-//            speechText += "dafür brauchst du ";
-//            for(int i =0; i<bestRecipe.zumeng.length; i++) {
-//                ZutatMengeEinheit zum = bestRecipe.zumeng[i];
-//                if(i == bestRecipe.zumeng.length -1) speechText += " und ";
-//                speechText += zum.mengeToString() + " ";
-//                speechText += zum.einheitToString() + " ";
-//                speechText += zum.zutatToString() + " <break time=\"1s\"/>";
-//                if (i < bestRecipe.zumeng.length -2) speechText += ", ";
-//                if(i == bestRecipe.zumeng.length -1) speechText += ". ";
 
                 }
             } else {
-                speechText = new StringBuilder("Ich habe leider kein Rezept mit diesen Zutaten auf Lager. ich werde daran arbeiten! ");
+                speechText = SessionAttributes.programState.equals(Strings.INITIAL_STATE) ? new StringBuilder("Ich habe leider kein Rezept mit diesen Zutaten auf Lager. ich werde daran arbeiten! "): new StringBuilder("Das habe ich leider nicht verstanden , kannst du das wiederholen?");
             }
 
 
-        return speechText.toString();
+
+
+
+        }else{
+            speechText = new StringBuilder("tut mir leid, das habe ich nicht verstanden. kannst du das wiederholen ?");
+        } return speechText;
     }
+
 
     private static ArrayList<Rezept> treeMapToSortedList(Map<Integer, ArrayList<Rezept>> map) {                              //TODO Refactor this method to be in some other class
         ArrayList<Rezept> list = new ArrayList<>();

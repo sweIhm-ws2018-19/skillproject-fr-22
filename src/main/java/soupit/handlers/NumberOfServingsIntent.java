@@ -33,9 +33,15 @@ public class NumberOfServingsIntent implements RequestHandler {
         Intent intent = intentRequest.getIntent();
         Map<String, Slot> slots = intent.getSlots();
         Slot numberSlot = slots.get("Number");
+        Slot oneSlot = slots.get("One");
         String speechText;
-        if(numberSlot != null){
-            int numberOfServings = Integer.parseInt(numberSlot.getValue());
+        if(! (numberSlot == null && oneSlot == null)){
+            int numberOfServings;
+            if (oneSlot != null ){
+                numberOfServings = 1;
+            }else{
+                numberOfServings = Integer.parseInt(numberSlot.getValue());
+            }
             SessionAttributes.currentRecipe.multiplyZumeng(numberOfServings);
             String servingNumber = numberOfServings == 1 ? "eine Portion" : numberOfServings+" Portionen";
             speechText = "Für eine "+SessionAttributes.currentRecipe+" für " + servingNumber + " benötigst du einige Zutaten. Lege dir folgendes bereit. ";
