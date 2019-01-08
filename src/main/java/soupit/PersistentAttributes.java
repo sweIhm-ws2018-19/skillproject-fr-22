@@ -63,7 +63,7 @@ public class PersistentAttributes {
         persistentAttributes.put("recipeToDecideOn",null);
         input.getAttributesManager().setPersistentAttributes(persistentAttributes);
         input.getAttributesManager().savePersistentAttributes();
-        SessionAttributes.clear();
+        SessionAttributes.clear(false);
     }
 
     public static void setLastSentence(String lastSentence, HandlerInput input){

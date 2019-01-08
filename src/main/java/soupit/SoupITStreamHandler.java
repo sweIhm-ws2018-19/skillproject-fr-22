@@ -26,6 +26,7 @@ public class SoupITStreamHandler extends SkillStreamHandler {
 
         return Skills.standard().addRequestHandlers(
                 new PauseIntent(),
+                new RestartIntent(),
                 new LaunchRequestHandler(),
                 new CancelandStopIntentHandler(),
                 new SessionEndedRequestHandler(),

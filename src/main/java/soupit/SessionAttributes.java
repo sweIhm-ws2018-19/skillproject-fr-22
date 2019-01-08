@@ -17,8 +17,8 @@ public class SessionAttributes {
     public static String[] steps;
     public static int stepTracker;
 
-    public static void clear() {
-        recipes.clear();
+    public static void clear(boolean clearRecipes) {
+        if(clearRecipes) recipes.clear();
         recipeToDecideOn = null;
         currentRecipe = null;
         programState = Strings.INITIAL_STATE;

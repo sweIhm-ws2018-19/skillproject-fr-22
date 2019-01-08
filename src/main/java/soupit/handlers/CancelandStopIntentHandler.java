@@ -30,7 +30,7 @@ public class CancelandStopIntentHandler implements RequestHandler {
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        SessionAttributes.clear();
+        SessionAttributes.clear(true);
 
         return input.getResponseBuilder()
                 .withSpeech("Bis zum nächsten Mal")

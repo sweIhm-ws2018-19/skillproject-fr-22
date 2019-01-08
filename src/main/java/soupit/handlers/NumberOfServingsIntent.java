@@ -23,7 +23,7 @@ public class NumberOfServingsIntent implements RequestHandler {
 
     @Override
     public boolean canHandle(HandlerInput input) {
-        return input.matches(intentName("NumberOfServingsIntent"));
+        return input.matches(intentName("NumberOfServingsIntent") );
     }
 
     @Override

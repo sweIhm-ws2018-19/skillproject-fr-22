@@ -24,7 +24,7 @@ public class SoupMain {
     public static void main(String... args) {
         List<Rezept> list ;
         Object tester = new Object();
-        
+
 
         try {
 
@@ -50,7 +50,7 @@ public class SoupMain {
         }
 
         String speechText  = "";
-        SessionAttributes.setCurrentRecipe("kartoffelsuppe");
+        SessionAttributes.setCurrentRecipe("lasagnesuppe");
         SessionAttributes.currentRecipe.multiplyZumeng(5);
         ZutatMengeEinheit [] zumArray = SessionAttributes.getCurrentRecipeZumeng();
         for(int i =0; i<zumArray.length; i++) {

@@ -33,7 +33,7 @@ public class SessionEndedRequestHandler implements RequestHandler {
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        SessionAttributes.clear();
-        return input.getResponseBuilder().withSpeech("ich fahre herunter").withSimpleCard("schüss joey", "schüüüüs").withShouldEndSession(true).build();
+        SessionAttributes.clear(true);
+        return input.getResponseBuilder().withShouldEndSession(true).build();
     }
 }

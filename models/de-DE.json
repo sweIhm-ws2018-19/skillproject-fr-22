@@ -220,6 +220,29 @@
             "warte kurz",
             "pause"
           ]
+        },
+        {
+          "name": "RestartIntent",
+          "slots": [],
+          "samples": [
+            "nochmal von vorne",
+            "nochmal von neu",
+            "Noch einmal von vorne",
+            "Neustart",
+            "Neu Anfangen",
+            "Von Vorne ",
+            "suppe ändern",
+            "Suppenrezept ändern",
+            "Rezept ändern",
+            "Rezept wechseln",
+            "Zutaten wechseln",
+            "anderes rezept",
+            "andere suppe",
+            "Neue Suppe",
+            "Andere Zutaten",
+            "Neue Zutaten",
+            "Neues Rezept"
+          ]
         }
       ],
       "types": [

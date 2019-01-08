@@ -17,6 +17,8 @@ public class Strings {
     public static final String COOKING_STATE = "CookingState";
     public static final String INGREDIENT_NAMED_STATE = "IngredientNamed";
     public static final String STARTCOOKING_STATE = "StartCookingState";
+    public static final String RECIPE_CHOSEN_STATE = "RecipeChosenState";
+    public static final String RESTART_YES_NO_STATE= "RestartYesNoState";
 
     public static String getRandomWelcome(){
         String[] whichIngredients = {"Nenne mir Zutaten, die du zum Kochen verwenden möchtest.","Welche Zutaten möchtest du verwenden?","Mit welchen Zutaten möchtest du eine Suppe kochen?"};

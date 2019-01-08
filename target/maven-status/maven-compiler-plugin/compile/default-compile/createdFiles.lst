@@ -9,6 +9,7 @@ soupit\SoupMain.class
 soupit\handlers\LaunchRequestHandler.class
 soupit\handlers\RepeatIntent.class
 soupit\handlers\NameRecipeIntent.class
+soupit\handlers\RestartIntent.class
 soupit\PersistentAttributes.class
 soupit\SoupITStreamHandler.class
 soupit\handlers\NumberOfServingsIntent.class
