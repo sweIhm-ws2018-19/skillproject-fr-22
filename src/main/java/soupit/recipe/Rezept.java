@@ -34,7 +34,7 @@ public class Rezept {
         return zumeng;
     }
 
-    public void multiplyZumeng(int multiplicator){
+    public void multiplyZumeng(double multiplicator){
         for(ZutatMengeEinheit zum:zumeng){
 
             zum.multiplyIngredients(multiplicator);

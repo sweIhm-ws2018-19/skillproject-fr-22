@@ -135,7 +135,7 @@ public class ZutatMengeEinheit {
         return zutat;
     }
 
-    public void multiplyIngredients(int mulitplicator){
+    public void multiplyIngredients(double mulitplicator){
         this.menge*=mulitplicator;
     }
 

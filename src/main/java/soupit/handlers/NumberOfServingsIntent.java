@@ -23,7 +23,7 @@ public class NumberOfServingsIntent implements RequestHandler {
 
     @Override
     public boolean canHandle(HandlerInput input) {
-        return input.matches(intentName("NumberOfServingsIntent") );
+        return input.matches(intentName("NumberOfServingsIntent"));
     }
 
     @Override
@@ -33,38 +33,34 @@ public class NumberOfServingsIntent implements RequestHandler {
         Intent intent = intentRequest.getIntent();
         Map<String, Slot> slots = intent.getSlots();
         Slot numberSlot = slots.get("Number");
-        Slot oneSlot = slots.get("One");
         String speechText;
-        if(! (numberSlot == null && oneSlot == null)){
-            int numberOfServings;
-            if (oneSlot != null ){
-                numberOfServings = 1;
-            }else{
-                numberOfServings = Integer.parseInt(numberSlot.getValue());
-            }
-            SessionAttributes.currentRecipe.multiplyZumeng(numberOfServings);
-            String servingNumber = numberOfServings == 1 ? "eine Portion" : numberOfServings+" Portionen";
-            speechText = "Für eine "+SessionAttributes.currentRecipe+" für " + servingNumber + " benötigst du einige Zutaten. Lege dir folgendes bereit. ";
-
-
-            ZutatMengeEinheit [] zumArray = SessionAttributes.getCurrentRecipeZumeng();
-            for(int i =0; i<zumArray.length; i++) {
-                ZutatMengeEinheit zum = zumArray[i];
-                if (i == zumArray.length - 1) speechText += " und ";
-                speechText += zum.mengeToString() + " ";
-                speechText += zum.einheitToString() + " ";
-                speechText += zum.zutatToString() + " <break time=\"1s\"/>";
-                if (i < zumArray.length - 2) speechText += ", ";
-                if (i == zumArray.length - 1) speechText += ". ";
-            }
-            speechText += "Hast du alle Zutaten vorrätig? ";
-            SessionAttributes.programState = Strings.INGREDIENTSAVAILIABLE;
-            PersistentAttributes.setProgramState(Strings.INGREDIENTSAVAILIABLE,input);
-        }else{
-            speechText = "das habe ich leider nicht verstanden";
+        int numberOfServings;
+        if (numberSlot.getValue() == null) {
+            numberOfServings = 1;
+        } else {
+            numberOfServings = Integer.parseInt(numberSlot.getValue());
         }
+        SessionAttributes.currentRecipe.multiplyZumeng(numberOfServings);
+        String servingNumber = numberOfServings == 1 ? "eine Portion" : numberOfServings + " Portionen";
+        speechText = "Für eine " + SessionAttributes.currentRecipe + " für " + servingNumber + " benötigst du einige Zutaten. Lege dir folgendes bereit. ";
 
-        PersistentAttributes.setLastSentence(speechText,input);
+
+        ZutatMengeEinheit[] zumArray = SessionAttributes.getCurrentRecipeZumeng();
+        for (int i = 0; i < zumArray.length; i++) {
+            ZutatMengeEinheit zum = zumArray[i];
+            if (i == zumArray.length - 1) speechText += " und ";
+            speechText += zum.mengeToString() + " ";
+            speechText += zum.einheitToString() + " ";
+            speechText += zum.zutatToString() + " <break time=\"1s\"/>";
+            if (i < zumArray.length - 2) speechText += ", ";
+            if (i == zumArray.length - 1) speechText += ". ";
+        }
+        SessionAttributes.currentRecipe.multiplyZumeng(1/(double)(numberOfServings));
+        speechText += "Hast du alle Zutaten vorrätig? ";
+        SessionAttributes.programState = Strings.INGREDIENTSAVAILIABLE;
+        PersistentAttributes.setProgramState(Strings.INGREDIENTSAVAILIABLE, input);
+
+        PersistentAttributes.setLastSentence(speechText, input);
         return input.getResponseBuilder()
                 .withSpeech(speechText)
                 .withShouldEndSession(false)
