@@ -62,10 +62,9 @@ public class IngredientIntentHandler implements RequestHandler {
             String[] strinGredients = ingredientSlot.getValue().split("\\s");
             Zutat[] ingredients = new Zutat[strinGredients.length];
             for (int i = 0; i < strinGredients.length; i++) {
-                ingredients[i] = new Zutat(strinGredients[i], "f");
+                ingredients[i] = new Zutat(strinGredients[i], "gender","plural");
             }
 
-            input.getAttributesManager().setSessionAttributes(Collections.singletonMap("Ingredient", ingredients));
 
 
             NavigableMap<Integer, ArrayList<Rezept>> map = SessionAttributes.recipes.getFitting(ingredients);

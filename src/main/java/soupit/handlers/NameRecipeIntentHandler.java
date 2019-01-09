@@ -12,7 +12,7 @@ import java.util.Optional;
 
 import static com.amazon.ask.request.Predicates.intentName;
 
-public class NameRecipeIntent implements RequestHandler {
+public class NameRecipeIntentHandler implements RequestHandler {
 
     @Override
     public boolean canHandle(HandlerInput input) {

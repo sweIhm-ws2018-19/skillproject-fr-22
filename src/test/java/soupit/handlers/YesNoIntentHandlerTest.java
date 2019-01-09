@@ -8,9 +8,10 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.when;
 
-class NameRecipeIntentTest {
+class YesNoIntentHandlerTest {
 
-    private NameRecipeIntent handler;
+    private YesNoIntentHandler handler;
+
 
     @Test
     public void testCanHandle() {

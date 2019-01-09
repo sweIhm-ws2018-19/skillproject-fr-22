@@ -12,7 +12,7 @@ import java.util.Optional;
 
 import static com.amazon.ask.request.Predicates.intentName;
 
-public class YesNoIntent implements RequestHandler {
+public class YesNoIntentHandler implements RequestHandler {
 
     public boolean canHandle(HandlerInput input) {
         return input.matches(intentName("YesNoIntent"));
@@ -44,7 +44,8 @@ public class YesNoIntent implements RequestHandler {
                 }
             } else if (SessionAttributes.programState.equals(Strings.INGREDIENTSAVAILIABLE)){
                 if(yesNoSlot.getValue().equalsIgnoreCase("ja")) {
-                    speechText =((int) (Math.random()*2) )==0 ? "Super! Sobald du mit dem Kochen anfangen möchtest, sage: Rezept starten ": "Wenn du bereit bist zum Kochen, sage: Rezept starten";
+                    speechText = "<audio src='soundbank://soundlibrary/ui/gameshow/amzn_ui_sfx_gameshow_neutral_response_01'/>";
+                    speechText +=((int) (Math.random()*2) )==0 ? "Super! Sobald du mit dem Kochen anfangen möchtest, sage: Rezept starten ": "Wenn du bereit bist zum Kochen, sage: Rezept starten";
                     PersistentAttributes.setProgramState(Strings.STARTCOOKING_STATE,input);
                 }else{ // nein
                     speechText = "schade. soll ich die Zutaten auf eine Einkaufsliste schreiben, oder möchtest du eine andere suppe kochen ?";

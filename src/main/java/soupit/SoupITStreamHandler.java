@@ -25,21 +25,21 @@ public class SoupITStreamHandler extends SkillStreamHandler {
     private static Skill getSkill() {
 
         return Skills.standard().addRequestHandlers(
-                new PauseIntent(),
-                new RestartIntent(),
+                new PauseIntentHandler(),
+                new RestartIntentHandler(),
                 new LaunchRequestHandler(),
                 new CancelandStopIntentHandler(),
                 new SessionEndedRequestHandler(),
                 new HelpIntentHandler(),
                 new FallbackIntentHandler(),
                 new IngredientIntentHandler(),
-                new NameRecipeIntent(),
-                new YesNoIntent(),
-                new MoreRecipesIntent(),
-                new NumberOfServingsIntent(),
-                new StartCookingIntent(),
-                new NextStepIntent(),
-                new RepeatIntent()
+                new NameRecipeIntentHandler(),
+                new YesNoIntentHandler(),
+                new MoreRecipesIntentHandler(),
+                new NumberOfServingsIntentHandler(),
+                new StartCookingIntentHandler(),
+                new NextStepIntentHandler(),
+                new RepeatIntentHandler()
         )
                 .withSkillId("amzn1.ask.skill.88e3acae-7fca-4ec5-985c-220521f6d2ef")
                 .withTableName("dynamoRezepteTabelle")

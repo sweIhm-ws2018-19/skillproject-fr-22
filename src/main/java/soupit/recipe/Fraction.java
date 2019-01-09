@@ -1,11 +1,11 @@
 package soupit.recipe;
 
-public class Rational {
+public class Fraction {
 
     private int num = 1;
     private int denom =1;
 
-    public Rational(double d) {
+    public Fraction(double d) {
         String s = String.valueOf(d);
         int digitsDec = s.length() - 1 - s.indexOf('.');
         int denom = 1;

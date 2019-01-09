@@ -11,7 +11,7 @@ import java.util.Optional;
 
 import static com.amazon.ask.request.Predicates.intentName;
 
-public class MoreRecipesIntent implements RequestHandler {
+public class MoreRecipesIntentHandler implements RequestHandler {
 
     public boolean canHandle(HandlerInput input) {
         return input.matches(intentName("MoreRecipesIntent"));

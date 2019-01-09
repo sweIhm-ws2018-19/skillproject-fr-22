@@ -11,7 +11,7 @@ import java.util.Optional;
 
 import static com.amazon.ask.request.Predicates.intentName;
 
-public class NextStepIntent implements RequestHandler {
+public class NextStepIntentHandler implements RequestHandler {
 
     public boolean canHandle(HandlerInput input) {
         return input.matches(intentName("NextStepIntent"));
@@ -25,7 +25,7 @@ public class NextStepIntent implements RequestHandler {
             speechText = SessionAttributes.steps[++SessionAttributes.stepTracker];
             PersistentAttributes.setStepCount(input);
             if (SessionAttributes.stepTracker == SessionAttributes.steps.length-1) {
-
+                speechText += "<audio src='soundbank://soundlibrary/musical/amzn_sfx_bell_timer_01'/>";
                 speechText += Strings.getRandomFinish();
                 PersistentAttributes.clear(input);
             }

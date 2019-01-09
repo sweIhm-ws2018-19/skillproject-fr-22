@@ -11,23 +11,24 @@ import java.util.Optional;
 
 import static com.amazon.ask.request.Predicates.intentName;
 
-public class RestartIntent implements RequestHandler {
+public class PauseIntentHandler implements RequestHandler {
 
     public  boolean canHandle(HandlerInput input) {
-        return input.matches(intentName("RestartIntent"));
+        return input.matches(intentName("PauseIntent"));
     }
 
     public Optional<Response> handle(HandlerInput input) {
+        String speechText;
 
-        String speechText = "bist du dir sicher, dass du von vorne beginnen möchtest?";
-        SessionAttributes.programState = Strings.RESTART_YES_NO_STATE;
-        PersistentAttributes.setProgramState(Strings.RESTART_YES_NO_STATE,input);
-
-
-
+        if(PersistentAttributes.getProgramState(input).equals(Strings.STARTCOOKING_STATE)){
+            speechText = "Kein Problem. Wenn du soweit bist, öffne soupit erneut.";
+        }else{
+            speechText = "Bis später!";
+        }
+        SessionAttributes.clear(true);
         return input.getResponseBuilder()
                 .withSpeech(speechText)
-                .withShouldEndSession(false)
+                .withShouldEndSession(true)
                 .build();
 
     }

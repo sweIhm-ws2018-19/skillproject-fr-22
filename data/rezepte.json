@@ -7,7 +7,7 @@
     "knoblauchzehe": {"gender":"f","plural":"knoblauchzehen"},
     "olivenöl": {"gender":"n","plural":"olivenöl"},
     "saure sahne": {"gender":"f","plural":"saure sahne"},
-    "pinienkern": {"gender":"f","plural":"pinienkerne"},
+    "pinienkerne": {"gender":"f","plural":"pinienkerne"},
     "orangensaft": {"gender":"m","plural":"orangensaft"},
     "basilikumpesto": {"gender":"n","plural":"basilikumpesto"},
     "kürbis": {"gender":"m","plural":"kürbis"},
@@ -24,7 +24,6 @@
     "zucchini": {"gender":"f","plural":"zucchini"},
     "tomate": {"gender":"f","plural":"tomaten"},
     "tomatenmark": {"gender":"n","plural":"tomatenmark"},
-    "ingwerstück": {"gender":"n","plural":"ingwerstücke"},
     "cayenne pfeffer": {"gender":"m","plural":"cayenne pfeffer"},
     "kokosmilch": {"gender":"f","plural":"kokosmilch"},
     "gelbe currypaste": {"gender":"f","plural":"gelbe currypaste"},
@@ -117,7 +116,7 @@
     "fenchel": {"gender":"m","plural":"fenchel"},
     "gehackte tomate": {"gender":"f","plural":"gehackte tomaten"},
     "trockenen weißwein": {"gender":"m","plural":"trockenen weißwein"},
-    "festfleischiges Fischfilet, zum Beispiel Seelachs, Kabeljau oder Zander": "n",
+    "festfleischiges Fischfilet, zum Beispiel Seelachs, Kabeljau oder Zander":{"gender":"n","plural":"festfleischiges Fischfilet, zum Beispiel Seelachs, Kabeljau oder Zander"},
     "geschälte riesengarnele":{"gender":"f","plural":"geschälte riesengarnelen"},
     "orange":{"gender":"f","plural":"orangen"},
     "thymian":{"gender":"m","plural":"thymian"},
@@ -157,7 +156,12 @@
     "zucker":{"gender":"m","plural":"zucker"},
     "rindfleisch":{"gender":"n","plural":"rindfleisch"},
     "paprikapulver edelsüß":{"gender":"n","plural":"paprikapulver edelsüß"},
-    "hähnchen":{"gender":"n","plural":"hähnchen"}
+    "hähnchen":{"gender":"n","plural":"hähnchen"},
+    "kürbiskernöl":{"gender":"n","plural":"kürbiskernöl"},
+    "seelachsfillet":{"gender":"n","plural":"seelachsfillet"},
+    "ingwer":{"gender":"m","plural":"ingwer"},
+    "garnele":{"gender":"f","plural":"garnelen"},
+    "getrocknete tomate":{"gender":"f","plural":"getrocknete tomaten"}
 
   },
   "einheiten": {
@@ -331,7 +335,7 @@
           "einheit": "milliliter",
           "menge": "40"
         },
-        "paprikapulver ": {
+        "paprikapulver": {
           "einheit": "teelöffel",
           "menge": "0.3"
         },
@@ -480,8 +484,8 @@
           "einheit": "milliliter",
           "menge": "65"
         },
-        "ingwerstück": {
-          "einheit": "null",
+        "ingwer": {
+          "einheit": "stück",
           "menge": "0.5"
         },
         "salz": {
@@ -545,7 +549,7 @@
           "einheit": "milliliter",
           "menge": "50"
         },
-        "kokosilch": {
+        "kokosmilch": {
           "einheit": "milliliter",
           "menge": "33"
         },
@@ -660,8 +664,8 @@
           "einheit": "null",
           "menge": "0.5"
         },
-        "ingwerstück": {
-          "einheit": "null",
+        "ingwer": {
+          "einheit": "stück",
           "menge": "0.5"
         },
         "gemüsebrühe": {
@@ -1108,7 +1112,7 @@
       },
       "schritte": {
         "schritt 1": "Avocados schälen und entkernen. Fruchtfleisch im Mixer pürieren. Sahne hinzugießen und einige Sekunden mitquirlen, bis die Mischung geschmeidig ist.",
-        "schritt 2": "Brühe und Zitronensaft angießen, salzen und pfeffern. Noch einmal glattpürieren.",
+        "schritt 2": "Brühe und Zitronensaft angiessen, salzen und pfeffern. Noch einmal glattpürieren.",
         "schritt 3": "Gut gekühlt oder bei Zimmertemparatur servieren. Nach Wunsch mit einem Klecks saurer oder süßer Sahne und gehacktem Schnittlauch garnieren.",
         "schritt 4": "Nach Wunsch kann die Suppe auch warm serviert werden.",
         "schritt 5": "Avocadosuppe sollte so bald wie möglich nach der Zubereitung serviert werden, da sich die Suppe trotz Zitronensaft verfärben kann."
@@ -1205,7 +1209,7 @@
         "schritt 1": "Schäle die Zwiebeln und schneide sie in feine Ringe.",
         "schritt 2": "Butter im Topf erwärmen, Zwiebelringe hinzugeben und bei niedriger Hitze etwa fünfzehn Minuten schmoren, bis sie weich sind.",
         "schritt 3": "Zucker und Mehl darüberstäuben und unter Rühren nochmals ein bis zwei Minuten lang schmoren.",
-        "schritt 4": "Gemüsebrühe angießen bei niedriger Hitze etwa zwanzig Minuten köcheln lassen.<break time=\"2s\"/> Währenddessen den Ofen auf hundertachtzig Grad vorheizen. Das Baguette in Scheiben schneiden, mit Käse bestreuen etwa zehn Minuten backen.",
+        "schritt 4": "Gemüsebrühe angiessen bei niedriger Hitze etwa zwanzig Minuten köcheln lassen.<break time=\"2s\"/> Währenddessen den Ofen auf hundertachtzig Grad vorheizen. Das Baguette in Scheiben schneiden, mit Käse bestreuen etwa zehn Minuten backen.",
         "schritt 5": "Die Suppe mit Salz und Pfeffer abschmecken und heiß servieren."
       }
     },
@@ -1352,7 +1356,7 @@
           "einheit": "prise",
           "menge": "1"
         },
-        "zirtonensaft": {
+        "zitronensaft": {
           "einheit": "teelöffel",
           "menge": "0.25"
         },
@@ -1607,7 +1611,7 @@
         "schritt 1": "Zwiebeln schälen und halbieren und in einer Pfanne mit Butter anrösten.",
         "schritt 2": "Sellerie, Karotten und Petersilienwurzel schälen und in große Stücke schneiden. Lauch ebenfalls in grobe Stücke schneiden.",
         "schritt 3": "Das Gemüse bis auf die Zwiebel in Olivenöl vier Minuten lang andünsten.",
-        "schritt 4": "Kaltes Wasser angießen und Zwiebelhälften, Lorbeerblätter und Pfefferkörner zugeben.",
+        "schritt 4": "Kaltes Wasser angiessen und Zwiebelhälften, Lorbeerblätter und Pfefferkörner zugeben.",
         "schritt 5": "Die Brühe aufkochen und zugedeckt bei mittlerer Hitze eine halbe Stunde lang kochen.",
         "schritt 6": "Die Brühe durch ein sehr feines Sieb oder Mulltuch passieren und mit Salz und Pfeffer würzen."
       }
@@ -1650,8 +1654,8 @@
           "einheit": "milliliter",
           "menge": "2.5"
         },
-        "ingwerstück": {
-          "einheit": "null",
+        "ingwer": {
+          "einheit": "stück",
           "menge": "0.5"
         },
         "orangensaft": {
@@ -2117,14 +2121,14 @@
         "schritt 3": "Den Fisch kalt abspülen, trockentupfen und in größere Stücke schneiden.",
         "schritt 4": "Den Fond und das Wasser in einem Topf zum Kochen bringen und die Fischstücke darin bei schwacher Hitze acht Minuten ziehen lassen.",
         "schritt 5": "Öl in einem zweiten Topf erhitzen. Zwiebel, Knoblauch und Lauch dazugeben und unter Rühren bei mittlerer Hitze fünf Minuten anbraten.",
-        "schritt 6": "Die Tomate waschen, klein schneiden und hinzugeben. Die Fischbrühe aus dem anderem Topf angießen und zum Kochen bringen. Die Fischstücke beiseite stellen.",
+        "schritt 6": "Die Tomate waschen, klein schneiden und hinzugeben. Die Fischbrühe aus dem anderem Topf angiessen und zum Kochen bringen. Die Fischstücke beiseite stellen.",
         "schritt 7": "Die eingeweichte Paprikaschote grob zerkleinern und mit Salz und Pfeffer würzen. Gewürzpaste",
         "schritt 8": "Geröstetes Weißbrot im Mörser zerkleinern, Paprikaschote und etwas Fischbrühe aus dem Topf hinzugeben und alles zu einer Gewürzpaste zerstampfen.",
         "schritt 9": "Die Würzpaste unter die Suppe mischen und bei mittlerer Hitze weitere zehn Minuten kochen.",
         "schritt 10": "Die Suppe nach Belieben pürieren, die Fischstücke hinzugeben und bei schwacher Hitze nochmal zwei Minuten ziehen lassen."
       }
     },
-    "tomatenfischsuppe": {
+    "tomaten fischsuppe": {
       "zutaten": {
         "tomate": {
           "einheit": "gramm",
@@ -2380,8 +2384,8 @@
       "schritte": {
         "schritt 1": "Schäle die Zwiebel. Putze und wasche das Suppengrün und schneide alles in feine Stücke.",
         "schritt 2": "Butter im Topf erhitzen und das Gemüse darin unter Rühren andünsten.",
-        "schritt 3": "Die Fleischbrühe, den Weißwein und etwa zwei Drittel der Sahne angießen und fünfzehn Minuten köcheln lassen.",
-        "schritt 4": "Die Krabbel hinzugeben und bei kleiner Hitze in der Suppe erwärmen.",
+        "schritt 3": "Die Fleischbrühe, den Weißwein und etwa zwei Drittel der Sahne angiessen und fünfzehn Minuten köcheln lassen.",
+        "schritt 4": "Die Krabben hinzugeben und bei kleiner Hitze in der Suppe erwärmen.",
         "schritt 5": "Schmecke die Suppe mit Salz und Pfeffer ab und schlage die restliche Schlagsahne mit einem Rührgerät steif.",
         "schritt 6": "Dill waschen, trocken schütteln und fein schneiden.",
         "schritt 7": "Die Suppe mit einem Klecks Sahne und mit Dill garniert servieren."
@@ -2389,7 +2393,7 @@
     },
     "Thailändische Kokos Garnelen suppe": {
       "zutaten": {
-        "garnelen": {
+        "garnele": {
           "einheit": "gramm",
           "menge": "37.5"
         },
@@ -2706,7 +2710,7 @@
           "einheit": "gramm",
           "menge": "2.5"
         },
-        "hähnchenbrustfillet": {
+        "hähnchenbrustfilet": {
           "einheit": "null",
           "menge": "1"
         },
@@ -3031,7 +3035,7 @@
           "einheit": "gramm",
           "menge": "125"
         },
-        "seleriknolle": {
+        "sellerieknolle": {
           "einheit": "null",
           "menge": "0.25"
         },
@@ -3067,8 +3071,8 @@
       "schritte": {
         "schritt 1": "Spüle das Hähnchenstück unter dem Wasserhahn ordentlich ab und schneide es in mehrere Stücke.",
         "schritt 2": "Schäle die Karotten und den Sellerie und schneide Karotten, Sellerie und Petersilienwurzel in mundgerechte Stücke.",
-        "schritt 3": "Gib die Hähnchenstücke zusammen mit der Gemüsebrühe, den Karotten-, Sellerie- und Petersilienwurzelstücken in einen Topf und koche es etwa fünfunddreißig Minuten lang.",
-        "schritt 4": "Nehme nach den fünfunddreißig Minuten die Brathähnchenstücke aus dem Topf und trenne das Fleisch von Haut und Knochen.",
+        "schritt 3": "Gib die Hähnchenstücke zusammen mit der Gemüsebrühe, den Karotten-, Sellerie- und Petersilienwurzelstücken in einen Topf und koche es etwa fünfunddreissig Minuten lang.",
+        "schritt 4": "Nehme nach den fünfunddreissig Minuten die Brathähnchenstücke aus dem Topf und trenne das Fleisch von Haut und Knochen.",
         "schritt 5": "Jetzt kannst du das Fleisch in mundgerechte Stücke zurechtschneiden.",
         "schritt 6": "Gib die klein geschnittenen Fleischstücke sowie nach Wunsch die vorgekochten Suppennudeln in die Suppe.",
         "schritt 7": "Petersilie waschen und fein hacken. Petersilie hinzugeben, Suppe mit Salz und Pfeffer abschmecken."

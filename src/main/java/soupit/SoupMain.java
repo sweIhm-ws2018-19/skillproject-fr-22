@@ -38,7 +38,7 @@ public class SoupMain {
 
             for (Object s : alleRezepte) {
                 tester =s;
-                if(s.toString().equals("kartoffelsuppe")){
+                if(s.toString().equals("möhrencremesuppe")){
                     int a = 0;
                 }
                 addRecipes(s.toString(), rezepte, zutatenMitGeschlecht, einheitenMitGeschlecht);
@@ -66,7 +66,7 @@ public class SoupMain {
         System.out.println(speechText);
     }
 
-    private static void addRecipes(String rezeptname, Map rezepte, Map alleZutaten, Map<String,Map<String,String>> einheiten) {
+    private static void addRecipes(String rezeptname, Map rezepte, Map<String,Map<String,String>> alleZutaten, Map<String,Map<String,String>> einheiten) {
 
 
         Map rezept = (Map) rezepte.get(rezeptname);
@@ -86,7 +86,7 @@ public class SoupMain {
             Map nextMap = next.getValue();
             tester2 = nextMap;
             String zutatString = (String) zutaten.keySet().toArray()[counter];
-            Zutat zutat = new Zutat(zutatString, (String) alleZutaten.get(zutatString));
+            Zutat zutat = new Zutat(zutatString, alleZutaten.get(zutatString).get("gender"),alleZutaten.get(zutatString).get("plural"));
             String einheitString = (String) nextMap.get("einheit");
             Einheit einheit = new Einheit(einheitString,einheiten.get(einheitString).get("gender"),einheiten.get(einheitString).get("plural"));
             String mengeString = nextMap.get("menge").toString();
@@ -109,7 +109,7 @@ public class SoupMain {
             String[] strinGredients = ingredientSlot.getValue().split("\\s");
             Zutat[] ingredients = new Zutat[strinGredients.length];
             for (int i = 0; i < strinGredients.length; i++) {
-                ingredients[i] = new Zutat(strinGredients[i], "f");
+                ingredients[i] = new Zutat(strinGredients[i], "gender","plural");
             }
 
             input.getAttributesManager().setSessionAttributes(Collections.singletonMap("Ingredient", ingredients));

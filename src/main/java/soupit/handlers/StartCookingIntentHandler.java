@@ -16,7 +16,7 @@ import java.util.Optional;
 
 import static com.amazon.ask.request.Predicates.intentName;
 
-public class StartCookingIntent implements RequestHandler {
+public class StartCookingIntentHandler implements RequestHandler {
 
     public boolean canHandle(HandlerInput input) {
         return input.matches(intentName("StartCookingIntent"));

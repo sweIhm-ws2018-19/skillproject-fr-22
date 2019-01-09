@@ -13,13 +13,10 @@ public class ZutatMengeEinheit {
     }
 
     public String zutatToString() {
-        String string = zutat.toString();
         if (menge > 1) {
-            if (zutat.toString().equals("kartoffel") || zutat.toString().equals("zwiebel")) {
-                string += "n";
+                return zutat.getPlural();
             }
-        }
-        return string;
+        return zutat.toString();
     }
 
     public String mengeToString() {
@@ -121,13 +118,13 @@ public class ZutatMengeEinheit {
     }
 
     private String useRationalToGetString(double number) {
-        Rational rational = new Rational(number);
-        if(rational.getNum() == 1 && menge < 1){
-            return rational.getDenom()+"tel";
+        Fraction fraction = new Fraction(number);
+        if(fraction.getNum() == 1 && menge < 1){
+            return fraction.getDenom()+"tel";
         }
         else {
-            String fraction = rational.toString();
-            return "<say-as interpret-as=\"fraction\">" + fraction + "</say-as>";
+            String fractionString = fraction.toString();
+            return "<say-as interpret-as=\"fraction\">" + fractionString + "</say-as>";
         }
     }
 

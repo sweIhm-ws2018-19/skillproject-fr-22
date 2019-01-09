@@ -70,7 +70,6 @@ public class LaunchRequestHandler implements RequestHandler {
         }
 
 
-
         return input.getResponseBuilder()
                 .withSimpleCard("Soup IT", speechText)
                 .withSpeech(speechText)
@@ -97,7 +96,7 @@ public class LaunchRequestHandler implements RequestHandler {
         }
     }
 
-    private static void addRecipes(String rezeptname, Map rezepte, Map alleZutaten, Map<String,Map<String,String>> einheiten) {
+    private static void addRecipes(String rezeptname, Map rezepte, Map<String,Map<String,String>> alleZutaten, Map<String,Map<String,String>> einheiten) {
 
 
         Map rezept = (Map) rezepte.get(rezeptname);
@@ -116,7 +115,7 @@ public class LaunchRequestHandler implements RequestHandler {
             Map.Entry<String, Map> next = it.next();
             Map nextMap = next.getValue();
             String zutatString = (String) zutaten.keySet().toArray()[counter];
-            Zutat zutat = new Zutat(zutatString, (String) alleZutaten.get(zutatString));
+            Zutat zutat = new Zutat(zutatString, alleZutaten.get(zutatString).get("gender"),alleZutaten.get(zutatString).get("plural"));
             String einheitString = (String) nextMap.get("einheit");
             Einheit einheit = new Einheit(einheitString,einheiten.get(einheitString).get("gender"),einheiten.get(einheitString).get("plural"));
             String mengeString = nextMap.get("menge").toString();
@@ -136,8 +135,6 @@ public class LaunchRequestHandler implements RequestHandler {
 
 
 
-}
 
-//persat
-// rezeptname, stepcount
+}
 
