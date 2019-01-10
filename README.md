@@ -2,6 +2,9 @@ visit our [GitHub Pages](https://sweihm-ws2018-19.github.io/skillproject-fr-22/)
 
 ## Soup-IT
 
+Beta Test für Lieblingsfarbe (Invite Link):
+https://skills-store.amazon.com/deeplink/tvt/28475fb1a61e0a449fda68ae373fc150b6d5be47c812708c42526791f5895976fe3122c1f8b97acef8b99fbbfb9ca5287e76bf4c203fbb8a7c0eeaf0fbd2f50251c99ff461e7dd9e2d0b499ef8ecf94c5bcaea41bf33b3cab0baa1f18f97428a98a865e5cb4a00089430372d4fc37dc0
+
 Soup-IT ist eine Anwendung, die den Nutzer bei der Zubereitung von Suppen unterstützen soll. 
 
 Das System sieht vor, dass der Nutzer eine Liste von Zutaten vorschlägt, welche ihm zur Verfügung stehen. Auf Basis dieser Informationen soll Alexa eine Liste mit möglichen Rezepten ausgeben, welche die größten Übereinstimmungen mit der gegebenen Zutatenliste haben.
