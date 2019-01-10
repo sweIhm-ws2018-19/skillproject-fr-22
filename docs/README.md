@@ -28,3 +28,16 @@ Was zunächst nur für Suppen möglich sein soll, könnte in Zukunft auch für v
 
 Auch Hobby-Köchen mit mehr Erfahrung soll die Anwendung eine interessante Alternative für das „Kochen nach Rezept“ bieten. Denn mit einem persönlichen Kochassistenten macht das Kochen sicherlich noch mehr Spaß als alleine.
 
+### Link zu Skill
+
+https://skills-store.amazon.com/deeplink/tvt/28475fb1a61e0a449fda68ae373fc150b6d5be47c812708c42526791f5895976fe3122c1f8b97acef8b99fbbfb9ca5287e76bf4c203fbb8a7c0eeaf0fbd2f50251c99ff461e7dd9e2d0b499ef8ecf94c5bcaea41bf33b3cab0baa1f18f97428a98a865e5cb4a00089430372d4fc37dc0
+
+### Anwendungsfalldiagramm
+
+### Tabelle mit User Stories
+
+### Fachklassendiagramm
+
+### Sequenz-Diagramme
+
+### Testen
