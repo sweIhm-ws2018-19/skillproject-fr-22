@@ -14,9 +14,9 @@ public class Zutat {
     }
 
     boolean equals(Zutat z){
-        for(String s:(SessionAttributes.synonyme.get(z.toString()))){
-            if (s!= null && s.equalsIgnoreCase(zutat)) return true;
-        }
+//        for(String s:(SessionAttributes.synonyme.get(z.toString()))){
+//            if (s!= null && s.equalsIgnoreCase(zutat)) return true;
+//        }
         return (z.toString().equals(zutat) || (z.toString()).equals(zutat+"n") );
     }
 

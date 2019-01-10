@@ -36,19 +36,6 @@ public class SoupMain {
 
 
             Map rezepte = (Map) jsonObject.get("rezepte");
-            Map<String,JSONArray> jsonSynonyme= (Map) jsonObject.get("synonyme");
-            Map<String,String[]> synonyme = new HashMap<>();
-
-            for(Map.Entry<String,JSONArray> e: jsonSynonyme.entrySet()) {
-                String[] valueArray = new String[e.getValue().size()];
-                int counter = 0;
-                for (Object o : e.getValue().toArray()) {
-                    valueArray[counter] = o.toString();
-                    counter++;
-                }
-                synonyme.put(e.getKey(),valueArray);
-            }
-            SessionAttributes.synonyme = synonyme;
             Map zutatenMitGeschlecht = (Map) jsonObject.get("zutaten");
             Map einheitenMitGeschlecht = (Map) jsonObject.get("einheiten");
             Object [] alleRezepte =  ((Map) jsonObject.get("rezepte")).keySet().toArray();
@@ -104,6 +91,7 @@ public class SoupMain {
             Map nextMap = next.getValue();
             tester2 = nextMap;
             String zutatString = (String) zutaten.keySet().toArray()[counter];
+            Object o = alleZutaten.get(zutatString).get("synonyms");
             Zutat zutat = new Zutat(zutatString, alleZutaten.get(zutatString).get("gender"),alleZutaten.get(zutatString).get("plural"));
             String einheitString = (String) nextMap.get("einheit");
             Einheit einheit = new Einheit(einheitString,einheiten.get(einheitString).get("gender"),einheiten.get(einheitString).get("plural"));
@@ -187,7 +175,7 @@ public class SoupMain {
 
                 }
             } else {
-                speechText = SessionAttributes.programState.equals(Strings.INITIAL_STATE) ? new StringBuilder("Ich habe leider kein Rezept mit diesen Zutaten auf Lager. ich werde daran arbeiten! "): new StringBuilder("Das habe ich leider nicht verstanden , kannst du das wiederholen?");
+                speechText =  new StringBuilder("Ich habe leider kein Rezept mit diesen Zutaten auf Lager. ich werde daran arbeiten! ");
             }
 
 
