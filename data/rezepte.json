@@ -1,12 +1,12 @@
 {
   "zutaten": {
-    "rinderbrühe":{"gender":"f","plural":"rinderbrühe","synonyms":["brühe"]},
-    "karotte": {"gender":"f","plural":"karotten"},
-    "kartoffel": {"gender":"f","plural":"kartoffeln"},
-    "möhre": {"gender":"f","plural":"möhren"},
-    "knoblauchzehe": {"gender":"f","plural":"knoblauchzehen"},
+    "rinderbrühe":{"gender":"f","plural":"rinderbrühe","synonyms":[""]},
+    "karotte": {"gender":"f","plural":"karotten","synonyms":["möhre","möhren","rübe","rüben"]},
+    "kartoffel": {"gender":"f","plural":"kartoffeln","synonyms":[""]},
+    "möhre": {"gender":"f","plural":"möhren","synonyms":["karotte","karotten","rübe","rüben"]},
+    "knoblauchzehe": {"gender":"f","plural":"knoblauchzehen","synonyms":["knoblauch"]},
     "olivenöl": {"gender":"n","plural":"olivenöl"},
-    "saure sahne": {"gender":"f","plural":"saure sahne"},
+    "saure sahne": {"gender":"f","plural":"saure sahne","synonyms":["schmand"]},
     "pinienkerne": {"gender":"f","plural":"pinienkerne"},
     "orangensaft": {"gender":"m","plural":"orangensaft"},
     "basilikumpesto": {"gender":"n","plural":"basilikumpesto"},
