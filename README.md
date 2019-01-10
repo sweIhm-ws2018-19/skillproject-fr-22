@@ -33,6 +33,11 @@ Was zunächst nur für Suppen möglich sein soll, könnte in Zukunft auch für v
 
 Auch Hobby-Köchen mit mehr Erfahrung soll die Anwendung eine interessante Alternative für das „Kochen nach Rezept“ bieten. Denn mit einem persönlichen Kochassistenten macht das Kochen sicherlich noch mehr Spaß als alleine.
 
+## Anwendungsfalldiagramm
+
+![anwendungsfall](https://user-images.githubusercontent.com/43879315/48561755-f2512780-e8f0-11e8-8f2c-ce7bfd377475.png)
+
+
 ## User Stories
 
 <img width="688" alt="userstory" src="https://user-images.githubusercontent.com/43779031/51001040-1155e980-152f-11e9-807f-b23610ca71ea.png">
