@@ -197,22 +197,15 @@
             "Später beginnen",
             "Später kochen",
             "Einen Moment",
-            "Halt",
-            "Warte bitte",
-            "Warten",
             "kleinen Moment",
             "Ich brauche noch kurz",
             "ich brauche noch",
             "noch nicht",
             "moment",
-            "wart kurz",
-            "wart",
             "hab es noch nicht ganz",
             "brauch noch",
             "brauche noch etwas",
             "bitte warten",
-            "warte einen kleinen Moment noch",
-            "warte kurz",
             "pause"
           ]
         },
@@ -226,14 +219,10 @@
             "Neustart",
             "Neu Anfangen",
             "Von Vorne ",
-            "suppe ändern",
-            "Suppenrezept ändern",
             "Rezept ändern",
             "Rezept wechseln",
             "Zutaten wechseln",
             "anderes rezept",
-            "andere suppe",
-            "Neue Suppe",
             "Andere Zutaten",
             "Neue Zutaten",
             "Neues Rezept"
@@ -244,6 +233,14 @@
         {
           "name": "Recipe",
           "values": [
+            {
+              "name": {
+                "value": "kalte avocadosuppe",
+                "synonyms": [
+                  "kalte avocado suppe"
+                ]
+              }
+            },
             {
               "name": {
                 "value": "hühnersuppe",
@@ -548,14 +545,6 @@
             },
             {
               "name": {
-                "value": "kalte avokadosuppe",
-                "synonyms": [
-                  "kalte avocado suppe"
-                ]
-              }
-            },
-            {
-              "name": {
                 "value": "kürbissuppe",
                 "synonyms": [
                   "kürbis suppe"
@@ -659,7 +648,7 @@
             },
             {
               "name": {
-                "value": "Möhrencremesuppe",
+                "value": "möhrencremesuppe",
                 "synonyms": [
                   "möhren creme suppe",
                   "möhren cremesuppe"
@@ -668,7 +657,7 @@
             },
             {
               "name": {
-                "value": "Kartoffelcremesuppe",
+                "value": "kartoffelcremesuppe",
                 "synonyms": [
                   "kartoffel creme suppe",
                   "kartoffel cremesuppe"

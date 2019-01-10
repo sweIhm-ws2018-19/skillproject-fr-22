@@ -69,7 +69,6 @@ public class LaunchRequestHandler implements RequestHandler {
             speechText = "Willkommen zurück! "+PersistentAttributes.getLastSentence(input);
         }
 
-
         return input.getResponseBuilder()
                 .withSimpleCard("Soup IT", speechText)
                 .withSpeech(speechText)
