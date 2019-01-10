@@ -80,11 +80,6 @@ PauseIntent | Der User kann SoupIT pausieren
 Audio Datei | Alexa soll am Anfang und Ende einen Ton   abspielen
 RestartIntent | Alexa soll vom Nutzer aus und wieder an-geschaltet   werden können
 Kein Rezept gefunden | Alexa sagt nur dass sie kein Rezept   gefunden hat, wenn der User grade dabei ist Zutaten zu nennen
-  |  
-
-
-Name   der User Story | User   Story
--- | --
 Zufall | Es werden von Alexa zufällige Texte für die   gleichen Schritte angegeben um es für den User abwechslungsreicher zu machen
 Wiederholung | Man kann das zuletzt gesagte von Alexa   wiederholen lassen
 Synonyme | Alexa erkennt Synonyme für Zutaten z.B.   Möhre und Karotte
