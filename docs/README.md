@@ -33,28 +33,28 @@ Auch Hobby-Köchen mit mehr Erfahrung soll die Anwendung eine interessante Alter
 
 - Alexa, öffne Soup IT.
 
-**- Willkommen bei Soup it. Als dein persönlicher Assistent begleite ich dich bei der Suppenzubereitung. Welche Zutaten möchtest du verwenden?
+**- Willkommen bei Soup it. Als dein persönlicher Assistent begleite ich dich bei der Suppenzubereitung. Welche Zutaten möchtest du verwenden?**
 
 - Ich habe Tomaten, Zwiebeln und Sahne.
 
-**- Ich kann dir anhand der genannten Zutaten vier Rezepte vorschlagen: Tomatencremesuppe, Gemüsecremesuppe und zwei weitere. Wähle eine Suppe oder sage: Weitere anhören
+**- Ich kann dir anhand der genannten Zutaten vier Rezepte vorschlagen: Tomatencremesuppe, Gemüsecremesuppe und zwei weitere. Wähle eine Suppe oder sage: Weitere anhören**
 
 - Ich möchte die Tomatencremesuppe kochen.
 
-**- Wie viele Portionen möchtest du kochen?
+**- Wie viele Portionen möchtest du kochen?**
 
 - Zwei Portionen.
 
-**- Für eine Tomatencremesuppe für zwei Portionen benötigst du die folgenden vier Zutaten: dreihundertfünfzig Gramm Tomaten, eine halbe Zwiebel, zweihundertfünfzig milliliter Gemüsebrühe und fünfzig Milliliter Sahne. Hast du alle Zutaten vorrätig?
+**- Für eine Tomatencremesuppe für zwei Portionen benötigst du die folgenden vier Zutaten: dreihundertfünfzig Gramm Tomaten, eine halbe Zwiebel, zweihundertfünfzig milliliter Gemüsebrühe und fünfzig Milliliter Sahne. Hast du alle Zutaten vorrätig?**
 
 - Ja.
 
-**- Super. Lass uns mit der Zubereitung beginnen. Schäle die Zwiebel und schneide sie klein.
+**- Super. Lass uns mit der Zubereitung beginnen. Schäle die Zwiebel und schneide sie klein.**
 
 - Weiter.
 
-**- Gebe alle Zutaten in den Topf und lasse sie zehn Minuten köcheln.
+**- Gebe alle Zutaten in den Topf und lasse sie zehn Minuten köcheln.**
 
 - Weiter.
 
-**- Ich hoffe die Suppe schmeckt und wünsche einen guten Appetit.
+**- Ich hoffe die Suppe schmeckt und wünsche einen guten Appetit.**
