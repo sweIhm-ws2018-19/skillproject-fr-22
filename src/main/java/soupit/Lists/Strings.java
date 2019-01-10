@@ -1,5 +1,7 @@
 package soupit.Lists;
 
+import soupit.SessionAttributes;
+
 public class Strings {
     public static final String TEMPLATE = "";
 
@@ -19,9 +21,10 @@ public class Strings {
     public static final String STARTCOOKING_STATE = "StartCookingState";
     public static final String RECIPE_CHOSEN_STATE = "RecipeChosenState";
     public static final String RESTART_YES_NO_STATE= "RestartYesNoState";
+    private static final String [] INSPIRATION = {"Ich habe folgende Vorschläge: ","Wie wär's mit: ","Ich hätte im Angebot: ","Ich empfehle dir: "};
 
     public static String getRandomWelcome(){
-        String[] whichIngredients = {"Nenne mir Zutaten, die du zum Kochen verwenden möchtest.","Welche Zutaten möchtest du verwenden?","Mit welchen Zutaten möchtest du eine Suppe kochen?"};
+        String[] whichIngredients = {"Du kannst mir Zutaten nennen oder dich von mir inspirieren lassen."};
         return WELCOME[(int) (Math.random()*WELCOME.length)].concat(" ").concat( whichIngredients[(int) (Math.random()*whichIngredients.length)] );
     }
 
@@ -29,6 +32,9 @@ public class Strings {
         return FINISHED_COOKING[(int)(Math.random()*FINISHED_COOKING.length)];
     }
 
+    public static String geRandomInspiration(){
+        return INSPIRATION[(int)(Math.random()*INSPIRATION.length)].concat(SessionAttributes.recipes.get((int)(Math.random()*SessionAttributes.recipes.size())).toString());
+    }
 
 
 }

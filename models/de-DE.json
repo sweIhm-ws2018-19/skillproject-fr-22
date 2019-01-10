@@ -227,6 +227,20 @@
             "Neue Zutaten",
             "Neues Rezept"
           ]
+        },
+        {
+          "name": "InsprationIntent",
+          "slots": [],
+          "samples": [
+            "mach mir einen vorschlag",
+            "was soll ich kochen",
+            "was kann ich kochen",
+            "bring mich auf neue ideen",
+            "inspiriere",
+            "schlag mir was vor",
+            "inspiration",
+            "inspirieren"
+          ]
         }
       ],
       "types": [
