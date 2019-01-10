@@ -17,7 +17,6 @@ public class SessionAttributes {
     public static String programState;
     public static String[] steps;
     public static int stepTracker;
-    public static Map<String,String[]> synonyme;
 
     public static void clear(boolean clearRecipes) {
         if(clearRecipes) recipes.clear();

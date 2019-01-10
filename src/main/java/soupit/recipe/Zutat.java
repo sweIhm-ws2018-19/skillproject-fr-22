@@ -1,23 +1,26 @@
 package soupit.recipe;
 
-import soupit.SessionAttributes;
+
+import java.util.ArrayList;
 
 public class Zutat {
     private final String zutat;
     private final String grammatGeschlecht;
     private final String plural;
+    private final ArrayList<String> synonyms;
 
-    public Zutat(String zutat,String grammatGeschlecht, String plural){
+    public Zutat(String zutat,String grammatGeschlecht, String plural,ArrayList<String> synonyms){
         this.zutat = zutat;
         this.grammatGeschlecht = grammatGeschlecht;
         this.plural = plural;
+        this.synonyms = synonyms;
     }
 
     boolean equals(Zutat z){
-//        for(String s:(SessionAttributes.synonyme.get(z.toString()))){
-//            if (s!= null && s.equalsIgnoreCase(zutat)) return true;
-//        }
-        return (z.toString().equals(zutat) || (z.toString()).equals(zutat+"n") );
+        if(z.toString().equals(zutat)) return true;
+        if (this.synonyms.contains(z.toString())) return true;
+        if(this.plural.equals(z.toString())) return true;
+        return false;
     }
 
     @Override

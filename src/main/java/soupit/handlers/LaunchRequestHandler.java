@@ -18,6 +18,7 @@ import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.LaunchRequest;
 import com.amazon.ask.model.Response;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
@@ -29,6 +30,7 @@ import soupit.Lists.Strings;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Optional;
@@ -83,7 +85,6 @@ public class LaunchRequestHandler implements RequestHandler {
             InputStream stream = getClass().getClassLoader().getResourceAsStream("data/rezepte.json");
             Object obj = new JSONParser().parse(new InputStreamReader(stream));
             JSONObject jsonObject = (JSONObject) obj;
-            SessionAttributes.synonyme =  (Map) jsonObject.get("synonyme");
             Map rezepte = (Map) jsonObject.get("rezepte");
             Map zutaten = (Map) jsonObject.get("zutaten");
             Map einheiten = (Map) jsonObject.get("einheiten");
@@ -115,7 +116,14 @@ public class LaunchRequestHandler implements RequestHandler {
             Map.Entry<String, Map> next = it.next();
             Map nextMap = next.getValue();
             String zutatString = (String) zutaten.keySet().toArray()[counter];
-            Zutat zutat = new Zutat(zutatString, alleZutaten.get(zutatString).get("gender"),alleZutaten.get(zutatString).get("plural"));
+            Object synonObject = alleZutaten.get(zutatString).get("synonyms");
+            JSONArray jsonsynonyms =((JSONArray) synonObject);
+            Object[] synonObjects = jsonsynonyms.toArray();
+            ArrayList<String> synonyms = new ArrayList<>();
+            for(Object o: synonObjects){
+                synonyms.add(o.toString());
+            }
+            Zutat zutat = new Zutat(zutatString, alleZutaten.get(zutatString).get("gender"),alleZutaten.get(zutatString).get("plural"),synonyms);
             String einheitString = (String) nextMap.get("einheit");
             Einheit einheit = new Einheit(einheitString,einheiten.get(einheitString).get("gender"),einheiten.get(einheitString).get("plural"));
             String mengeString = nextMap.get("menge").toString();

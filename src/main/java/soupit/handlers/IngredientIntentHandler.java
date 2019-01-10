@@ -62,7 +62,7 @@ public class IngredientIntentHandler implements RequestHandler {
             String[] strinGredients = ingredientSlot.getValue().split("\\s");
             Zutat[] ingredients = new Zutat[strinGredients.length];
             for (int i = 0; i < strinGredients.length; i++) {
-                ingredients[i] = new Zutat(strinGredients[i], "gender","plural");
+                ingredients[i] = new Zutat(strinGredients[i], "gender","plural",new ArrayList<>());
             }
 
 

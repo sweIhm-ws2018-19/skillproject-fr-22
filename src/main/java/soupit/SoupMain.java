@@ -42,7 +42,7 @@ public class SoupMain {
 
             for (Object s : alleRezepte) {
                 tester =s;
-                if(s.toString().equals("möhrencremesuppe")){
+                if(s.toString().equals("kohlrabi kartoffelsuppe")){
                     int a = 0;
                 }
                 addRecipes(s.toString(), rezepte, zutatenMitGeschlecht, einheitenMitGeschlecht);
@@ -90,9 +90,20 @@ public class SoupMain {
             Map.Entry<String, Map> next = it.next();
             Map nextMap = next.getValue();
             tester2 = nextMap;
+
             String zutatString = (String) zutaten.keySet().toArray()[counter];
-            Object o = alleZutaten.get(zutatString).get("synonyms");
-            Zutat zutat = new Zutat(zutatString, alleZutaten.get(zutatString).get("gender"),alleZutaten.get(zutatString).get("plural"));
+            Object synonObject = alleZutaten.get(zutatString).get("synonyms");
+            JSONArray jsonsynonyms =((JSONArray) synonObject);
+            Object[] synonObjects = jsonsynonyms.toArray();
+            ArrayList<String> synonyms = new ArrayList<>();
+            for(Object o: synonObjects){
+                synonyms.add(o.toString());
+            }
+//            for(int i= 0; i< synonyms.length; i++){
+//                synonyms[i] = jsonsynonyms.toArray()[i].toString();
+//            }
+
+            Zutat zutat = new Zutat(zutatString, alleZutaten.get(zutatString).get("gender"),alleZutaten.get(zutatString).get("plural"),synonyms);
             String einheitString = (String) nextMap.get("einheit");
             Einheit einheit = new Einheit(einheitString,einheiten.get(einheitString).get("gender"),einheiten.get(einheitString).get("plural"));
             String mengeString = nextMap.get("menge").toString();
@@ -115,7 +126,7 @@ public class SoupMain {
             String[] strinGredients = {"fisch"};
             Zutat[] ingredients = new Zutat[strinGredients.length];
             for (int i = 0; i < strinGredients.length; i++) {
-                ingredients[i] = new Zutat(strinGredients[i], "gender","plural");
+                ingredients[i] = new Zutat(strinGredients[i], "gender","plural",new ArrayList<>());
             }
 
 
