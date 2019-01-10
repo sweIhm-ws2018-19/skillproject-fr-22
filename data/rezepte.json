@@ -1,4 +1,13 @@
 {
+  "synonyme":{
+    "möhrensaft":["karottensaft"],
+    "rübensaft":["karottensaft"],
+    "rübensaft":["karottensaft"],
+    "rübensaft":["karottensaft"],
+    "rübensaft":["karottensaft"],
+    "fisch":["weißer Seefisch, zum Beispiel Seehecht, Seelachs oder Kabeljau","gemischtes Fischfilet, zum Beispiel Kabeljau, Zander und Rotbarsch","Räucherlachs","festfleischiges Fischfilet, zum Beispiel Seelachs, Kabeljau oder Zander"]
+
+  },
   "zutaten": {
     "rinderbrühe":{"gender":"f","plural":"rinderbrühe"},
     "karotte": {"gender":"f","plural":"karotten"},
@@ -12,23 +21,23 @@
     "basilikumpesto": {"gender":"n","plural":"basilikumpesto"},
     "kürbis": {"gender":"m","plural":"kürbis"},
     "hokkaido kürbis": {"gender":"m","plural":"hokkaido kürbis"},
-    "zwiebel": {"gender":"f","plural":"zwiebeln"},
-    "gemüsebrühe":{"gender":"f","plural":"gemüsebrühe"},
-    "öl": {"gender":"n","plural":"öl"},
+    "zwiebel": {"gender":"f","plural":"zwiebeln","synonyms":[""]},
+    "gemüsebrühe":{"gender":"f","plural":"gemüsebrühe","synonyms":["brühe","Gemüsebouillon"]},
+    "öl": {"gender":"n","plural":"öl","synonyms":["walnussöl","olivenöl","rapsöl"]},
     "sahne": {"gender":"f","plural":"sahne"},
-    "petersilie": {"gender":"f","plural":"petersilie"},
-    "salz": {"gender":"n","plural":"salz"},
-    "pfeffer": {"gender":"m","plural":"pfeffer"},
-    "muskat": {"gender":"m","plural":"muskat"},
-    "schinken oder speckwürfel": {"gender":"f","plural":"schinken oder speckwürfel"},
-    "zucchini": {"gender":"f","plural":"zucchini"},
+    "petersilie": {"gender":"f","plural":"petersilie","synonyms":[""]},
+    "salz": {"gender":"n","plural":"salz","synonyms":[""]},
+    "pfeffer": {"gender":"m","plural":"pfeffer","synonyms":[""]},
+    "muskat": {"gender":"m","plural":"muskat","synonyms":["muskatnuss","Muskatgewürz"]},
+    "schinken oder speckwürfel": {"gender":"f","plural":"schinken oder speckwürfel","synonyms":["schinkenwürfel","speckwürfel","schinken","speck"]},
+    "zucchini": {"gender":"f","plural":"zucchini","synonyms":[""]},
     "tomate": {"gender":"f","plural":"tomaten"},
     "tomatenmark": {"gender":"n","plural":"tomatenmark"},
     "cayenne pfeffer": {"gender":"m","plural":"cayenne pfeffer"},
     "kokosmilch": {"gender":"f","plural":"kokosmilch"},
     "gelbe currypaste": {"gender":"f","plural":"gelbe currypaste"},
     "koriander": {"gender":"m","plural":"koriander"},
-    "möhrensaft": {"gender":"m","plural":"möhrensaft"},
+    "karottensaft": {"gender":"m","plural":"karottensaft"},
     "tiefgekühlte erbse": {"gender":"f","plural":"tiefgekühlte erbsen"},
     "wasser": {"gender":"n","plural":"wasser"},
     "mandelmus": {"gender":"n","plural":"mandelmus"},
@@ -152,7 +161,7 @@
     "lasagneblatt":{"gender":"f","plural":"lasagneblätter"},
     "hackfleisch":{"gender":"n","plural":"hackfleisch"},
     "passierte tomate":{"gender":"f","plural":"passierte tomaten"},
-    "chilliflocke":{"gender":"f","plural":"chilliflocken"},
+    "chiliflocke":{"gender":"f","plural":"chiliflocken"},
     "zucker":{"gender":"m","plural":"zucker"},
     "rindfleisch":{"gender":"n","plural":"rindfleisch"},
     "paprikapulver edelsüß":{"gender":"n","plural":"paprikapulver edelsüß"},
@@ -161,7 +170,9 @@
     "seelachsfillet":{"gender":"n","plural":"seelachsfillet"},
     "ingwer":{"gender":"m","plural":"ingwer"},
     "garnele":{"gender":"f","plural":"garnelen"},
-    "getrocknete tomate":{"gender":"f","plural":"getrocknete tomaten"}
+    "getrocknete tomate":{"gender":"f","plural":"getrocknete tomaten"},
+    "gemischtes Fischfilet, zum Beispiel Kabeljau, Zander und Rotbarsch":{"gender":"n","plural":"gemischtes Fischfilet, zum Beispiel Kabeljau, Zander und Rotbarsch"},
+    "weißer Seefisch, zum Beispiel Seehecht, Seelachs oder Kabeljau":{"gender":"m","plural":"weißer Seefisch, zum Beispiel Seehecht, Seelachs oder Kabeljau"}
 
   },
   "einheiten": {
@@ -599,7 +610,7 @@
           "einheit": "teelöffel",
           "menge": "0.25"
         },
-        "möhrensaft": {
+        "karottensaft": {
           "einheit": "milliliter",
           "menge": "50"
         },
@@ -621,7 +632,7 @@
         "schritt 2": "Wasche den Koriander oder die Petersilie und schneide es klein.",
         "schritt 3": "Wasche den Kürbis und schneide die entsprechende Menge in kleine Stücke.",
         "schritt 4": "Öl im Topf erwärmen. Zwiebel, <break time=\"1s\"/> Knoblauch, <break time=\"1s\"/> Koriander <break time=\"1s\"/> und Kürbisstücke hinzugeben und etwa fünf Minuten unter Rühren dünsten.",
-        "schritt 5": "Gemüsebrühe, Möhrensaft und Currypaste hinzugeben und die Suppe etwa fünfzehn Minuten köcheln lassen.",
+        "schritt 5": "Gemüsebrühe, Karottensaft und Currypaste hinzugeben und die Suppe etwa fünfzehn Minuten köcheln lassen.",
         "schritt 6": "Kokosmilch, Salz und Pfeffer hinzugeben und weitere drei Minuten erhitzen.",
         "schritt 7": "Die Suppe mit einem Stabmixer pürieren, abschmecken und heiß servieren."
       }
@@ -2094,7 +2105,7 @@
           "einheit": "milliliter",
           "menge": "100"
         },
-        "weißer seefisch": {
+        "weißer Seefisch, zum Beispiel Seehecht, Seelachs oder Kabeljau": {
           "einheit": "gramm",
           "menge": "100"
         },
@@ -2158,7 +2169,7 @@
           "einheit": "esslöffel",
           "menge": "0.5"
         },
-        "fischfilet": {
+        "gemischtes Fischfilet, zum Beispiel Kabeljau, Zander und Rotbarsch": {
           "einheit": "gramm",
           "menge": "125"
         },
@@ -2872,7 +2883,7 @@
           "einheit": "gramm",
           "menge": "50"
         },
-        "chilliflocke": {
+        "chiliflocke": {
           "einheit": "etwas",
           "menge": "null"
         },

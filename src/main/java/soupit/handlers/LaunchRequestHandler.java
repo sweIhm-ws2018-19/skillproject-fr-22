@@ -83,6 +83,7 @@ public class LaunchRequestHandler implements RequestHandler {
             InputStream stream = getClass().getClassLoader().getResourceAsStream("data/rezepte.json");
             Object obj = new JSONParser().parse(new InputStreamReader(stream));
             JSONObject jsonObject = (JSONObject) obj;
+            SessionAttributes.synonyme =  (Map) jsonObject.get("synonyme");
             Map rezepte = (Map) jsonObject.get("rezepte");
             Map zutaten = (Map) jsonObject.get("zutaten");
             Map einheiten = (Map) jsonObject.get("einheiten");

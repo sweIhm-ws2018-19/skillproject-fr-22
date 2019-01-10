@@ -1,5 +1,7 @@
 package soupit.recipe;
 
+import soupit.SessionAttributes;
+
 public class Zutat {
     private final String zutat;
     private final String grammatGeschlecht;
@@ -12,7 +14,10 @@ public class Zutat {
     }
 
     boolean equals(Zutat z){
-        return (z.toString().equals(zutat) || (z.toString()).equals(zutat+"n"));
+        for(String s:(SessionAttributes.synonyme.get(z.toString()))){
+            if (s!= null && s.equalsIgnoreCase(zutat)) return true;
+        }
+        return (z.toString().equals(zutat) || (z.toString()).equals(zutat+"n") );
     }
 
     @Override

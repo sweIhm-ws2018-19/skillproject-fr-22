@@ -2,6 +2,7 @@ package soupit;
 
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.model.Slot;
+import org.json.simple.JSONArray;
 import soupit.Lists.Strings;
 import soupit.recipe.*;
 
@@ -31,7 +32,23 @@ public class SoupMain {
             InputStream stream = SoupMain.class.getClassLoader().getResourceAsStream("data/rezepte.json");
             Object obj = new JSONParser().parse(new InputStreamReader(stream,"UTF-8"));
             JSONObject jsonObject = (JSONObject) obj;
+
+
+
             Map rezepte = (Map) jsonObject.get("rezepte");
+            Map<String,JSONArray> jsonSynonyme= (Map) jsonObject.get("synonyme");
+            Map<String,String[]> synonyme = new HashMap<>();
+
+            for(Map.Entry<String,JSONArray> e: jsonSynonyme.entrySet()) {
+                String[] valueArray = new String[e.getValue().size()];
+                int counter = 0;
+                for (Object o : e.getValue().toArray()) {
+                    valueArray[counter] = o.toString();
+                    counter++;
+                }
+                synonyme.put(e.getKey(),valueArray);
+            }
+            SessionAttributes.synonyme = synonyme;
             Map zutatenMitGeschlecht = (Map) jsonObject.get("zutaten");
             Map einheitenMitGeschlecht = (Map) jsonObject.get("einheiten");
             Object [] alleRezepte =  ((Map) jsonObject.get("rezepte")).keySet().toArray();
@@ -64,6 +81,7 @@ public class SoupMain {
         }
 
         System.out.println(speechText);
+        System.out.println(getSpeechResponse());
     }
 
     private static void addRecipes(String rezeptname, Map rezepte, Map<String,Map<String,String>> alleZutaten, Map<String,Map<String,String>> einheiten) {
@@ -102,17 +120,16 @@ public class SoupMain {
 
     }
 
-    private StringBuilder getSpeechResponse(HandlerInput input, Slot ingredientSlot) {
+    private static StringBuilder getSpeechResponse() {
         StringBuilder speechText;
-        if (ingredientSlot != null) {
+        if (true) {
             // Store the user's favorite color in the Session and create response.
-            String[] strinGredients = ingredientSlot.getValue().split("\\s");
+            String[] strinGredients = {"fisch"};
             Zutat[] ingredients = new Zutat[strinGredients.length];
             for (int i = 0; i < strinGredients.length; i++) {
                 ingredients[i] = new Zutat(strinGredients[i], "gender","plural");
             }
 
-            input.getAttributesManager().setSessionAttributes(Collections.singletonMap("Ingredient", ingredients));
 
 
             NavigableMap<Integer, ArrayList<Rezept>> map = SessionAttributes.recipes.getFitting(ingredients);
@@ -137,8 +154,7 @@ public class SoupMain {
                     speechText.append(". Möchtest du diese Suppe kochen?");
                     SessionAttributes.recipeToDecideOn= list.get(0);
                     SessionAttributes.programState = Strings.SOUP_YES_NO_STATE;
-                    PersistentAttributes.setProgramState(Strings.SOUP_YES_NO_STATE,input);
-                    PersistentAttributes.setRecipeToDecideOn(input);
+
                 }
                 else if (listSize <= 3) {
                     for (int i = 0; i < listSize; i++) {

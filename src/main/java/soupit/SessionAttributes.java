@@ -6,6 +6,7 @@ import soupit.recipe.RezeptArrayList;
 import soupit.recipe.ZutatMengeEinheit;
 
 import java.util.List;
+import java.util.Map;
 
 public class SessionAttributes {
     public static RezeptArrayList recipes = new RezeptArrayList();
@@ -16,6 +17,7 @@ public class SessionAttributes {
     public static String programState;
     public static String[] steps;
     public static int stepTracker;
+    public static Map<String,String[]> synonyme;
 
     public static void clear(boolean clearRecipes) {
         if(clearRecipes) recipes.clear();
