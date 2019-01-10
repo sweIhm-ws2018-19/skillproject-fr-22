@@ -61,7 +61,8 @@ Auch Hobby-Köchen mit mehr Erfahrung soll die Anwendung eine interessante Alter
 
 ### Anwendungsfalldiagramm
 
-![anwendungsfall](https://user-images.githubusercontent.com/43879315/48561755-f2512780-e8f0-11e8-8f2c-ce7bfd377475.png)
+![untitled diagram 1](https://user-images.githubusercontent.com/43779031/51003773-57fc1180-1538-11e9-9904-7199c7e94d01.png)
+
 
 ### User Stories
 
@@ -113,6 +114,9 @@ Zutaten verwenden, die da sind | Der User kann von basierend auf Zutaten, die er
 
 ![fachklassen_fertig](https://user-images.githubusercontent.com/43878732/51002600-14070d80-1534-11e9-8969-b0d434b9feb9.png)
 
+Für eine bessere Ansicht, sehen Sie sich das [Fachklassendiagramm](https://user-images.githubusercontent.com/43878732/51002600-14070d80-1534-11e9-8969-b0d434b9feb9.png) in einem neuen Fenster an.
+
+
 ### Sequenz-Diagramme
 
 ![1 1](https://user-images.githubusercontent.com/43878732/49977022-d6b75c00-ff44-11e8-93e8-2b6791a2f585.png)
@@ -125,13 +129,12 @@ Zutaten verwenden, die da sind | Der User kann von basierend auf Zutaten, die er
 
 ![1portionen 1](https://user-images.githubusercontent.com/43878732/49977775-eedcaa80-ff47-11e8-9899-4f66e3bdac76.png)
 
-
 ![1beenden](https://user-images.githubusercontent.com/43878732/49977660-7b3a9d80-ff47-11e8-940d-b2aea765e211.png)
 
 
 ### Beta Test für SoupIT (Invite Link)
 
-https://skills-store.amazon.com/deeplink/tvt/28475fb1a61e0a449fda68ae373fc150b6d5be47c812708c42526791f5895976fe3122c1f8b97acef8b99fbbfb9ca5287e76bf4c203fbb8a7c0eeaf0fbd2f50251c99ff461e7dd9e2d0b499ef8ecf94c5bcaea41bf33b3cab0baa1f18f97428a98a865e5cb4a00089430372d4fc37dc0
+[Invite Link](https://skills-store.amazon.com/deeplink/tvt/28475fb1a61e0a449fda68ae373fc150b6d5be47c812708c42526791f5895976fe3122c1f8b97acef8b99fbbfb9ca5287e76bf4c203fbb8a7c0eeaf0fbd2f50251c99ff461e7dd9e2d0b499ef8ecf94c5bcaea41bf33b3cab0baa1f18f97428a98a865e5cb4a00089430372d4fc37dc0)
 
 
 
