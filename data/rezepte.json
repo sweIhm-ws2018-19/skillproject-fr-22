@@ -1,6 +1,6 @@
 {
   "zutaten": {
-    "rinderbrühe":{"gender":"f","plural":"rinderbrühe"},
+    "rinderbrühe":{"gender":"f","plural":"rinderbrühe","synonyms":["brühe"]},
     "karotte": {"gender":"f","plural":"karotten"},
     "kartoffel": {"gender":"f","plural":"kartoffeln"},
     "möhre": {"gender":"f","plural":"möhren"},
