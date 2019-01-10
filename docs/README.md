@@ -28,14 +28,33 @@ Was zunächst nur für Suppen möglich sein soll, könnte in Zukunft auch für v
 
 Auch Hobby-Köchen mit mehr Erfahrung soll die Anwendung eine interessante Alternative für das „Kochen nach Rezept“ bieten. Denn mit einem persönlichen Kochassistenten macht das Kochen sicherlich noch mehr Spaß als alleine.
 
-### Setup
 
-_hier können wir später ergänzen ob man eventuell beim skill auf etwas achten muss._
+### Anwendungsbeispiel
 
-### Anwendung
+- Alexa, öffne Soup IT.
 
-_hier beispiele für anwendung, was man sagen soll etc._
+**- Willkommen bei Soup it. Als dein persönlicher Assistent begleite ich dich bei der Suppenzubereitung. Welche Zutaten möchtest du verwenden?
 
-### Features
+- Ich habe Tomaten, Zwiebeln und Sahne.
 
-_welche zusatzfunktionen hat der soup it skill?_
+**- Ich kann dir anhand der genannten Zutaten vier Rezepte vorschlagen: Tomatencremesuppe, Gemüsecremesuppe und zwei weitere. Wähle eine Suppe oder sage: Weitere anhören
+
+- Ich möchte die Tomatencremesuppe kochen.
+
+**- Wie viele Portionen möchtest du kochen?
+
+- Zwei Portionen.
+
+**- Für eine Tomatencremesuppe für zwei Portionen benötigst du die folgenden vier Zutaten: dreihundertfünfzig Gramm Tomaten, eine halbe Zwiebel, zweihundertfünfzig milliliter Gemüsebrühe und fünfzig Milliliter Sahne. Hast du alle Zutaten vorrätig?
+
+- Ja.
+
+**- Super. Lass uns mit der Zubereitung beginnen. Schäle die Zwiebel und schneide sie klein.
+
+- Weiter.
+
+**- Gebe alle Zutaten in den Topf und lasse sie zehn Minuten köcheln.
+
+- Weiter.
+
+**- Ich hoffe die Suppe schmeckt und wünsche einen guten Appetit.
