@@ -1,3 +1,5 @@
+visit our [GitHub Pages](https://sweihm-ws2018-19.github.io/skillproject-fr-22/)!
+
 ## Soup-IT
 
 Soup-IT ist eine Anwendung, die den Nutzer bei der Zubereitung von Suppen unterstützen soll. 
@@ -28,14 +30,3 @@ Was zunächst nur für Suppen möglich sein soll, könnte in Zukunft auch für v
 
 Auch Hobby-Köchen mit mehr Erfahrung soll die Anwendung eine interessante Alternative für das „Kochen nach Rezept“ bieten. Denn mit einem persönlichen Kochassistenten macht das Kochen sicherlich noch mehr Spaß als alleine.
 
-### Setup
-
-_hier können wir später ergänzen ob man eventuell beim skill auf etwas achten muss._
-
-### Anwendung
-
-_hier beispiele für anwendung, was man sagen soll etc._
-
-### Features
-
-_welche zusatzfunktionen hat der soup it skill?_
