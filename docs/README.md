@@ -79,7 +79,7 @@ Hilfe | Der Akteur bekommt gesagt was seine   derzeitigen Optionen sind z.B. Sch
 PauseIntent | Der User kann SoupIT pausieren
 Audio Datei | Alexa soll am Anfang und Ende einen Ton   abspielen
 RestartIntent | Alexa soll vom Nutzer aus und wieder an-geschaltet   werden können
-Kein Rezept gefunden | Alexa sagt nur dass sie kein Rezept   gefunden hat, wenn der User dabei ist Zutaten zu nennen
+Kein Rezept gefunden | Alexa sagt nur dass sie kein Rezept   gefunden hat, wenn der User grade dabei ist Zutaten zu nennen
   |  
 
 
@@ -114,22 +114,34 @@ Zutaten verwenden, die da sind | Der User kann von basierend auf Zutaten, die er
 
 ![fachklassen_fertig](https://user-images.githubusercontent.com/43878732/51002600-14070d80-1534-11e9-8969-b0d434b9feb9.png)
 
-Für eine bessere Ansicht, sehen Sie sich das [Fachklassendiagramm](https://user-images.githubusercontent.com/43878732/51002600-14070d80-1534-11e9-8969-b0d434b9feb9.png) in einem neuen Fenster an.
+Für eine bessere Ansicht, sehen Sie sich das [Fachklassendiagramm](https://user-images.githubusercontent.com/43878732/51002600-14070d80-1534-11e9-8969-b0d434b9feb9.png) im Vollbild an.
 
 
 ### Sequenz-Diagramme
 
 ![1 1](https://user-images.githubusercontent.com/43878732/49977022-d6b75c00-ff44-11e8-93e8-2b6791a2f585.png)
 
+[begrüßung](https://user-images.githubusercontent.com/43878732/49977022-d6b75c00-ff44-11e8-93e8-2b6791a2f585.png)
+
 ![6weitereezepte](https://user-images.githubusercontent.com/43878732/49977117-58a78500-ff45-11e8-8dd2-31d84a6eb889.png)
+
+[weitereezepte](https://user-images.githubusercontent.com/43878732/49977117-58a78500-ff45-11e8-8dd2-31d84a6eb889.png)
 
 ![1rezeptwahlen](https://user-images.githubusercontent.com/43878732/49977184-9efce400-ff45-11e8-90b8-0bdeecc43974.png)
 
+[rezeptwählen](https://user-images.githubusercontent.com/43878732/49977184-9efce400-ff45-11e8-90b8-0bdeecc43974.png)
+
 ![1rezept 1](https://user-images.githubusercontent.com/43878732/49977469-bdafaa80-ff46-11e8-80e9-936390e3092e.png)
+
+[rezept](https://user-images.githubusercontent.com/43878732/49977469-bdafaa80-ff46-11e8-80e9-936390e3092e.png)
 
 ![1portionen 1](https://user-images.githubusercontent.com/43878732/49977775-eedcaa80-ff47-11e8-9899-4f66e3bdac76.png)
 
+[portionen](https://user-images.githubusercontent.com/43878732/49977775-eedcaa80-ff47-11e8-9899-4f66e3bdac76.png)
+
 ![1beenden](https://user-images.githubusercontent.com/43878732/49977660-7b3a9d80-ff47-11e8-940d-b2aea765e211.png)
+
+[beenden](https://user-images.githubusercontent.com/43878732/49977660-7b3a9d80-ff47-11e8-940d-b2aea765e211.png)
 
 
 ### Beta Test für SoupIT (Invite Link)
