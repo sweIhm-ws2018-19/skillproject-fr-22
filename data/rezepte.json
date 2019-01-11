@@ -158,7 +158,8 @@
     "kürbiskernöl":{"gender":"n","plural":"kürbiskernöl","synonyms":["öl"]},
     "ingwer":{"gender":"m","plural":"ingwer","synonyms":[""]},
     "garnele":{"gender":"f","plural":"garnelen","synonyms":["meeresfrüchte"]},
-    "getrocknete tomate":{"gender":"f","plural":"getrocknete tomaten","synonyms":["getrocknete"]}
+    "getrocknete tomate":{"gender":"f","plural":"getrocknete tomaten","synonyms":["getrocknete"]},
+    "aubergine":{"gender":"f","plural":"auberginen","synonyms":[""]}
 
   },
   "einheiten": {
@@ -3073,6 +3074,55 @@
         "schritt 5": "Jetzt kannst du das Fleisch in mundgerechte Stücke zurechtschneiden.",
         "schritt 6": "Gib die klein geschnittenen Fleischstücke sowie nach Wunsch die vorgekochten Suppennudeln in die Suppe.",
         "schritt 7": "Petersilie waschen und fein hacken. Petersilie hinzugeben, Suppe mit Salz und Pfeffer abschmecken."
+      }
+    },
+    "Auberginensuppe ": {
+      "zutaten": {
+        "zwiebel": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "knoblauchzehe": {
+          "einheit": "null",
+          "menge": "0.25"
+        },
+        "aubergine": {
+          "einheit": "null",
+          "menge": "0.5"
+        },
+        "olivenöl": {
+          "einheit": "esslöffel",
+          "menge": "0.5"
+        },
+        "weißwein": {
+          "einheit": "milliliter",
+          "menge": "20"
+        },
+        "gemüsebrühe": {
+          "einheit": "milliliter",
+          "menge": "125"
+        },
+        "sakz": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "pfeffer": {
+          "einheit": "prise",
+          "menge": "1"
+        },
+        "basilikum": {
+          "einheit": "etwas",
+          "menge": "null"
+        }
+      },
+      "schritte": {
+        "schritt 1": "Die Knoblauchzehe und die Zwiebel schälen und sehr fein hacken.",
+        "schritt 2": "Die Aubergine abwaschen, schälen und alles in feine Würfel schneiden.",
+        "schritt 3": "In einem breiten Topf Knoblauch und Zwiebeln in 2 EL Öl andünsten",
+        "schritt 4": "Jetzt die gewürfelte Aubergine dazugeben und ca. 10 Minuten sanft anbraten.",
+        "schritt 5": " Mit dem Weißwein ablöschen und nach ca. 3 Minuten die Gemüsebrühe dazugeben.",
+        "schritt 6": " Dann ca. 15 Minuten alles köcheln lassen bis die Aubergine butterweich ist."
+
       }
     }
   }
