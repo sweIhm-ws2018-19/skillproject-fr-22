@@ -26,6 +26,10 @@ Was zunächst nur für Suppen möglich sein soll, könnte in Zukunft auch für v
 
 Auch Hobby-Köchen mit mehr Erfahrung soll die Anwendung eine interessante Alternative für das „Kochen nach Rezept“ bieten. Denn mit einem persönlichen Kochassistenten macht das Kochen sicherlich noch mehr Spaß als alleine.
 
+### Status
+
+https://sonarcloud.io/api/project_badges/measure?project=alexa-skills-kit-samples%3Asoupit&metric=alert_status
+
 ### Anwendungsbeispiel
 
 
