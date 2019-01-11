@@ -78,18 +78,19 @@ Rezept auswählen | Der Akteur wählt sein ausgewähltes Rezept aus einer Liste 
 Portionen | Der User kann wählen wieviele Portionen er kochen möchte.
 Zutaten auf Einkaufsliste setzen | Der Akteur kann Zutaten auf seine in Alexa   schon integrierte Einkaufsliste setzen. Zum Beispiel "Setze Karotten auf   die Einkaufsliste". 
 Zubereitung beginnen | Man beginnt die Zubereitung des   ausgewählten Rezepts.
+Schrittweise Zubegreitung | Die Zubereitungsschritte sind knapp und verständlich formuliert. Mit "Weiter" kommt man zum nächsten Schritt, man kann den Schritt aber auch wiederholen lassen, z. B. "Wiederhole den Schritt bitte". So kann der User in seinem eigenen Tempo kochen.
+Okay | "Okay" wird auch als "Ja" bzw. "Weiter" verstanden.
 Zubereitung abbrechen | Der Akteur kann die Zubereitung komplett abrechen.
-Einzelne Schritte | Die Zubereitung wird in einzelnen Schritten   angegeben damit der User langsam mitkochen kann.
-Zutaten wiederholen | Die Zutaten eines Rezeptes sollen jederzeit wiederholt werden können. Z.b. "Wie viele Eier brauche ich nochmal?".
-Okay | Man kann statt "Ja" auch "Okay" sagen. Wenn Okay gesagt wird, kommt der nächste Schritt.
+Zutaten wiederholen | Die Zutaten eines Rezeptes können jederzeit wiederholt werden. Z.b. "Wie viele Eier brauche ich nochmal?".
 PauseIntent | Der User kann SoupIT jederzeit pausieren.
 RestartIntent | Alexa setzt genau dort wieder an, wo der User pausiert hat. Gespeicherte Informationen sind noch erhalten.
-Kein Rezept gefunden | Alexa sagt nur dass sie kein Rezept gefunden hat, wenn der User grade dabei ist Zutaten zu nennen.
+Keine unerwarteten Antworten | Alexa weiß immer wo man sich im Programmablauf befindet. So sagt sie also z. B. nur dann, dass kein Rezept gefunden wurde, wenn der User grade Zutaten genannt hat.
+Neustart | Der User kann jederzeit von vorne anfangen und neue Zutaten nennen.
 Zufall | Es werden von Alexa zufällige Texte für die gleichen Schritte angegeben um es für den User abwechslungsreicher zu machen.
 Wiederholung | Man kann jederzeit das zuletzt gesagte von Alexa wiederholen lassen.
-Synonyme | Alexa erkennt Synonyme für Zutaten z.B.   Möhre und Karotte und schlägt einem Rezepte vor, die das Synonym enthalten. Genauso bekommt man wenn man "Fisch" sagt alle Rezepte die irgendeinen Fisch, z. B. Lachs, enthalten. 
-Plural | Alexa gibt den Plural jeder Zutat grammatikalisch korrekt wieder.
-Brüche | Alexa gibt Brüche grammatikalisch korrekt wieder.
+Synonyme | Alexa erkennt Synonyme für Zutaten z.B.   Möhre und Karotte und schlägt einem alle passenden Rezepte vor, die eines der Synonyme enthalten. Genauso bekommt man wenn man "Fisch" sagt alle Rezepte die irgendeinen Fisch, z. B. Lachs, enthalten. 
+Plural | Alexa gibt den Plural jeder Zutat grammatikalisch korrekt wieder. 
+Brüche | Alexa gibt Brüche grammatikalisch korrekt und verständlich wieder. Die Mengen der Zutaten sind sinnvoll, egal wie viele Portionen.
 Hilfe | Der Akteur bekommt gesagt was seine derzeitigen Optionen sind z.B. Schritt wiederholen oder weiter.
 
 ### Fachklassendiagramm
