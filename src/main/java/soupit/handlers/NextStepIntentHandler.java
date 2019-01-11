@@ -22,7 +22,7 @@ public class NextStepIntentHandler implements RequestHandler {
         String speechText;
 
         if(SessionAttributes.programState.equals(Strings.COOKING_STATE)) {
-            SessionAttributes.stepTracker = PersistentAttributes.getStepCount(input);
+
             if (SessionAttributes.steps.length > SessionAttributes.stepTracker + 1) {
                 speechText = SessionAttributes.steps[++SessionAttributes.stepTracker];
                 PersistentAttributes.setStepCount(input);

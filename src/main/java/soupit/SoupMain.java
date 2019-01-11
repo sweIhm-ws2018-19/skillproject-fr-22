@@ -26,6 +26,7 @@ public class SoupMain {
         List<Rezept> list ;
         Object tester = new Object();
 
+        System.out.println(SoupMain.class.getSimpleName());
 
         try {
 

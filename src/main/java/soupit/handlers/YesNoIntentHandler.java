@@ -59,19 +59,31 @@ public class YesNoIntentHandler implements RequestHandler {
                     speechText = "Okay. lass uns da weitermachen, wo wir aufgehört haben. "+PersistentAttributes.getLastSentence(input);
                     jumpBack = true;
                 }
+            }else if (SessionAttributes.programState.equals(Strings.COOKING_STATE)) {           // danke herr berchtenbreiter
+                if (SessionAttributes.steps.length > SessionAttributes.stepTracker + 1) {
+                    speechText = SessionAttributes.steps[++SessionAttributes.stepTracker];
+                    PersistentAttributes.setStepCount(input);
+                    if (SessionAttributes.stepTracker == SessionAttributes.steps.length - 1) {
+                        speechText += "<audio src='soundbank://soundlibrary/musical/amzn_sfx_bell_timer_01'/>";
+                        speechText += Strings.getRandomFinish();
+                        PersistentAttributes.clear(input);
+                    }
+                } else {
+                    speechText = "es gibt nichts mehr zu tun ausser die suppe zu essen!";
+                }
             }
-            else {
+            else if(SessionAttributes.programState.equals(Strings.CONTINUE_SOUP_YES_NO_STATE)) {
                 if(yesNoSlot.getValue().equalsIgnoreCase("ja")){
-                    if(SessionAttributes.programState.equals(Strings.COOKING_STATE)){
+
                         speechText = "Okay. sage 'wiederholen' , wenn du den letzten Schritt noch einmal hören möchtest oder weiter, für den nächsten Schritt";
                         repeatStep = true;
-                    }else{
-                        speechText = SessionAttributes.programState;
-                    }
+
                 }else { // nein
                     speechText = "Okay. nenne mir die Zutaten, die du für deine neue Suppe verwenden willst";
                     PersistentAttributes.clear(input);
                 }
+            }else{
+                speechText = "nagut";
             }
 
         } else speechText = "das habe ich leider nicht verstanden";

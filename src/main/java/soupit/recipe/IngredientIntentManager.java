@@ -16,7 +16,7 @@ public class IngredientIntentManager {
 
     public static StringBuilder getSpeechResponse(HandlerInput input, Slot ingredientSlot,String invocingClass) {
         StringBuilder speechText;
-        if(invocingClass.equals("IngredientIntentHandler")){
+        if(invocingClass.equals(IngredientIntentHandler.class.getSimpleName())){
             IngredientIntentHandler.setProgramState = true;
             IngredientIntentHandler.setLastSentence= true;
         }

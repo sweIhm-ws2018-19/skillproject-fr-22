@@ -38,6 +38,18 @@ public class StartCookingIntentHandler implements RequestHandler {
             SessionAttributes.programState = Strings.COOKING_STATE;
             PersistentAttributes.setProgramState(Strings.COOKING_STATE,input);
             PersistentAttributes.setLastSentence(SessionAttributes.steps[0],input);
+        }else if(SessionAttributes.programState.equals(Strings.COOKING_STATE)){   //danke herr berchtenbreiter
+            if (SessionAttributes.steps.length > SessionAttributes.stepTracker + 1) {
+                speechText = SessionAttributes.steps[++SessionAttributes.stepTracker];
+                PersistentAttributes.setStepCount(input);
+                if (SessionAttributes.stepTracker == SessionAttributes.steps.length - 1) {
+                    speechText += "<audio src='soundbank://soundlibrary/musical/amzn_sfx_bell_timer_01'/>";
+                    speechText += Strings.getRandomFinish();
+                    PersistentAttributes.clear(input);
+                }
+            } else {
+                speechText = "es gibt nichts mehr zu tun ausser die suppe zu essen!";
+            }
         }
         else  {
             speechText = "das habe ich leider nicht verstanden, kannst du das wiederholen? ";

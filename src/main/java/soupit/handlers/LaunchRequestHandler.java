@@ -58,12 +58,16 @@ public class LaunchRequestHandler implements RequestHandler {
 
         if (SessionAttributes.programState.equals(Strings.COOKING_STATE)){
             speechText = "möchtest du mit der Zubereitung deiner "+ SessionAttributes.currentRecipe+" fortfahren?";
+            SessionAttributes.programState = Strings.CONTINUE_SOUP_YES_NO_STATE;
+            PersistentAttributes.setProgramState(Strings.CONTINUE_SOUP_YES_NO_STATE,input);
+            PersistentAttributes.setLastSentence(speechText,input);
         }
         else if (SessionAttributes.programState.equals(Strings.INITIAL_STATE)){
             speechText = Strings.getRandomWelcome();
         }else if (SessionAttributes.programState.equals(Strings.STARTCOOKING_STATE)){
             speechText =( (int) (Math.random()*2)) == 0 ?"Willkommen zurück. Dann können wir nun zum Kochen anfangen.": "Willkommen zurück. Lass uns mit dem Kochen der " + SessionAttributes.currentRecipe+" beginnen.";
             speechText += " "+SessionAttributes.steps[0];
+            SessionAttributes.programState = Strings.COOKING_STATE;
             PersistentAttributes.setProgramState(Strings.COOKING_STATE,input);
             PersistentAttributes.setLastSentence(SessionAttributes.steps[0], input);
         }

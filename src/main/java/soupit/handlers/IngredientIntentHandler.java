@@ -42,7 +42,7 @@ public class IngredientIntentHandler implements RequestHandler {
 
 
 
-        if(ingredientSlot.getValue() != null)   speechText = IngredientIntentManager.getSpeechResponse(input, ingredientSlot,"IngredientIntentHandler");
+        if(ingredientSlot.getValue() != null)   speechText = IngredientIntentManager.getSpeechResponse(input, ingredientSlot,this.getClass().getSimpleName());
         else if(foodSlot.getValue() != null)  speechText = IngredientIntentManager.getSpeechResponse(input, foodSlot,"IngredientIntentHandler");
         else speechText = new StringBuilder("tut mir leid, dass habe ich nicht verstanden, kannst du das wiederholen");
 
