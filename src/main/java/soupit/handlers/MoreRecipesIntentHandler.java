@@ -22,25 +22,29 @@ public class MoreRecipesIntentHandler implements RequestHandler {
       StringBuilder speechText = new StringBuilder("du kannst ausserdem noch ");
       int index = SessionAttributes.matchingRecipesIndex;
         List list = SessionAttributes.matchingRecipes;
-        int remainingRecipesCount = list.size() - index;
-        if(remainingRecipesCount == 1){
-            speechText.append(list.get(index));
-            speechText.append(" kochen. möchtest du das tun?");
+        if(list == null){
+            speechText = new StringBuilder("ich habe wohl vergessen, was die anderen Rezepte waren. Meine Entwickler werden sich bald um mein erinnerungsvermögen kümmern");
         }else {
-            speechText.append("folgende Rezepte mit diesen Zutaten kochen: ");
-            for (; index < list.size(); index++) {
+            int remainingRecipesCount = list.size() - index;
+            if (remainingRecipesCount == 1) {
                 speechText.append(list.get(index));
-                if(remainingRecipesCount > 1){
-                    speechText.append(", ");
+                speechText.append(" kochen. möchtest du das tun?");
+            } else {
+                speechText.append("folgende Rezepte mit diesen Zutaten kochen: ");
+                for (; index < list.size(); index++) {
+                    speechText.append(list.get(index));
+                    if (remainingRecipesCount > 1) {
+                        speechText.append(", ");
+                    }
+                    remainingRecipesCount--;
+                    if (remainingRecipesCount == 1) {
+                        speechText.append("und ");
+                    }
                 }
-                remainingRecipesCount--;
-                if(remainingRecipesCount == 1){
-                    speechText.append("und ");
-                }
+                speechText.append(". Welche wählst du ? ");
             }
-            speechText.append(". Welche wählst du ? ");
+            PersistentAttributes.setLastSentence(speechText.toString(), input);
         }
-        PersistentAttributes.setLastSentence(speechText.toString(),input);
         return input.getResponseBuilder()
                 .withSpeech(speechText.toString())
                 .withShouldEndSession(false)

@@ -21,6 +21,7 @@ public class SessionAttributes {
 
     public static void clear(boolean clearRecipes) {
         if(clearRecipes) recipes.clear();
+        if(matchingRecipes != null) matchingRecipes.clear();
         recipeToDecideOn = null;
         currentRecipe = null;
         programState = Strings.INITIAL_STATE;
