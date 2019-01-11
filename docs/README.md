@@ -94,7 +94,7 @@ Hilfe | Der Akteur bekommt gesagt was seine derzeitigen Optionen sind z.B. Schri
 
 ![fachklassen_fertig](https://user-images.githubusercontent.com/43878732/51002600-14070d80-1534-11e9-8969-b0d434b9feb9.png)
 
-Für eine bessere Ansicht, sehen Sie sich das [Fachklassendiagramm](https://user-images.githubusercontent.com/43878732/51002600-14070d80-1534-11e9-8969-b0d434b9feb9.png) im Vollbild an.
+Für eine bessere Ansicht, sehen Sie sich das [Fachklassendiagramm im Vollbild](https://user-images.githubusercontent.com/43878732/51002600-14070d80-1534-11e9-8969-b0d434b9feb9.png) an.
 
 
 ### Sequenz-Diagramme
