@@ -3,6 +3,7 @@ package soupit.handlers;
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.*;
+import soupit.Lists.Strings;
 import soupit.PersistentAttributes;
 import soupit.SessionAttributes;
 
@@ -29,6 +30,8 @@ public class MoreRecipesIntentHandler implements RequestHandler {
             if (remainingRecipesCount == 1) {
                 speechText.append(list.get(index));
                 speechText.append(" kochen. möchtest du das tun?");
+                SessionAttributes.programState = Strings.SOUP_YES_NO_STATE;
+                PersistentAttributes.setProgramState(Strings.SOUP_YES_NO_STATE,input);
             } else {
                 speechText.append("folgende Rezepte mit diesen Zutaten kochen: ");
                 for (; index < list.size(); index++) {
