@@ -67,7 +67,7 @@ Auch Hobby-Köchen mit mehr Erfahrung soll die Anwendung eine interessante Alter
 
 Name   der User Story | User   Story
 -- | --
-Audio Datei | Alexa soll am Anfang und Ende einen Ton abspielen.
+Audio Datei | Alexa spielt am Anfang und Ende einen Ton ab.
 Zutaten verwenden, die da sind | Der User kann von basierend auf Zutaten, die er   im Kühlschrank hat Rezeptvorschläge bekommen.
 Inspiration durch Alexa | Alexa soll dem User alternativ auch Rezepte vorschlagen können, wenn dieser sich inspirieren lassen möchte anstatt Zutaten zu nennen.
 Zutatenliste nennen | Der Akteur sagt Alexa seine vorhandenen Zutaten. Diese werden in einer Liste gespeichert.
