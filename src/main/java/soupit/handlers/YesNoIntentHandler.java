@@ -38,6 +38,9 @@ public class YesNoIntentHandler implements RequestHandler {
                 if (yesNoSlot.getValue().equalsIgnoreCase("ja")){
                     SessionAttributes.currentRecipe = SessionAttributes.recipeToDecideOn;
                     PersistentAttributes.setRecipeName(SessionAttributes.recipeToDecideOn.toString(),input);
+                    SessionAttributes.programState = Strings.RECIPE_CHOSEN_STATE;
+                    PersistentAttributes.setProgramState(Strings.RECIPE_CHOSEN_STATE,input);
+                    PersistentAttributes.setLastSentence(" Wie viele Portionen der"+SessionAttributes.recipeToDecideOn+" möchtest du kochen ?",input);
                     speechText = "Wie viele Portionen möchtest du kochen ?";
                 }else{ // nein
                     speechText = "tut mir leid dass ich nicht helfen konnte.";

@@ -50,6 +50,13 @@ public class StartCookingIntentHandler implements RequestHandler {
             } else {
                 speechText = "es gibt nichts mehr zu tun ausser die suppe zu essen!";
             }
+        }else if(SessionAttributes.programState.equals(Strings.SOUP_YES_NO_STATE)){ //danke herr berchtenbreiter (Und schlechter Planung meinerseits)
+            SessionAttributes.currentRecipe = SessionAttributes.recipeToDecideOn;
+            PersistentAttributes.setRecipeName(SessionAttributes.recipeToDecideOn.toString(),input);
+            SessionAttributes.programState = Strings.RECIPE_CHOSEN_STATE;
+            PersistentAttributes.setProgramState(Strings.RECIPE_CHOSEN_STATE,input);
+            PersistentAttributes.setLastSentence(" Wie viele Portionen der"+SessionAttributes.recipeToDecideOn+" möchtest du kochen ?",input);
+            speechText = "Wie viele Portionen möchtest du kochen ?";
         }
         else  {
             speechText = "das habe ich leider nicht verstanden, kannst du das wiederholen? ";
