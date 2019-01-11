@@ -1,6 +1,3 @@
-![Build Status](https://travis-ci.org/sweIhm-ws2018-19/skillproject-fr-22.svg?branch=master) ![Build Status](https://sonarcloud.io/api/project_badges/measure?project=alexa-skills-kit-samples%3Asoupit&metric=alert_status)
-
-
 # <img src="https://user-images.githubusercontent.com/43878732/51005877-f5f3da00-1540-11e9-9db0-08cf20d5f70a.png" width="40">  Soup-IT    
 
 Das System sieht vor, dass der Nutzer eine Liste von Zutaten vorschlägt, welche ihm zur Verfügung stehen. Auf Basis dieser Informationen soll Alexa eine Liste mit möglichen Rezepten ausgeben, welche die größten Übereinstimmungen mit der gegebenen Zutatenliste haben.
@@ -128,8 +125,15 @@ Für eine bessere Ansicht, sehen Sie sich das [Fachklassendiagramm im Vollbild](
 [beenden](https://user-images.githubusercontent.com/43878732/49977660-7b3a9d80-ff47-11e8-940d-b2aea765e211.png)
 
 
+### Status
+
+![Build Status](https://travis-ci.org/sweIhm-ws2018-19/skillproject-fr-22.svg?branch=master) ![Build Status](https://sonarcloud.io/api/project_badges/measure?project=alexa-skills-kit-samples%3Asoupit&metric=alert_status)
+
+
 ### Beta Test für SoupIT (Invite Link)
 
 [Invite Link](https://skills-store.amazon.com/deeplink/tvt/28475fb1a61e0a449fda68ae373fc150b6d5be47c812708c42526791f5895976fe3122c1f8b97acef8b99fbbfb9ca5287e76bf4c203fbb8a7c0eeaf0fbd2f50251c99ff461e7dd9e2d0b499ef8ecf94c5bcaea41bf33b3cab0baa1f18f97428a98a865e5cb4a00089430372d4fc37dc0)
+
+
 
 
