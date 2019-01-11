@@ -27,8 +27,7 @@ public class StartCookingIntentHandler implements RequestHandler {
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        boolean setProgramState = true;
-        boolean setLastSentence = true;
+
 
         String speechText;
         if( SessionAttributes.programState.equals(Strings.STARTCOOKING_STATE) ) {
@@ -36,20 +35,19 @@ public class StartCookingIntentHandler implements RequestHandler {
             speechText += "du kannst nach jedem Zubereitungsschritt <emphasis level=\"moderate\">weiter</emphasis> oder <emphasis level=\"moderate\">schritt wiederholen</emphasis> sagen. ";
             speechText+=SessionAttributes.currentRecipe.getSteps()[0];
             SessionAttributes.stepTracker = 0;
+            SessionAttributes.programState = Strings.COOKING_STATE;
+            PersistentAttributes.setProgramState(Strings.COOKING_STATE,input);
+            PersistentAttributes.setLastSentence(SessionAttributes.steps[0],input);
         }
         else  {
-
             speechText = "das habe ich leider nicht verstanden, kannst du das wiederholen? ";
-            speechText = input.getRequestEnvelope().toString();
-            setProgramState = false;
-            setLastSentence = false;
+
         }
 
 
-        PersistentAttributes.setStepCount(input);
 
-       if(setProgramState) PersistentAttributes.setProgramState(Strings.COOKING_STATE,input);
-       if(setLastSentence) PersistentAttributes.setLastSentence(SessionAttributes.steps[0],input);
+
+
         return input.getResponseBuilder()
                 .withSpeech(speechText)
                 .withShouldEndSession(false)

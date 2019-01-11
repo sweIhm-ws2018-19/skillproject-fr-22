@@ -40,27 +40,32 @@ public class NumberOfServingsIntentHandler implements RequestHandler {
         } else {
             numberOfServings = Integer.parseInt(numberSlot.getValue());
         }
-        SessionAttributes.currentRecipe.multiplyZumeng(numberOfServings);
-        String servingNumber = numberOfServings == 1 ? "eine Portion" : numberOfServings + " Portionen";
-        speechText = "Für eine " + SessionAttributes.currentRecipe + " für " + servingNumber + " benötigst du die folgenden "+ SessionAttributes.currentRecipe.getZumeng().length+" Zutaten. ";
+        if(SessionAttributes.programState.equals(Strings.RECIPE_CHOSEN_STATE)) {
+            SessionAttributes.currentRecipe.multiplyZumeng(numberOfServings);
+            String servingNumber = numberOfServings == 1 ? "eine Portion" : numberOfServings + " Portionen";
+            speechText = "Für eine " + SessionAttributes.currentRecipe + " für " + servingNumber + " benötigst du die folgenden " + SessionAttributes.currentRecipe.getZumeng().length + " Zutaten. ";
 
 
-        ZutatMengeEinheit[] zumArray = SessionAttributes.getCurrentRecipeZumeng();
-        for (int i = 0; i < zumArray.length; i++) {
-            ZutatMengeEinheit zum = zumArray[i];
-            if (i == zumArray.length - 1) speechText += " und ";
-            speechText += zum.mengeToString() + " ";
-            speechText += zum.einheitToString() + " ";
-            speechText += zum.zutatToString() + " <break time=\"1s\"/>";
-            if (i < zumArray.length - 2) speechText += ", ";
-            if (i == zumArray.length - 1) speechText += ". ";
+            ZutatMengeEinheit[] zumArray = SessionAttributes.getCurrentRecipeZumeng();
+            for (int i = 0; i < zumArray.length; i++) {
+                ZutatMengeEinheit zum = zumArray[i];
+                if (i == zumArray.length - 1) speechText += " und ";
+                speechText += zum.mengeToString() + " ";
+                speechText += zum.einheitToString() + " ";
+                speechText += zum.zutatToString() + " <break time=\"1s\"/>";
+                if (i < zumArray.length - 2) speechText += ", ";
+                if (i == zumArray.length - 1) speechText += ". ";
+            }
+            SessionAttributes.currentRecipe.multiplyZumeng(1 / (double) (numberOfServings));
+            speechText += "Hast du alle Zutaten vorrätig? ";
+            SessionAttributes.programState = Strings.INGREDIENTSAVAILIABLE;
+            PersistentAttributes.setProgramState(Strings.INGREDIENTSAVAILIABLE, input);
+
+            PersistentAttributes.setLastSentence(speechText, input);
         }
-        SessionAttributes.currentRecipe.multiplyZumeng(1/(double)(numberOfServings));
-        speechText += "Hast du alle Zutaten vorrätig? ";
-        SessionAttributes.programState = Strings.INGREDIENTSAVAILIABLE;
-        PersistentAttributes.setProgramState(Strings.INGREDIENTSAVAILIABLE, input);
-
-        PersistentAttributes.setLastSentence(speechText, input);
+        else{
+            speechText = "du hast noch keine suppe ausgewählt für die du die Anzahl der Portionen angeben könntest. Falls du Zutaten für deine Suppe aufgezählt hast, denke daran zahlen zu vermeiden.";
+        }
         return input.getResponseBuilder()
                 .withSpeech(speechText)
                 .withShouldEndSession(false)

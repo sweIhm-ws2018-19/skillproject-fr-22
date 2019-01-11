@@ -20,17 +20,22 @@ public class NextStepIntentHandler implements RequestHandler {
     @Override
     public Optional<Response> handle(HandlerInput input) {
         String speechText;
-        SessionAttributes.stepTracker = PersistentAttributes.getStepCount(input);
-        if(SessionAttributes.steps.length > SessionAttributes.stepTracker+1) {
-            speechText = SessionAttributes.steps[++SessionAttributes.stepTracker];
-            PersistentAttributes.setStepCount(input);
-            if (SessionAttributes.stepTracker == SessionAttributes.steps.length-1) {
-                speechText += "<audio src='soundbank://soundlibrary/musical/amzn_sfx_bell_timer_01'/>";
-                speechText += Strings.getRandomFinish();
-                PersistentAttributes.clear(input);
+
+        if(SessionAttributes.programState.equals(Strings.COOKING_STATE)) {
+            SessionAttributes.stepTracker = PersistentAttributes.getStepCount(input);
+            if (SessionAttributes.steps.length > SessionAttributes.stepTracker + 1) {
+                speechText = SessionAttributes.steps[++SessionAttributes.stepTracker];
+                PersistentAttributes.setStepCount(input);
+                if (SessionAttributes.stepTracker == SessionAttributes.steps.length - 1) {
+                    speechText += "<audio src='soundbank://soundlibrary/musical/amzn_sfx_bell_timer_01'/>";
+                    speechText += Strings.getRandomFinish();
+                    PersistentAttributes.clear(input);
+                }
+            } else {
+                speechText = "es gibt nichts mehr zu tun ausser die suppe zu essen!";
             }
         }else{
-            speechText = "es gibt nichts mehr zu tun ausser die suppe zu essen!";
+            speechText = "der Kochvorgang hat noch nicht begonnen. Entschuldige falls ich dich falsch verstanden habe";
         }
 
         PersistentAttributes.setLastSentence(speechText,input);

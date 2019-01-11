@@ -35,13 +35,16 @@ public class IngredientIntentHandler implements RequestHandler {
         Map<String, Slot> slots = intent.getSlots();
 
         Slot ingredientSlot = slots.get("Ingredient");
+        Slot foodSlot = slots.get("Food");
+
 
         StringBuilder speechText;
 
 
 
-        speechText = IngredientIntentManager.getSpeechResponse(input, ingredientSlot,"IngredientIntentHandler");
-
+        if(ingredientSlot.getValue() != null)   speechText = IngredientIntentManager.getSpeechResponse(input, ingredientSlot,"IngredientIntentHandler");
+        else if(foodSlot.getValue() != null)  speechText = IngredientIntentManager.getSpeechResponse(input, foodSlot,"IngredientIntentHandler");
+        else speechText = new StringBuilder("tut mir leid, dass habe ich nicht verstanden, kannst du das wiederholen");
 
         if(setProgramState) PersistentAttributes.setProgramState(Strings.INGREDIENT_NAMED_STATE,input);
         if(setLastSentence) PersistentAttributes.setLastSentence(speechText.toString(),input);

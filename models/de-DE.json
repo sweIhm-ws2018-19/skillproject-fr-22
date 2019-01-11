@@ -72,10 +72,15 @@
           "slots": [
             {
               "name": "Ingredient",
+              "type": "Ingredients"
+            },
+            {
+              "name": "Food",
               "type": "AMAZON.Food"
             }
           ],
           "samples": [
+            "{Food}",
             "{Ingredient}",
             "Ich möchte eine Suppe mit {Ingredient} machen",
             "Ich möchte eine Suppe mit {Ingredient} kochen ",
@@ -142,10 +147,9 @@
           "name": "StartCookingIntent",
           "slots": [],
           "samples": [
-            "rezept starten",
-            "bereit",
             "ok",
-            "starten"
+            "starten",
+            "Rezept starten"
           ]
         },
         {
@@ -177,7 +181,6 @@
           "name": "PauseIntent",
           "slots": [],
           "samples": [
-            "warte",
             "Noch nicht anfangen",
             "Später anfangen",
             "Später beginnen",
@@ -222,7 +225,7 @@
             "was soll ich kochen",
             "was kann ich kochen",
             "bring mich auf neue ideen",
-            "inspiriere",
+            "inspiriere mich",
             "schlag mir was vor",
             "inspiration",
             "inspirieren"
@@ -686,17 +689,1193 @@
           "values": [
             {
               "name": {
+                "value": "aubergine"
+              }
+            },
+            {
+              "name": {
+                "value": "getrocknete tomate",
+                "synonyms": [
+                  "getrocknete"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "garnele",
+                "synonyms": [
+                  "meeresfrüchte"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "ingwer"
+              }
+            },
+            {
+              "name": {
+                "value": "kürbiskernöl",
+                "synonyms": [
+                  "öl"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "hähnchen",
+                "synonyms": [
+                  "geflügel",
+                  "hähnchenbrust",
+                  "hühnerbrust",
+                  "hühnchen",
+                  "fleisch"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "paprikapulver edelsüß",
+                "synonyms": [
+                  "paprikapulver"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "rindfleisch",
+                "synonyms": [
+                  "kuh",
+                  "rind",
+                  "fleisch"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "zucker"
+              }
+            },
+            {
+              "name": {
+                "value": "chilliflocke",
+                "synonyms": [
+                  "chiligewürz",
+                  "chili",
+                  "chilipulver"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "passierte tomate",
+                "synonyms": [
+                  "dosentomaten",
+                  "passierte"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "hackfleisch",
+                "synonyms": [
+                  "fleisch"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "lasagneblatt"
+              }
+            },
+            {
+              "name": {
+                "value": "gehobelter parmesankäse",
+                "synonyms": [
+                  "parmesan"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "gyros gewürz"
+              }
+            },
+            {
+              "name": {
+                "value": "schweineschnitzel",
+                "synonyms": [
+                  "schnitzel"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "fetakäse",
+                "synonyms": [
+                  "käse",
+                  "feta"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "sahneschmelzkäse",
+                "synonyms": [
+                  "ofenkäse",
+                  "schmelzkäse"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "schwarze olive",
+                "synonyms": [
+                  "oliven",
+                  "olive"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "glasnudel",
+                "synonyms": [
+                  "nudeln"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "grüne currypaste",
+                "synonyms": [
+                  "currypaste"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "geflügelfond",
+                "synonyms": [
+                  "hühnerbrühe",
+                  "geflügelbrühe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "sambal oelek",
+                "synonyms": [
+                  "sambal",
+                  "ölek"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "weißweinessig"
+              }
+            },
+            {
+              "name": {
+                "value": "bambussprosse",
+                "synonyms": [
+                  "bambus"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "hähnchenbrustfilet",
+                "synonyms": [
+                  "fleisch",
+                  "hähnchenbrust",
+                  "huhn",
+                  "hühnerfilet"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "geschälte tomate",
+                "synonyms": [
+                  "tomate",
+                  "tomaten"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "ei"
+              }
+            },
+            {
+              "name": {
+                "value": "geräucherter lachs",
+                "synonyms": [
+                  "fisch",
+                  "lachs",
+                  "räucherlachs"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "zitrone"
+              }
+            },
+            {
+              "name": {
+                "value": "seelachsfilet",
+                "synonyms": [
+                  "seelachs",
+                  "fischfilet",
+                  "lachs",
+                  "fisch"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "geräuchertes Forellenfilet",
+                "synonyms": [
+                  "fisch",
+                  "forelle",
+                  "forellen"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "curry",
+                "synonyms": [
+                  "currypulver",
+                  "currypaste"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "rote linse",
+                "synonyms": [
+                  "linsen"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "helle sojasoße",
+                "synonyms": [
+                  "sojasoße",
+                  "soja"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "limettensaft",
+                "synonyms": [
+                  "limetten"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "ausgelöste Krabben, zum Beispiel Nordseegarnelen",
+                "synonyms": [
+                  "krabben",
+                  "garnelen"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "fleischbrühe",
+                "synonyms": [
+                  "fleischbuillon",
+                  "fleischfond"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "suppengrün",
+                "synonyms": [
+                  "suppengemüse"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "gehackte petersilie",
+                "synonyms": [
+                  "petersilie"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "safran"
+              }
+            },
+            {
+              "name": {
+                "value": "thymian"
+              }
+            },
+            {
+              "name": {
+                "value": "orange"
+              }
+            },
+            {
+              "name": {
+                "value": "geschälte riesengarnele",
+                "synonyms": [
+                  "riesengarnele",
+                  "garnelen"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "festfleischiges Fischfilet, zum Beispiel Seelachs, Kabeljau oder Zander",
+                "synonyms": [
+                  "lachs",
+                  "seelachs",
+                  "fischfilet",
+                  "zander",
+                  "kabeljau",
+                  "fisch"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "trockenen weißwein",
+                "synonyms": [
+                  "weißwein"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "gehackte tomate",
+                "synonyms": [
+                  "tomaten",
+                  "tomate"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "fenchel"
+              }
+            },
+            {
+              "name": {
+                "value": "räucherlachs",
+                "synonyms": [
+                  "fisch"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "fischpaste",
+                "synonyms": [
+                  "fisch"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "fischfilet",
+                "synonyms": [
+                  "fisch"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "anislikör"
+              }
+            },
+            {
+              "name": {
+                "value": "geröstetes weißbrot",
+                "synonyms": [
+                  "brot",
+                  "weißbrot"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "weißer seefisch",
+                "synonyms": [
+                  "seefisch",
+                  "fisch"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "fischfond",
+                "synonyms": [
+                  "fischbrühe",
+                  "fischbuillon"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "rote paprikaschote",
+                "synonyms": [
+                  "paprika"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "meerrettich",
+                "synonyms": [
+                  "rettich"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "schalotte",
+                "synonyms": [
+                  "charlotte"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "rote bete",
+                "synonyms": [
+                  "bete"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "apfelsaft",
+                "synonyms": [
+                  "saft"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "suppengemüse",
+                "synonyms": [
+                  "suppengrün"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "kümmelpulver",
+                "synonyms": [
+                  "kümmel"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "linsen"
+              }
+            },
+            {
+              "name": {
+                "value": "brokkoli"
+              }
+            },
+            {
+              "name": {
+                "value": "selleriegrün",
+                "synonyms": [
+                  "sellerie"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "rote chillischote",
+                "synonyms": [
+                  "chiligewürz",
+                  "chilipulver",
+                  "chilischote",
+                  "chili"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "süßkartoffel"
+              }
+            },
+            {
+              "name": {
+                "value": "paprikapulver"
+              }
+            },
+            {
+              "name": {
+                "value": "mie nudel",
+                "synonyms": [
+                  "mie",
+                  "mienudeln"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "sojasoße",
+                "synonyms": [
+                  "soja"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "sesamöl",
+                "synonyms": [
+                  "öl"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "sonnenblumenöl",
+                "synonyms": [
+                  "öl"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "gefrorene erbse",
+                "synonyms": [
+                  "erbsen",
+                  "tiefkühlerbsen"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "porree",
+                "synonyms": [
+                  "lauch"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "knollensellerie",
+                "synonyms": [
+                  "sellerie"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "rote paprika",
+                "synonyms": [
+                  "paprika"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "lorbeerblatt",
+                "synonyms": [
+                  "lorbeer"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "pfefferkorn",
+                "synonyms": [
+                  "cayenne",
+                  "cayenne pfeffer",
+                  "pfeffer"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "petersilienwurzel"
+              }
+            },
+            {
+              "name": {
+                "value": "cremefraiche"
+              }
+            },
+            {
+              "name": {
+                "value": "kohlrabi"
+              }
+            },
+            {
+              "name": {
+                "value": "weißwein",
+                "synonyms": [
+                  "wein"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "weißer spargel",
+                "synonyms": [
+                  "spargel"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "speisestärke",
+                "synonyms": [
+                  "soßenbinder"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "rucola"
+              }
+            },
+            {
+              "name": {
+                "value": "grüner spargel"
+              }
+            },
+            {
+              "name": {
+                "value": "bärlauch"
+              }
+            },
+            {
+              "name": {
+                "value": "dill",
+                "synonyms": [
+                  "dillkraut"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "gurke"
+              }
+            },
+            {
+              "name": {
+                "value": "oregano"
+              }
+            },
+            {
+              "name": {
+                "value": "basilikum"
+              }
+            },
+            {
+              "name": {
+                "value": "geriebener parmesan",
+                "synonyms": [
+                  "parmesan"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "schlagsahne",
+                "synonyms": [
+                  "süßrahm",
+                  "süße sahne",
+                  "sahne",
+                  "rahm"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "paprika",
+                "synonyms": [
+                  "paprikaschoten",
+                  "paprikaschote"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "geriebener käse",
+                "synonyms": [
+                  "reibkäse",
+                  "käse"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "baguette",
+                "synonyms": [
+                  "brot"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "frühlingszwiebel",
+                "synonyms": [
+                  "jungzwiebel",
+                  "lauchzwiebel"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "brunnenkresse",
+                "synonyms": [
+                  "kresse"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "hühnerbrühe",
+                "synonyms": [
+                  "geflügelfond",
+                  "geflügelbuillon",
+                  "geflügelbrühe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "milch"
+              }
+            },
+            {
+              "name": {
+                "value": "toastbrot",
+                "synonyms": [
+                  "brot"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "majoran"
+              }
+            },
+            {
+              "name": {
+                "value": "sauerrahm",
+                "synonyms": [
+                  "saure sahne",
+                  "schmand"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "mehl"
+              }
+            },
+            {
+              "name": {
+                "value": "butter",
+                "synonyms": [
+                  "margarine"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "champignon",
+                "synonyms": [
+                  "schwammerl",
+                  "pilze"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "schinkenspeck"
+              }
+            },
+            {
+              "name": {
+                "value": "schmelzkäse",
+                "synonyms": [
+                  "käse",
+                  "ofenkäse"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "sellerieknolle",
+                "synonyms": [
+                  "selleriegrün",
+                  "knollensellerie",
+                  "sellerie"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "schnittlauch"
+              }
+            },
+            {
+              "name": {
+                "value": "lauch",
+                "synonyms": [
+                  "porree",
+                  "winterlauch"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "misopaste"
+              }
+            },
+            {
+              "name": {
+                "value": "gemahlene mandel",
+                "synonyms": [
+                  "mandeln",
+                  "mandel"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "ungesüßter sanddornsaft"
+              }
+            },
+            {
+              "name": {
+                "value": "ungesüßter mandeldrink",
+                "synonyms": [
+                  "mandelmilch",
+                  "mandelsaft",
+                  "mandeldrink"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "avocado"
+              }
+            },
+            {
+              "name": {
+                "value": "blattspinat"
+              }
+            },
+            {
+              "name": {
+                "value": "limette"
+              }
+            },
+            {
+              "name": {
+                "value": "rapsöl",
+                "synonyms": [
+                  "öl"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "pastinake"
+              }
+            },
+            {
+              "name": {
+                "value": "rote chilischote",
+                "synonyms": [
+                  "chiligewürz",
+                  "chilipulver",
+                  "chiliflocken",
+                  "rote chilis",
+                  "rote chili",
+                  "chili"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "agavendicksaft"
+              }
+            },
+            {
+              "name": {
+                "value": "sonnenblumenkern"
+              }
+            },
+            {
+              "name": {
+                "value": "currypulver",
+                "synonyms": [
+                  "currypaste"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "minze"
+              }
+            },
+            {
+              "name": {
+                "value": "zitronensaft"
+              }
+            },
+            {
+              "name": {
+                "value": "walnussöl",
+                "synonyms": [
+                  "öl"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "walnusskern",
+                "synonyms": [
+                  "walnüsse",
+                  "walnuss"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "mandelmus"
+              }
+            },
+            {
+              "name": {
+                "value": "wasser"
+              }
+            },
+            {
+              "name": {
+                "value": "tiefgekühlte erbse",
+                "synonyms": [
+                  "erbse",
+                  "grüne erbsen",
+                  "tiefkühlerbsen",
+                  "erbsen"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "möhrensaft",
+                "synonyms": [
+                  "karottensaft"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "koriander"
+              }
+            },
+            {
+              "name": {
+                "value": "gelbe currypaste",
+                "synonyms": [
+                  "currypaste"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "kokosmilch",
+                "synonyms": [
+                  "kokosnuss",
+                  "kokosnussmilch"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "cayenne pfeffer",
+                "synonyms": [
+                  "cayenne"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "tomatenmark",
+                "synonyms": [
+                  "tomatenpaste"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "tomate"
+              }
+            },
+            {
+              "name": {
+                "value": "zucchini"
+              }
+            },
+            {
+              "name": {
+                "value": "schinken oder speckwürfel",
+                "synonyms": [
+                  "speckwürfel",
+                  "schinkenwürfel",
+                  "speck",
+                  "schinken"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "muskat",
+                "synonyms": [
+                  "muskatnuss",
+                  "muskatgewürz"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "pfeffer"
+              }
+            },
+            {
+              "name": {
+                "value": "salz"
+              }
+            },
+            {
+              "name": {
+                "value": "petersilie"
+              }
+            },
+            {
+              "name": {
+                "value": "sahne",
+                "synonyms": [
+                  "schlagsahne",
+                  "süssrahm",
+                  "süßrahm",
+                  "süsse sahne",
+                  "süße sahne",
+                  "rahm"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "öl",
+                "synonyms": [
+                  "kürbiskernöl",
+                  "sesamöl",
+                  "sonnenblumenöl",
+                  "rapsöl",
+                  "walnussöl"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "gemüsebrühe",
+                "synonyms": [
+                  "instantbrühe",
+                  "gemüsebouillon",
+                  "brühe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "zwiebel"
+              }
+            },
+            {
+              "name": {
+                "value": "kokkaido kürbis",
+                "synonyms": [
+                  "kürbis"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "kürbis",
+                "synonyms": [
+                  "kokkaido kürbis"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "basilikumpesto",
+                "synonyms": [
+                  "pesto"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "orangensaft"
+              }
+            },
+            {
+              "name": {
+                "value": "pinienkerne"
+              }
+            },
+            {
+              "name": {
+                "value": "saure sahne",
+                "synonyms": [
+                  "sauerrahm",
+                  "schmand"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "rinderbrühe"
+              }
+            },
+            {
+              "name": {
                 "value": "papriapulver"
               }
             },
             {
               "name": {
-                "value": "olivenöl"
+                "value": "olivenöl",
+                "synonyms": [
+                  "öl"
+                ]
               }
             },
             {
               "name": {
-                "value": "knoblauchzehe"
+                "value": "knoblauchzehe",
+                "synonyms": [
+                  "knoblauch"
+                ]
               }
             },
             {
@@ -711,7 +1890,13 @@
             },
             {
               "name": {
-                "value": "karotte"
+                "value": "karotte",
+                "synonyms": [
+                  "rüben",
+                  "rübe",
+                  "möhren",
+                  "möhre"
+                ]
               }
             }
           ]

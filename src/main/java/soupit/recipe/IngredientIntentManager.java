@@ -6,7 +6,6 @@ import soupit.Lists.Strings;
 import soupit.PersistentAttributes;
 import soupit.SessionAttributes;
 import soupit.handlers.IngredientIntentHandler;
-import soupit.handlers.StartCookingIntentHandler;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -94,15 +93,20 @@ public class IngredientIntentManager {
                 if(SessionAttributes.programState.equals(Strings.INITIAL_STATE)) {
                     speechText = new StringBuilder("für deine Zutat");
                     if(strinGredients.length>1) speechText.append("en");
-                    speechText.append("\"<break time=\"500ms\"/>  ");
+                    speechText.append("<break time=\"300ms\"/> ");
                     for(int i =0 ; i<strinGredients.length; i++){
                         speechText.append(strinGredients[i]);
                         if(i<strinGredients.length-2) speechText.append(", ");
                         else if(i == strinGredients.length-2) speechText.append(" und ");
                     }
-                    speechText.append(",  kann ich dir aktuell leider kein passendes Suppenrezept vorschlagen. Nenne mir andere Zutaten oder lasse dich von mir inspirieren.");
+                    speechText.append(",  kann ich dir aktuell leider kein passendes Suppenrezept vorschlagen.");
+                    if(SessionAttributes.UserAnnoyance == 0) {
+                        speechText.append(" Nenne mir andere Zutaten oder lasse dich von mir inspirieren. ");
+                        SessionAttributes.UserAnnoyance++;
+                    }
                 }
                 else speechText = new StringBuilder("Das habe ich leider nicht verstanden , kannst du das wiederholen?");
+
                 IngredientIntentHandler.setProgramState= false;
                 IngredientIntentHandler.setLastSentence= false;
             }
@@ -112,6 +116,7 @@ public class IngredientIntentManager {
 
 
         }else{
+
             speechText = new StringBuilder("tut mir leid, das habe ich nicht verstanden. kannst du das wiederholen ?");
         } return speechText;
     }

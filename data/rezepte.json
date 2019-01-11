@@ -25,7 +25,7 @@
     "tomate": {"gender":"f","plural":"tomaten","synonyms":[""]},
     "tomatenmark": {"gender":"n","plural":"tomatenmark","synonyms":["tomatenpaste"]},
     "cayenne pfeffer": {"gender":"m","plural":"cayenne pfeffer","synonyms":["cayenne"]},
-    "kokosmilch": {"gender":"f","plural":"kokosmilch","synonyms":["kokosnussmilch"]},
+    "kokosmilch": {"gender":"f","plural":"kokosmilch","synonyms":["kokosnussmilch","kokosnuss"]},
     "gelbe currypaste": {"gender":"f","plural":"gelbe currypaste","synonyms":["currypaste"]},
     "koriander": {"gender":"m","plural":"koriander","synonyms":[""]},
     "möhrensaft": {"gender":"m","plural":"möhrensaft","synonyms":["karottensaft"]},
@@ -3076,7 +3076,7 @@
         "schritt 7": "Petersilie waschen und fein hacken. Petersilie hinzugeben, Suppe mit Salz und Pfeffer abschmecken."
       }
     },
-    "Auberginensuppe ": {
+    "auberginensuppe ": {
       "zutaten": {
         "zwiebel": {
           "einheit": "null",
@@ -3102,7 +3102,7 @@
           "einheit": "milliliter",
           "menge": "125"
         },
-        "sakz": {
+        "salz": {
           "einheit": "prise",
           "menge": "1"
         },
