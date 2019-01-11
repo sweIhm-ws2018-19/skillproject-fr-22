@@ -16,7 +16,8 @@ public class Zutat {
         this.synonyms = synonyms;
     }
 
-    boolean equals(Zutat z){
+
+   public boolean equals(Zutat z){
         if(z.toString().equals(zutat)) return true;
         if (this.synonyms.contains(z.toString())) return true;
         if(this.plural.equals(z.toString())) return true;

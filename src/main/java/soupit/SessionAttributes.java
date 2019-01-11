@@ -6,7 +6,6 @@ import soupit.recipe.RezeptArrayList;
 import soupit.recipe.ZutatMengeEinheit;
 
 import java.util.List;
-import java.util.Map;
 
 public class SessionAttributes {
     public static RezeptArrayList recipes = new RezeptArrayList();
@@ -17,7 +16,8 @@ public class SessionAttributes {
     public static String programState;
     public static String[] steps;
     public static int stepTracker;
-    public static int UserAnnoyance=0;
+    public static int userAnnoyance =0;
+    public static int numberOfServings = 0;
 
     public static void clear(boolean clearRecipes) {
         if(clearRecipes) recipes.clear();
@@ -26,7 +26,7 @@ public class SessionAttributes {
         programState = Strings.INITIAL_STATE;
         matchingRecipesIndex = 0;
         stepTracker = 0;
-        UserAnnoyance =0;
+        userAnnoyance =0;
     }
 
 

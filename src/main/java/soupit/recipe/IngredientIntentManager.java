@@ -100,9 +100,9 @@ public class IngredientIntentManager {
                         else if(i == strinGredients.length-2) speechText.append(" und ");
                     }
                     speechText.append(",  kann ich dir aktuell leider kein passendes Suppenrezept vorschlagen.");
-                    if(SessionAttributes.UserAnnoyance == 0) {
+                    if(SessionAttributes.userAnnoyance == 0) {
                         speechText.append(" Nenne mir andere Zutaten oder lasse dich von mir inspirieren. ");
-                        SessionAttributes.UserAnnoyance++;
+                        SessionAttributes.userAnnoyance++;
                     }
                 }
                 else speechText = new StringBuilder("Das habe ich leider nicht verstanden , kannst du das wiederholen?");

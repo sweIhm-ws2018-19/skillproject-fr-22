@@ -33,9 +33,6 @@ public class PersistentAttributes {
     }
 
 
-    public static int getStepCount(HandlerInput input) {
-        return Integer.parseInt(input.getAttributesManager().getPersistentAttributes().get("stepCount").toString());
-    }
 
     public static void setStepCount(HandlerInput input) {
         Map<String, Object> persistentAttributes = input.getAttributesManager().getPersistentAttributes();
@@ -55,16 +52,7 @@ public class PersistentAttributes {
         input.getAttributesManager().savePersistentAttributes();
     }
 
-    public static void clear(HandlerInput input) {
-        Map<String, Object> persistentAttributes = input.getAttributesManager().getPersistentAttributes();
-        persistentAttributes.put("recipeName", null);
-        persistentAttributes.put("stepCount",String.valueOf(0));
-        persistentAttributes.put("programState",Strings.INITIAL_STATE);
-        persistentAttributes.put("recipeToDecideOn",null);
-        input.getAttributesManager().setPersistentAttributes(persistentAttributes);
-        input.getAttributesManager().savePersistentAttributes();
-        SessionAttributes.clear(false);
-    }
+
 
     public static void setLastSentence(String lastSentence, HandlerInput input){
         Map<String, Object> persistentAttributes = input.getAttributesManager().getPersistentAttributes();
@@ -80,6 +68,13 @@ public class PersistentAttributes {
     public static void setRecipeToDecideOn(HandlerInput input){
         Map<String, Object> persistentAttributes = input.getAttributesManager().getPersistentAttributes();
         persistentAttributes.put("recipeToDecideOn", SessionAttributes.recipeToDecideOn.toString());
+        input.getAttributesManager().setPersistentAttributes(persistentAttributes);
+        input.getAttributesManager().savePersistentAttributes();
+    }
+
+    public static void setNumberOfServings(HandlerInput input){
+        Map<String, Object> persistentAttributes = input.getAttributesManager().getPersistentAttributes();
+        persistentAttributes.put("numberOfServings",String.valueOf(SessionAttributes.numberOfServings));
         input.getAttributesManager().setPersistentAttributes(persistentAttributes);
         input.getAttributesManager().savePersistentAttributes();
     }
@@ -106,5 +101,22 @@ public class PersistentAttributes {
         }else{
             SessionAttributes.recipeToDecideOn = null;
         }
+        if(persistentAttributes.get("numberOfServings") != null ){
+            SessionAttributes.numberOfServings = Integer.parseInt(persistentAttributes.get("numberOfServings").toString());
+        }else{
+            SessionAttributes.numberOfServings = 0;
+        }
+    }
+
+    public static void clear(HandlerInput input) {
+        Map<String, Object> persistentAttributes = input.getAttributesManager().getPersistentAttributes();
+        persistentAttributes.put("recipeName", null);
+        persistentAttributes.put("stepCount",String.valueOf(0));
+        persistentAttributes.put("programState",Strings.INITIAL_STATE);
+        persistentAttributes.put("recipeToDecideOn",null);
+        persistentAttributes.put("numberOfServings",String.valueOf(0));
+        input.getAttributesManager().setPersistentAttributes(persistentAttributes);
+        input.getAttributesManager().savePersistentAttributes();
+        SessionAttributes.clear(false);
     }
 }

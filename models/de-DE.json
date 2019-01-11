@@ -147,6 +147,10 @@
           "name": "StartCookingIntent",
           "slots": [],
           "samples": [
+            "beginnen",
+            "lass uns loslegen",
+            "los",
+            "anfangen",
             "ok",
             "starten",
             "Rezept starten"
@@ -229,6 +233,19 @@
             "schlag mir was vor",
             "inspiration",
             "inspirieren"
+          ]
+        },
+        {
+          "name": "HowMuchIntent",
+          "slots": [
+            {
+              "name": "Ingredient",
+              "type": "Ingredients"
+            }
+          ],
+          "samples": [
+            "wie viele {Ingredient}",
+            "wie viel {Ingredient}"
           ]
         }
       ],

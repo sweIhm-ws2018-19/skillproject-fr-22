@@ -41,6 +41,7 @@ public class NumberOfServingsIntentHandler implements RequestHandler {
             numberOfServings = Integer.parseInt(numberSlot.getValue());
         }
         if(SessionAttributes.programState.equals(Strings.RECIPE_CHOSEN_STATE)) {
+            SessionAttributes.numberOfServings = numberOfServings;
             SessionAttributes.currentRecipe.multiplyZumeng(numberOfServings);
             String servingNumber = numberOfServings == 1 ? "eine Portion" : numberOfServings + " Portionen";
             speechText = "Für eine " + SessionAttributes.currentRecipe + " für " + servingNumber + " benötigst du die folgenden " + SessionAttributes.currentRecipe.getZumeng().length + " Zutaten. ";

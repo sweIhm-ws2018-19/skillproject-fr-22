@@ -31,6 +31,7 @@ public class YesNoIntentHandler implements RequestHandler {
 
         boolean repeatStep = false;
         boolean jumpBack = false;
+        boolean shouldEndSession = false;
 
         if (yesNoSlot != null) {
 
@@ -119,6 +120,8 @@ public class YesNoIntentHandler implements RequestHandler {
                     }
                  }else{ // nein
                     speechText = "Okay. Bis zum nächsten mal.";
+                    jumpBack = true;
+                    shouldEndSession = true;
                 }
             } else if (SessionAttributes.programState.equals(Strings.RESTART_YES_NO_STATE)) {
                     if (yesNoSlot.getValue().equalsIgnoreCase("ja")) {
@@ -161,7 +164,7 @@ public class YesNoIntentHandler implements RequestHandler {
 
             return input.getResponseBuilder()
                     .withSpeech(speechText)
-                    .withShouldEndSession(false)
+                    .withShouldEndSession(shouldEndSession)
                     .build();
 
         }
