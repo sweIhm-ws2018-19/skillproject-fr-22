@@ -74,17 +74,14 @@ Inspiration durch Alexa | Alexa soll dem User alternativ auch Rezepte vorschlage
 Zutatenliste nennen | Der Akteur sagt Alexa seine vorhandenen Zutaten. Diese werden in einer Liste gespeichert.
 Rezeptvorschläge bekommen | Der Akteur bekommt Rezepte ausgegeben, die   zu seinen vorhandenen Zutaten passen. Die Rezepte werden in absteigender Reihenfolge nach Übereinstimmungen von Zutaten vorgeschlagen.
 Wiedergabe | Nur maximal sechs passende Rezepte werden   wiedergegeben in absteigender Übereinstimmung
-
 Rezept auswählen | Der Akteur wählt sein ausgewähltes Rezept aus einer Liste von Rezepten aus. Das Rezept wird gespeichert.
 Portionen | Der User kann wählen wieviele Portionen er kochen möchte.
-
 Zutaten auf Einkaufsliste setzen | Der Akteur kann Zutaten auf seine in Alexa   schon integrierte Einkaufsliste setzen. Zum Beispiel "Setz Karotten auf   die Einkaufsliste"
 Zubereitung beginnen | Man beginnt die Zubereitung des   ausgewählten Rezepts.
 Zubereitung abbrechen | Der Akteur kann die Zubereitung komplett abrechen.
 Einzelne Schritte | Die Zubereitung wird in einzelnen Schritten   angegeben damit der User langsam mitkochen kann.
 Zutaten wiederholen | Die Zutaten eines Rezeptes sollen jederzeit wiederholt werden können. Z.b. "Wie viele Eier brauche ich nochmal?".
 Okay | Man kann statt "Ja" auch "Okay" sagen. Wenn Okay gesagt wird, kommt der nächste Schritt.
-
 PauseIntent | Der User kann SoupIT jederzeit pausieren.
 RestartIntent | Alexa setzt genau dort wieder an, wo der User pausiert hat. Gespeicherte Informationen sind noch erhalten.
 Kein Rezept gefunden | Alexa sagt nur dass sie kein Rezept gefunden hat, wenn der User grade dabei ist Zutaten zu nennen
