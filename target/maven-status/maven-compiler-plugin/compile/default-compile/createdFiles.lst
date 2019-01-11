@@ -1,5 +1,6 @@
 soupit\handlers\RestartIntentHandler.class
 soupit\handlers\MoreRecipesIntentHandler.class
+soupit\recipe\IngredientIntentManager.class
 soupit\handlers\StartCookingIntentHandler.class
 soupit\recipe\RezeptArrayList.class
 soupit\handlers\NameRecipeIntentHandler.class
