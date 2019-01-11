@@ -17,7 +17,7 @@ public class InspirationIntentHandler implements RequestHandler {
 
 
     public Optional<Response> handle(HandlerInput input) {
-        String speechText = Strings.geRandomInspiration();
+        String speechText = Strings.getRandomInspiration();
 
         return input.getResponseBuilder()
                 .withSpeech(speechText)

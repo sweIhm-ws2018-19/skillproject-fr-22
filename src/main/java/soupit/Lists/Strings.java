@@ -2,6 +2,8 @@ package soupit.Lists;
 
 import soupit.SessionAttributes;
 
+import java.util.ArrayList;
+
 public class Strings {
     public static final String TEMPLATE = "";
 
@@ -24,7 +26,7 @@ public class Strings {
     private static final String [] INSPIRATION = {"Ich habe folgende Vorschläge: ","Wie wär's mit: ","Ich hätte im Angebot: ","Ich empfehle dir: "};
 
     public static String getRandomWelcome(){
-        String[] whichIngredients = {"Du kannst mir Zutaten nennen oder dich von mir inspirieren lassen."};
+        String[] whichIngredients = {"Nenne mir Zutaten, die du zum Kochen verwenden möchtest.","Mit welchen Zutaten möchtest du eine Suppe kochen?"};
         return WELCOME[(int) (Math.random()*WELCOME.length)].concat(" ").concat( whichIngredients[(int) (Math.random()*whichIngredients.length)] );
     }
 
@@ -32,8 +34,18 @@ public class Strings {
         return FINISHED_COOKING[(int)(Math.random()*FINISHED_COOKING.length)];
     }
 
-    public static String geRandomInspiration(){
-        return INSPIRATION[(int)(Math.random()*INSPIRATION.length)].concat(SessionAttributes.recipes.get((int)(Math.random()*SessionAttributes.recipes.size())).toString());
+    public static String getRandomInspiration(){
+        String inspiration;
+        ArrayList<Integer> randomRecipesIndex = new ArrayList<>();
+        while (randomRecipesIndex.size() < 3){
+            int rnd = (int) (Math.random()*SessionAttributes.recipes.size());
+            if(!randomRecipesIndex.contains(rnd)) randomRecipesIndex.add(rnd);
+        }
+        inspiration = INSPIRATION[(int)(Math.random()*INSPIRATION.length)];
+        inspiration += SessionAttributes.recipes.get(randomRecipesIndex.get(0))+",  ";
+        inspiration += SessionAttributes.recipes.get(randomRecipesIndex.get(1))+" oder ";
+        inspiration += SessionAttributes.recipes.get(randomRecipesIndex.get(2));
+        return inspiration;
     }
 
 

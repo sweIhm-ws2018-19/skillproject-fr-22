@@ -42,7 +42,7 @@ public class NumberOfServingsIntentHandler implements RequestHandler {
         }
         SessionAttributes.currentRecipe.multiplyZumeng(numberOfServings);
         String servingNumber = numberOfServings == 1 ? "eine Portion" : numberOfServings + " Portionen";
-        speechText = "Für eine " + SessionAttributes.currentRecipe + " für " + servingNumber + " benötigst du die folgenden "+ SessionAttributes.currentRecipe.getZumeng().length+" Zutaten.";
+        speechText = "Für eine " + SessionAttributes.currentRecipe + " für " + servingNumber + " benötigst du die folgenden "+ SessionAttributes.currentRecipe.getZumeng().length+" Zutaten. ";
 
 
         ZutatMengeEinheit[] zumArray = SessionAttributes.getCurrentRecipeZumeng();

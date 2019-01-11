@@ -229,7 +229,7 @@
           ]
         },
         {
-          "name": "InsprationIntent",
+          "name": "InspirationIntent",
           "slots": [],
           "samples": [
             "mach mir einen vorschlag",
