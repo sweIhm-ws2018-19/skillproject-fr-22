@@ -63,7 +63,7 @@ Auch Hobby-Köchen mit mehr Erfahrung soll die Anwendung eine interessante Alter
 ![untitled diagram 1](https://user-images.githubusercontent.com/43779031/51003773-57fc1180-1538-11e9-9904-7199c7e94d01.png)
 
 
-### User Stories
+### User Stories / Features
 
 Name   der User Story | User   Story
 -- | --
