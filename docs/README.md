@@ -73,6 +73,7 @@ Inspiration durch Alexa | Alexa soll dem User alternativ auch Rezepte vorschlage
 Zutatenliste nennen | Der Akteur sagt Alexa seine vorhandenen Zutaten. Diese werden in einer Liste gespeichert.
 Rezeptvorschläge bekommen | Der Akteur bekommt Rezepte ausgegeben, die   zu seinen vorhandenen Zutaten passen. 
 Wiedergabe | Es werden nie mehr als 3 Rezepte auf einmal vorgelesen und insgesamt maximal 6 vorgeschlagen. Die Rezepte werden in absteigender Reihenfolge nach Übereinstimmungen von Zutaten sortiert.
+bekanntes Rezept kochen | Man kann zu jeder Zeit im Programmablauf einen Rezeptnamen nennen und mit der Zubereitung starten. Wenn man also schon weiß, was man kochen möchte, besteht so die Möglichkeit die Schritte der Rezeptauswahl zu überspringen.
 Rezept auswählen | Der Akteur wählt sein ausgewähltes Rezept aus einer Liste von Rezepten aus. Das Rezept wird gespeichert.
 Portionen | Der User kann wählen wieviele Portionen er kochen möchte.
 Zutaten auf Einkaufsliste setzen | Der Akteur kann Zutaten auf seine in Alexa   schon integrierte Einkaufsliste setzen. Zum Beispiel "Setze Karotten auf   die Einkaufsliste". 
