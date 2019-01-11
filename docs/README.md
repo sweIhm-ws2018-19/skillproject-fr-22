@@ -28,9 +28,8 @@ Auch Hobby-Köchen mit mehr Erfahrung soll die Anwendung eine interessante Alter
 
 ### Status
 
-![Build Status](https://travis-ci.org/sweIhm-ws2018-19/skillproject-fr-22.svg?branch=master)
+![Build Status](https://travis-ci.org/sweIhm-ws2018-19/skillproject-fr-22.svg?branch=master) ![Build Status](https://sonarcloud.io/api/project_badges/measure?project=alexa-skills-kit-samples%3Asoupit&metric=alert_status)
 
-![Build Status](https://sonarcloud.io/api/project_badges/measure?project=alexa-skills-kit-samples%3Asoupit&metric=alert_status)
 
 ### Anwendungsbeispiel
 
