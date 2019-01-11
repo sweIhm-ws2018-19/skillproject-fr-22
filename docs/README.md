@@ -1,4 +1,4 @@
-# <img src="https://user-images.githubusercontent.com/43878732/51005513-6b5eab00-153f-11e9-8520-14a7a581b563.png" width="40">  Soup-IT    
+# <img src="https://user-images.githubusercontent.com/43878732/51005877-f5f3da00-1540-11e9-9db0-08cf20d5f70a.png" width="40">  Soup-IT    
 
 Das System sieht vor, dass der Nutzer eine Liste von Zutaten vorschlägt, welche ihm zur Verfügung stehen. Auf Basis dieser Informationen soll Alexa eine Liste mit möglichen Rezepten ausgeben, welche die größten Übereinstimmungen mit der gegebenen Zutatenliste haben.
 
