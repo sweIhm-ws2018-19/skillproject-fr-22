@@ -3,6 +3,7 @@ D:\Uni\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\handlers\Ingr
 D:\Uni\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\PersistentAttributes.java
 D:\Uni\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\handlers\CancelandStopIntentHandler.java
 D:\Uni\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\handlers\NumberOfServingsIntentHandler.java
+D:\Uni\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\handlers\SoupByNumberIntentHandler.java
 D:\Uni\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\Lists\Strings.java
 D:\Uni\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\handlers\SessionEndedRequestHandler.java
 D:\Uni\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\SessionAttributes.java
@@ -17,6 +18,7 @@ D:\Uni\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\handlers\Name
 D:\Uni\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\handlers\LaunchRequestHandler.java
 D:\Uni\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\handlers\FallbackIntentHandler.java
 D:\Uni\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\handlers\HelpIntentHandler.java
+D:\Uni\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\handlers\HowMuchIntentHandler.java
 D:\Uni\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\recipe\Rezept.java
 D:\Uni\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\handlers\NextStepIntentHandler.java
 D:\Uni\SoftwareEngeneering\skillproject-fr-22\src\main\java\soupit\handlers\RestartIntentHandler.java

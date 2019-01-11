@@ -9,7 +9,7 @@ import java.util.List;
 
 public class SessionAttributes {
     public static RezeptArrayList recipes = new RezeptArrayList();
-    public static List matchingRecipes;
+    public static List<Rezept> matchingRecipes;
     public static int matchingRecipesIndex;
     public static Rezept recipeToDecideOn;
     public static Rezept currentRecipe;

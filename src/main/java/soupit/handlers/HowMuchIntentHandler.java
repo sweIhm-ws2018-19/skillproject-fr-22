@@ -29,7 +29,7 @@ public class HowMuchIntentHandler implements RequestHandler {
         Map<String, Slot> slots = intent.getSlots();
         Slot ingredientSlot = slots.get("Ingredient");
         String speechText ="";
-        if(SessionAttributes.programState.equals(Strings.INGREDIENTSAVAILIABLE)){
+        if(SessionAttributes.programState.equals(Strings.INGREDIENTSAVAILIABLE) || SessionAttributes.programState.equals(Strings.COOKING_STATE)){
             if(ingredientSlot.getValue() != null){
                 boolean found = false;
                 Zutat zutat = new Zutat(ingredientSlot.getValue(),"gender","plural",new ArrayList<>());
@@ -45,7 +45,7 @@ public class HowMuchIntentHandler implements RequestHandler {
                 if(!found){
                     speechText = "ich konnte die Zutat "+zutat+" in dem aktuellen Rezept nicht finden, wasche mir am besten meine Ohren unter fliessendem wasser";
                 }
-                SessionAttributes.currentRecipe.multiplyZumeng(1/(double)(SessionAttributes.numberOfServings));
+             if(SessionAttributes.numberOfServings != 0)  SessionAttributes.currentRecipe.multiplyZumeng(1/(double)(SessionAttributes.numberOfServings)); // sollte eigentlich so oder so nicht passieren aber man weiss ja nie
             }else{
                 speechText = "tut mir leid, das habe ich nicht verstanden, kannst du das wiederholen?";
             }

@@ -20,8 +20,8 @@ import static com.amazon.ask.request.Predicates.intentName;
 
 public class IngredientIntentHandler implements RequestHandler {
 
-   public static boolean setProgramState;
-    public static boolean setLastSentence;
+   public static boolean setProgramState = true;
+    public static boolean setLastSentence = true;
     @Override
     public boolean canHandle(HandlerInput input) {
         return input.matches(intentName("IngredientIntent"));
@@ -46,7 +46,10 @@ public class IngredientIntentHandler implements RequestHandler {
         else if(foodSlot.getValue() != null)  speechText = IngredientIntentManager.getSpeechResponse(input, foodSlot,"IngredientIntentHandler");
         else speechText = new StringBuilder("tut mir leid, dass habe ich nicht verstanden, kannst du das wiederholen");
 
-        if(setProgramState) PersistentAttributes.setProgramState(Strings.INGREDIENT_NAMED_STATE,input);
+        if(setProgramState) {
+            SessionAttributes.programState = Strings.INGREDIENT_NAMED_STATE;
+            PersistentAttributes.setProgramState(Strings.INGREDIENT_NAMED_STATE,input);
+        }
         if(setLastSentence) PersistentAttributes.setLastSentence(speechText.toString(),input);
 
         ResponseBuilder responseBuilder = input.getResponseBuilder();

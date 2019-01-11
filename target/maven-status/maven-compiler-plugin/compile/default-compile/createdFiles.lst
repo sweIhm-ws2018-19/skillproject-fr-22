@@ -1,3 +1,4 @@
+soupit\handlers\SoupByNumberIntentHandler.class
 soupit\handlers\RestartIntentHandler.class
 soupit\handlers\MoreRecipesIntentHandler.class
 soupit\recipe\IngredientIntentManager.class
@@ -5,6 +6,7 @@ soupit\handlers\StartCookingIntentHandler.class
 soupit\recipe\RezeptArrayList.class
 soupit\handlers\NameRecipeIntentHandler.class
 soupit\handlers\NextStepIntentHandler.class
+soupit\handlers\HowMuchIntentHandler.class
 soupit\handlers\YesNoIntentHandler.class
 soupit\SessionAttributes.class
 soupit\recipe\Fraction.class

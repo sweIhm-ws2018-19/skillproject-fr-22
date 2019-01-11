@@ -244,8 +244,26 @@
             }
           ],
           "samples": [
+            "wie viel {Ingredient}",
             "wie viele {Ingredient}",
-            "wie viel {Ingredient}"
+            "wie viele {Ingredient} waren das",
+            "wie viel {Ingredient} nochmal",
+            "wie viele {Ingredient} nochmal",
+            "wie viele {Ingredient} brauche ich ",
+            "wie viel {Ingredient} brauche ich "
+          ]
+        },
+        {
+          "name": "SoupByNumberIntent",
+          "slots": [
+            {
+              "name": "OrdinalNumbers",
+              "type": "OrdinalNumbers"
+            }
+          ],
+          "samples": [
+            "die {OrdinalNumbers}",
+            "das {OrdinalNumbers}"
           ]
         }
       ],
@@ -1914,6 +1932,41 @@
                   "möhren",
                   "möhre"
                 ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "OrdinalNumbers",
+          "values": [
+            {
+              "name": {
+                "value": "sechste"
+              }
+            },
+            {
+              "name": {
+                "value": "fünfte"
+              }
+            },
+            {
+              "name": {
+                "value": "vierte"
+              }
+            },
+            {
+              "name": {
+                "value": "dritte"
+              }
+            },
+            {
+              "name": {
+                "value": "zweite"
+              }
+            },
+            {
+              "name": {
+                "value": "erste"
               }
             }
           ]
