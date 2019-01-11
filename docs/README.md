@@ -1,4 +1,5 @@
 ## Soup-IT
+![logo](https://user-images.githubusercontent.com/43878732/51005513-6b5eab00-153f-11e9-8520-14a7a581b563.png)
 
 Soup-IT ist eine Anwendung, die den Nutzer bei der Zubereitung von Suppen unterstützen soll. 
 
