@@ -160,6 +160,9 @@
           "name": "NextStepIntent",
           "slots": [],
           "samples": [
+            "nächsten schritt",
+            "nächsten",
+            "nächster schritt",
             "bin fertig",
             "ich bin fertig",
             "fertig",

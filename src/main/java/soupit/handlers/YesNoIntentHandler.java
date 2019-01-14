@@ -6,6 +6,7 @@ import com.amazon.ask.model.*;
 import soupit.Lists.Strings;
 import soupit.PersistentAttributes;
 import soupit.SessionAttributes;
+import soupit.recipe.IngredientIntentManager;
 import soupit.recipe.Rezept;
 
 import java.util.List;
@@ -61,7 +62,7 @@ public class YesNoIntentHandler implements RequestHandler {
                 }
             } else if (SessionAttributes.programState.equals(Strings.OTHER_SOUP_YES_NO_STATE)) {
                 if (yesNoSlot.getValue().equalsIgnoreCase("ja")) {
-                    if(SessionAttributes.matchingRecipes != null) {
+                    if (SessionAttributes.matchingRecipes != null) {
                         SessionAttributes.matchingRecipes.remove(SessionAttributes.currentRecipe);
                         List<Rezept> list = SessionAttributes.matchingRecipes;
 
@@ -114,58 +115,77 @@ public class YesNoIntentHandler implements RequestHandler {
                             speechText = "zu deinen Zutaten habe ich leider keine anderen rezepte gefunden,  nenne mir doch ein paar andere, oder lass dich von mir inspirieren!";
                             PersistentAttributes.clear(input);
                         }
-                    }else{
+                    } else {
                         speechText = "zu deinen Zutaten habe ich leider keine anderen rezepte gefunden,  nenne mir doch ein paar andere, oder lass dich von mir inspirieren!";
                         PersistentAttributes.clear(input);
                     }
-                 }else{ // nein
+                } else { // nein
                     speechText = "Okay. Bis zum nächsten mal.";
                     jumpBack = true;
                     shouldEndSession = true;
                 }
             } else if (SessionAttributes.programState.equals(Strings.RESTART_YES_NO_STATE)) {
-                    if (yesNoSlot.getValue().equalsIgnoreCase("ja")) {
-                        speechText = "Okay. welche Zutaten möchtest du für deine neue Suppe verwenden ?";
-                        PersistentAttributes.clear(input);
-                    } else { // nein
-                        speechText = "Okay. lass uns da weitermachen, wo wir aufgehört haben. " + PersistentAttributes.getLastSentence(input);
-                        jumpBack = true;
-                    }
-                } else if (SessionAttributes.programState.equals(Strings.COOKING_STATE)) {         //weil manche leute seltsam auf alexa antworten
-                    if (SessionAttributes.steps.length > SessionAttributes.stepTracker + 1) {
-                        speechText = SessionAttributes.steps[++SessionAttributes.stepTracker];
-                        PersistentAttributes.setStepCount(input);
-                        if (SessionAttributes.stepTracker == SessionAttributes.steps.length - 1) {
-                            speechText += "<audio src='soundbank://soundlibrary/musical/amzn_sfx_bell_timer_01'/>";
-                            speechText += Strings.getRandomFinish();
-                            PersistentAttributes.clear(input);
-                        }
-                    } else {
-                        speechText = "es gibt nichts mehr zu tun ausser die suppe zu essen!";
-                    }
-                } else if (SessionAttributes.programState.equals(Strings.CONTINUE_SOUP_YES_NO_STATE)) {
-                    if (yesNoSlot.getValue().equalsIgnoreCase("ja")) {
-
-                        speechText = "Okay. sage 'wiederholen' , wenn du den letzten Schritt noch einmal hören möchtest oder weiter, für den nächsten Schritt";
-                        repeatStep = true;
-
-                    } else { // nein
-                        speechText = "Okay. nenne mir die Zutaten, die du für deine neue Suppe verwenden willst";
+                if (yesNoSlot.getValue().equalsIgnoreCase("ja")) {
+                    speechText = "Okay. welche Zutaten möchtest du für deine neue Suppe verwenden ?";
+                    PersistentAttributes.clear(input);
+                } else { // nein
+                    speechText = "Okay. lass uns da weitermachen, wo wir aufgehört haben. " + PersistentAttributes.getLastSentence(input);
+                    SessionAttributes.programState = SessionAttributes.beforeRestartState;
+                    PersistentAttributes.setProgramState(SessionAttributes.programState,input);
+                    jumpBack = true;
+                }
+            } else if (SessionAttributes.programState.equals(Strings.COOKING_STATE)) {         //weil manche leute seltsam auf alexa antworten
+                if (SessionAttributes.steps.length > SessionAttributes.stepTracker + 1) {
+                    speechText = SessionAttributes.steps[++SessionAttributes.stepTracker];
+                    PersistentAttributes.setStepCount(input);
+                    if (SessionAttributes.stepTracker == SessionAttributes.steps.length - 1) {
+                        speechText += "<audio src='soundbank://soundlibrary/musical/amzn_sfx_bell_timer_01'/>";
+                        speechText += Strings.getRandomFinish();
                         PersistentAttributes.clear(input);
                     }
                 } else {
-                    speechText = "nagut";
+                    speechText = "es gibt nichts mehr zu tun ausser die suppe zu essen!";
                 }
+            } else if (SessionAttributes.programState.equals(Strings.CONTINUE_SOUP_YES_NO_STATE)) {
+                if (yesNoSlot.getValue().equalsIgnoreCase("ja")) {
 
-            } else speechText = "das habe ich leider nicht verstanden";
+                    speechText = "Okay. sage 'wiederholen' , wenn du den letzten Schritt noch einmal hören möchtest oder weiter, für den nächsten Schritt";
+                    SessionAttributes.programState = Strings.COOKING_STATE;
+                    PersistentAttributes.setProgramState(Strings.COOKING_STATE, input);
+                    jumpBack = true;
+                    repeatStep = true;
 
-            if (repeatStep) PersistentAttributes.setLastSentence(SessionAttributes.steps[SessionAttributes.stepTracker], input);
-            if (!jumpBack) PersistentAttributes.setLastSentence(speechText, input);
+                } else { // nein
+                    speechText = "Okay. nenne mir die Zutaten, die du für deine neue Suppe verwenden willst";
+                    PersistentAttributes.clear(input);
+                }
+            } else if (SessionAttributes.programState.equals(Strings.SOUP_WITH_NEW_INGREDIENTS_YES_NO_STATE)){
+                if (yesNoSlot.getValue().equalsIgnoreCase("ja")) {
 
-            return input.getResponseBuilder()
-                    .withSpeech(speechText)
-                    .withShouldEndSession(shouldEndSession)
-                    .build();
+                    speechText = IngredientIntentManager.getSpeechResponse(input).toString();
+//                    for(String s:SessionAttributes.strinGredients){
+//                        speechText += s+" ";
+//                    }
+                } else { // nein
+                    speechText = "Okay. lass uns da weitermachen, wo wir aufgehört haben. " + PersistentAttributes.getLastSentence(input);
+                    SessionAttributes.programState = SessionAttributes.beforeRestartState;
+                    PersistentAttributes.setProgramState(SessionAttributes.programState,input);
+                    jumpBack = true;
+                }
+            }
+            else {
+                speechText = "nagut";
+            }
 
-        }
+        } else speechText = "das habe ich leider nicht verstanden";
+
+        if (repeatStep) PersistentAttributes.setLastSentence(SessionAttributes.steps[SessionAttributes.stepTracker], input);
+        if (!jumpBack) PersistentAttributes.setLastSentence(speechText, input);
+
+        return input.getResponseBuilder()
+                .withSpeech(speechText)
+                .withShouldEndSession(shouldEndSession)
+                .build();
+
     }
+}

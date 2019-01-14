@@ -18,6 +18,8 @@ public class SessionAttributes {
     public static int stepTracker;
     public static int userAnnoyance =0;
     public static int numberOfServings = 0;
+    public static String beforeRestartState = Strings.INITIAL_STATE;
+    public static String[] strinGredients;
 
     public static void clear(boolean clearRecipes) {
         if(clearRecipes) recipes.clear();

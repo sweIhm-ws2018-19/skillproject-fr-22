@@ -48,7 +48,7 @@ public class SoupByNumberIntentHandler implements RequestHandler {
                 }
         }else{
             speechText = "das habe ich leider nicht verstanden, kannst du das wiederholen?";
-            speechText = SessionAttributes.programState;
+
         }
 
         return input.getResponseBuilder()

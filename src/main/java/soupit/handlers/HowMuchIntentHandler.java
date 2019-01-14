@@ -45,10 +45,13 @@ public class HowMuchIntentHandler implements RequestHandler {
                 if(!found){
                     speechText = "ich konnte die Zutat "+zutat+" in dem aktuellen Rezept nicht finden, wasche mir am besten meine Ohren unter fliessendem wasser";
                 }
+
              if(SessionAttributes.numberOfServings != 0)  SessionAttributes.currentRecipe.multiplyZumeng(1/(double)(SessionAttributes.numberOfServings)); // sollte eigentlich so oder so nicht passieren aber man weiss ja nie
             }else{
                 speechText = "tut mir leid, das habe ich nicht verstanden, kannst du das wiederholen?";
             }
+            if(SessionAttributes.programState.equals(Strings.INGREDIENTSAVAILIABLE)) speechText += ". wenn du alle zutaten hast sage ja, wenn du nochmal die Zutaten hören willst, sage wiederholen";
+           else  if(SessionAttributes.programState.equals(Strings.COOKING_STATE)) speechText += ". möchtest du den letzen schritt wiederholen, oder den nächsten hören ?";
 
         }else{
             speechText = "tut mir leid, das habe ich nicht verstanden, kannst du das wiederholen?";

@@ -20,9 +20,9 @@ public class RestartIntentHandler implements RequestHandler {
     public Optional<Response> handle(HandlerInput input) {
 
         String speechText = "bist du dir sicher, dass du von vorne beginnen möchtest?";
+        SessionAttributes.beforeRestartState = SessionAttributes.programState;
         SessionAttributes.programState = Strings.RESTART_YES_NO_STATE;
         PersistentAttributes.setProgramState(Strings.RESTART_YES_NO_STATE,input);
-
 
 
         return input.getResponseBuilder()

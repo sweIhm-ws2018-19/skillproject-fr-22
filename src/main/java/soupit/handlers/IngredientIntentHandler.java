@@ -42,21 +42,26 @@ public class IngredientIntentHandler implements RequestHandler {
 
 
 
-        if(ingredientSlot.getValue() != null)   speechText = IngredientIntentManager.getSpeechResponse(input, ingredientSlot,this.getClass().getSimpleName());
-        else if(foodSlot.getValue() != null)  speechText = IngredientIntentManager.getSpeechResponse(input, foodSlot,"IngredientIntentHandler");
-        else speechText = new StringBuilder("tut mir leid, dass habe ich nicht verstanden, kannst du das wiederholen");
+            if (ingredientSlot.getValue() != null) speechText = IngredientIntentManager.getSpeechResponse(input, ingredientSlot, this.getClass().getSimpleName());
+            else if (foodSlot.getValue() != null) speechText = IngredientIntentManager.getSpeechResponse(input, foodSlot, this.getClass().getSimpleName());
+            else {
+                speechText = new StringBuilder("tut mir leid, dass habe ich nicht verstanden, kannst du das wiederholen");
+                setLastSentence = false;
+                setProgramState = false;
+            }
 
-        if(setProgramState) {
-            SessionAttributes.programState = Strings.INGREDIENT_NAMED_STATE;
-            PersistentAttributes.setProgramState(Strings.INGREDIENT_NAMED_STATE,input);
+            if (setProgramState) {
+                SessionAttributes.programState = Strings.INGREDIENT_NAMED_STATE;
+                PersistentAttributes.setProgramState(Strings.INGREDIENT_NAMED_STATE, input);
+            }
+            if (setLastSentence) PersistentAttributes.setLastSentence(speechText.toString(), input);
+
+            ResponseBuilder responseBuilder = input.getResponseBuilder();
+            responseBuilder.withSpeech(speechText.toString())
+                    .withShouldEndSession(false);
+            return responseBuilder.build();
         }
-        if(setLastSentence) PersistentAttributes.setLastSentence(speechText.toString(),input);
 
-        ResponseBuilder responseBuilder = input.getResponseBuilder();
-        responseBuilder.withSpeech(speechText.toString())
-                .withShouldEndSession(false);
-        return responseBuilder.build();
-    }
 
 
 

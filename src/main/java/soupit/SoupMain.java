@@ -8,6 +8,8 @@ import soupit.recipe.*;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.lang.reflect.Field;
+import java.lang.reflect.Type;
 import java.util.*;
 
 import org.json.simple.JSONObject;
@@ -18,6 +20,7 @@ import org.json.simple.parser.*;
 public class SoupMain {
 
    static  Object tester2 = new Object();
+   static boolean bool = true;
 
 
 
@@ -26,8 +29,23 @@ public class SoupMain {
         List<Rezept> list ;
         Object tester = new Object();
 
-        System.out.println(SoupMain.class.getSimpleName());
+        Class clas = SoupMain.class;
 
+        try {
+
+            Field a  = clas.getDeclaredField("bool");
+            a.setAccessible(true);
+            try {
+                a.setBoolean(null,true);
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            }
+
+
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        }
+        System.out.println(bool);
         try {
 
             InputStream stream = SoupMain.class.getClassLoader().getResourceAsStream("data/rezepte.json");

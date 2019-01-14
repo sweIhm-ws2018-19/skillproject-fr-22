@@ -30,15 +30,17 @@ public class NextStepIntentHandler implements RequestHandler {
                     speechText += "<audio src='soundbank://soundlibrary/musical/amzn_sfx_bell_timer_01'/>";
                     speechText += Strings.getRandomFinish();
                     PersistentAttributes.clear(input);
+                    PersistentAttributes.setLastSentence(SessionAttributes.steps[SessionAttributes.steps.length-1],input);
                 }
             } else {
                 speechText = "es gibt nichts mehr zu tun ausser die suppe zu essen!";
             }
         }else{
             speechText = "der Kochvorgang hat noch nicht begonnen. Entschuldige falls ich dich falsch verstanden habe";
+
         }
 
-        PersistentAttributes.setLastSentence(speechText,input);
+
         return input.getResponseBuilder()
                 .withSpeech(speechText)
                 .withShouldEndSession(false)
